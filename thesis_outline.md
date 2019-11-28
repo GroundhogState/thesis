@@ -10,6 +10,8 @@ Noting that this thesis consists of fairly distinct but complete projects, the s
 
 ## Opening hook
 
+In this thesis, we will get about as close to perfect stillness as physically possible. The fact of zero-point energy - that no quantum state can have definitevly zero momentum - cements a simple tenet: Nothing is stationary.
+ 
 ## Background/context
 
 ## Problem statement/research gap
@@ -21,13 +23,9 @@ Noting that this thesis consists of fairly distinct but complete projects, the s
 # Conclusion
 
 ## Remind readers of your aims
-
 ## Summary of what you found in relation to the aims
-
 ## Implications of your findings
-
 ## Limitations, unresolved issues
-
 ## What next for this research/issue?
 
 
