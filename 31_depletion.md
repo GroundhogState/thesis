@@ -19,7 +19,7 @@
 ## Aim & scope	
 	To reproduce the Palaiseau experiment.
 ## Contribution	& discussion.
-
+	Results, error budget, interpretation.
 ## Issues	
 	Sys: Background
 	Stat: Fitting power laws, weak signals

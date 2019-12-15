@@ -8,6 +8,7 @@ Quantum Electrodynamics, or QED, describes the interaction of charged particles 
 
 ## Atomic theory
 	Refresher - Levels & spherical harmonics
+	Metastable helium
 	Transitions: Dipole approx
 	forbidden transitions
 	Oscillator strengths & driving

@@ -1,26 +1,64 @@
 # Tuneout	
+## Poetic license.
+Silence - nothingness - stillness. A subject of fascination for humans over centuries. Entire schools of meditation practise, and pursuits of divinity, seem to be pointed towards realizing perfect stillness. The space between the breaths. The stillness of the mind and the insights that follow - from simple clarity. The universe, however, is never motionless. Whatever zero-point energy happens to be - suggests that true stationarity is impossible. And likewise, in depletion, nothing can be truly empty, thanks to vacuum fluctuations. But there is the resounding theme throug thsi thesis, right of approaching the motionless, of approaching the definitive, the ability to say precisely waht something is. To distill an element of truth, and the effort it takes to wrest away so much of the noise of the world is titanic. The continual drive to split the subject from the object - by ensconcing it in vacuum, by isolating something with laser precision, a *pure* sample in *stable* conditions - in some sense perfectly well-defined, perfectly characterized, and perfectly frozen. But nothing in reality is so simple - even at the ground state, there is endless detail - field noise, et cetera. 
+
+The condensate aquiver in the ground state - depletion. As ketterle said 'exquisitely isolated'
+The interplay of internal structure aligning perfectly to isolate the atom from the world. THere's poetic beauty in this. There's an allure. But elusive, and so is the condensate - the QM description works but there are always going to be traces of the initial conditions, right? 
+
+So, tuneout.
+
+Electronic transitions can be violent events! THe electron cloud completely reconfigures. A disturbance in the electric field, the energy ripping out from the cloud (go read the attoclock/electron tunnelling papers maybe) - we continue the journey down to weaker signals in pursuit of the measurement of nothing. That nothing is almost always impossible to measure - detector noise, for instance, always present, and the ever-pervasive background. Best we can do is to account for all these - but zero crossings are easier to meaure. 
+
+Blah. Even in TO we don't realize a state of perfect stillness - it's done by trying to shift a frequency. But to make it indistinguishable. We tried the trap driving method but that didn't really work. 
+
 ## Topic intro	
 	Intuition: Classical oscillator
-	Polarizability redux
+	Polarization & Polarizability 
+	Sketch of method
+		Trap freq theory
+		Nonlinearity & anharmonicity - why did our traps chirp? Model never quite nailed the same chirp did it? Was it trap ringing in the end?
 	Uses of Tuneouts
 	Previous measurement
-## Gap	
+
+## Gap, Aim & scope	
 	Have TO been used for QED?
-## Aim & scope	
 	Measure the TO with sufficient precision to test QED
 ## Contribution	
 	We did it.
+	Error budget.
 ## Method	
-	Alignment
-	Polarizability
-	Trap freq theory
-	Fixed polz method
-	Fitting & determination
+
+Trap configuration
+
+Alignment
+	We employed three stages of successively increasing precision to align the probe beam with the magnetic trap, using a 2W? 532nm laser, followed by a 300mW 450nm beam, and finally using the tunable laser at approx 405nm?. The first beam was used for coarse alignment by scanning the vertical position of the focusing lens and dropping the BEC onto the phosphor detector. This technique has been used previously to align beams - reason being that the repulsive dipole potential of the 532nm beam creates a fissure in the BEC as the fallinc condensate diffracts around the beam. The effect is weak but visible as a dark stripe through the BEC - at least, ideally. Sadly, our ingenuity held us back (yet again). We used a pickoff plate - a large spherical optic which is weakly reflective at the target wavelength - for initial scans, deflecting a fraction of the beam onto a CCD (as described in the Laser System chapter). Unfortunately, Bryce dropped this optic at point point and the rim of the glass lost a chip. We did not notice for quite some time that this had altered the strain distribution on the transmitting surface of the optic, and actually completely destroyed the beam profile. How did we find this out, again? This led us to replace the optic with a mirror on a hinged mount, so we could remove the mirror and return it to a controllable position. Once we removed the damaged optic, we were quite quickly able to find a signal in the disturbed BEC. I think we eventually used the atom laser for a better visible signal - although the phosphor had a better dynamic range, the brightness difference was hard to see by eye, but integrating over several PALs gave us a density profile we could use.
+	We aligned the beam with the fall path of the condensate by ensuring the destruction was in the centre of the falling condensate, and then raising the beam step by step until the signal vanished. At this point we figured we'd overshot the trap, so stepped back down and changed to another beam after marking beam position on the CCD. We then changed to the high power 450nm beam because it would produce a strong polarization response in the condensed atoms. We then ran successive trap frequency measurements while adjusting the beam position, looking for disturbances in the oscillation frequency under the same mechanism by which our measurement method works. When this signal reached a maximum with respect to position, we iterated adjustments in lens position along the beam axis with adjustments in pointing (as imperfectly aligned optics would couple these degrees of freedom). When this signal was maximized, we switched to the probe beam at 405nm. At this wavelength the atomic polarizability is positive so the beam is attractive. We therefore adjusted the sequence by switching off the beam at XXX ms after the trap release. When the beam was aligned we observed a second peak in the detection rate (picture), from the release of atoms trapped in the beam. We iterated this alignment procedure until the number of trapped atoms saturated - assuming this to be pointing at the BEC. Then we switched to alternating shots measuring the trap frequency, as in our measurement method, and adjusted the lens configuration until the frequency difference between the measurement and reference shots reached a maximum. Then, because the optical dispersion would be such that the beam pointing and focus would vary with wavelength, we repeated this procedure after taking steps of a few nm at a time towards the tuneout wavelength, eventually settling within a few MHz of the transition on the assumption that a few ppb change in frequency wouldn't bother us.
+	We measured the distance from the focus lens to the chamber centre with reference to a technical diagram, and positioned the CCD at this distance away from the focus lens (including the reflection off the alignment mirror) but of course the beam before the focus lens would not have been perfectly collimated which might have affected the outcome.
+
+Tune-out for fixed polarization
+
+	As described in the section above, for fixed laser intensity, the polarizability of the atom in the neighbourhood of the tuneout is proportional to the detuning from the tuneout. We used the machine control interface to automatically iterate the laser setpoint in steps of XX MHz for total scan sizes of YY MHz about the Tuneout. Alternating shots between measurement and control, where the laser was blocked on the pre-fibre side (even though the AO could be set to zero, light leakage had been observed. Why? Probably the zero offset of the photodiode. And also leaking fundamental light? I mean, we characterized that anyhow, will have to dig up that measurement). We use the calibration shots to produce a drift model to predict the underlying magnetic trap frequency (details?), then take the difference of squares of the measured frequency and the predicted frequency. Below is a plot of the squared difference versus wavelength for a single scan (PIC). The zero crossing is determined by fitting a linear model and solving for y=0. There was not a statistically significant quadratic contribution to the signal. The stat error in the zero determination is X. Sys contributions at this level are Y.
+
+	The gradient of the line was found to vary, and in some cases invert in sign. While initially puzzling, this turned out to be a useful validation of the trap frequency picture came from the inadvertent observation of a change of sign of the trap frequency change. This was eventually ascribed to the sign change in the second derivative of a Gaussian function, which shows that the small-amplitude oscillation picture described above is actually quite accurate despite all the approximations (like, how big is the BEC?). (PIC)
+
+Polarization dependence
+
+	We measured the dependence on polarization by adjusting the waveplate optics. We took wide scans (several GHz) about the TO for a few WP values, and produced an empirical model to predict the frequency of the tuneout as a function of waveplate angles. This helped us search for appropriate scan regions as we iterated. We did not rely purely on predictions based on waveplate configs as the birefringence would have been wavelength dependent (and we were about a nm from the spec wavelength - estimated error here? These are zero-order, so could perhaps estimate this, assuming no change in refractive index, just from the physical size diff maybe...). Not to mention there was the unfortunate fact that we put the focus lenses and mirrors after the optics - will be a tricky thing to put into the thesis, how we screwed this up and spent so long trying to correct it... 
+
+	As we have numerous scans across the tuneout in any given run, we have some options for processing. One would be to bin the shots by set wavelength, and fit the average values. However, this would lead to issues with trap frequency or alignment drift? But the solution we took was to determine the zero crossing each scan separately, then take an average over a given run weighted inversely by the statistical error in that shot. This is because deviations from perfet alignment would manifest as a lower gradient and hence reduced sensitivity - so did the gradient or the stat error get used as the weighting function? Should go check. This introduced a stat/sys error in the fixed-polarization tuneout of XXX MHz.
+
+	We did not, in the end, know what the final state of the polarization was. We used a beamsplitter to measure the min/max transmitted power as a function of QWP angles (go revise the method) to determine the degree of linear polarization, leaving the sign of the circular component undetermined (can possibly calculate from WPs but wound up using the empirical model anyhow). We also passed the beam thruogh a few optics and a vacuum window in order to actually hit the atoms, and the effect of the optical birefringence, angle-dependent polarization shifts from reflective mirrors, et cetera, would mess with this. To estimate the polarization we set up a Rochon prism after the beam exited the vacuum chamber through the LVIS hole and calculated the circularity of the light. We compared with measurements taken at the centre of the beam axis before the window and found they were - how different? - this introduces an error margin of the light polarization of, well, some amount, and this manifests as a variable systematic error in some silly way.
+
+	Unfortunately we did not have the ability to measure the pointing of the magnetic field in the trap. This meant we were unable to find the precise angle between the probe beam wave vector and the quantization axis - hence the precise polarization in the atomic frame was not possible to determine as a function of measured parameters before the experiment. We constrained the direction of pointing to within 4 degrees (in polar and azimuthal angles)? Or we estimate that it was BLAH degrees based on simulations of the magnetic trap (estimate systematic error here). Fortunately, somehow this is absorbed into the fit so it doesn't matter in the end. Will need to revise this procedure.  
+
+## Systematic errors
+
+	What goes in here?
+
 ## Issues	
-	Magnetic field pointing
-	Polarization issues
+	Hyperpolz?
 ##Next?	
-Isotope shifts?
+	Isotope shifts? Precision required?
 
 ## Chapter wrap	
 

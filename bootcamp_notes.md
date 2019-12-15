@@ -1,3 +1,8 @@
+# Misc
+
+Sean's thesis: 54k words.
+
+
 # First writing task:
 This thesis builds on and contributes to work in the area(s) of:
 

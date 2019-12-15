@@ -29,7 +29,24 @@
 ## Aim & scope	
 	To build the dang lattice
 ## Contribution	
+	Maybe it's best to do this chronologically.
+	* Cut my teeth on AO alignment and eventually building a MOT with an old-school security camera
+	* Assembling new vacuum system
+		Construction
+		Bakeouts - logs?
+		Ti Sub and NEG improvements
+	* LVIS
+	* MOT 2
+	* Absorption Imaging
+	* Dipole alignment
+		* Misadventures and eventual fluke - thanks to Patrick
+
+## Progress thereafter
+	* D
+
+
 	Vacuum chamber
+
 	Optics build inc dipole
 		So when I started, we actually didn't have a working MOT. THere were the optis but they were dirty and eyah. So they didn't have light either. Had to build a few AO arms - everything except the collimator and zeeman slower I think, and the ZS was set up according to the old paper about that lab, right? THe 'optimized' one. Altough one could certainly design a chirped system to increase yield, but then I wonder what the density/number limits for a MOT are. How much could we actually obtain, given that we then have to push through the feed hold into another chamber?
 		SO yeah. Two MOTs. Anythign exciting to write about? Maybe not - just ballpark the capture velocities maybe. 
