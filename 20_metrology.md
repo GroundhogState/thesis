@@ -8,12 +8,18 @@ Quantum Electrodynamics, or QED, describes the interaction of charged particles 
 
 ## Atomic theory
 	Refresher - Levels & spherical harmonics
-	Metastable helium
+
 	Transitions: Dipole approx
 	forbidden transitions
 	Oscillator strengths & driving
-	Helium structure
+Helium
+	Helium exhibits a uniquely large gap between the ground and excited states (is it the biggest? What other electronic transitions have higher energy. The lowest-lying excited state differs in electron spin from the ground state, and is also an S state, hence the transition is *doubly* forbidden. This confers a lifetime of 7900 seconds, as measured by Hodgman et al in the lab in which I started my thesis. The gap of 19.8eV is a few times the work function of most metals, which is the key enabler of the use of the delay-line detector in our experiment. However, interatomic collisions may also distribute this energy between atoms, ionizing them. What other decay channels can you have? Can both atoms remain neutral and yet disperse the 20eV in kinetic energy? This is known as Penning ionization (box: Penning and his ionization) and can lead to atom loss or sample heating. Fortunately it can be suppressed if the sample is spin-polarized, because then the scattering process no longer conserves angular momentum. The suppression, oddly, fails at very high magnetic fields - maybe because of deformation of atomic orbitals. As Penning ionization is collision-driven, the ion production scales with the square of the atomic density. This means that monitoring the ion production rate can be used as a measure for the atomic density, and indeed has been used to detect the condensation of Helium previously by this group. Also, I think people tried to use it as a feedback signal, but I dunno how that went. 
+
+	The metastable gap is the agony and the ecstasy of Helium. Other noble gases also exhibit large gaps and long metastable lifetimes, but the lifetime decreases with increasing mass, and the penning ionization rate is harder to suppress. As they have larger masses, also, the condensation temperature is lower. Given the technical difficulty of condensing Helium, it may remain the only noble gas ever condensed for the foreseeable future. 
+	LEVEL DIAGRAM GOES HERE
+
 ## History of spectroscopy	
+	
 	Early uses of spectra
 	Discovery of Helium?
 Types of spectroscopy

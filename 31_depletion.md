@@ -58,6 +58,89 @@ Processing
 
 	My general dream for these sections is a graph of the program or some kind of systems diagram, maybe nested screenshots or pseudocode would do the trick and then include the code as an appendix hey?
 
+	## Definition}
+In the image obtained from the MCP-DLD detector of the shots in which the quantum depletion is observed, the pointwise density of atom detection events in momentum space can be described by
+
+\[
+    n(\textbf{k}) = \sum{m=1}^3 nm(\textbf{k},N,\omega{x,y,z},T) + \delta(\textbf{k}) + \lambda(N0,\bar{\omega}\textbf{k})\Theta(-kz)
+\]
+
+The first terms\(nm\)refer to the detected density of atoms from the\(mJ=m\)condensates, which depends on the momentum vector\(\textbf{k}\)on the total atom number\(N\), the temperature \(T\), and harmonic trapping frequencies\(\omega{x,y,z}\). 
+The dark count rate\(\delta\)is momentum-dependent due to its non-uniformity on the detector. 
+The measured trap leak rate\(\lambda\)stops when the trap is released, hence the Heaviside\(\Theta\)function ensures this term 
+only contributes on the lower side of the falling BEC. 
+Below we adopt the notation\((\delta+\lambda) = \delta + \lambda\Theta(\theta)\)where\(\theta\)is the elevation angle from the plane of the detector subtending from the centre of the condensate.
+Details of the measurement and calibration of each of these terms is discussed in section calibration.
+
+
+## Contributions to the model}
+
+The count density from the falling BECs depend explicitly on the trapped population and on the trapping frequencies. 
+This is most obviously true for the condensate of atoms in the\(mJ=0\)state, and also for the\(mJ=\pm 1\)condensates when all three condensates land undisturbed on the detector during calibration of the transfer efficiency.
+
+In the depletion detection shots, we have observed a remaining presence of\(mJ=1\)atoms, the cause of which is unclear but is suspected to be due to a collision process with a feature inside the chamber. 
+Regardless of the cause, we calibrate for this contamination (also called \textit{spin mixing} elsewhere). 
+The count density of the\(mJ=1\)states depends on the trapping frequencies also - this could be because the trap centre shifts with changing trap frequencies, changing the details of the spin mixing process during freefall. 
+We cannot rule out the presence of\(mJ=-1\)on the detector also. Calibrating for this contribution is less straightforward, as discussed below. 
+The temperature dependence of the condensate density is expected to manifest only as a change in the thermal fraction - calculation of the thermal depletion contributions are pending. 
+
+The contributions from the dark count rate are assumed to be time-invariant and independent of any properties of the condensate itself. 
+There may be a change in the dark count rate while the detector is subject to high atom fluxes, but these are not expected to be a problem for the following reasons: 
+One, we observe very similar thermal tails both above and below the condensate, suggesting that, at least, the quantum efficiency and dark count rates are not significantly different. 
+Two, although there are some temporary hotspots on the detector during the peak BEC flux, these are only observed co-temporally with the falling BEC. 
+The quantum depletion is detected far beyond the regions where this effect is noticable, and so they are not expected to contaminate the signal. 
+
+The leak rate should be expected to be dependent on the BEC number. 
+The most simple model would be an exponential decay of BEC number with some collection efficiency by the detector. 
+There may also be density-dependent collision effects feeding the trap leak rate driven by changing the trapping frequencies, which could also alter any spatial structure in the leak rate due to a shift in trap position. 
+
+## Obtaining the Tan constant}
+
+The far-field density of a harmonically trapped condensate is described by contributions from the condensed, thermal, and depleted populations,
+
+\[
+        n(\textbf{k}) = n{BEC}(\textbf{k}) + n{T}(\textbf{k}).
+\]
+
+The momentum density of the thermal fraction is [Pitaevskii \& Stringari]
+\[
+n{T}(\textbf{k}) = \frac{1}{\left(\lambdaT m \bar{\omega}\right)^3} g{3/2}\left(e^{-\beta k^2/2m\hbar^2}\right)
+\]
+where\(T\)is the temperature,\(\lambdaT = h^2/\sqrt{2\pi m kB T}\)is the thermal de Broglie wavelength,\(\bar{\omega}\)is the geometric mean of the trapping frequencies,\(\beta=1/ kB T\)is the thermodynamic Beta, and\(g{3/2}(z)\)is the Bose integral 
+\[
+g{3/2}(z) = \frac{2}{\sqrt{\pi}}\int0^\infty \frac{\sqrt{x}}{z^{-1}e^x-1}=\sum{l=1}^\infty \frac{z^l}{l^{3/2}}.
+\]
+
+The short-wavelength density of the BEC momentum density is described by the Thomas-Fermi approximation. The asymptotic momentum distribution is that of the quantum depletion,
+\[
+n(\textbf{k}) = \frac{C\infty}{(2\pi)^3 k^4},
+\]
+
+where\(C\infty\)is the universal Tan constant, defined by\(\mathcal{C}{\infty}=\textrm{lim}{|\textbf{k}|\to\infty}(2\pi)^3 |\textbf{k}|^4 n(\textbf{k})\), and for a harmonically trapped Bose gas is\(\frac{64\pi^2}{7}a{s}^{2}N0 n0\)in the local density approximation [Chang et al].
+
+The asymptotic behaviour of the single-particle probability density function for a particle in the ground state (not in the thermal fraction) is therefore\(\frac{64\pi^2}{7}a{s}^{2} n0\), hence the contact constant can be seen as a parameter defining a probability distribution, which we estimate using the procedure described in the next section.
+
+## Calibration
+
+
+We assume that the RF pulse and magnetic separation of the condensates does not affect their far-field distribution. 
+This may be false if the inter-condensate scattering rate is high (calculation/reference pending).
+The RF pulse transfers atoms into the different\(mJ\)states with efficiency\(\etaJ\), therefore we estimate the momentum density of the initial condensate via
+
+
+\[n(k) = \frac{1}{\eta0}\left(\bar{n}0 - \eta1\bar{n}1 - 1+\eta1)(\delta+\lambda)\right)\]
+
+where \(\bar{n}{1}\) refer respectively to the count densities obtained from the measurement and spin mixing calibration shots. We produce a background calibration for\((\delta+\lambda)\)by defining background density in the upper and lower hemisphere of\(\bar{\delta}\pm\)to be the backgrounds obtained from the dark count and leak calibrations, respectively.
+We determined the transfer efficiencies\(\etaJ\)from the initially released condensate to the other\(mJ\)states by separating the clouds with a magnetic field gradient generated by auxiliary field coils. (Refinement pending).
+We calibrate the dark count rate by building a spherical histogram centred at the same position on the detector as the\(mJ=0\)condensate, but 2 seconds after the condensate impact and before the trap loading sequence begins, and calibrate the trap leak similarly but centering the histogram about a point earlier in time than the BEC impact. 
+We calibrate the contamination by stray\(mJ=1\)counts by running the depletion measurement sequence without the RF transfer, obtaining the distribution of stray counts, plus the background count rate. 
+By subtracting our empirical measurement of the background, we obtain the estimated density of the stray counts,\(n1 = \bar{n}1 - (\delta+\lambda)\).
+
+The total atom number\(N\)and trapping frequencies\(\omegai\)are determined by a pulsed atom-laser measurement, which we describe in detail in [another publication]. 
+A fit of the empirical thermal fraction produces a measurement of the temperature, through which we may determine the condensed number\(N0\).
+
+Average dark count rate is determined to be\(5.6228E3 Hz/m^2\), or\(9.3713E-16 (m^{-1})^{-3}\). The latter is calculated by converting 1 sec interval into a distance c.f. the centre of mass velocity of the BEC - about 4m or 4E6 micron. 
+
 ##What next?	
 	I guess it depends a bit on what the findings are, if any, from the correlation study. Like, does it agree with theory, with the fit, or neither? What's going on here?
 	Bragg spectroscopy?
