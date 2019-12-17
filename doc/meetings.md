@@ -11,9 +11,15 @@ Re: Jacob plan 2020
 	* Had to sit through some extremely discomforting thoughts, see notes
 ## This week
 * EBMG re-read
-* QD Error bars -> Piotr
+* Figure sketch
+* QD Error bars -> Piotr, Elena
 * Review & edit TBC output
 * Set up workspace
+
+Timeframes
+* End jan - Spectroscopy for group review
+* End mar - Depletion for final review
+* 
 
 ## 2020 outlook: Articles & thesis
 	Thesis
