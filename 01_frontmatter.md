@@ -1,5 +1,10 @@
 ## Abstract
 
+## Dedication
+
+To my parents, who finally get to see me graduate school for what might be the last time.
+
+
 ## Acknowledgements	
 
 Well, this is about the time I start collecting some nice things to say to people who've stuck around. There will no doubt be more to add in future as I reflect on people's contributions.
@@ -28,5 +33,3 @@ The readr team:
 * Lauren.
 
 * Josh - for reminding me that my various panics are not only normal but survivable
-
-To my parents
