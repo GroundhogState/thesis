@@ -17,39 +17,30 @@
 </node>
 </node>
 <node CREATED="1578462166956" ID="ID_1000080785" MODIFIED="1578466379469" POSITION="right" TEXT="Introduction">
-<node CREATED="1578466380998" ID="ID_714822336" MODIFIED="1578618499436" TEXT="Raw">
-<node CREATED="1578464625988" ID="ID_563602811" MODIFIED="1578464631592" TEXT="Spectroscopy">
+<node CREATED="1578464625988" ID="ID_563602811" MODIFIED="1579062629832" TEXT="Spectroscopy">
 <node CREATED="1578461458942" ID="ID_196763113" MODIFIED="1578618687601" TEXT="Quantum electrodynamics describes the interaction of light and matter. This intrinsically relativistic theory, for which Schwinger, Tomonaga and Feynman were awarded the 1965 Nobel Prize, is the most accurate quantitative description of physical phenomena to date, and led Paul Dirac to predict the existence of antimatter. "/>
 <node CREATED="1578618690054" ID="ID_828005213" MODIFIED="1578618903801" TEXT=" The state of the art of experimental spectroscopy is sufficient to match theoretical uncertainties in table-scale experiments, signalling an era in which fundamental physical theories can be tested in atomic physics laboratories."/>
+<node CREATED="1578618929869" ID="ID_1823357533" MODIFIED="1579062643687" TEXT="Hydrogen has played a starring role in fundamental spectroscopy, including the measurements of Lamb shift, etc. These observations are found to match impeccably with theory, which is very well-developed for Hydrogen thanks to its simple structure."/>
 <node CREATED="1578618825028" ID="ID_1909323334" MODIFIED="1578618832129" TEXT="Proton radius and outstanding issues"/>
-<node CREATED="1578462480562" ID="ID_887295965" MODIFIED="1578462480562" TEXT="&quot;The main significance of your work will likely be a determination of the absolute ionization energy of the 3 3S and 5 3S states to a sub-MHz accuracy where the theoretical uncertainties are much larger due to the QED terms.&quot;"/>
 </node>
 <node CREATED="1578461458965" ID="ID_441094154" MODIFIED="1578619158731" TEXT="Helium spectroscopy">
-<node CREATED="1578618929869" ID="ID_1823357533" MODIFIED="1578619113320" TEXT="Hydrogen has played a starring role in fundamental spectroscopy, including the measurements of Lamb shift, etc. These observations are found to match impeccably with theory, which is very well-developed for Hydrogen thanks to its simple structure."/>
-<node CREATED="1578462480574" ID="ID_1511222404" MODIFIED="1578462480574" TEXT="Wienczek, Quantum electrodynamic corrections to the 1s3d states of the helium atom">
-<node CREATED="1578461458966" ID="ID_1801021361" MODIFIED="1578619419934" TEXT="Helium is more challenging for QED calculations, being a more complex 3-body system, but energy levels and transitions rates may still be predicted with sufficient accuracy to test with modern experimental precision. "/>
-<node CREATED="1578462480576" ID="ID_1320043306" MODIFIED="1578619423647" TEXT="Namely, the 2^3P1-2^3P2 transition to 25kHz determines the fine structure constant to parts-per-billion and the 2^3P-2^3S to 1.4kHz, which can determine the nuclear charge radius to below 0.1%, better than muonic helium Lamb shift. In the former case, the bottleneck is that theory is not sufficiently developed!"/>
-<node CREATED="1578462480578" ID="ID_483674812" MODIFIED="1578462480578" TEXT="Measured 2L-3D intervals are about 1MHz larger than theory."/>
-</node>
 <node CREATED="1578619209109" ID="ID_1111829872" MODIFIED="1578619384491" TEXT="Notably, the Vassen group measured the forbidden 1557nm transition - did they test QED?"/>
-<node CREATED="1578462480561" ID="ID_1001003599" MODIFIED="1578462480561" TEXT="From Drake&apos;s email:">
-<node CREATED="1578462480565" ID="ID_987953870" MODIFIED="1578619309991" TEXT="However, given the 2^3P manifold is fixed to about 35kHz by theory and Luo&apos;s measurement of the 2 3P0 - 3 3D1 line, if there is a sub-MHz value for the 2 3P manifold splitting, then we can determine the 5 S manifold level to within 4MHz.In contrast, Gordon estimates theoretical uncertainty to be 0.7MHz - and our difference from theory is less than the systematic 4MHz error (lower in this case because we are closer to calibration line)"/>
+<node CREATED="1578461458966" ID="ID_1801021361" MODIFIED="1579062673680" TEXT="Helium is more challenging for QED calculations, being a more complex 3-body system, but energy levels and transitions rates may still be predicted with sufficient accuracy to test with modern experimental precision.  Namely, the 2^3P1-2^3P2 transition to 25kHz determines the fine structure constant to parts-per-billion and the 2^3P-2^3S to 1.4kHz, which can determine the nuclear charge radius to below 0.1%, better than muonic helium Lamb shift. In the former case, the bottleneck is that theory is not sufficiently developed! Measured 2L-3D intervals are about 1MHz larger than theory.">
+<node CREATED="1578462480574" ID="ID_1511222404" MODIFIED="1579062691594" TEXT="Wienczek, Quantum electrodynamic corrections to the 1s3d states of the helium atom"/>
 </node>
-<node CREATED="1578462480584" ID="ID_1442628997" MODIFIED="1578462480584" TEXT="Morton &amp; Drake again:">
-<node CREATED="1578462480584" ID="ID_1865940464" MODIFIED="1578621971169" TEXT="Presently there is a 33MHz uncertainty in the ground state ionization potential. Most of this comes from uncertainty in the 1s-2s transitions."/>
-<node CREATED="1578462480579" ID="ID_93459883" MODIFIED="1578619534552" TEXT="&quot;Unfortunately there is no precision laboratory data involving 3^3S1, 4^1S0, or 5^1S0&quot;"/>
-<node CREATED="1578462480586" ID="ID_233203543" MODIFIED="1578462480586" TEXT="The greatest error in predicted energy levels are for the 1^1S0, 3^1S0, 3^3S1,4^1S0,4^3S1,5^1S0,5^3S1."/>
-<node CREATED="1578462480587" ID="ID_1004953517" MODIFIED="1578462480587" TEXT="There is a 350kHz uncertainty in the prediction of the 5^3S_1 energy level, the others we could not reach."/>
-</node>
-<node CREATED="1578622279163" ID="ID_1272673056" MODIFIED="1578622283997" TEXT="Among outstanding discrepancies between predicted and observed Helium transition lines are the 7.5$\sigma$ difference in the $n=3$ singlet-triplet splitting\cite{Luo2015} and the $93\sigma$ difference between Martin&apos;s measurements of the $2^3P_2 \rightarrow 5^3S_1$ and $2^3P_2 \rightarrow5^3D$ transitions values, and recent predictions by Drake \cite{Drake2007}."/>
+<node CREATED="1578622279163" ID="ID_1272673056" MODIFIED="1579062702888" TEXT="Among outstanding discrepancies between predicted and observed Helium transition lines are the 7.5$\sigma$ difference in the $n=3$ singlet-triplet splitting\cite{Luo2015} and the $93\sigma$ difference between Martin&apos;s measurements of the $2^3P_2 \rightarrow 5^3S_1$ and $2^3P_2 \rightarrow5^3D$ transitions values, and recent predictions by Drake \cite{Drake2007}."/>
 <node CREATED="1578622279177" ID="ID_160875996" MODIFIED="1578622443406" TEXT="We contribute to both of these by measuring five transitions from the $2^3P_2$ state, improving on Martin&apos;s measurements with an order of magnitude greater precision, and making the first observation of the spin-forbidden $2^3P_2\rightarrow5^1D_2$ transition in Helium. "/>
-<node CREATED="1578462480557" ID="ID_203714964" MODIFIED="1578622370421" TEXT="Past measurements of the 2^3P-5D lines we observed were accurate to 140-200MHz. Our measurements are an order of magnitude more accurate than Martin&apos;s, and find that our measurements agree with current predictions within our systematic error budget. Martin&apos;s measurements were made using a nitrogen-cooled Helium discharge lamp fed through an in-vacuum prism onto photographic plates where line separations were measured with a ruler. In contrast, we perform direct, low-background absorption spectroscopy of excited states with ultracold atoms in hard vacuum. The rate of technological development that allows such improvements is quite remarkable."/>
-<node CREATED="1578461775328" ID="ID_658653927" MODIFIED="1578622448813" TEXT="In Martin&apos;s original paper, he only quotes measurements from 23P2-5D, indicating that his equipment did not have the resolving power to distinguish the lines from the 23P to the 53D states. We resolve these lines from the 23P2 to the 5D level individually for the first time. The method for measuring excited-state transitions extends to the first observation of this singlet-triplet line, which is of interest given the outstanding disagreement on the singlet-triplet interval as constrained by the precision measurement by Vassen&apos;s group. We therefore have four contributions to the NIST database of atomic spectral lines. Our measurements constrain  the $5^3D$ and $5^1D$ ionization energies of 4He\cite{Morton2006} to 150 parts per billion, and the $5^3S$ to 28 parts per billion."/>
+<node CREATED="1578462480557" ID="ID_203714964" MODIFIED="1578622370421" TEXT="Past measurements of the 2^3P-5D lines we observed were accurate to 140-200MHz. Our measurements are an order of magnitude more accurate than Martin&apos;s, and find that our measurements agree with current predictions within our systematic error budget. Martin&apos;s measurements were made using a nitrogen-cooled Helium discharge lamp fed through an in-vacuum prism onto photographic plates where line separations were measured with a ruler. In contrast, we perform direct, low-background absorption spectroscopy of excited states with ultracold atoms in hard vacuum. The rate of technological development that allows such improvements is quite remarkable.">
+<node CREATED="1579062734270" ID="ID_1336416975" MODIFIED="1579062738496" TEXT="Martin, 1960"/>
+</node>
+<node CREATED="1578461775328" ID="ID_658653927" MODIFIED="1579062772719" TEXT="In Martin&apos;s original paper, he only quotes measurements from 23P2-5D, indicating that his equipment did not have the resolving power to distinguish the lines from the 23P to the 53D states. We resolve these lines from the 23P2 to the 5D level individually for the first time. The method for measuring excited-state transitions extends to the first observation of this singlet-triplet line, which is of interest given the outstanding disagreement on the singlet-triplet interval as constrained by the precision measurement by Vassen&apos;s group. We therefore have four contributions to the NIST database of atomic spectral lines. Our measurements constrain  the $5^3D$ and $5^1D$ ionization energies of 4He to 150 parts per billion, and the $5^3S$ to 28 parts per billion.">
+<node CREATED="1579062773463" ID="ID_940649248" MODIFIED="1579062781360" TEXT="Martin 1960, \cite{Morton2006}"/>
 </node>
 </node>
+<node CREATED="1579062854332" ID="ID_828031717" MODIFIED="1579062870327" TEXT="Figure: Level diagram and beam geometry"/>
 </node>
 <node CREATED="1578462171164" ID="ID_283928467" MODIFIED="1578466337297" POSITION="right" TEXT="Method">
-<node CREATED="1578466349023" FOLDED="true" ID="ID_590248563" MODIFIED="1578466386872" TEXT="Raw">
+<node CREATED="1578466349023" FOLDED="true" ID="ID_590248563" MODIFIED="1579062826679" TEXT="Raw">
 <node CREATED="1578464966827" FOLDED="true" ID="ID_879999365" MODIFIED="1578466353512" TEXT="Apparatus">
 <node CREATED="1578461458983" ID="ID_289513835" MODIFIED="1578461458983" TEXT="6. BEC machine">
 <node CREATED="1578461458984" ID="ID_1433307591" MODIFIED="1578461458984" TEXT="As I said, getting your atoms ultra cold is a great way to do spectroscopy. That&apos;s pretty involved, though: We start with a liquid nitrogen-cooled plasma discharge which feeds through an aperture creating a beam of excited helium, which we collimate with a crossed laser beam, slow with a zeeman slower, and catch in a magneto-optical trap. We provide a gentle push with a weak laser into our so-called &apos;science chamber&apos;, which includes temperature and magnetic field stabilization, and evaporatively cool our atoms to about 300nK in about a femtobar of background gas, mostly Hydrogen. Atoms fall about 850mm before detection at the bottom of this rube goldberg."/>
@@ -78,17 +69,17 @@
 </node>
 </node>
 </node>
-<node CREATED="1578462172469" ID="ID_556151752" MODIFIED="1578466357799" POSITION="right" TEXT="Results">
-<node CREATED="1578466360319" FOLDED="true" ID="ID_582099246" MODIFIED="1578466369705" TEXT="Raw">
-<node CREATED="1578461458971" ID="ID_1893848342" MODIFIED="1578461458971" TEXT="To the point, we&apos;ve found three different ways to do spectroscopy, maybe some are common practise, but along the way we picked up three lines that been a single peak in past experiments, which were nearly 100 sigma away from theory. Theory looks fine. We also measured the weakest transition in a neutral atom to our knowledge, in two different ways."/>
-<node CREATED="1578461458975" ID="ID_912348323" MODIFIED="1578461458975" TEXT="Our precision is limited by absolute wavemeter accuracy, and as far as we can tell, theory is fine. But let&apos;s talk about the methods!"/>
+<node CREATED="1578462172469" ID="ID_556151752" MODIFIED="1579062806924" POSITION="right" TEXT="Results">
+<node CREATED="1578466360319" ID="ID_582099246" MODIFIED="1579062807298" TEXT="Raw">
 <node CREATED="1578461775413" ID="ID_950777253" MODIFIED="1578461775413" TEXT="On the horizontal axis is the probe laser frequency, relative to the zero-field prediction. The vertical axis is the response as measured by atom number loss relative to a model obtained by interpolating between calibration shots adjacent to each data shot. Theory values, in orange, are Zeeman shifted from the zero-field value according to the field calibration, with uncertainty included. The blue curve is the weaker magnetic field, and the red is the stronger, at eleven and eighteen Gauss, respectively. Using two field values gives us better statistics in calculating the field-free resonance, and also helps verify our identification of the transitions. This is the first recording of this transition, and it&apos;s super cool because it&apos;s actually a forbidden spin-flip transition, four orders of magnitude weaker than our cooling transition. This line nails two points of contention - the 2L-5D interval and the singlet-triplet gap."/>
 <node CREATED="1578461775418" ID="ID_613488542" MODIFIED="1578461775418" TEXT="The statistical error in the centre frequency of our Lorentzian fits is less than a MHz, fixing these transitions to some parts per billion, with MHz differences from theory.  The last measurement of the 2^3P-5^3D gap could not resolve the fine structure splitting, about 300MHz, but we resolve them with excellent visibility. To give credit where credit is due, the last measurement of these transitions used a discharge cell submerged in liquid nitrogen, passed through a window to an in-vacuum diffraction grating and illuminating a phosphor screen with lines whose splitting was measured with a ruler against a Mercury reference. Still, they were wrong."/>
 <node CREATED="1578461775421" ID="ID_348163938" MODIFIED="1578461775421" TEXT="But, our ultimate accuracy is limited by the wavemeter to 20MHz in the worst case, or 4MHz when close enough to the calibration line. Unfortunately, we don&apos;t have the precision required to compete with the state of the art, but had we a frequency comb reference then we&apos;d be in the game for tests of fundamental physics. Still, we correct the previous values by thirteen gigahertz,  update four values in the NIST database, and add a new line to boot. We conclude that within our experimental uncertainty, QED is correct."/>
 <node CREATED="1578461775411" ID="ID_1291903110" MODIFIED="1578461775411" TEXT="So, results! This is a pair of resonance peaks I observed by applying the probe beam at two different magnetic field strengths, and calibrated independently with radio spectroscopy."/>
+<node CREATED="1579062829404" ID="ID_1241092271" MODIFIED="1579062848216" TEXT="Figure: Spectra"/>
+<node CREATED="1579062848612" ID="ID_808998754" MODIFIED="1579062851576" TEXT="Table: Results"/>
 </node>
 </node>
-<node CREATED="1578462175156" ID="ID_546907793" MODIFIED="1578466378355" POSITION="right" TEXT="Discussion">
+<node CREATED="1578462175156" FOLDED="true" ID="ID_546907793" MODIFIED="1579062754200" POSITION="right" TEXT="Discussion">
 <node CREATED="1578466372767" FOLDED="true" ID="ID_1001620423" MODIFIED="1578466376969" TEXT="Raw">
 <node CREATED="1578461775390" ID="ID_780087921" MODIFIED="1578461775390" TEXT="Arguably, spectroscopy is the mother of all our understanding of matter. From  spectroscopy was born quantum theory, spin, and the prediction of antimatter in relativistic quantum electrodynamics. But for all its triumphs, our best physical theory, quantum electrodynamics, falls short in some high-precision instances. For example, if you switch the electron in Hydrogen for a Muon and measure the respective Lamb shifts, you can determine the radius of the proton and find that it&apos;s different in each case. We need more measurements to constrain or discard competing theories. Fortunately, the simplicity of Helium allows predictions of its transition lines to some parts per trillion, accurate enough to compete with modern spectroscopy."/>
 <node CREATED="1578461775334" ID="ID_26596044" MODIFIED="1578461775334" TEXT="## Contribution">
@@ -119,6 +110,16 @@
 <node CREATED="1578462480587" ID="ID_1386950393" MODIFIED="1578462480587" TEXT="There is a 350kHz uncertainty in the prediction of the 5^3S_1 energy level, the others we could not reach."/>
 </node>
 </node>
+<node CREATED="1578462480561" ID="ID_1001003599" MODIFIED="1578462480561" TEXT="From Drake&apos;s email:">
+<node CREATED="1578462480565" ID="ID_987953870" MODIFIED="1578619309991" TEXT="However, given the 2^3P manifold is fixed to about 35kHz by theory and Luo&apos;s measurement of the 2 3P0 - 3 3D1 line, if there is a sub-MHz value for the 2 3P manifold splitting, then we can determine the 5 S manifold level to within 4MHz.In contrast, Gordon estimates theoretical uncertainty to be 0.7MHz - and our difference from theory is less than the systematic 4MHz error (lower in this case because we are closer to calibration line)"/>
+</node>
+<node CREATED="1578462480584" ID="ID_1442628997" MODIFIED="1578462480584" TEXT="Morton &amp; Drake again:">
+<node CREATED="1578462480584" ID="ID_1865940464" MODIFIED="1578621971169" TEXT="Presently there is a 33MHz uncertainty in the ground state ionization potential. Most of this comes from uncertainty in the 1s-2s transitions."/>
+<node CREATED="1578462480579" ID="ID_93459883" MODIFIED="1578619534552" TEXT="&quot;Unfortunately there is no precision laboratory data involving 3^3S1, 4^1S0, or 5^1S0&quot;"/>
+<node CREATED="1578462480586" ID="ID_233203543" MODIFIED="1578462480586" TEXT="The greatest error in predicted energy levels are for the 1^1S0, 3^1S0, 3^3S1,4^1S0,4^3S1,5^1S0,5^3S1."/>
+<node CREATED="1578462480587" ID="ID_1004953517" MODIFIED="1578462480587" TEXT="There is a 350kHz uncertainty in the prediction of the 5^3S_1 energy level, the others we could not reach."/>
+</node>
+<node CREATED="1578462480562" ID="ID_887295965" MODIFIED="1579062636126" TEXT="&quot;The main significance of your work will likely be a determination of the absolute ionization energy of the 3 3S and 5 3S states to a sub-MHz accuracy where the theoretical uncertainties are much larger due to the QED terms.&quot;"/>
 </node>
 <node CREATED="1578465107947" ID="ID_1933709989" MODIFIED="1578618077948" POSITION="right" TEXT="Figures and tables">
 <node CREATED="1578465110939" FOLDED="true" ID="ID_1392776548" MODIFIED="1578618482714" TEXT="Schematic &amp; level diagram">
@@ -130,8 +131,7 @@
   <body>
     <img src="chapter_map_8238668298060384200.jpeg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1578618065249" MODIFIED="1578618065249">
 <richcontent TYPE="NODE"><html>
@@ -141,8 +141,7 @@
   <body>
     <img src="chapter_map_3197502701865396265.jpeg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1578465136490" FOLDED="true" ID="ID_1964504813" MODIFIED="1578618483947" TEXT="Apparatus &amp; laser system">
@@ -154,8 +153,7 @@
   <body>
     <img src="chapter_map_6487484447314459549.jpeg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1578465151834" FOLDED="true" ID="ID_1395864787" MODIFIED="1578618484537" TEXT="Observed spectra">
@@ -167,8 +165,7 @@
   <body>
     <img src="chapter_map_8891582954877060972.jpeg" />
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1578465164250" ID="ID_1598052253" MODIFIED="1578465177615" TEXT="Zeeman data/theory?"/>
