@@ -1,0 +1,105 @@
+Notermans
+Derivation of Rydberg constants from fundamental constants early success [N Bohr, on the constitution of atoms and molecules] 
+'Doublet' features finally explained by dirac's relativistic description, uncovering spin and antimatter [P A M Dirac, the quantum theory of the electron]
+NTM Kelvin: Physics understood except for Michaelson-Morley expt and inability of Maxwell-Boltzmann to explain specific heats in terms of continuous energy scales 
+NTM All overturned by Einstein (building on the work of many - see his classic humility in opening of his book) 
+NTM [10-12] Subsequent observation of the Lamb shift [10,11] required QED [12] by Bethe  
+	W E Lamb, R C Retherford, Fine structure of the hydrogen atom by a microwave method, Phys Rev 72, 1947
+	W E lamb, R C Retherford, Fine structure of the hydrogen atom, phys rev 79, 1950
+	H A Bethe, THe electromagnetic shift of energy levels, Phys Rev 72, 1947
+NTM [13] Astoundingly fast progress within 2yrs [Dyson 13], after which any observable could be expressed as a sum over constituent processes of increasing complexity weighted by alpha; and which posited that the vacuum was not empty but alive with virtual particles which manifested as measurable changes in the energy levels of atoms, including the Lamb shift 
+	F J Dyson, the radiation theoreis of TOmonaga, Schwinger, and Feynman, phys rev 75, 1940
+NTM [20,21] And also, QED predicts anomalous electron magnetic moment to some 9 [20] - accurately [21] 
+	T aoyama et al, Tenth-order QED ontribution to the electron g-2 and an improved value of the fine structure constant, phys rev lett 109, 2012
+	D Hannecke et al, New measurement of the electron magnetic moment and the fine structure constant, phys rev lett 100, 2008
+NTM We are in a regime where QED and experiments seem to be good - can we thus turn the lens back on the constants?	 
+NTM [23-59] history of Helium spectroscopy theory and measurements
+NTM [62-73] Are constants really constant?  for tests of drift or spatial variation  cf dimensionless constants, Dirac's idea 
+	E Peik, fundamental constants and units and the search for temporal variation, Nucl Phys B (proc suppl.) 203-204, 2010
+	T Chiba, the constantcy of the constants o fnature: Updates, prog th phys 126, 2011
+	N Hundemann et al, improved limit on a temporal variation of mp/me from comparisons of Yb and Cs atomic clocks, phys rev lett 113, 2014
+	R M Godun et al, frequency ratio of two atomic clock transitions in 171Yb+ and constraints on the time variation of fundamental constants
+	J Badonaite et al, a stringent limit on a drifting proton-to-electron mass ratio from alcohol in the early universe, Science 339, 2013
+	J Badonaite et al, Constraints on a varying proton-electron mass ratio 1.5 billion years after the big bang, phys rev lett 114, 2015
+	J K Webb et al, futher evidence for cosmological evolution of hte fine structure constant Phys rev lett 87, 2001
+	J K Webb et al indications of a spatial variation of the fine structure constantsPhys Rev Lett 107, 2011
+	J A King et al spatial variation in the fine-structur constant - New results from VLT/UVES, Mon Not R Astron. Soc, 422, 2012
+	P Bonifacio et al, fundamental constants and high-resolution spectroscopy, Astron Nachr. 335, 2014
+	A M M Pinho, C J A P Martins, Updated constraints on spatial variations of the fine-structure constant
+	W Ubachs et al, Physics beyond the standard model from hydrogen spectroscopy, J Mol Spec 320, 2016
+NTM p10 He is promising candidate to measure alpha via recoil measurements in almost-QED dependent way 
+NTM [74-81] He for fundamental constants, mostly ref'd in spectroscopy paper
+NTM [111-120] key papers in cold atoms up to BEC/DFG 
+	B DeMarco, D S Jin, onset of fermi degeneracy in a trapped atmoic gas, science 285 1999
+	A G truscott et al, observation of fermi pressure in a gas of trapped atoms, science 291, 2001
+	F Schreck et al, quasipure Bose-Einstein condensate immersed in a fermi sea, phys rev lett 87 2001
+	[Many body phys] I bloch, J Dalibard, W Zwerger many-body physics with ultracold gases, rev mod phys 80, 2008
+	[Many body phys/scattering] C Chin et al, feschbach resoannces in ultracold gases, rev mod phys 82, 2010
+NTM [123-130] He* BECs 
+	A robert et al, A bose-einstein condensate of metastable atoms, science 292, 2001
+	F Pereira dos Santos et al, bose einstein condenstation of metastable helium, phys rev lett 86, 2001
+	A S Tychkov et al, metastable helium bose-einstein condensate with a large number of atoms
+	R G Dall & A G truscott 2007
+	S C doret et al, buffer-gas cooled bose-einstein condensate phys rev lett 103, 2009
+	M keller et al, bose-einstein condensate of metastable helium for quantum correlation experiments, phys rev a 2009
+	Q bouton et al, fast production of Bose-Einstein conensates of metastable helium, phys rev a 91, 2015
+	A S flores, simple method for producing Bose-Einstein condensates of metastable helium using a single-beam optical dipole trap, Appl Phys B 121, 2015
+NTM [131] 3He* DFG, as direction for french group 
+	J M McNamrara, degenerate bose-fermi mixture of metastable atoms, phys rev lett 97, 2012
+NTM [132] He* overview - Vassen 
+	Vassen et al cold and trapped metastable nobele gases
+NTM [133-136] accurate transition freqs and oscillator strengths allows for precise calculations of AC and DC polarizabilities, which allow for accurate determinations of tune-out and magic wavelengths 
+	R P M JW Notermans et al, magic wavelengths for the 2 3S 2 1S transition in helium
+NTM [163-168] atom correlations with He* 
+	T Jeltes et al, comparison of the HBT effect for bosons and fermions, nature 445, 2007
+	M SChellekens et al, HBT effect for ultracold quantum gases, science 310, 2005
+	S S Hodgman et al, direct measrurement of long-range third-order coherence in BEC, science 331, 2011
+	R G Dall et al, ideal n-body correlations with massive particles, nat phys 9, 2013
+	W RuGway et al, correlations in amplified four-wave mixing of matter waves, phys rev lett 107, 2011
+	R Lopes et al, second-order coherence of superradiance from a bose-einstein condensate, phys rev A 90, 2014
+NTM [169-172] HOM, Wheeler as classic recapitulation of QM experiments 
+	R lopes et al, aomic HOM experiment, nature 520 2015
+	C K Hong, Z Y Ou, L Mandel, measruement of subpicosecond time intervals between two photons by interference, phys rev lett 59, 1987
+	A G manning et al, single-atom source in the pico-kelvin regime, phys rev lett 113, 2014
+	A G Manning et al, wheelers delayed-choice expt with a single atom, phys rev less 59 1987
+NTM [173-176] towards entangled pairs 
+	A perron et al, observation of atom pairs in spontaneous four-wave mixing of two colliding bose einstein condensates, phys rev lett 99, 2007
+	V Krachmalnicoff et al, spontaneous four-wave mixing of de broglie waves: beyond optics, pys rev lett 104, 2010
+	J C Jaskula et al, sub-Poissonian number differences in four-wave mixing of matter waves, phys rev lett 105, 2010
+	K V kherunstyan et al, violation of the Cauchy-Schwartz in equality with matter waves
+NTM alpha can be determined to 2.5e-10 in the electron magnetic moment [20,21] 
+NTM [177-185] timeline of cold atoms culminating in He* BEC - two decades at VU
+NTM [113,114] MOT papers - large detuning for He* needed to reduce phot-assisted collision rate [147,151]. Gives field gradients, beam power and detuning, typical size and temp and density. 
+		Pereira dos santos et al, penning collisions of laser-cooled metastable atoms, eur phys J D 14, 2001
+NTM [153,186,191] For temps below 6.5mK, only s-wave collisions are relevant for collision expansion in partial waves (basis fns for solution of born-oppenheimer scattering problem) 
+	R J W Stas et al, homonuclear ionizing collisions
+	J weiner et al, experiments and theory in cold and ultracold collisions, rev mod phys 71, 1999
+NTM [139,148,153,155, 156] expt [137.138.141.143] thry the penning- and auto-ionization processes are coupled to the singlet and triplet channels by interatomic interaction. Extensively studied  
+	M W Muller et al, experimental and theoretical studeis of the bi-excited collision systems at thermal and subthermal wavelengths
+	P J J Tol et al, large numbers of cold metastable helium atoms in a MOT
+	R J W Stas et al, Homonuclear ionizing collisions 
+	G B Partrisdhe t al, bose-einstein condensation and spin mixutres of optically trapped metastable atoms
+	J S Borbely, Magnetic-field dependent trap loss of metastable helium, phys rev A 85, 2012
+	K L Bell et al, penning ionization by metastable helium atoms, J phys B, at mol phys 1, 1968
+	W H Miller, theory of penning ionization - atms, J chem phys 52, 1970
+	G Shlypanikov et al, decay kinetics and bose condensation in a gas of spin-polarized triplet helium
+	Leo et al, ultracold collisions of metastable helium atoms
+NTM [148,155]  Loss rate 1e-10 cm^-3 in unpolarized gas 
+	Tol, large numbers of cold metastable helium atoms in a MOT
+	G B partridge et al, BEC and spin mixtures
+NTM [141,156] The quintet potential is forbidden to connect to the PI and AI channels as it would require  spin flip. Of course higher order processes like relazation induced ionization or magnetic field dependent spin relaxation  can lead to ionization, but the two body loss rate is some 4 OoM smaller for quintet 
+	Shlyapnikov et al & Borbely et al
+NTM mot lifetime limited by photoassociative collisions, typically - and using big beams for lower density, high number 
+NTM [192-194] majorana loss 
+	E Majorana, Atomi orientati in campo magnetico variabile, Nuovo Cim 9, 1932
+	W Petrich et al, STable, tightly confining magnetic trap for evaporatvie cooling of neutral atoms, phys rev lett 74 1995
+	R dubessy et al, rubidium-87 bose einstein condensate in an optically plugged quadrupole trap
+NTM [185] derivation of detector flux profiles - inc mean field 
+	Tychkov PhD thesis
+NTM [148,149,153,180] ionizong collision rates, photoassociation spectroscopy via ions [150,181], [125] as measure of BEC onset via density increase 
+	Tol large numbers, 
+	Hershbach, suppression of penning ionization by spin polarization of cold He(2 3S) atoms, phys rev A 61, 2000
+	R JW Stas, homonuclear ionizing collisions
+	J C J Koelemeij et al, magneto-optical trap for metastable helium at 389nm
+NTM [184] extensive discussion of correction factors for absorption imaging 
+	P J J Tol, PhD thesis

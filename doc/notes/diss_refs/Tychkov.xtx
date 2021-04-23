@@ -1,0 +1,57 @@
+Tychkov
+	TKV [7,14] In 1925, extending Bose's work [7], Einstein predicted that so-called bosons collapse into a new state of matter [14] - noting critical temperature is a millionth of the coldest part of the universe 
+		S N Bose, Plancks Gesetz und lichtquantenhypothese, Zeischrift fur Physik A 26, 178-181 Dec 1925
+		A Einstein, Guantentheorie des einatomigen idealen gases: zweite abhandlung, Sitzungsber Kgl Preuss Akad Wiss, p3 Jan 1925
+	TKV [48,63] molasses and MOT 
+		P D Lett, W D Phillips, S L Rolston, CE Tanner, R N Watts, C I Wetbrook, Optical Molasses, journal of the optical society of america B 6, 2084-2107, Nov 1981
+		E L Raab, M Prentiss, A Cable, S Chu, D E Pritchard, Trapping of neutral sodium atoms with radiation pressure, Physical Review Letters 59, 2631-2634, Dec 1987
+	TKV [30,37,49] Laser cooling limits are low enough to load mag traps which can be evap cooled
+		H F Hess, Evaporative cooling of magnetically trapped and compressed spin-oolarized hydrogen, Physical Review B 34, 3476-3479, Sept 1986
+		W Ketterle and N J van Druten, Evaporative cooling of traped atoms, advanes in atomic molecular and optical physics 37, 181-236, 1996
+		O J Luiten, M W reynolds, J T M Walraven, Kinetic theory of the evaporative cooling of a trappe dgas, Physical Reveiw A 53, 381-389 Jan 1996
+	TKV [1,8,13] BEC nobel papers 
+		M H ANderson, J R Ensher, M R Mathews, C E Wieman, and E A cornell, observation of bose-einstein condensation in a dilute atomic vapor, Science 269, 198-201, July 1995
+		C C Bradley, C A Sackett, J J Tollett,  G Hulet, evidence of Bose-Einstein condesnation in an atomic gas with attractive interactions, phyiscal review letters 75, 1687-1690, aug 1995
+		K B Davis, M O Mewes, M R Andrews, N J van Druten, D S Durfee, D M Kurn, W Ketterle, Bose-Einstein condensation in a gas of sodium atoms - Physical Review Letters 75, 3969-3973, Nov 1995
+	TKV [27,72] suppression of Penning ionization 
+		N Herschbach, P J J Tol, W Hogervorst, W Vassen, Suppression of penning ionization by spin polarization of He(2 3S) atoms, physical reveiw A 61, april 2000
+		G V Shlyapnikov, J T M Walraven, U M Rahmanov, M W Reynolds, Decay kinetics and bose condensation in a gas of spin-polarized triplet helium, Physical Review Letters 73, Dec 1994
+	TKV [82] limits of zeeman slower to 35%? 
+		P J J Tol, trappin gand evaporative coolin of metastable helium, PhD thesis, VU Amsterdam 2005
+	TKV [24] Haraguchi alternative source of metastables with rf discharge in crystat cooled source, could load directly to MOT (did they do it?) 
+			M Haraguchi, Y Shibayama, K Kikuchi, M okamoto, H Sasada, K shirahama, production of cold metastable ehlium atoms in a crysotat, Physica B: Condensed Matter 329-333, May 2003
+	TKV [77] DC discarge is .01% effective 
+		R J stas, J M McNamara, W Hogervosrst, W Vassen, homonuclear ionizing collisions of laer-cooled metastable helium atoms, Physical Rview A 73, March 2006
+	TKV [66,82] avoid the zeeman resonance at 563G  
+		W Rooijakkers, Wo Hogervorst, W Vassen, an intense collimated beam of metastable helium atoms by two-dimensional laser cooling, Optics COmmunications 123, january 1996
+		Tol, PhD thesis
+	TKV [29] MOT capture velocity estimate 
+		N Herschbach, Trrapped Triplet helium atoms: inelastic collisions and evaporative cooling, PhD thesis VU Amsterdam 2003
+	TKV [63] MOT first suggested by Dalibard and realized by Raab 
+		E L Raab, M Prentiss, A Cable, S Chu, D E Pritchard, Trapping of neutral sodium atoms with radiation pressure, Physical Review Letters 59, 2631-2634, Dec 1987
+	TKV [83,86] detailed studies of MOTs 
+		C G Townsend, N H edwards, C J cooper, K P zetie, C J foot, A M Steane, P Szrfitgiser, H Perrin, J Dalibard, Phase-space density in the magneto-optical trap, Physical review A 52, august 1995
+		T Walker, D sesko, C E Wiemann, collective behaviour of opticlly trapped neutral atoms, physical review letters 64, jan 1990
+	TKV [3,43,50] Early He expts  limited in density by Penning ionization, some 100x smaller than alkali-metal MOTs where density is limited by reabsorption pressure 
+		F bardou, O emile, J M courty, C I Westbrook, A Aspect, magneto-optical trapping of metastable ehlium: Collisions in the presence of resonant light, Europhysics letters 20, Dec 1992
+		M Kumakura N Morita, visible observation of metastable helium atoms confined in an invisible/visible resonance trap, japanese journal of applied physics 31, march 1992
+		H C Mastwijk, J W thomsen, P van der straten, A niehaus, optical collisions of cold, metastable helium atoms, physical review letters 80, june 1998
+	TKV [66,80] large MOT overcame number limitation (-22Gamma, huge? compared with other species) 
+		W Rooijakkers, Wo Hogervorst, W Vassen, an intense collimated beam of metastable helium atoms by two-dimensional laser cooling, Optics COmmunications 123, january 1996
+		P J J Tol, N Herschbach, E A Hessels, W Hogervorst, W Vassen, alrge numbers of cold metastable helium atoms in a magneto0optical trap, physical review A 60, august 1999
+	TKV [29] two regimes of motion in MOT capture 
+		N Herschbach, Trrapped Triplet helium atoms: inelastic collisions and evaporative cooling, PhD thesis VU Amsterdam 2003
+	TKV [48] steady-state temperature predicted by molasses theory (in 1D) of order 1mK 
+		P D Lett, W D Phillips, S L Rolston, CE Tanner, R N Watts, C I Wetbrook, Optical Molasses, journal of the optical society of america B 6, 2084-2107, Nov 1981
+	TKV [80] Tol et al two body loss rate in MOT 
+		P J J Tol, N Herschbach, E A Hessels, W Hogervorst, W Vassen, alrge numbers of cold metastable helium atoms in a magneto0optical trap, physical review A 60, august 1999
+	TKV [29] SAS at 1083nm 
+		N Herschbach, Trrapped Triplet helium atoms: inelastic collisions and evaporative cooling, PhD thesis VU Amsterdam 2003
+	TKV [73,82] Beer-Lambert law for abs img including effective sat intens, including polarization and CJ-coefs, a lineshape factor, and simple sat intens.  
+		A E siggman, Lasers (University science books, Mill valley CA) 1986
+		P J Tol PhD thesis
+	TKV [10] thomas-fermi approx applies when mean field dominates kinetic term, mean fled balanced by harmonic confinement 
+		F Dalfovo, S Georgini, L P Pitaevskii, S stringari, theory of bose-einstein condensation in trapped gases, rev mod phys 71, april 1999
+	TKV [9,10] expanding condensate density distributions 
+		Y Castin, R Dum, bose-einstein condensation in time-dependent traps, Physical Review Letters 77, 1996
+	TKV [71,77,80] penning ions for loss rate determinations, [71] scat len, [26] photoassoc spectroscopy, [70] growth of condensate 

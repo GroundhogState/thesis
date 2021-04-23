@@ -1,0 +1,293 @@
+
+
+
+
+\section{Bose-Einstein condensation}
+
+% There are numerous treatments of the theory of Bose-Einstein condensation, for example the textbooks \cite{PitaevskiiStringari,PethickSmith} and review articles \cite{Dalfovo,Pitaevskii, etc}. The essential background for the rest of this thesis, discussed below, draws on these standard sources.
+
+% from \cite{pitaevskiistringari} 
+
+% They introduce the one body density matrix $n^{(1)}(r,r') = \langle \Psi^\dagger(r)\Psi(r')\rangle$ in terms of the creation/annihilation operator. Is this the same as the familiar $\rho$? I think so...  'the meaning of the average will be discussed later'
+% Of course the field operators satisfy
+% $$
+% [\Psi(r),\Psi^\dagger(r')] = \delta(r-r'), [\Psi(r),\Psi(r)]=[\Psi^\dagger(r),\Psi^\dagger(r')]=0
+% $$
+% Which contains the one-body density $n(r) = n^{(1)}(r,r)$ on the diagonal, where $\int dr n(r) = N$. One can also work in the Fourier basis via $\Psi(p) = (2\pi\hbar)^{-3/2}\int dr exp(-ip\cdot r/\hbar)\Psi(r)$. 
+% In an isotropic uniform system (which can be employed in the local density approx) in a volume V, the one-body density depends only on the separation of $r$ and $r'$ as in
+
+% $$
+% n^{(1)}(s) = \frac{1}{V}\int dp n(p) exp(ip\cdot s/\hbar)
+% $$
+% Below the critcal temperature the density has the form $n(p) = N_0\delta(p) + \tilde{n}(p)$, where $N_0$ is the condensed number. This means that one has $n^{1}(s)\rightarrow n_0=N_0/V$ which involves offdiagonal parts of the one body density.
+% If we have the single-particle eigenfunctions $\phi_i$ then we can also write $n^{1}(r,r') = \sum_i n_i \phi_{i}^*(r)\phi_{i}(r')$ where $n_i$ are the occupation numbers of the single particle states. One can conveniently separate the condensed and noncondensed parts 
+% $n^{1}(r,r') = N_0 \pis_0^*(r)\phi_0(r') + \sum_{i\neq0} n_i \phi_{i}^*(r)\phi_{i}(r')$
+% wherein the latter term is replaced by an integral in the thermodynamic limit which vanishes at infinity (incoherence??)
+
+% The eigenfunctions can be used to express the field operator $\Psi(r) = \sum_i \phi(i) \hat{a}_i$ in terms of the creation operator, which obeys similar commutation relations. This then leads to a similar separation of the field operator into the condensed and noncondensed part,
+% $$
+% \Psi(r) = \phi_0\hat{a}_0 + \sum_{i\neq0}\phi_r(r)\hat{a}_i,
+% $$
+
+% which is where Bogoliubov begins, namely by assuming that $[\hat{a}_o,\hat{a}^{\dagger}_0] = 0$ and replacing them by $\sqrt{N_0}$, ie assuming the condensate is a coherent state. The obvious form is then $\Psi(r) = \Psi_0(r) + \delta\Psi(r)$ where the first term on RHS is the complex fn $\sqrt{N_0}\phi_0$ and the last term is a sum over other modes. The parameter $\Psi_0(r)$ is called thw wavefunction of the condensate and can be written $\Psi_0(r) = |Psi_0(r)|exp(i\mathcal{S}(r))$ where the phase $\mathcal{S}$ characterizes coherence and superfluidity. Thus $\Psi_0$ is the order parameter and is zero above the critical temperature.
+
+% The textbook definition of the grand canonical ensemble gives the probability that a system of $N'$ particles is in a state $k$ with energy $E_k$ as
+% $$
+% P_{N'}(E_k) = \exp(\beta(\mu N' - E_k))
+% $$
+% Where $\mu$ is the chem pot of the reservoir in contact with the system of interest. One major topic is the grand canonical partition function
+
+% $$
+% Z(\beta,\mu) = \sum_{N'=0}^{\infty} e(\beta\mu N') Q_{N'}(\beta)
+% $$
+% where $Q_{N'}$ is the canonical partitionfunction for $N'$ particles. This is assuming that P(System|Reservoir) = P(system)P(reservoir) ie states of sys and res are independent. One gets the thermodynamic potentials
+% $$
+% \Omega = E - TS - \mu N = - k_B T \ln Z
+% $$
+
+% Consider now a system described by single-particle hamiltonians $\hat{H} - \sum_i\hat{H}^{(1)}_i$, then the schrodinger equation $H^{(1)}\phi_i(r) = \vareps_i\phi_i(r)$ specifies the many-body eigenstate. 
+% In the idal bose gas one can find $\Omega = k_B T\sum_i \ln(1-e^{\beta(\mu-\vareps_i)})$ which then gives the number of particles via 
+
+% $$
+% N = -\frac{\partial \Omega}{\partial\mu},
+% $$
+
+% or in terms of the occupation numbers (what's the general principle here? something something conjugates)
+% $$
+% \bar{n}_i = -\frac{\partial Z}{\partial \beta \vareps_i} = \frac{1}{\exp(\beta(\vareps_i-\mu))-1}
+% $$
+% which is the famous Bose-Einstein statistics. One must have $\mu<\vareps_0$ which would otherwise entail a negative number of particles in the ground state. In the limit $\mu\rightarrow\vareps_0$ the condensed number $N_0=\bar{n}_0$ grows rapidly. 
+
+% NB the 'coherent state' approximation is quite profound, like the transition from treating the quantized electromagnetic field to the Maxwell equations, this has the flavour of a classical field but one which is consitued by matter which has dispersed in some delocalized state
+
+% Assuming a slow variation n $\Psi(r,t)$ and using the Born approximation for the interactions one arrives at the Gross-Pitaevskii equation
+% $$
+% -\hbar\partial_t\Psi(r,t) = \left(-\frac{\hbar^2\nabla^2}{2m} + V(r,t) + g|\psi(r,t)|^2\right)\Psi(r,t)
+% $$
+% where $g=4\pi\hbar^2a/m$, both of which are valid for arbitary interactions dominated by the s-wave scat len. A many-body approximation can come from the hartree-fock approx $\Phi(r_1,...r_N) = \prod_i (\Psi(r_i)/\sqrt{N})$ using solns of the GPE.
+
+% The stationary (action?) principle can be used to derive the energy functional 
+% $$
+% E = \int\left(\frac{\hbar^2}{2m}|\nabla\Psi|^2 + V(r)|\Psi|^2 + \frac{g}{2}|\Psi|^4\right)dr
+% $$
+% from which the GPE follows. 
+
+% If one assumes that the density varies slowly in space one can employ the Thomas-Fermi approximation, namely when the density varies on scales larger than the healing length $\xi = \hbar/\sqrt{2mgn}$
+
+% Of course we work in harmonic traps defined by 
+% $$
+% V(r) = \frac{1}{2}m\omega_{x}^2x^2+\frac{1}{2}m\omega_{y}^2y^2+\frac{1}{2}m\omega_{z}^2z^2
+% $$
+% Where the oscillator freqs define the geometric frequency $\omega_{ho} = (\omega_x\omega_y\omega_z)^{1/3}$ and the oscillator length $a_{ho}=\sqrt{\hbar/m\omega_{ho}}$ (the size of the ground state for non-interacting particles) which in turn defines physical parameters like the condensate density and momentum width. 
+
+% The critical temperature in an ideal harmonically trapped gas is 
+% $$
+% k_B T_c^0 = \hbar\omega_{ho}(N/\zeta(3))^{1/3}
+% $$
+% Below which the condensed fraction is given by
+% $$
+% \frac{N_0}{N} = 1-(T/T_c^0)^3,
+% $$
+% with the peculiar feature that the number of thermal atoms is then $N_T = \zeta(3)(k_B T/\hbar\omega_{ho})^3$, which is independent of N. This so-called saturation, wherein adding extra particles would simply grow the condensate, is not expected in interacting gases, where instead...
+
+% A useful parameter $\eta = \alpha(N^{1/6}a/a_{ho})^{2/5}$ where $\alpha = 15^{2/5}\zeta(3)^1/3)/2\approx1.57$, which depends very weakly on N but strongly on $a$, and shifts the critical temperature by $\delta T_c/T_c^0 = -0.43\eta^{5/2}$ (or equiv? $-1.3 a/a_{ho} N^{1/6}$, from Dalfovo) and a subsequent modification of the condensed fraction - plot these side by side
+% $$
+% \frac{N_0}{N} = 1-...
+% $$
+% See pp229, pitaevskii \& stringari, and MATLAB code (bec_properties). These deviations from ideal behaviour have been observed in experiments (Tammuz et al 2011 PRL 106, Smith et al 2011, PRL 106). One can understand these in terms of the repulsive interactions reducing the density, thus driving down the phase space density $n\lambda^3$ at a given temperature, requiring yet lower temperatures for condensates to form.
+
+% There is also a finite-N correction to the crit temp$\approx -0.73 \bar{\omega}/(\omega_{ho} N^{1/3})$, which diminishes for large N, where $\bar{\omega}$ is the arithmetic mean trap freq.
+
+% As in the uniform gas one sees a separation of the momentum dist into the Gaussian form of the thermal part,
+
+% $n_T(p) = \frac{1}{\lambda_T m\omega_{ho}}g_{3/2}(e^{-\beta p^2/2m})$, and the condensed part (TF picture),
+
+% The repulsive interactions widen the cloud. This smooths the density variation and thus the kinetic energy which is proportional to the gradient of the order parameter (hence density). Neglecting the kinetic term in the GPE yields the thomas-farmi solution which gives the density profile
+% $$
+% n_{TF}^0(r) = (\mu_{TF}^0-V(r))/g
+% $$
+% where the checmical potential is (get from QD paper) and the energy is (get from QD paper). Quantitatively the TF approx works when $N a/a_{ho}>>1$. This produces the famous inverted-parabola density profile. 
+% There are also corrections beyond the mean-field (LHY) but these are not significant for the purposes of this thesis.
+
+
+
+% The momentum distribution can be obtained from the Fourier transform of the TF density but the expansion dynamics affect the profile, as...
+
+
+
+% \subsection{Interacting BEC}
+
+
+% \section{Interacting atoms}
+% Move this section to BEC part, not atomic structure
+
+% Preamble: No gas is really ideal; something something defining features and controlling physics etc.
+% BEC itself is metastable. Requires \cite{pitaevskiistringari}
+% 	Low enough density that three-body colisions are rare. Fr higher densities than the 1e13-1e15 atoms//cm^3 range in expts, recombination effects are cimportant. Low densities imply that low temperatures are required to achieve high phase space density.
+% 		The The gas should be kept away from any surfaces, which would interact with the gas (other than He) and proide a substantial heat reservoir
+% Two-body collisions allow thermalization as long as the relaxation times are shorter than the sample lifetime. Esp important in evap. 
+% First, elastic, and then important nonelastic.
+
+% An overview of atomic scattering physics can be found in the \cite{PitaevskiiStringari} and \cite{PethickSmith}, with more detail in the latter. An exhaustive review of low-temperature scattering studies up to the turn of the millenium can be found in \cite{weiner99}. A brief recap is presented here, drawing from both \cite{PitaevskiiStringari,PethickSmith} unless otherwise referenced.
+
+% Neglecting spin-orbit and relativistic effects the scattering problem reduces to the Keplerian schrodinger equation
+% 	$(hbar^2\Delta/2m* + V(r) - E)\psi(r) = 0,$
+% 	where $r=r_1-r_2$ and $m*=m_1m_2/(m_1+m_2)$, and $E>0$. One is concerned with the asymptotic regime where $r$ is much larger than the scale of $V(r)$. The solution takes the form of a superposition of the initial plane wave of the incipient particle, plus an angle-dependent term,
+% 	$\psi(r) = exp(ikz) + f(\theta)exp(ikr)/r$, where $k=\sqrt{2m*E/\hbar}$ and $\theta$ is the angle from the z axis. In the low-energy limit, f is independent of angle and $f(\theta)\rightarrow-a$ is called the s-wave scattering length (from the partial wave expansion, which decomposes $f$ into a spherical basis which includes Legendre polynomials labeled $s,p,d,f,..$ in order of increasing angular momentum). For polarized bosons, the total cross-section approaches $\sigma=8\pi a^$, but for fermion pairs with odd total spin, thecross section tends to zero. 
+
+% 	The differential cross section is the current per solid angle divided by the input flux. That is, the total cross section is the probability of scattering. 
+% Keplerian problem solved in centre-of-mass coordinates
+% 	For spherically symmetric interactions, $f(\theta)$ depends only on scattering angle (no orientation term required)
+% 	Wavefunction takes the form $\psi=1-a/r$ in the low-energy limit, and $a$ fixes the intercept in the r-axis (at the origin, but div by zero??)
+
+% 	BEC are dominated by long-wavelength behaviour and so an effective treatment which integrates out the high-frequency modes can be used to simplify treatment. The scattering problem can be considered in momentum space, yielding a scattering matrix subject to the Lippmann-Schwinger equation, yielding the effective interaction strength for low-energy scattering as $4\pi \hbar^2 a/m$, also referred to as the pseudopotential. This necessarily washes out short-range correlations but makes fairly accurate calculations much more tractable, in particular using Hartree or Hartree-Fock methods (as in the GPE, right?). 
+% 	Of course, the effective interaction neglect small-scale features that are relevant when atoms approach each other, which is captured in part by the contact, the subject of chapter X.
+% Chin et al, complete updated review inc measured properties for most investigated species
+% At low temperatures and densities the sole parameter pertaining to the interatomic interactions is the s-wave scattering length. 
+
+% See Dalibard 1999 and Heinzen 1999 for reviews of scattering length determinations
+
+% Feshbach resonances originated in Feshbah's work in nuclear physics (Feshbach 1958, 1962) and Fano worked on in atomic context (fano 1961), but these fano-feshbach resonances are referred to in general as feshbach resonances. The upshot is they allow setting $a = \tilde{a}(1-\Delta/(B-B_0)$ where $\tilde{a}$ is the value when the field is far from a resonance and $\Delta$ sets the resonance width.
+% 	Scattering length can even be negative (what does this correspond to, though? The phase of the outgoing particle, and the size gives the likelihood it will scatter?)
+% 		-> Bosenova experimetns and condensate collapse
+
+
+
+% Collisional effects limit the lifetime of trapped gases, and three-body recombination becomes an issue at large densities or scat len. Helium has another problem, Penning ionization. Who was Penning, and why did he study this ionization?
+
+% \cite{weiner99}
+% Doppler and molasses temperatures are called Cold. Collisions in the sub-microkelvin regime are below the recoil energy of light and so must occur in the dark - this is the 'ultracold' regime.
+% Penning rates are EVEN WORSE in a MOT because of S-P collisions, the latter of which are 14e-8 cm^3/sec vs 2e-9 cm^3/sec as calculated for the S state - light-assisted collisions previously limited helium MOTs in density and thus number until larger beams and detunings were used \cite{tol99} wherein Pennig rates are of order 5e-9 cm^3/s at large detunings. In the dark, the rate constant is a factor of 50 lower.
+
+% \cite{Muller91}
+% He* can ionize any atoms except He and Ne, known as Penning ionization. The decay channel from two triplet He* atoms to a ground state He, ground state He+, and electron is an imporant loss mechanism. Another channel to He2+ and an e-, associative ionization, is also possible but less common
+
+
+
+% \cite{Partridge10} Study of spin-mixture BEC
+
+% \cite{stas06} experiment and theory, \cite{mcnamara07} temps below 5mK are dominated by a few partial waves, in the ultracold regime only s-wave matters
+
+
+% \cite{Venturi99} predicts feshbach resonance in 4He,
+
+% \cite{Borbely12} confirmed suppression of penning ionization and breakdown of suppression for fields above 50G. Did not find fesbach resonance. 
+% \cite{bell68} tabulation of penning ionization rates with other species, important for other gas physics.... like?
+% \cite{shlyapnikov94} predicts if 1e5x reduction in PI in spin-pol samples; relaxation-induced penning; virtual spin-dipole transitions to the zero spin state of the quasimolecule can life the spin-conservation rule and lead to regular penning ionization
+% Direc dipole-exchange ionization is also a possibility but dominated by spin-relazation
+% \cite{Przybytek05} accurate prediction of scat len in line with most accurate experiment \cite{moal06}
+
+% \cite{Goosen10} the spinless nucleus of 4He prohibits coupling of bound states within and m_f manifold from crossing an open-channel threshold and induce a Feshbach resonance, but can be induced by spin-spin interactions and so they predict a Feshbach resonance at 9.9mT which was not observed by \cite{borbely12}
+
+
+
+%%%%%%%%%%%%%%%%
+NTM For temps below 6.5mK, only s-wave collisions are relevant [153] - [186,191] for collision expansion in partial waves (basis fns for solution of born-oppenheimer scattering problem) 
+	in this regime the scattering cross section is $4\pi a^2$
+	total spin of atom pairs gives the relevant scattering potential (Sigma notation) - the triplet potential corresponds to p wave scattering (odd parity) and so negligible in the s wave scattering regime
+	NTM the penning- and auto-ionization processes are coupled to the singlet and triplet channels by interatomic interaction. Extensively studied [139,148,153,155, 156] expt [137.138.141.143] thry 
+	% J weiner et al, experiments and theory in cold and ultracold collisions, rev mod phys 71, 1999
+	% M W Muller et al, experimental and theoretical studeis of the bi-excited collision systems at thermal and subthermal wavelengths
+	% P J J Tol et al, large numbers of cold metastable helium atoms in a MOT
+	% R J W Stas et al, Homonuclear ionizing collisions 
+	% G B Partridge t al, bose-einstein condensation and spin mixutres of optically trapped metastable atoms
+	% J S Borbely, Magnetic-field dependent trap loss of metastable helium, phys rev A 85, 2012
+	% K L Bell et al, penning ionization by metastable helium atoms, J phys B, at mol phys 1, 1968
+	% W H Miller, theory of penning ionization - atms, J chem phys 52, 1970
+	% G Shlypanikov et al, decay kinetics and bose condensation in a gas of spin-polarized triplet helium
+	% Leo et al, ultracold collisions of metastable helium atoms
+	NTM Loss rate 1e-10 $cm^-3$ in unpolarized gas [148,155] 
+	% Tol, large numbers of cold metastable helium atoms in a MOT
+	% G B partridge et al, BEC and spin mixtures
+	The quintet potential is forbidden to connect to the PI and AI channels as it would require  spin flip. Of course higher order processes like relazation induced ionization or magnetic field dependent spin relaxation [141,156] can lead to ionization, but the two body loss rate is some 4 OoM smaller for quintet
+	% Shlyapnikov et al & Borbely et al
+	NTM mot lifetime limited by photoassociative collisions, typically - and using big beams for lower density, high number 
+	NTM [192-194] majorana loss 
+	% E Majorana, Atomi orientati in campo magnetico variabile, Nuovo Cim 9, 1932
+	% W Petrich et al, STable, tightly confining magnetic trap for evaporatvie cooling of neutral atoms, phys rev lett 74 1995
+	% R dubessy et al, rubidium-87 bose einstein condensate in an optically plugged quadrupole trap
+	% Bouton BEC paper
+	TKV [27,72] suppression of Penning ionization 
+	% N Herschbach, P J J Tol, W Hogervorst, W Vassen, Suppression of penning ionization by spin polarization of He(2 3S) atoms, physical reveiw A 61, april 2000
+	% G V Shlyapnikov, J T M Walraven, U M Rahmanov, M W Reynolds, Decay kinetics and bose condensation in a gas of spin-polarized triplet helium, Physical Review Letters 73, Dec 1994
+	total spin of atom pairs gives the relevant scattering potential (Sigma notation) - the triplet potential corresponds to p wave scattering (odd parity) and so negligible in the s wave scattering regime
+	RGL [57] measurement of least bound quintet state by photoassociation spectroscopy 
+	% Moal et al, accurate determination of the scattering length
+	RGL [58] calculation of molecular potential and determines s wave scat len 
+	% M Przybytek, B Jeziorski, s, J Phys Chem 123, 2005
+	RGL [59] molecular potentials in other spin mixtures 
+	% M W Muller et al, experimental and theoretical studies of the bi-excited cillision systems He* 2 3S + He* 2 3S, 2 1S at thermal and subthermal kinetic energies, Z Phys D 21, 1991
+	RGL [64] no feshbach resonances in search, despite predictions thereof [61] 
+	% M R Goosen et al, Feshbach resonances in 3He-4He mixtures, phys rev A 82, 2010
+	% -> Cocks and Hirsch update?
+	% J S Borbely et a, magnetic-field dependent trap loss of ultracold metastable heliumm, phys rev A 85, 2012
+
+From \cite{PitaevskiiStringari}
+	At low temperatures and densities the sole parameter pertaining to the interatomic interactions is the s-wave scattering length.
+	This also allows description of Feshbach resonances but we won't spend much time on this.
+	All interating systems except helium unergo a phase transition to the solid phase at low temps (!!)
+	BEC itself is a metastable state which requires:
+		Low enough density that three-body colisions are rare. Fr higher densities than the 1e13-1e15 atoms//cm^3 range in expts, recombination effects are cimportant. Low densities imply that low temperatures are required to achieve high phase space density.
+		The The gas should be kept away from any surfaces, which would interact with the gas (other than He) and proide a substantial heat reservoir
+	See Inguscio and Fallani 2013 for review of cooing and trapping
+	-> some subtlety in the above, which is in context of solid as equilibrium. Nonetheless, mHe would be metastable BEC because of penning losses (or three-body?), even in an otherwise perfect vacuum	
+	Two-body collisions allow thermalization as long as the relaxation times are shorter than the sample lifetime. Esp important in evap. 
+	Many key properties of a BEC are fixed by the interaction strenght, explicitly in terms of the s wave scat len, including density profiles, ground state energy, collective excitations, etc. 
+	Neglecting spin-orbit and relativistic effects the scattering problem reduces to the Keplerian schrodinger equation
+	$(hbar^2\Delta/2m* + V(r) - E)\psi(r) = 0,$
+	where $r=r_1-r_2$ and $m*=m_1m_2/(m_1+m_2)$, and $E>0$. One is concerned with the asymptotic regime where $r$ is much larger than the scale of $V(r)$. The solution takes the form of a superposition of the initial plane wave of the incipient particle, plus an angle-dependent term,
+	$\psi(r) = exp(ikz) + f(\theta)exp(ikr)/r$, where $k=\sqrt{2m*E/\hbar}$ and $\theta$ is the angle from the z axis. In the low-energy limit, f is independent of angle and $f(\theta)\rightarrow-a$ is called the s-wave scattering length (from the partial wave expansion, which decomposes $f$ into a spherical basis which includes Legendre polynomials labeled $s,p,d,f,..$ in order of increasing angular momentum). For polarized bosons, the total cross-section approaches $\sigma=8\pi a^$, but for fermion pairs with odd total spin, thecross section tends to zero. 
+	Obviously, precise knowledge of the scattering length is thus very important! 
+	See Dalibard 1999 and Heinzen 1999 for reviews of scattering length determinations
+	Pethick and Smith 2008 for exhaustive discussion
+	Chin et al, complete updated review inc measured properties for most investigated species
+	Scattering length can even be negative (what does this correspond to, though? The phase of the outgoing particle, and the size gives the likelihood it will scatter?)
+	Feshbach resonances originated in Feshbah's work in nuclear physics (Feshbach 1958, 1962) and Fano worked on in atomic context (fano 1961), but these fano-feshbach resonances are referred to in general as feshbach resonances. The upshot is they allow setting $a = \tilde{a}(1-\Delta/(B-B_0)$ where $\tilde{a}$ is the value when the field is far from a resonance and $\Delta$ sets the resonance width.
+
+from \cite{PethickSmith}
+	He is unusual in that all other species are in their electronic ground states and the relevant spin physics is hyperfine (if ground state He could be condensed, say in a dipole trap, then it would be spinless and truly unique)
+	For complex atoms it is usually difficult to directly measure scat lens and theory is also not especially accurate. 
+	But since laser cooling, study has benefited considerably. 
+	Ref [1] for review
+	Interaction potential depends strongly on the valence electron state as the Pauli exclusion principle diminishes the energetic preference of covalent bonding. Therefore polarized atoms are in general repulsive (He may have special behaviour here)
+	Remarkably scat len is about 100x the size of the atom (check)
+	van der waals coefficient C6 sets the basic energy scale for scattering - 6.5 for H-H, and 1393 for Li-Li up to 6851 for Cs-Cs
+	Keplerian problem solved in centre-of-mass coordinates
+	For spherically symmetric interactions, $f(\theta)$ depends only on scattering angle (no orientation term required)
+	Wavefunction takes the form $\psi=1-a/r$ in the low-energy limit, and $a$ fixes the intercept in the r-axis (at the origin, but div by zero??)
+	Wait, they give the total cross section as $4\pi a^2$ - presumably the factor of 2 comes from bose/fermi stats - yes indeed, the former was for distinguishable particles
+
+	BEC are dominated by long-wavelength behaviour and so an effective treatment which integrates out the high-frequency modes can be used to simplify treatment. The scattering problem can be considered in momentum space, yielding a scattering matrix subject to the Lippmann-Schwinger equation, yielding the effective interaction strength for low-energy scattering as $4\pi \hbar^2 a/m$, also referred to as the pseudopotential. This necessarily washes out short-range correlations but makes fairly accurate calculations much more tractable, in particular using Hartree or Hartree-Fock methods (as in the GPE, right?). 
+	Of course, the effective interaction neglect small-scale features that are relevant when atoms approach each other, which is captured in part by the contact, the subject of chapter X.
+	The differential cross section is the current per solid angle divided by the input flux. That is, the total cross section is the probability of scattering. 
+	Spin-changing collisions? 
+	For a more detailed discussion see PethickSmith
+
+
+\section{Cooling and trapping}
+From \cite{PitaevskiiStringari}
+	Magnetic fields and Zeeman splitting.
+	Alkalis are appealing because their single valence electron allows one to consider a ground state with zero orbital angular momentum (paired shell electrons and an S-state valence electron), plus the nuclear spin. In Helium one has a spinless nucleus but an unpaired lower electron, hence the triplet.
+	The total angular momentum is F = I+J, where I and J are the nuclear and electronic angular momenta.
+	This also means that there is no hyperfine coupling as the term $H_{hf}=AI\cdot J$ is always zero. Typical hyperfine splittings are of the order of 1-10GHz. In an external field we get $H= aI\cdot J+2\mu_b J_z B$ where $\mu = |e|\hbar/2m_e$ is the Bohr magneton. We then get $E_B = g_J \mu_b m_J B$ where $g_J$ is the g-factor which comes from the possible projections of total AM onto the z axis.
+	Plus more details... Can rip the explanation from the existing spectroscopy chapter and include a plot of some Zeeman-split levels if we can/want to 
+	Magnetic traps: We make the adiabatic approx wherein variation of field direction in the atom frame is on a longer timescale than the inverse Larmor frequency. This means the atoms will remain in the same state relative to the magnetic field. Thus, atoms will seek areas of space where the magnetic interaction energy is minimized. 
+	There cannot be a magnetic maximum of a static field in vacuum, which follows from Maxwell's equations. 
+	In anti-helmholtz coils the field is $\textbf{B} = B(x,y,-2z)$ along the coil axis z. Atoms near the bottom fall due to Majorana flips etc, various solutions etc. Can also supplement with extra coils, but no longer amenable to straightforward solution and instead numerical simulation of the coils and currents is preferred.
+	Dipole traps:
+	See Grimm review. IN the dipole approx, the wavelength of laser radiation is larger than the atomic size (and this is true even for large dB wavelengths?)
+	The dipole interaction is written as $v(r,t) = -d\cdot E(r,t)$ where $d$ is the dipole operator and $E)r,t) = E(r)exp(-i\omwga t) + c.c.$. The dipole polarization response has the form
+	$$
+	\langle d\rangle = \alpha(\omega) (E(r)exp(-i\omwga t) + c.c)
+	$$
+	where
+	$$
+	\alpha(\omega) = \hbar^{-1} \sum_n |\bra{n} d\cdot\hat{\epsilon}\ket{0}|^2 \frac{2\omega_{n0}}{\omega_{n0}^{2}-(\omega-\eta)^2}
+	$$
+	where $\epsilon$ is the unit vector in the electric field direction (and what is $\eta$?). This induces an energy change which can be calculated in second-oder perturbation theory and written as an effective potential
+	$$
+	U(r) = -\frac{1}{2} \alpha(\omega)\bar{E^2(r,t)}
+	$$
+	where the bar denotes a time average. This is justified by the fact that the laser frequency is much faster than anything corresponding to atomic motion. This assumes $\alpha$ is real and the response is linear; so this does not work well close to atomic resonances where absorption effects are important. 
+	This potential gives rise to a force that depends on the radiation intensity and on the laser detuning (though weakly on the latter when far from resonance). The effect can be illustrated in terms of a single resonance (one term from the above sum) which shows the $1/\Delta$ scaling and the importance of the sign of polarizability (set by detuning) . Optical traps are also useful for building box traps, lattices, 1D and 2D traps, arbitrary potential with light painting, rotating traps, spherical shell traps? eg optical lattice potential has a standing wave of the form $E = E \cos(qz) exp(-i \omega t) + c.c.$ which gives rise to $U(r) = -\alpha(\omega) E^2 \cos^2(qz)$ where $q=2\pi/\lambda$.
+

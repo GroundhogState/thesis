@@ -1,0 +1,103 @@
+Rispoli
+	'The physics we study occurs in a vacuum, but our scientific success does not' - Christie Chiu RSP
+	RSP [57] Solving quantum problems on classical machines is hard - feynman [57] 
+	 Feynman, Can quantum-mechanical description of physical reality be considered complete? International journal of theoretical physics 21, 1982
+	RSP [145,165] single-body: quantization of [145] black body ratioan [165] energy levels of hydrogen, and attendant revolutions from the wave picture  
+		M Planck, The theory of heat radiation Blakiston's son & co 1914
+		E Schrodinger, Quantisierung als eigenwertproblem, annalen der physic 384, 1926
+	RSP [51] Many-body: Global wavelike interference of interacting objects, as in EPR [51] - entanglement 
+		EPR, can quantum-mechanical description of physical reality be considered complete? Phys Rev 47, 1935
+		Other many-body 
+		J Eisert et al, colloquium: Area laws for the entanglement entropy, rev mod phys 82, 2010
+		J Eisert et al, quantum many-body systems out of equilibrium, nature physics 11, 2015
+	RSP [4,8,177,99,43] Entanglement and linking classical thermodynamics to open quantum systems - which we're in, so can't see the coherence 
+		Aidelsburger et al, Realization of the hofstatder hamiltonian with ultracold atoms in optical lattices, phys rev lett 111, 2013
+		Anderson P, absence of diffusion in certain random lattices, phys rev 109, 1958
+		D'alessio et al, from quantum chaos and eigenstate thermalization to statistical mechancis and thermodynamics, advances in physics 65, 2016
+		CLos et al, time-resolved observation of thermalization in an isolatd quantum system, phys rev let 117, 2016
+		Kaufman et al, quantum thermalization through entanglement in isolated many-body systems, science 353, 2016
+		M Srednicki, chaos and quantum thermalization, phys rev E 50, 1994
+	RSP [23,82] trapped ions and [82] superconducting qubits - fast and high fidelity but envt decoherence is a challenge 
+		Houck et al, on-chip quantum simulation with superconducting circuits, nature pysics 8, 2012
+		Blatt et al, Quantum simulation with trapped ions, nature physics 8, 2012
+	RSP [60] photonic systems - isolated but not clearly scalable 
+		Garanovich et al, Light propagation and localization in modulated photonic lattices and waveguides, physics reports 518, 2012
+	ion [24,25] optical lattices for simulat
+		Bloch, Dalibard, Nascimbne, quantum simulations with ultracold quantum gases, nature physics 8, 2012
+		Bloch, Dalibard, Zwerger, Many-body physics with ultracold gases, rev mod phys 80, 2008
+	RSP [113] lattice geometries 
+		Lewenstein et al, ultracold atoms in optical lattices, oxford univeristy press 2012
+	RSP [36] feshbach resonance to change sign of scat len (interaction strength) 
+		Chin et al, Feshbach resonances in ultracold gases, rev mod phys 82, 2010
+	RSP [15,173,127,73,141,35,55,154] Traditional microscopy useful in bose  and fermi gases, accessing local observalbes and corrfuns . 
+		Bakr et al, a quantum gas microscope for detecing single atoms in a hubbard-regime optical lattice, Nature 462, 2009
+		Cheuk et al, quantum-gas microscope for fermionic atoms, phys rev lett 114, 2015
+		Endres et al, observation of correlated particle-hole pairs and string order in low-dimensional Mott insulatros, science 334, 2011
+		Haller et al 2015 single atom imaging of fermions in a quantum gas microscope, nature physics 11
+		Miranda et al 2015, site resolved imaging of ytterbium atoms in a two-dimensional optical lattice phys rev A
+		Parsons et al 2015 site-resolved imaging of fermionic 6Li in an optical lattice phys rev lett 114
+		Rispoli et al 2018 quantum critical behaviour at the MBL transition
+		Sherson et al, single-atom resolved fluorescence imaging of an atomic Mott insulator
+	RSP [67,95,94,72,174,20,110,38,111] Equilibrium  and non-equilibrium  quantum phases, largely focused on the phases and order parameters 
+		Greiner et al 2002, wuantum phase transition from a superfluid to a mott insulator in a gas of ultracold atoms, nature 415
+		Jordens et al 2008 a Mott insulator of fermionic atoms in an optical lattice
+		Jo et al 2009, itinerant ferromagnetism in a fermi gas of ultracold atoms
+		Haller et al, pinning quantum phase transition for a Luttinger liquid of strongly interacting bosons
+		Simon et al 2011, quantum simulation of antiferromagnetic spin chains in an optical lattice
+		Baumann et al 2010 Dicke quantum phase transition with a superfluid gas in an optical cavity
+		Leonard et al 2017 supersolid formation in a quantu mgas breaking a continuous translational symmetry, nature 543
+		Choi et al, observation of discrete-time crystalline order in a disordered dipolar many-body system, nature 543
+		Landig et al 2016, quantum phases from competing short- and long-rante interactions in an optical lattice, nature 532
+	RSP [109,158,9,41,100] Critical regimes difficult to access as corrfuns diverge due to quantum fluctuations? , recently accessed for equilibrium phase transitions  
+		L D Landau 1937, on the theory of phase transitions, Zh Eskp Teor Fiz 7
+		Sachdev 2011, Quantum phase transitions, cambridge univ press
+		Anquez et al, 2016, quantum kibble-zurek mechanism in a spin-1 bose-einstein condensate, phys rev lett 116
+		Clark et al 2016, universal space-time scaling symmetry in the dynamics of bosons across a quantum phase transition
+		Keesling et al 2019, quantum kibble-zurek mechanism and critical dynamcis on a programmable Rydberg simulator, nature 568
+	RSP [160,131,43] Non-equilibrium phase transitions: Quantum thermalization and Many-Body Localization are two non-equilib quantum phases, which are prepared by a quench   and so coherently populate many eigenstates, defining their dynamics .  
+		J Sakurai Modern Quantum Mechanics 1993, addison wesley
+		Nandkishore, Huse, 2015, many-body localization and thermalization in quantum statistical mechanics, annaual review of condensed matter physics 6
+		D'alessio et al, from quantum chaos..
+	RSP [69,185,148,101,5,192] Microscopic access to entanglement properties of many body state provide a view in. Both phases well understood theoretically [169,84,181], transition is opne question (what does this mean)  
+
+	RSP [17,16,149] Mapping from condensed matter to cold atoms can be made if the atoms are sup 1nK  - or that db wavelen has to be comparable to lattice spacing, so indistinguishably occupying many sites 
+		Bakr et al 2009, a quantum gas microscope for detecting single atoms in a hubbard-regime optical lattice, nature 462
+		Bark et PhD thesis
+		Press PhD thesis 2015 Atomoc bose-hubbard systems with single-particle control
+	RSP [10,126] ac stark shift -> dipole interaction, can include more levels for better calc [126] 
+		A Askkin acceleration and trapping of particles by radiation pressure, phys rev lett 24, 1970
+	RSP [68] scattering happens [68] 
+		Grimm optical dipole traps
+	RSP [143, 158, 97, 96] stuff about BEC and phase transitions  
+		Kardar, statistical physics of fields and statistical physics of particles, cambridge univ. press
+		Pichler et al 2010 nonequlibrium dynamcics of bosonic atoms in optical lattices: Decoherence of many-body states dues to spontaneous emissions, phys rev a, atomic molecular and optical phscs 82
+		Sachdev QPT book
+	RSP [97,96] classical phase transitions are accompanied by non-analytic free energy (deriv. of partition fn?) and micro fluctuations (thermal) actually cause the transition. Quantum phase transitions occur when tuning g in H = H0 + g H1, where [H0,H1]!=0 - and can occur at T=0, usuall refer to ground state transitions, dominant character of state changes due to eg avoided crossing? 
+		Kardar books
+	RSP [7,136,135] study of entanglement at quantum phase transitions - but 
+		T J osborne, M A Nielsen, entanglement in a simple quantum phase transition, phys rev A 66, 2002
+		Osterloh et al, 2002, scaling of entangement cose to a quantum phase transition ??
+		Amico et al, entanglement in many-body systems, rev mod phys 80, 2008
+	RSP [103,112,93] local order parameters not obviously applicable to (eg) quantum hall states RSP 
+		Jiang et al 2012, identifiying topological order by entanglement entropy, nature physics 8
+		Kitaev & PReskill, topological entanglement entropy 2006, phys rev lett 96 
+		Levin & Wen, 2006 detecting topological order in a ground state wave functionm ohys rev lett 96
+	RSP [193,88] or spin liquids , but non-local entanglement works. 
+		Isakov et al, 2011 topological entanglement entropu of a bose-hubbard spin liquid
+		Zhang et al, 2011 entanglement entopy of critical spin liquids
+	RSP [11,12,76,64,172] Bell state measurements by Aspect et al ruling out HV theories, loophole-free tests  
+		Aspect et al 1982 experimental test of bell's inequalities using time-varying analysers
+		Aspect et al 1981 experimental tests of realistic local theories via bell's theorem
+		Giustina et al, 2015 significant loophole-free test of bell's theorem with entangled photons
+		Hensen et al 2015, loophole-free bell inequailty violation using electron spins separated by 1.3km, nature 562
+		Shalm et al, 2015 strong loophole-free test of local realism, phys rev lett 115
+	RSP [71,132] While repeatability of ions and qubits means one can exhaustively computer the density matrix , no known state tomography for lattices of itinerant particles, 
+		Neill et al 2016 ergodic dynamics and thermalization in an isolated quantum system
+		Haffner et al, scalable multiparticle entanglement of trapped ions, nature 438
+	RSP [54,129,140,44,31] and instead interferometry techniques are employted  
+		Ekert et al 2002 direct estimations of linear and nonlinear functionals of a quantum state PRL 88
+		Brydges et al 2019 probing reyni entanglement entropy via randomized measurements, science 364
+		Daley et al 2012 measuring entanglement growth in quench dynamics of bosons in an optical lattice
+		Moura Alves & Jaksch 2004 multipartite entanglement detection in bosons, phys rev lett 93
+		Palmer et al 2005 detection and characterization of multipartite entanglement in optical lattices
+? Gupta et al, coherent manipulation of atoms with standing light waves 2001?

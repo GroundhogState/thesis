@@ -1,0 +1,451 @@
+
+
+ % Ok, mate, what is your narrative arc here?
+% There's a better name for this. Setting? Prologue?
+% Start at the beginning of the universe and finish at Helium BEC??
+
+\begin{adjustwidth}{3.5cm}{0cm}
+\begin{flushright}
+{\emph{``In the weeks that had just passed, Commander Norton had often wondered what he would say at this moment. But now that it was upon him, history chose his words, and he spoke almost automatically, barely aware of the echo from the past:\\ ~`Rama Base. \emph{Endeavour} has landed.'"\\} 
+- Arthur C Clarke \footnote{\emph{Rendezvous with Rama}, p14, Harcourt Brace Jovanovich, 1973}}
+\end{flushright}
+\end{adjustwidth}
+
+\section*{Pr\'{e}cis}\label{sec:abstract}
+\addcontentsline{toc}{section}{Pr\'{e}cis}  
+
+remember the line 'exquisitely isolated' - find that Ketterle lecture if you have time
+
+kastberg95
+		lattices briefly held the record for the lowest kinetic temperature record
+
+yan20 ultracold dipolar molecules with microwave-dressed resonant interaction; enhances interaction above s-wave scattering limit for controlled interactions and immediately applicable in lattices
+
+This thesis documents three projects that were undertaken in the ANU
+Helium BEC laboratory over the period of 2018-2019 and one project,
+which remains unfinished, that was undertaken in 2016-2018. A number of
+other graduate students were in residence at the time, and each of them
+contributed variously to the experiments. These experiments constitute a
+chapter each, and conclude with acknowlegements of the contributions of
+each person involved. The chapters are arranged in such a way as to
+provide a progression through subjects of increasing complexity, and are
+separated into three parts.
+
+The first part includes a general introduction to ultracold atomic
+physics and an overview of the apparatus used to complete the
+experiments described in this thesis.
+
+The second part includes chapters 3 and 4, and concentrates on a pair of
+experiments regarding the atomic structure of Helium. The experiments in
+this section are motivated by open questions in atomic structure theory,
+and includes a review of essential concepts. Chapter 3 concerns a set of
+measurements of electronic absorption lines, which in some sense is the
+most elementary concept encountered in this thesis. Chapter 4 describes
+the measurement of a tune-out frequency in Helium, at which there is a
+null response of the atomic dipole induced by an oscillating electric
+field. Such tune-out frequencies are determined by the interplay of an
+array of atomic transitions, and so this chapter represents a marginal
+increase in complexity. Conversely, the signals sought in chapters 3 and
+4 are presented in sequence of decreasing signal power, ultimately
+converging on a measurement of a null response, attempting to determine
+when \emph{nothing} happens.
+
+Following these studies of the internal structure of atoms, the third
+part, consisting of chapters 5 and 6, is concerned with interacting
+systems. Chapter 5 describes a third completed project concerning the
+effects of weak interactions on the density and correlations of the
+momentum spectrum of ultracold Bose gases. This section includes an
+overview of the relevant physics of ultracold gases. Chapter 6 discusses
+the motivation for, and progress towards, an optical lattice trap for
+ultracold Helium. This was the initial project of my PhD, but after two
+years of work the decision was made to discontinue working to construct
+this apparatus. Chapter 7 presents a summary of the findings of all the
+projects in this thesis, presents future directions of research using
+ultracold helium, and concludes by unraveling the narrative thread of
+this thesis.
+
+\section*{Prologue}\label{sec:prologue}
+\addcontentsline{toc}{section}{Prologue}  
+
+
+\begin{adjustwidth}{6cm}{0cm}
+\begin{flushright}
+\emph{``Who are we? And more than that: I consider this not only one of the tasks, but the task, of science, the only one that really counts."\\}
+- Erwin Schr\"{o}dinger, \footnote{\emph{Science and Humanism: Physics in Our Time}, p.51, Cambridge Univ. Press, 1952.}\\
+\end{flushright}
+\end{adjustwidth}
+
+% In the beginning was the word, and the word was with God, and the word was GUT... 
+
+What is the nature of reality?
+
+% Some beautiful ideas to invoke;
+% Transitions - simplicity? Tuneout - measuring zero - the only constant
+% is change, so can anything really have \emph{no} effect? 
+% stillness, and the impossibility thereof - vacuum fluctuations 
+% lattice - complexity 
+
+
+% Without a doubt, we live in extraordinary times... Whereas millenia have passed without significant evolution, each generation living the same lives as the last, we are surrounded/circumscribed/immersed in the pervasive myth of progress. The undescoring narrative always invites the conscientious scientist to ask the impossible question; \emph{what} is the future we are building? \emph{For whom} are we building it, and \emph{why}? <- perhaps better placed in the afterword, gels with notion we are not in vacuum
+[11,12] Bell state measurements by Aspect et al ruling out HV theories, loophole-free tests [76,64,172] RSP
+
+
+RSP [145,165] single-body: quantization of [145] black body ratioan [165] energy levels of hydrogen, and attendant revolutions from the wave picture  
+		M Planck, The theory of heat radiation Blakiston's son \& co 1914
+		E Schrodinger, Quantisierung als eigenwertproblem, annalen der physic 384, 1926
+Naturally, the coldest object in the universe will tend to heat up by virtue of being in the universe. Unfortunately this means the lifetime of a BEC is always limited. Crafty experimentalists have found workarounds...
+Moreover you can never get to 0K
+
+Realization of BEC [1,2,3], previous work on cooling and trapping [4-8], SSH 
+		[9] inertial sensors [10] atomic clocks SSH
+Ok so somewhere in here I wax lyrical. We tend to try to understand
+things. Why? Well. There is something advantageuos about being able to
+make predictions bout the world. This is something that has enhanced our
+survival prospects. But in humans something seems to be running on
+overdrive. And, sure, this isn't really relevant to the thesis, but you
+want to start from somewhere that naturally lreads to a framing of
+atomic theory. Matter is inescapable. Except perhaps in the dream state
+- we are surrounded by substance. Some two or so thousand years ago,
+Democritus posited that there was a smallest thing. That one could break
+mountains down into boulders, boulders down to stones, stones to sand,
+and sand\ldots To something indivisible. He called them, literally,
+atomos, for indivisible. This was astoundingly prescient: The atomic
+theory, as it came to be known, would not find empirical validation for
+another millenia or so. And, like all theories that prove to be correct,
+it too reached its point of failure a few hundred years thereafter. The
+atomic theory was outlandish at the time, breaking with the notion that
+things were ultimately continuous. The exploration of the atomic world
+eventualyl yielded a new kind of understanding of everyday matter.
+Kinetic theory of gases, thermodynamics, `absolute zero'
+
+
+% \section{Fruits of one quantum century}\label{ssec:bec-hist}
+The first profound successes were had with gases, laying the foundations
+for thermodynamics and the understanding of the extraction of energy
+from storage in chemical bonds, via heating a working fluid, say - and
+powering the steam revolution. Among the findings of the kinetic theory
+of gases was what later became known as an equation of state - an
+apparently universal relationship between macroscopic quantities -
+pressure, temperature, volume, and mass - expressing the balance of
+energy in gases. Among the findings that stem from this understanding
+was the notion of an absolute temperature scale: That if one could
+extract enough energy from a gas, by cooling it, then its internal
+energy would vanish. It would have no volume. It would be motionless.
+This prediction predated Einstein's formulation of the mass-energy
+equivalence, but even at the time, it was appreciated that gas molecules
+had to have a size. So they could not vanish simply by getting colder.
+This paradox took some years to resolve, and it was only possible by
+completely overturning the picture of the atom. While understanding thus
+far had stemmed from the investigation of matter, the first quantum
+revolution was to come from the study of light. Spectra \& old quantum
+theory
+
+Spectra are typically obtained by taking a beam of light - say, from a
+pinhole or slit in a mask - and passing it through a medium, such as
+glass, which disperses the light according to its colour. In modern
+parlance, there is a difference between the momentum (direction of
+travel) of light with different energies (related to frequency). It was
+by WHO? that spectra were first resolved with enough detail to
+distinguish more or less intense lines against an apparent continuum.
+And in particular, that pure elemental sources created different
+colours. A standard prism and screen would show different results with
+different elements. Wait - but by this point, we must have had an
+understanding of electrons, right? Because there was this Bohr model,
+where the electrons were orbiting the nucleus. And there was an
+understanding that moving charges radiated light - this was
+post-Maxwell, surely. Better go revise that history. So the upshot I
+guess would be that, anyway, there was a finding that the lines of light
+- oh also, the photoelectric effect which predicts that light are
+particles and have energy proportional to their wavelength, hey. So,
+this is how people worked out the energy gaps between the internal
+states of atoms that were later found to be related to inverse ratios of
+square integers: That led to the positing of a classical model, with a
+1/r potential, that was inspired by the knowledge that potential energy
+fell off like $1/r^2$. But did we get this backwards? Would have to
+revise the classical mechanics too, yikes. But yeah. The wise thing to
+do would be to talk angular momentum, and then from spectra we introduce
+Planck's idea of supposing that it \emph{comes in units}. And then we
+add in the postulate of de broglie - where was this first verified? -
+and the double slit experiment, then the whole world turns just about on
+its head. And so was born the old quantum theory. Or something like
+that, go read Born and that Disney book for starters. Modern QM, QFT?
+Presumably there will need to be some historical preamble, but the idea
+is now that we lay out the foundational pieces of quantum theory as we
+now understand it, or at least as it will be used in this thesis. This
+includes, and perhaps is motivated by an example, leading to a small
+exegesis of the thesis Hilbert spaces and quantum states Probability
+amplitudes Operators and observables Time evolution Composite systems
+Density matrices Interactions Correlations \& Entanglement And a survey
+of the present state: Formulation of QED Lamb shift, Rydberg constant,
+etc etc? Extension to QFT Experimental successes Extension to condensed
+matter What's after the standard model? Unifying HEP/condensed
+matter/QI? Following the math doesn't seem to have worked for SUSY (and
+so one might take this as a cautionary tale for Everrett).
+
+Quantum technology is a young term, but has been growing exponentially
+since used in print for the first time in about 1970 according to Google
+Ngram. Some have said that we live in the `silicon age', in light of the
+pervasiveness of computing technology based on silicon substrates. What
+is perhaps less conventionally appreciated is that modern semiconductor
+technologies, including the transistor which is essential to the
+miniaturized computing devices available today, are a direct outcome of
+the first quantum revolution - that is, the conception of quantum
+mechanics and its associated ontological metamorphosis. Understanding
+gained since the conception of QM has led to myriad other technologies
+that foundationally depend on the quantum world. Nuclear magnetic
+resonance, for example, underpins the life-altering technology of
+magnetic resonance imaging and finds use in the study of biomolecular
+structure and industrial applications, forming multibillion dollar
+industries. A second prominent example is the laser, whose functioning
+depends on the quantum theory of light and matter. Of course, lasers
+will be extensively used through this thesis for the purposes of
+preparing and investigating ultracold samples of Helium, but outside of
+the atomic physics laboratory lasers are now used in fields as diverse
+as electromagnetic and gravitational astronomy, medicine, self-driving
+vehicles and robotics, cosmetics, manufacturing, remote sensing, and
+miltary use. Despite their foundational reliance on the quantum picture
+of the world, these technolgies may one day be seen as `primitive' in
+the same way that a typewriter or vacuum tube is now. A second quantum
+revolution began with the creation and manipulation of single quantum
+states, for which Haroche and Wineland were awarede a Nobel, but
+includes technologies such as ion traps and coherent control mechanisms,
+and the still nascent technolgies of single-system state determination.
+These are still developing but have laid the foundations for the third
+quantum revolution, the large-scale engineering of quantum states by
+controllable interactions between multiple subsystems. The posterchild
+for such technologies is, of course, quantum computing. Notwithstanding
+ongoing controversy over the viability and usefulness of quantum
+computing, the challenge of large-scale quantum engineering has spurred
+an explosion of technical developments. Moreover, the growing prominence
+of quantum technology has drawn the curious eyes of computer scientists,
+who now join forces with physicists in attempts to unravel the basic
+structure of the cosmos from process-theoretic perspectives. Why is it,
+for example, so difficult to efficiently simulate quantum processes?
+Where is the border between efficient and intractable? The proof of
+genuine quantum advantages in certain processes may be one of the most
+profound statements about the nature of reality of this generation.
+Wherefore the nature of this advantage? Perhaps we will know before the
+century is out - perhaps, if ongoing crises arenot addressed - we will
+never know, and the cosmos may miss its chance to delve most deeply into
+its own self-awareness.
+
+Digressions aside, a parallel stream of large-scale quantum engineering
+exists not in silico but in vacuo. The techniques of laser cooling to
+quantum degeneracy, established at the turn of the millenium, make
+quantum coherence (a topic to return to later) readily available and
+amenable to almost routine study. In the early days, cold gases were
+fantastic resources for studying atomic structure and basic interactions
+such as dimerization, because their low kinetic energies and densities
+dramaticall reduced the homogenous broadening effects that spectroscopy
+would otherwise be susceptible to. The development of advanced atomic
+clocks was a logical extension. In the later 90s though, Jaksch and
+Zoller proposed quantum simulation in optical lattices. Lattices
+themselves had been used before for some studies - check out Orzel for
+the work that \emph{almost} got to the quantum phase transition - but
+yeah. That field is exploding now, with advances into microscopy and
+stuff.
+
+Both of these topics - metrology and many body physics - form the spine
+of this dissertation. Also known as - internal structure and
+interactions - precision measurement and quantum engineering - stuff
+like this.
+
+
+
+Metrology may be reasonably defined as the art of measurement.
+
+The advancing precision of modern atomic spectroscopy is beginning to afford optical tests of fundamental physics in helium through, for instance, nuclear charge radii determinations. Helium now provides a testbed as appealing as Hydrogen for spectroscopic tests of QED and determinations of physical constants. 
+
+Early uses of spectra Discovery of Helium? Types of spectroscopy
+Emission \& absorption spectroscopy State of the art methods Landmark
+results Lamb shift proton radius
+
+Arguably, spectroscopy is the mother of all our understanding of matter. From spectroscopy was born quantum theory, spin, and the prediction of antimatter in relativistic quantum electrodynamics. But for all its triumphs, our best physical theory, quantum electrodynamics, falls short in some high-precision instances. For example, if you switch the electron in Hydrogen for a Muon and measure the respective Lamb shifts, you can determine the radius of the proton and find that it's different in each case. We need more measurements to constrain or discard competing theories. Fortunately, the simplicity of Helium allows predictions of its transition lines to some parts per trillion, accurate enough to compete with modern spectroscopy.
+
+Quantum Electrodynamics, or QED, describes the interaction of charged particles with the electromagnetic field, whose fundamental excitations are identified with the more familiar photons, or particles of light. QED therefore describes the physics that governs all we see with our eyes, the interatomic forces from which arise the various familiar phases of matter, prevent solids from passing through one another, almost all technology (even nuclear physicists use electronic control and diagonistic technology), and indeed the dynamics of the action potentials in neurons. Hence, the purview of QED may well include the physics underlying the most intriguing of phenomena, perception. The detailed connection between quantum field theory and subjective self-awareness are beyond the scope of this thesis. For decades, quantum electrodynamics has stood unchallenged as the most accurate quantitative description of the world to date. Among its triumps include the prediction of the Rydberg constant to absurd precision and the correct prediction of the existence of antimatter. As the first synthesis of special relativity and quantum mechanics, QED laid foundations for more general quantum field theories, ultimately leading us to the standard model of particle physics. Undoubtedly, QED is a foundation stone in one of the great pillars of our understanding of the cosmos. However, as any sensible applied scientist will tell you: All models are wrong. QED, and QFT in general, presently has no formulation that is consistent with general relativity (other than in string theory, which despite its ambition and elegance has yet to satisfy experimental physicists). However, until we have the technology to synthesize black holes or other extreme gravitational conditions, we may not have experimental access to the high energy densities required to probe the Planck scale where quantum and gravitational effects are expected to be of comparable magnitude. Fortunately, we may not have to wait so long: The infamous proton radius puzzle, regarding the disagreement between experimental determinations of the proton charge radius, remains unresolved. Further, there remain statistically significant disagreements between predicted and measured energy levels in Helium. If there is an identifiable bias in theoretical predictions then, optimistically, one may find a legitimate need for physics beyond the standard model to explain these results. Therefore, experimental atomic physicists may find themselves prospectors for the fundamental discovery of the century. The experiments described in the following two chapters constitute searches for evidence to constrain the search space of theories that purport to resolve the ongoing disagreements. Before describing the aims, findings, and methods of the experiments, I will provide a short refresher on atomic theory, terminology, and notation that is relevant to the following results.
+
+% Usual story goes that Bose noticed the effect of counting statistics on photons, and Einstein predicted that non-interacting atoms would undergo a phase transition at low temperatures. The discovery (Kapitza 1938) of superfluidity in helium was immediately thought by London to be connected to this effect now known as BEC. Three years later Landau formalized the two-fluid model suggested by Tisza in 1940, and then in 1947 Bogoliubov provided the microscopic theory underlying the Landau model. 
+
+Later, Landau \& Lifshitz (1951), penrose (1951) and Penrose and onsager (1956) introduces ODLRO, of which superfluidity in both bosons and fermions is a consequence (in the one-body and two-body density matrices?)
+
+DFG papers; Greiner et al 2003 (40K), Zwirlein et al (2003) bourdel et al (2003) bartenstein et al(2004) and partridge et al (2005) with 6Li. Others have followed
+
+
+Kelvin: Physics understood except for Michaelson-Morley expt and inability of Maxwell-Boltzmann to explain specific heats in terms of continuous energy scales NTM
+			All overturned by Einstein (building on the work of many - see his classic humility in opening of his book) NTM
+			Some of the pioneers of the revolution; Bethe, Bohr, Born, de Broglie, Dirac, Ehrenfest, Fermi, Feynman, Heisenberg, Lamb, Pauli, Planck, Schrodinger, Sommerfeld...
+				Why was it that European academia was the site of origin, not other countries or a more multinational effort? This epistemic revolution is at least as consequential as the agricultural or industrial revolutions...
+				Who else is missing from this list?
+			Derivation of Rydberg constants from fundamental constants early success [N Bohr, on the constitution of atoms and molecules] 
+			'Doublet' features finally explained by dirac's relativistic description, uncovering spin and antimatter [P A M Dirac, the quantum theory of the electron]
+			Subsequent observation of the Lamb shift [10,11] required QED [12] by Bethe  NTM
+			Astoundingly fast progress within 2yrs [Dyson 13], after which any observable could be expressed as a sum over constituent processes of increasing complexity weighted by alpha; and which posited that the vacuum was not empty but alive with virtual particles which manifested as measurable changes in the energy levels of atoms, including the Lamb shift
+			And also, QED predicts anomalous electron magnetic moment to some 9 [20] - accurately [21] NTM
+			We are in a regime where QED and experiments seem to be good - can we thus turn the lens back on the constants?	
+			Are constants really constant? [62-73] for tests of drift or spatial variation  NTM
+				cf dimensionless constants, Dirac's idea
+Kamerlingh Onnes first liquified and started low-temperature physics (Nobel prize, no?)
+Ultracold atoms A brief history Cooling and trapping - who, when, why?
+BEC - a complete surprise and experimental triumph
+He is unique in the intersection of tractable structure calculations and access to ultralow temperature - H has reached degeneracy [15] but the experimental sophistication favours traditional atomic beams [16-18] RGL
+
+
+QM began with Planck's proposal of discrete photon energy - was just to fit the data! - in 1900. Then Einstein used this to explain the photoelectric effect five years later. By 1926, the foundational Pauli, de Broglie, Fermi-Dirac principles were established, and the works of Heisenberg and Schrodinger. 
+	In 1925, extending Bose's work [7], Einstein predicted that so-called bosons collapse into a new state of matter [14] - noting critical temperature is a millionth of the coldest part of the universe TKV
+	Since these: Lasing, superfluidity, and superconductivity 
+	Lasers first demonstrated in the 50s but not until the 80s was laser cooling done and, 70 years after BE work and a century of QM, quantum degenerate matter was realized in the laboratory
+	
+Ultracold metrology Ultracold many-body physics
+
+
+While the industry of European statistical physics was in its infancy, a	young admirer of Einstein began asking questions would plant the seed of	a flurry of work culminating in a technical triumph over the next seven	decades. Satyendra Nath Bose made postulates about distinguishability -	and noticed that such particles had dramatically fewer distinguishable	microstates than they would if they were distinguishable. This, of	course, has dramatic consequences for the statistical physics of systems	constituted of these particles, which are now known as Bosons in his	honour. Among the predictions that follow from postulating the	indistinguishability of particles is that in the low-temperature limit,	the velocity distribution diverges from the more familiar	maxwell-boltzmann distribution. The threshold here can be thought of as	the point where the intrinsic wavelike nature of particles becomes	pronounced enough that the wavepackets of neighbouring particles begin	to overlap, heralding a regime where the particle picture breaks down.	Explicitly, Louis de Broglie's postulated that the relationship of	momentum and wavelength of photons, $\lambda_{dB} = h/p$, was exactly	true for all particles. The reason we do not see particles interfere at	everyday scales is that the so-called de Broglie wavelegth is smaller	than the particles themselves. Taken in concert with the equipartition	theorem, one can assign the (mean?) de Broglie wavelength of particles	in a gas of temperature T,
+
+	% $\lambda_{T} = \frac{\hbar}{\sqrt{2\pi m k_B T}}$,
+
+	and in three dimensions one can therefore ascribe a the particles	a'quantum volume' of $\lambda_T^3$. For a gas of density $n$, the	volume per particle is $1/n$. From this argument, the quantum nature	of gas particles cannot be ignored when $\lambda_T^3 \approx 1/n$,	or when $n\lambda_T^3\approx 1$. The latter quantity is called the	phase space density, referring to the concentration of the likely atomic	states into a small region of phase space, consisting of the	position-momentum conjugate variables (footnote: Phase space is not just	x/p but could refer to any set of conjugate variables, mathematically	speaking). Below this point, the distinguishability of particles becomes	crucially important.
+
+	In the case of indistinguishable particles, at a given temperature the	probability that a single particle will occupy a given state of energy E	is given by the Bose-Einstein distribution. Another way to read this is	the number of particles that occupy a given state, on average, is given	by the BE statistics. Remarkably, as the temperature vanishes, the	population of particles falls overwhelmingly into the lowest-energy	state. The temperature at which a macroscopic fraction of the atoms	occupy the ground state simultaneously is called the critical	temperature, and coincides with the temperature given above. This	heralds the phase transition from a `normal' gas to quantum degenerate	matter, or Bose-Einstein condensation.
+
+	Macroscopic coherence is also manifest as off-diagonal long range order	in the density matrix, as described by Penrose and Onsager (and leading	to their definition of condensation in terms of the eigenvalues of the	density matrix), and also has close analogies with Glauber's theory of	optical coherence. Glauber's theory was extended by Sudarshan (?) to	matter waves, which are distinct from the photonic case by ???. The	theory of coherence makes predictions about the arrival-time	correlations and distinguishes the g(2) function of the condensate	(FUNCTION) from the thermal state (FUNCTION). These predictions were	borne out by early experiments with metastable Helium, conducted in this	laboratory using the same machine described in this thesis. For these	reasons, the BEC is often referred to as a coherent state of matter, and	the resulting pulses of atomic matter waves are called atom lasers in	analogy with the coherent light sources, or lasers.
+
+	This, along with the various analogies between the optical propagator	(the Huygens' equation) and the quantum mechanical one (the Schrodinger	equation?), especially in the advent of techniques for reflection and	dispersion of the momentum of coherent matter waves, led to the	emergence of the term \emph{atom optics}, and heralded a slew of	experiments with matter waves that demonstrated the equivalence of	optical and atomic systems, including matter wave interferometers and	foundational experiments like Wheeler's delayed choice experiment. A	distinguishing feature of atoms from light is that the atoms have	intrinsic rest mass, and hence interact with each other gravitationally.	this is the root of ongoing experimental campaigns to harness this	distinguishing feature for applications such as gravimetry, and also to	probe the interface of quantum mechanics and gravity, a central	outstanding problem in modern physics.
+
+	% On new physics: We are searching for a revolution in the margins. A hair's width between complex theory and calculations. Let's assume the calculations are perfect and the experimental errors are overly cautious. What do we find - another term in the standard model? Very well. It's true that the Higgs detection was a spectacular vindication. Was it a revolution? Did it change how we think of our place in the world, alter what we thought was possible? Maybe if you are a theoretical particle physicist. And so with these results; they may contribute to an advance in physics, defined as a change in our model of the world in a more profound way than better precision in the fundamental constants. Forgive my skepticism; the 'new physics' we find in these experiments may extend the standard model, but for the 'pure' scientist, the goal is not to extend SM, but to supercede it. Of course, if we knew where the revelations were, we would spend our money very differently, but in some sense *search* is inseparable from re*search*, with apologies to etymologists.  <- also maybe better in the afterword
+
+
+			NTM [169-172] HOM, Wheeler as classic recapitulation of QM experiments 
+		% R lopes et al, aomic HOM experiment, nature 520 2015
+		% C K Hong, Z Y Ou, L Mandel, measruement of subpicosecond time intervals between two photons by interference, phys rev lett 59, 1987
+		% A G manning et al, single-atom source in the pico-kelvin regime, phys rev lett 113, 2014
+		% A G Manning et al, wheelers delayed-choice expt with a single atom, phys rev less 59 1987
+
+		% https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.78.483 
+		% photoassoc unlocked by cold atoms
+
+
+		RGL [4] Einstein prediction - look further into that history cf: Mukunda Das 
+	% A Einstein, Guantentheorie des einatomigen idealen gases: zweite abhandlung, Sitzungsber Kgl Preuss Akad Wiss, p3 Jan 1925
+	RGL [5,6] Cornell, Wiemann, Ketterle nobel 
+	% E A Cornell & C E Wiemann, nobel lecture: Bose-Einstein condensation in a dilute gas, the first 70 years and some recent experiments, rev mod phys, 2002
+	SSH  Realization of BEC [1,2,3], previous work on cooling and trapping [4-8], 
+		% M H ANderson, J R Ensher, M R Mathews, C E Wieman, and E A cornell, observation of bose-einstein condensation in a dilute atomic vapor, Science 269, 198-201, July 1995
+		% K B Davis, M O Mewes, M R Andrews, N J van Druten, D S Durfee, D M Kurn, W Ketterle, Bose-Einstein condensation in a gas of sodium atoms - Physical Review Letters 75, 3969-3973, Nov 1995
+		% C C Bradley, C A Sackett, J J Tollett,  G Hulet, evidence of Bose-Einstein condesnation in an atomic gas with attractive interactions, phyiscal review letters 75, 1687-1690, aug 1995
+		% W D Phillips, H Metcalf, Laser deceleration of an atomic beam, Phys Rev Lett 48, 1982
+		% Chu et al, three-dimensional viscouc confinement and cooling of atoms by resonance radiation pressure, phys rev lett 55, 1985
+		% Ch et al, experimental observation of optically trapped atoms, phys rev lett 57, 1986
+		% Raab et al, trapping of neutral sodium atoms with radiation pressure, phys rev lett 59, 1987
+		% P D Lett et al, observation of atoms laser cooled below the Doppler limit, phys rev lett 61, 1988
+	SSH [9] inertial sensors [10] atomic clocks 
+	% A D Croning et al, optics and interferometry with atoms and molecules
+	
+	
+	SSH [20] phase coherence of BEC via fringe observation 
+	% M. R. Andrews, C. G. Townsend, H.-J. Miesner, D. S. Durfee, D. M. Kurn, and W. Ketterle, “Observation of Interference Between Two Bose Condensates,” Science 275, 637–641 (1997).	
+	SSH [17] Glauber coherence - extended with Sudarshan/Klauder to cold atoms ? - birthed quantum optics, which since fertilized atom optics 
+	% R. J. Glauber, “The Quantum Theory of Optical Coherence,” Phys. Rev. 130,2529–2539 (1963).
+	SSH [18,19] HBT showed there can be correlations between pairs of photons on detectors which have no correlation at their source  
+	R. Hanbury Brown and R. Q. Twiss, “Correlation between photons in two coherent beams of light,” Nature 177, 27–29 (1956).
+	R. Hanbury Brown and R. Q. Twiss, “A test of a new type of stellar interfer- ometer on Sirius,” Nature 178, 1046–1048 (1956).
+	TKV Num species condensed as of this thesis - check everycoldatom.com or whatever 
+
+
+	there are some folks who claim steady-state BEC by optical cooling which doens't need the atoms to talk to each other. 
+	The criterion for condensation is, roughly speaking, when most of the particles in a dilute bosonic gas occupy the same quantum state. More formally this is captured by the Penrose-Onsager criterion, wherein a homogeneous gas is said to be condensed if there is a macroscopic population of the ground-state eigenvalue of the ensemble density matrix. Any particles not in the ground state are said to be part of the depleted fraction. The depletion of the condensate is comprised of two parts, the thermal depletion and the quantum depletion. The thermal depletion is an artefact of the finite temperature of the condensate and has a number distribution described by Bose-Einstein statistics. The quantum depletion is a consequence of particle interactions/quantum fluctuations?
+	A Bose-Einstein condensate (BEC) forms when a system of bosons is cooled below a critical temperature, where the majority of atoms occupy the ground state of the system. At non-zero temperature, the condensate will be depleted by thermal excitations, where some atoms occupy higher energy states with occupation probabilities following a Bose-Einstein statistics. However, even at absolute zero, the condensate will still be depleted by quantum fluctuations, a phenomenon known as quantum depletion. 
+
+	The concept of coherence has enjoyed a long history and several reconceptions. The classical definition of coherence was concerned with the phase of an oscillating signal, such as an electromagnetic wave. A wave was said to be coherent if one could predict with certainty its phase at a later time, or at a different point on its path of propagation. That is, the phase at two points in spacetime were perfectly correlated: Information about the phase at one point yielded complete information about the phase at another. After the development of the quantum theory of light, Hanbury-Brown and Twiss used correlations in intensity, the square of the electric field amplitude, to measure the diameter of stars. A classical explanation was accepted until Roy Glauber unified the concepts of coherence and correlation in his seminal paper. He extended the concept of coherence to arbitrarily high orders by invoking the correlations between additional points in spacetime. Light was said to be perfectly coherent to nth order if knowledge of the phase of light at one point yielded knowledge of the phase at n other points? This definition was extended thereafter to include massive bosons, such as atoms. Decades later, the modernized definition of coherence was explored by experiments in quantum optics and with ultracold atoms. Atoms have been used to reproduce many classic phenomena in optics, including the construction of atomic interferometers, atomic diffraction gratings, and more recently the reproduction of the Hanbury-Brown and Twiss effect.
+	
+
+	Resource theories have gained much ground lately, most prominently the resource theories of entanglement and thermodynamics. However, contextuality and reference frames have been explored as resources as well. Any resource theory must characterize the resource, give a framework for quantifying the resource content of a state, and describe the operations that preserve and diminish the resource content of a given quantum state. Resource theories pertain to coherence, entanglement; where do they come from? An incoherent state, with no resource content, is therefore any state with a fully diagonal density matrix in a given basis. A coherent state is any state with  nonzero off-diagonal elements, Where does coherence come from? How much do you get in a BEC (distillable) and at what cost?	In which we connect with past measurements of coherent BECs, perhaps across the condensation transition, and test the performance of various coherence monotones across said transition. 
+
+
+	NTM [111-120] key papers in cold atoms up to BEC/DFG 
+		% B DeMarco, D S Jin, onset of fermi degeneracy in a trapped atmoic gas, science 285 1999
+		% A G truscott et al, observation of fermi pressure in a gas of trapped atoms, science 291, 2001
+		% F Schreck et al, quasipure Bose-Einstein condensate immersed in a fermi sea, phys rev lett 87 2001
+
+RGL [1-3] nobel works for Chu, Cohen-Tannoudji and Phillips (remember that time you met him - BEC was a total surprise) 
+	Chu, Cohen-Tannoudji, Phillips - Nobel lectures, rev mod phys 70, 1998
+
+		Work of other groups:
+		NTM [123-130] He* BECs 
+		% A robert et al, A bose-einstein condensate of metastable atoms, science 292, 2001
+		% F Pereira dos Santos et al, bose einstein condenstation of metastable helium, phys rev lett 86, 2001
+		% A S Tychkov et al, metastable helium bose-einstein condensate with a large number of atoms
+		% R G Dall & A G truscott 2007
+		% S C doret et al, buffer-gas cooled bose-einstein condensate phys rev lett 103, 2009
+		% M keller et al, bose-einstein condensate of metastable helium for quantum correlation experiments, phys rev a 2009
+		% Q bouton et al, fast production of Bose-Einstein conensates of metastable helium, phys rev a 91, 2015
+		% A S flores, simple method for producing Bose-Einstein condensates of metastable helium using a single-beam optical dipole trap, Appl Phys B 121, 2015
+		
+		SSH IOP group works [69] -> Spend the time to collect all the mHe references you can find...
+		% O. Sirjean, S. Seidelin, J. V. Gomes, D. Boiron, C. I. Westbrook, A. Aspect,and G. V. Shlyapnikov, “Ionization Rates in a Bose-Einstein Condensate of Metastable Helium,” Phys. Rev. Lett. 89, 220 406 (2002).
+		% S. Seidelin, J. V. Gomes, R. Hoppeler, O. Sirjean, D. Boiron, A. Aspect, and C. I. Westbrook, “Getting the Elastic Scattering Length by Observing Inelastic Collisions in Ultracold Metastable Helium Atoms,” Phys. Rev. Lett.		93, 090 409 (2004).
+		% A. Perrin, H. Chang, V. Krachmalnicoff, M. Schellekens, D. Boiron, A. Aspect,		and C. I. Westbrook, “Observation of Atom Pairs in Spontaneous Four-Wave		Mixing of Two Colliding Bose-Einstein Condensates,” Phys. Rev. Lett. 99,		150 405 (2007).
+		% V. Krachmalnicoff, J.-C. Jaskula, M. Bonneau, V. Leung, G. B. Partridge,		D. Boiron, C. I. Westbrook, P. Deuar, P. Zi´n, M. Trippenbach, and K. V.		Kheruntsyan, “Spontaneous Four-Wave Mixing of de Broglie Waves: Beyond		Optics,” Phys. Rev. Lett. 104, 150 402 (2010)
+		% J.-C. Jaskula, M. Bonneau, G. B. Partridge, V. Krachmalnicoff, P. Deuar,		K. V. Kheruntsyan, A. Aspect, D. Boiron, and C. I. Westbrook, “Sub-		Poissonian Number Differences in Four-Wave Mixing of Matter Waves,” Phys.		Rev. Lett. 105, 190 402 (2010).
+		% SSH ENS goup dimer photoassociation [74] and scat len [75] 
+		% J. L´eonard, M. Walhout, A. P. Mosk, T. M¨uller, M. Leduc, and C. Cohen-		Tannoudji, “Giant Helium Dimers Produced by Photoassociation of Ultracold		Metastable Atoms,” Phys. Rev. Lett. 91, 073 203 (2003).
+		% S. Moal, M. Portier, J. Kim, J. Dugu´e, U. D. Rapol, M. Leduc, and C. Cohen-		Tannoudji, “Accurate Determination of the Scattering Length of Metastable		Helium Atoms Using Dark Resonances between Atoms and Exotic Molecules,”		Phys. Rev. Lett. 96, 023 203 (2006).
+		
+		NTM [163-168] atom correlations with He* 
+		% T Jeltes et al, comparison of the HBT effect for bosons and fermions, nature 445, 2007
+		% M SChellekens et al, HBT effect for ultracold quantum gases, science 310, 2005
+		% S S Hodgman et al, direct measrurement of long-range third-order coherence in BEC, science 331, 2011
+		% R G Dall et al, ideal n-body correlations with massive particles, nat phys 9, 2013
+		% W RuGway et al, correlations in amplified four-wave mixing of matter waves, phys rev lett 107, 2011
+		% R Lopes et al, second-order coherence of superradiance from a bose-einstein condensate, phys rev A 90, 2014
+
+		NTM [173-176] towards entangled pairs 
+		% 		A perron et al, observation of atom pairs in spontaneous four-wave mixing of two colliding bose einstein condensates, phys rev lett 99, 2007
+		% V Krachmalnicoff et al, spontaneous four-wave mixing of de broglie waves: beyond optics, pys rev lett 104, 2010
+		% J C Jaskula et al, sub-Poissonian number differences in four-wave mixing of matter waves, phys rev lett 105, 2010
+		% K V kherunstyan et al, violation of the Cauchy-Schwartz in equality with matter waves
+		% Shin PhD work
+			
+		Spectroscopy with He - point to RGL/NTM? for historical review until 2017ish
+			RGL [21,22] forbidden measurements  
+				% R an Rooij et al, frequency metrology in quantum degenerate helium: direct measurement of the 2 3S1 - 2 1S0 transition, Science 333, 2011
+				% R P M J W Notermans et al, high precision spectroscopy of the forbidden 2 3S1 2 1P1 transition in quantum degenerate metastable helium, phys rev lett 112, 2014
+		NTM [131] 3He* DFG, as direction for french group 
+		% J M McNamrara, degenerate bose-fermi mixture of metastable atoms, phys rev lett 97, 2012
+		Recent optical lattice work
+			
+The historical study of Helium is a microcosm of the maturing enterprise of physics....
+
+	RGL [19,20] record breaking ultracold atom clocks surpassing Cs fountains? 
+	% S L Campbell et al, a fermi-degenerate three-dimensional optical lattice clock
+	% 	G E Marti et al, imaging optical frequencies with 100 mu Hz precision and 1.1 mu m resolution, phys rev lett 120, 2018
+
+
+	Amico 2020 - roadmap on atomtronics
+	BEC in space 2020
+
+	2020 Mordini - measurement of the equation of state - BEC still yielding to fundamental studies
+
+	\cite{FootAtomic}Fraunhofer 1880 used a spectrograph (based on a prism) to measure wavelength of lines that hadn't been seen before, and deduced the existence of Helium from solar radiation.
+Following Rydberg's observation of that the wavenumber was proportional to the difference of inverse-squares of whole numbers in 1888, by 1913 Bohr proposed a new model, informed by Rutherford's scattering experiments, that electrons orbited the nucleus like planets. Bohr assumed the orbital angular momentum had to be quantized.
+
+RGL He is unique in the intersection of tractable structure calculations and access to ultralow temperature - H has reached degeneracy [15] but the experimental sophistication favours traditional atomic beams [16-18] 
+
+Helium is the second-most abundant element in the universe, remember!
+	Spake 2018 - the 1083nm line used to measure the rate of atmospheric loss of an exoplanet
+
+
+	% \subsection{Creation of Bose-Einstein condensates}
+	Doppler and molasses temperatures are called Cold. Collisions in the sub-microkelvin regime are below the recoil energy of light and so must occur in the dark - this is the 'ultracold' regime.
+	% Making, Probing, and understanding BEC
+	% Metcalf & Van der Straten
+	
+	TKV Laser cooling limits are low enough to load mag traps which can be evap cooled
+	% H F Hess, Evaporative cooling of magnetically trapped and compressed spin-oolarized hydrogen, Physical Review B 34, 3476-3479, Sept 1986
+	% W Ketterle and N J van Druten, Evaporative cooling of traped atoms, advanes in atomic molecular and optical physics 37, 181-236, 1996
+	% O J Luiten, M W reynolds, J T M Walraven, Kinetic theory of the evaporative cooling of a trappe dgas, Physical Reveiw A 53, 381-389 Jan 1996
+	Absolute limits of cooling Thermodynamic limits Third law \& quantum	proof Trap losses Modern methods Cooling fermions Prospects for feedback	cooling? Quantized refrigerators Algorithmic cooling Other techniques:	dilution fridges etc
+		
+	
+
+	RSP [51] Many-body: Global wavelike interference of interacting objects, as in EPR [51] - entanglement 
+		EPR, can quantum-mechanical description of physical reality be considered complete? Phys Rev 47, 1935
+		J Eisert et al, quantum many-body systems out of equilibrium, nature physics 11, 2015

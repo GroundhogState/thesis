@@ -1,0 +1,4 @@
+# gitignore: All the drafts
+drafts/*
+# gdrive stuff
+*.ini

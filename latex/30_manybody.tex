@@ -1,0 +1,251 @@
+% \hypertarget{many-body-physics}{%
+% \section{Many-body physics}\label{many-body-physics}}
+% \chapter*{Interplay, emergence, complexity}
+% \addcontentsline{toc}{chapter}{Interplay, emergence, complexity}
+% \section*{There's always a bigger Hilbert space}%stat phys, Thermalization, coherence, quantum matter, state engineering
+% \addcontentsline{toc}{section}{There's always a bigger Hilbert space}
+\subsection*{It to bit}% QMI/condmat, QML, church-turing, Physics as a branch of computer science, process theories?
+\subsection*{Over the horizon}% Exotic matter, quantum simulation, is this more like string theory or thermodynamics? 
+
+\begin{adjustwidth}{3cm}{0cm}
+\begin{flushright}
+\emph{``From the Tao comes one,\\
+from one comes two,\\
+from two comes three, and\\
+from three comes all things."}\\
+ - Lao Tzu\footnote{Tao Te Ching, circa 4th-6th century BCE}
+\end{flushright}
+\end{adjustwidth}
+    
+
+
+	% [Many body phys] I bloch, J Dalibard, W Zwerger many-body physics with ultracold gases, rev mod phys 80, 2008
+	% [Many body phys/scattering] C Chin et al, feschbach resoannces in ultracold gases, rev mod phys 82, 2010
+
+	What actually happens when you add more particles? What do we mean things get more complex - what resources are there more of in the state, and what does it take more of to simulate etc
+		% https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.82.1225 feshbach resonance review
+Oh look, this might be handy https://arxiv.org/pdf/1711.04105.pdf
+	Ingo Peschel shows that one can determine reduced density matrices from correlation functions of lattice systems \cite{Peschel03} %https://iopscience.iop.org/article/10.1088/0305-4470/36/14/101/fulltext/ 	(reduced) density matrices of solvable models have the form $\exp(-H)$, where $H$ is a solvable operator confined to the chosen subsystem (this is in the context of dmrg). You just integrate/trace out the degrees of freedom outside the subsystem.
+
+
+	% Kibble-Zurek mechanism and criticality?
+	% Pichler et al 2010 nonequlibrium dynamcics of bosonic atoms in optical lattices: Decoherence of many-body states dues to spontaneous emissions, phys rev a, atomic molecular and optical phscs 82
+	% Sachdev QPT book
+	% RSP [97,96] classical phase transitions are accompanied by non-analytic free energy (deriv. of partition fn?) and micro fluctuations (thermal) actually cause the transition 
+	% RSP in contrast to Quantum phase transitions occur when tuning g in H = H0 + g H1, where [H0,H1]!=0 - and can occur at T=0, usuall refer to ground state transitions, dominant character of state changes due to eg avoided crossing? 
+Section introduction\\
+Statistical physics Phase transitions\\
+Thermal, quantum, dynamical, computable, semantic Emergent complexity
+
+The third section of this thesis transitions from the study of atomic
+structure to the emergent dynamics of interacting systems. In teh old
+essay `More is different', there is an argument that when you put a lot
+of thigns together they start acting in genuinely novel ways. A single
+water molecule is not wet - nor does it mean anything to say it is any
+given phase, or that is has a temperature. (this is of course
+problematic because it ascribes a specific state but the idea's there I
+guess). So ya. One of the watershed(?) moments in the history of physics
+was the \emph{derivation} of thermodynamics from statistical mechancics
+- the assumption of a set of postulates about the microscopic nature of
+the world that led through the law of large numbers to a new
+understanding of empirical laws of the past; this gave a framework to
+understand and extend thermo, and it was a triumph to provide systematic
+ways to determine macro physics from teh nature of interactions. What
+was more profouond was the discovery of universality classes - that at
+phase boundaries there were unifying properties across disparate
+systems, things that tied together quite general phenomena in terms of
+these scaling relationships. This is kind of garbled. But yeah, look, we
+have agaaghagha this is just insane rambling - I wonder if I can push to
+10k words in the process of smooshing out all this. Not an entirely
+honest drive if I'm honest but w/e the thing is I'm here and I'm writing
+even if it's completely useless and will get trashed. This is a start,
+even if it's bogus and hard. Anyhow back to progress. So ya -
+statistical mechnics also provided an actual understanding of
+temperature as a sublime phenomenon in all the emergent phenomenon -
+that really, at the end of the day, thermal equlibrium and the
+`spontaneous' processes we see in nature are just outcomes of,
+basically, the law of large numbers. Phase transitions have been noted
+in all kinds of places now; the BEC transitiion is a classical phase
+transition. The idea is that an \emph{order parameter} changes value
+from zero - representing a kind of disorganization - to something
+nonzero, representing an emergent order. These come in different
+flavours and in different systems but tied together by their scaling
+laws - universality classes. Something really beautifully profound
+there. And of course, pepole have tried to take the numinous idea of the
+phase transition, of the \emph{qualitative} change in the emergent
+properties of otherwise unchanged constituents, just by fiddling how
+they relate to each other - and staple it to all kinds of things. People
+talk of phase transitions in general network theory, presumably in
+social dynamics, and more recently even in the study of grammars,
+arguing that meaningful language corresponds to a marked phase
+transition in lexical trees. But turning back from flights of fancy -
+thermodynamics unified these ideas (in the earlier days) with the idea
+of \emph{Free energy} which has since run rampant. But the idea is that
+- well, if you have tunable parameters, then are there different
+solutions to some equation? How do you wind up with these multiple
+free-energy landscapes from a microscopic basis? Or do you need to
+staple models toether? Idk, this would have been a great topics for a
+PhD, hey?
+
+Regardless. The idea is that we should probably add more signposts to
+this meandering mess. I want to lead from classical phase transitions to
+order parameters - using BEC as an example, identify its universality
+class, no need to list off a ton or ramble about them too much. Then say
+hey, once you're in the ground state, you have different kinds of phase
+transitions. Quantum phase transitions, which aren't driven thermally or
+by statistical laws but by the structure of the gruond state, and they
+were first observed in an optical lattice. Free energy comes up as
+should correlations, I think, as they both come hand in hand with order
+etc.
+
+
+Information In which the prospects of a quantum simulator are outlined. Beginning
+with the discussion of a qubit and then the purity of states, the quantum analog
+algorithms will be described. The necessity of state purity i.e. low entropy should
+be discussed, and the question of realizing a high-purity quantum register should be
+suggestively posed.
+ Turing machines
+ qubits
+ Bloch sphere and evolution
+ Purity
+ Density matrix and the trace operator
+ entanglement
+ decomposition (partial traces, Schmidt product)
+ second quantization
+ coherence
+ entropy
+ renormalization
+ thermodynamics
+ thermalization
+Matter In which the realization of the quantum analog algorithm is fixed in the form of
+an optical lattice. The theory of atom-light interactions should be presented, and
+the content of any field theories describing the composite system. Where possible,
+connections should be drawn to the preceding chapter, and also to experimental
+considerations which will be treated in the next chapter.
+ Atomic structure
+ metastable helium
+ light and two-level atoms (qubits)
+ Scattering and the radiative force
+ Dipole force
+ Sublevels
+ Zeeman effect
+vii
+viii
+ Angular momentum, polarization, and spin
+ Composite systems
+ Matter fields
+ Correlation functions
+ Strongly correlated systems
+ Effective field theories: Bogoliubov and Bose-Hubbard
+ Information revisited
+ Comments on thermodynamics of cold atom ensembles
+{ Breakdown of the equipartition theorem and kinetic temperature
+{ Efficiency of atomic refrigeration
+{ Quantum propagators, thermodynamics, and imaginary time
+ Comments on classical, semiclassical, and quantum models
+{ Breakdown of assumptions of continuity
+{ Classical and quantum dipoles
+{
+Neural Networks In which any work done on representation of the quantum system is
+decribed, along with precursors to any calculations done with these methods. In
+this section, connections should be drawn between deep learning/state representation/
+tensor networks/renormalization/state production/physical computation. It's
+the dream. It's where it all comes together, but also the chapter that will be the
+hardest or least likely to produce.
+ Matrix product states
+ MERA
+ quantum circuit model
+ RBM, DBM, and representations
+ Deep learning and renormalization
+ algorithms: tradeoffs and advantages
+ categorical formulation
+ Equivalence of circuits, ANN states and quantum states
+ Church-Turing in the age of QNN and ANNQS
+ Curry-Howard and state preparation
+
+ Introduction
+Perspective
+ Ultra low temperature atomic physics
+ Scenic Tour: Computing, quantum challenges
+ Quantum simulators
+ Optical lattice
+Process of physical science
+ Game of regularity: New understanding for free
+ Triumph of reason: expressivity from compression
+ Engineering requires correspondence: unpacking
+ Quantifying computational effort
+Computing and physics
+Machine-assisted Phenomenology
+ Convenient to outsource calculations
+ How do you accurately predict the future?
+ How much does it cost to predict the future?
+Cost of computation
+ Resolution/memory/time tradeoff
+ RSA relies on problems being hard
+Going Quantum
+Simplifying matters
+ Renormalization retains information while reducing dimensions
+ Strongly correlated systems: modest many body systems impossible on
+classical computers
+1
+Going Quantum
+ One resolution to exponential memory demands
+ universal quantum computer models ANY QUANTUM PROCESS
+Quantum supremacy
+Where's my QC?
+ decoherence: arbitrary phase noise
+ quantum errors are continuous: harder than bit 
+ips
+ Error correction threshold unreached, adds overhead
+ Universal quantum computing and effciency
+ Google's 50 qubits
+Comments on complexity
+ "Best possible classical algorithm"
+ Sorry there's no clear cut definitions
+ What is different about quantum computers? Open question.
+Feynman's Big Idea
+ System replication
+ Run experiments on the model system and translate them back
+ Move the goal posts: Solve (simulate) specific problems
+ hope the simulation is "more effcient" than anything else: difference be-
+tween impossble and achievable
+Optical Lattices
+Lattice overview
+ Atom-light interactions (lasers) provide control
+ Versatile: HEP, condensed matter, quantum information
+ Approaching strongly-correlated regime
+2
+Quantum Phase Transitions
+ Potential depth determines importance of interactions
+ Eventually tunnelling suppressed by interactions: MI
+ partial localization leads to interference
+ MI phase incoherent
+Simulations
+ Also: Artificial graphene, non-thermal states, negative temperatures
+ Role of entanglement in thermalization
+ In the pursuit of effective representations of physical systems we have built
+devices that create small-scale controllable simulations of the quantum
+fabric of the universe. Cool, huh?
+ Fundamental quantum mechanics necessary for quantum engineering
+Quantum supremacy?
+Research at ANU
+ANU lattice
+ Dipole force creates lattice
+ Dipole barely overcomes gravity: Atoms must be ultracold to remain
+trapped
+ laser cooling: 3 nobel. BEC: 3 nobel.
+ condensation: Macroscopic wavefunction
+Conclusion
+ High-resolution quantum dynamics in artifical crystal
+ Such systems hard to simulate with existing computers
+ No universal quantum computer, so specialized simulator
+ Other groups: Have data out of reach of modern computing!
+ Not known whether this is 'supreme'
+ Analog simulators probably bridge the gap between classical sims and
+universal quantum
+
+
+
+    https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.124.073401 
+
+

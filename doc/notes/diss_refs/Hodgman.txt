@@ -1,0 +1,81 @@
+Hodgman
+SSH [1-8] Realization of BEC, previous work on cooling and trapping [4-8], 
+	Anderson et al, Bradley et al, David et al, 
+	W D Phillips, H Metcalf, Laser deceleration of an atomic beam, Phys Rev Lett 48, 1982
+	Chu et al, three-dimensional viscouc confinement and cooling of atoms by resonance radiation pressure, phys rev lett 55, 1985
+	Ch et al, experimental observation of optically trapped atoms, phys rev lett 57, 1986
+	Raab et al, trapping of neutral sodium atoms with radiation pressure, phys rev lett 59, 1987
+	P D Lett et al, observation of atoms laser cooled below the Doppler limit, phys rev lett 61, 1988
+SSH [9,10] inertial sensors [10] atomic clocks 
+	A D Croning et al, optics and interferometry with atoms and molecules
+	M F Riedel et al, atom-chip-based generation of entanglement for quantum metrology
+SSH [12-16] astrophysics relevance of atomic structure measurements [12-14], [15-16] tests of QED 
+	J. G. Doyle, “The interpretation of C V and O VII emission line ratios in the sun,” Astron. Astrophys. 87, 183–187 (1980).
+	M. A. Jimenez-Garate, N. S. Schulz, and H. L. Marshall, “Discrete X-Ray Signatures of a Photoionized Plasma above the Accretion Disk of the Neutron Star EXO 0748676,” Astrophys. J. 590, 432 (2003).
+	K. M. Leighly, M. Dietrich, and S. Barber, “The Discovery of the First He Iλ 10830 Broad Absorption Line Quasar,” Astrophys. J. 728, 94 (2011).
+	W. R. Johnson, D. R. Plante, and J. Sapirstein, “Relativistic Calculations of Transition Amplitudes in the Helium Isoelectronic Sequence,” Adv. At. Mol. Opt. Phys. 35, 255–329 (1995).
+	G.  Lach and K. Pachucki, “Forbidden transitions in the helium atom,” Phys. Rev. A 64, 042 510 (2001).
+SSH [17] Glauber coherence - extended with Sudarshan/Klauder to cold atoms ? - birthed quantum optics, which since fertilized atom optics 
+	17] R. J. Glauber, “The Quantum Theory of Optical Coherence,” Phys. Rev. 130,2529–2539 (1963).
+SSH [18,19] HBT showed there can be correlations between pairs of photons on detectors which have no correlation at their source  
+	R. Hanbury Brown and R. Q. Twiss, “Correlation between photons in two coherent beams of light,” Nature 177, 27–29 (1956).
+	R. Hanbury Brown and R. Q. Twiss, “A test of a new type of stellar interfer- ometer on Sirius,” Nature 178, 1046–1048 (1956).
+SSH [20] phase coherence of BEC via fringe observation 
+	M. R. Andrews, C. G. Townsend, H.-J. Miesner, D. S. Durfee, D. M. Kurn, and W. Ketterle, “Observation of Interference Between Two Bose Condensates,” Science 275, 637–641 (1997).	
+SSH [23,24] Neon beam used to demonstrate bunching, but shown along with 2nd order coherence in BEC [24] 
+	M. Yasuda and F. Shimizu, “Observation of Two-Atom Correlation o
+SSH [28-32] measreuemnts of correlation functions, mostly qualitative 
+	A. ¨Ottl, S. Ritter, M. K¨ohl, and T. Esslinger, “Correlations and Counting Statistics of an Atom Laser,” Phys. Rev. Lett. 95, 090 404 (2005).
+	T. Rom, T. Best, D. van Oosten, U. Schneider, S. F¨olling, B. Paredes, and I. Bloch, “Free fermion antibunching in a degenerate atomic Fermi gas released from an optical lattice,” Nature 444, 733–736 (2006).
+	S. F¨olling, F. Gerbier, A. Widera1, O. Mandel, T. Gericke, and I. Bloch, “Spatial quantum noise interferometry in expanding ultracold atom clouds,” Nature 434, 481–484 (2005).
+	M. Greiner, C. A. Regal, J. T. Stewart, and D. S. Jin, “Probing Pair-Correlated Fermionic Atoms through Correlations in Atom Shot Noise,” Phys. Rev. Lett. 94, 110 401 (2005).
+	S. Manz, R. B¨ucker, T. Betz, C. Koller, S. Hofferberth, I. E. Mazets, A. Imam- bekov, E. Demler, A. Perrin, J. Schmiedmayer, and T. Schumm, “Two-point density correlations of quasicondensates in free expansion,” Phys. Rev. A 81, 031 610 (2010).
+SSH [33] Einstein extending Bose work, predicting phase transition [34] 
+SSH [35] source of most BEC theory; BE statistics, db wavelength, critical phase spacew density and temperature, cond frac 
+	Pethick & Smith
+SSH [36] GP equation solution - TF approximation, [37] chemical potential and condensate size 
+	Making, Probing, and understanding BEC
+	Metcalf & Van der Straten
+SSH [38,39] condensate ballstic expansion 
+	Y. Castin and R. Dum, “Bose-Einstein Condensates in Time Dependent Traps,” Phys. Rev. Lett. 77, 5315–5319 (1996).
+	K. Dieckmann, Bose-Einstein Condensation with High Atom Number in a Deep Magnetic Trap, Ph.D. thesis, University of Amsterdam (2001).
+SSH [40-43] atom laser methods 
+	M.-O. Mewes, M. R. Andrews, D. M. Kurn, D. S. Durfee, C. G. Townsend, and W. Ketterle, “Output Coupler for Bose-Einstein Condensed Atoms,” Phys. Rev. Lett. 78, 582–585 (1997).
+	I. Bloch, T. W. H¨ansch, and T. Esslinger, “Atom Laser with a CW Output Coupler,” Phys. Rev. Lett. 82, 3008–3011 (1999).
+	E. W. Hagley, L. Deng, M. Kozuma, J. Wen, K. Helmerson, S. L. Rolston, and W. D. Phillips, “A Well-Collimated Quasi-Continuous Atom Laser,” Science 283, 1706–1709 (1999).
+	A. Couvert, M. Jeppesen, T. Kawalec, G. Reinaudi, R. Mathevet, and D. Gu´ery-Odelin, “A quasi-monomode guided atom laser from an all-optical Bose-Einstein condensate,” Europhys. Lett. 83, 50 001 (2008).
+	Sean waveguide paper
+SSH [37] source for a lot of laser cooling and trapping infor - radiative force, scattering rate, recoil and doppler limits, magnetic traps 
+	Metcalf & Van der Straten
+SSH [36] no mag field max in free space? 
+SSH [46] first mag trapping of neutral atoms 
+	A. L. Migdall, J. V. Prodan, W. D. Phillips, T. H. Bergeman, and H. J. Metcalf, “First Observation of Magnetically Trapped Neutral Atoms,” Phys. Rev. Lett. 54, 2596–2599 (1985)
+SSH [1,3,47] TOP trap dipole QUIC coil to plug leaky traps 
+	T. Esslinger, I. Bloch, and T. W. H¨ansch, “Bose-Einstein condensation in a quadrupole-Ioffe-configuration trap,” Phys. Rev. A 58, R2664–R2667 (1998).
+SSH [48,49,50,51] IP trap, cloverleaf, atom chips 
+	D. E. Pritchard, “Cooling Neutral Atoms in a Magnetic Trap for Precision Spectroscopy,” Phys. Rev. Lett. 51, 1336–1339 (1983).
+	D. G. Fried, T. C. Killian, L.Willmann, D. Landhuis, S. C. Moss, D. Kleppner, and T. J. Greytak, “Bose-Einstein Condensation of Atomic Hydrogen,” Phys. Rev. Lett. 81, 3811–3814 (1998).
+	M.-O. Mewes, M. R. Andrews, N. J. van Druten, D. M. Kurn, D. S. Durfee, and W. Ketterle, “Bose-Einstein Condensation in a Tightly Confining DC Magnetic Trap,” Phys. Rev. Lett. 77, 416–419 (1996).
+	J. Fort´agh and C. Zimmermann, “Magnetic microtraps for ultracold atoms,” Rev. Mod. Phys. 79, 235–289 (2007).
+SSH [37,53,54] Dipole traps [37] and heating rate [53], first dipole BEC [54]  
+	J. D. Miller, R. A. Cline, and D. J. Heinzen, “Far-off-resonance optical trap- ping of atoms,” Phys. Rev. A 47, R4567–R4570 (1993).
+	M. D. Barrett, J. A. Sauer, and M. S. Chapman, “All-Optical Formation of an Atomic Bose-Einstein Condensate,” Phys. Rev. Lett. 87, 010 404 (2001).
+SSH [56] lifetime of metastable 
+		S. S. Hodgman, R. G. Dall, L. J. Byron, K. G. H. Baldwin, S. J. Buckman, and A. G. Truscott, “Metastable Helium: A New Determination of the Longest Atomic Excited-State Lifetime,” Phys. Rev. Lett. 103, 053 002 (2009).
+SSH [59] Isat for cooling transition 
+	K. G. H. Baldwin, “Metastable helium: Atom optics with nano-grenades.” Contemp. Phys. 46, 105–120 (2005).
+SSH [61] shlyapnikov predicts penning rate suppression 
+SSH [62,63] suppression only works well for Helium so other noble gases unlikely to condense 
+	C. Orzel, M. Walhout, U. Sterr, P. S. Julienne, and S. L. Rolston, “Spin polarization and quantum-statistical effects in ultracold ionizing collisions,” Phys. Rev. A 59, 1926–1935 (1999).
+	P. Spoden, M. Zinner, N. Herschbach, W. J. van Drunen, W. Ertmer, and G. Birkl, “Collisional Properties of Cold Spin-Polarized Metastable Neon Atoms,” Phys. Rev. Lett. 94, 223 201 (2005).
+SSH [24,25,69-73] IOP group works [69] 2-,3-body loss process, scat len [70], colliding condensate [71-73], 2nd order coherence [24], compared corfun for Bose, fermi [25] 
+	O. Sirjean, S. Seidelin, J. V. Gomes, D. Boiron, C. I. Westbrook, A. Aspect, and G. V. Shlyapnikov, “Ionization Rates in a Bose-Einstein Condensate of Metastable Helium,” Phys. Rev. Lett. 89, 220 406 (2002).
+	S. Seidelin, J. V. Gomes, R. Hoppeler, O. Sirjean, D. Boiron, A. Aspect, and C. I. Westbrook, “Getting the Elastic Scattering Length by Observing Inelastic Collisions in Ultracold Metastable Helium Atoms,” Phys. Rev. Lett. 93, 090 409 (2004).
+	A. Perrin, H. Chang, V. Krachmalnicoff, M. Schellekens, D. Boiron, A. Aspect, and C. I. Westbrook, “Observation of Atom Pairs in Spontaneous Four-Wave Mixing of Two Colliding Bose-Einstein Condensates,” Phys. Rev. Lett. 99, 150 405 (2007).
+	V. Krachmalnicoff, J.-C. Jaskula, M. Bonneau, V. Leung, G. B. Partridge, D. Boiron, C. I. Westbrook, P. Deuar, P. Zi´n, M. Trippenbach, and K. V. Kheruntsyan, “Spontaneous Four-Wave Mixing of de Broglie Waves: Beyond Optics,” Phys. Rev. Lett. 104, 150 402 (2010)
+	J.-C. Jaskula, M. Bonneau, G. B. Partridge, V. Krachmalnicoff, P. Deuar, K. V. Kheruntsyan, A. Aspect, D. Boiron, and C. I. Westbrook, “Sub- Poissonian Number Differences in Four-Wave Mixing of Matter Waves,” Phys. Rev. Lett. 105, 190 402 (2010).
+SSH [74,75] ENS goup dimer photoassociation [74] and scat len [75] 
+	J. L´eonard, M. Walhout, A. P. Mosk, T. M¨uller, M. Leduc, and C. Cohen- Tannoudji, “Giant Helium Dimers Produced by Photoassociation of Ultracold Metastable Atoms,” Phys. Rev. Lett. 91, 073 203 (2003).
+	S. Moal, M. Portier, J. Kim, J. Dugu´e, U. D. Rapol, M. Leduc, and C. Cohen- Tannoudji, “Accurate Determination of the Scattering Length of Metastable Helium Atoms Using Dark Resonances between Atoms and Exotic Molecules,” Phys. Rev. Lett. 96, 023 203 (2006).
+SSH [80] atomic structure ref SSH Transition probs, rate equations and einstein coefficients, transition rate by solving DE, transition prob and radiation density Dipole approximation, spontaneous transition rate
+	G. Woodgate, Elementary atomic structure, oxford science publications

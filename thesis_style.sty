@@ -1,0 +1,87 @@
+\ProvidesPackage{thesis_style}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{changepage}
+\usepackage[a4paper, margin=3.5cm]{geometry}
+% https://tex.stackexchange.com/questions/50258/margins-of-book-class
+
+% https://mirror.aarnet.edu.au/pub/CTAN/macros/latex/contrib/lettrine/doc/lettrine.pdf
+\usepackage{lettrine}
+\usepackage{siunitx}
+%%% Formatting stuffs
+\usepackage{rotating}
+\renewcommand{\baselinestretch}{1}
+\usepackage{Typocaps}
+\newcommand{\dropcap}[1]{\dropcapaux#1\relax}
+\def\dropcapaux#1#2\relax{\lettrine[lines=3,lraise=-0.5,depth=1]{\typocap{#1}}{#2}}
+% \input Rothdn.fd
+% \newcommand*\initfamily{\usefont{U}{Rothdn}{xl}{n}}
+
+
+% from tug.org try: QT Linostroke, Lukas Svatba, Calligra, Baroque initials, 
+%
+% Also try: eileenbl, elz, roth, romantik, royal
+% https://tug.org/FontCatalogue/rothenburgdecorative/example.html
+% https://tug.org/FontCatalogue/zallmancaps/example.html
+% https://tug.org/FontCatalogue/typographercaps/example.html
+% https://tug.org/FontCatalogue/elzeviercapsregular/example.html
+% https://tug.org/FontCatalogue/royalinitialen/example.html
+
+% main text font
+% https://tug.org/FontCatalogue/mathfonts.html
+
+\usepackage[backend=biber,style=numeric]{biblatex}
+
+% biber issues https://tex.stackexchange.com/questions/309991/how-to-fix-the-incompatility-between-biber-and-biblatex-versions-in-texmaker 
+% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+
+% Editing
+\newcommand{\todo}[1]{{\color{blue}{#1}\normalcolor}} % todo
+\newcommand{\com}[1]{{\color{red}{#1}\normalcolor}} %comment
+\newcommand{\commment}[1]{{\color{red}{#1}\normalcolor}} %comment
+
+% Formatting
+% Paper reference box
+	% Change bib format to fullform?
+	
+% Liner box
+% Scientist profile
+
+% common notation
+\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\ket}[1]{|#1\rangle}
+\newcommand{\braket}[2]{\langle#1|#2\rangle}
+\newcommand{\Tr}{\textrm{Tr}}
+
+\newcommand{\MetastableState}{2^{3\!}S_1}%
+\newcommand{\UpperS}{5^{3\!}S_{1}}%
+\newcommand{\UpperTriplet}{5^{1\!}D_{2}}%
+\newcommand{\triplet}{^{3\!}}
+\newcommand{\singlet}{^{1\!}}
+\newcommand{\UpperSingletStates}{5^{3\!}D_{0,1,2}}%
+\newcommand{\PStateManifold}{2^{3\!}P}%
+\newcommand{\UpperStateManifold}{5^{3\!}D}%
+% \newcommand{\atomstate}{3}{#1^{#2\!}#3}
+
+
+\newcommand{\kvec}{\textbf{k}}
+\newcommand{\pvec}{\textbf{p}}
+\newcommand{\rvec}{\textbf{r}}
+\newcommand{\micron}{\mu\textrm{m}}
+% common notation
+% Spectroscopic notation 
+\newcommand{\metastable}{2^{3\!}S_1}%
+\newcommand{\mhe}{\textrm{He}$^*~$}%
+
+
+\usepackage{afterpage}
+\newcommand\myemptypage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage
+    }

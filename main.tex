@@ -1,0 +1,52 @@
+\documentclass{book} % report offers chapter and abstract. book does not offer abstract. https://tex.stackexchange.com/questions/36988/regarding-the-book-report-and-article-document-classes-what-are-the-mai
+% However, book offers other nice things like openright and twoside, so the Abstract environment might well be defined manually instead (or change the class file)
+% For initial writing, will use report to get everything working, then consider porting to book for the nicer formatting.
+\usepackage{thesis_style}
+% Thesis should be double spaced or one and a half spaced. Single spacing is used only for indented quotations, footnotes and bibliographies. All margins are with header and footing settings as 2.5cm from the top and bottom. Digital copies: All four margins.
+% For fancy letterheading:
+% https://tex.stackexchange.com/questions/769/how-can-i-create-documents-in-latex-using-a-calligraphic-first-letter-for-chapte/10260
+
+
+\addbibresource{latex/bibliography.bib}
+% http://www.heliumbec.com/wiki/User:Jacob possible graphics for front page
+\begin{document}
+% \include{latex/mtodo}
+	% \myemptypage
+% \frontmatter
+% \include{latex/01_frontmatter}
+% % An abstract of 250-500 words is on the page or pages following the acknowledgement. The electronic version of the abstract must use standard text only.
+%  % table of contents appears following the abstract.
+% \include{latex/00_abstract}
+\setcounter{tocdepth}{1}
+% \tableofcontents
+
+% \part*{Preface}
+% \chapter*{Overview}
+% \include{latex/11_overview}
+% \part{Background and technical introduction}
+% \include{latex/12_introduction}
+% \include{latex/13_experiment}
+
+% \part{Laser spectroscopy of Helium}
+% \include{latex/20_metrology}
+% \chapter{Frequency measurements of transitions between the $n=2$ and $n=5$ manifolds in $^4$He}
+% \include{latex/21_transitions}
+% \chapter*{A: Forbidden}
+% \chapter*{A: Tuneout}
+
+% % % % \part*{Inflection point}
+
+% \part{Many-body physics in ultracold gases}
+% \include{latex/30_manybody}
+% \chapter{Quantum depletion of a harmonically trapped Bose gas}
+% \include{latex/31_depletion}
+\include{latex/32_lattice}
+
+% \chapter{Conclusion}
+% \include{latex/40_conclusion}
+% \backmatter
+\printbibliography
+% \bibliography{bibliography}
+% \include{latex/list_of_publications}
+% \appendix
+\end{document}
