@@ -38,4 +38,4 @@ if recompile_bib==True:
 	print('Recompiling PDF...')
 	os.system(compilecommand)
 	os.system(compilecommand)
-os.system('start "" {jobname}.pdf'.format(jobname=jobname))
+# os.system('start "" {jobname}.pdf'.format(jobname=jobname))
