@@ -1,4 +1,15 @@
 # gitignore: All the drafts
 drafts/*
+sample_thesis/*
+# huge numbers of qd figs
+fig/depletion/runs/*
+fig/apparatus/ComponentLibrary/*
 # gdrive stuff
 *.ini
+# matlab files
+*.m
+*.fig
+# Various image types not used
+*.png
+*.epsc
+

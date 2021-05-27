@@ -249,3 +249,81 @@ universal quantum
     https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.124.073401 
 
 
+
+
+The Hamiltonian \ref{eqn:ham} has an alternative presentation in second-quantized form,
+	\begin{equation}
+		\hat{H} = \sum_\pvec \frac{p^2}{2m} a^\dagger_\pvec a_\pvec +\sum_{\pvec,\textbf{q}} \frac{\nu(\pvec)}{V}a^\dagger_{\pvec+\textbf{p}} a^\dagger_{\textbf{q}-\textbf{p}} a_\pvec a_\textbf{q}, 
+	\end{equation}
+	where the $\hat{a}^\dagger_\pvec$  ($\hat{a}_\pvec$) operators create (annihilate) a bosonic atom in the state with momentum $\pvec$. The first sum is the kinetic term, and the second captures momentum-conserving collisions, where $\nu(\pvec)$ is the Fourier transform of the scattering potential $V(\textbf{r}'-\textbf{r})$ and the sum omits terms which do not conserve momentum. 
+
+	The Fourier conjugate of a contact interaction of the form $V(\textbf{r}'-\textbf{r})=g\delta_{\textbf{r},\textbf{r}'}$ is $\nu(\kvec)=g/2$, which appears 	following a lengthy calculation (see, for example, \cite{PitaevskiiStringari}) in the symmetric quadratic form
+	% Also, there's the issue of identifying the reservoir... is it identified with the thermal fraction, or some other system?
+	\begin{equation}
+		H = \frac{gN^2}{2V} + \sum_{\pvec\neq0}\frac{p^2}{2m}a^\dagger_\pvec a_\pvec + \frac{gn}{2}\sum_{\pvec\neq0}\left(2a^\dagger_\pvec a_\pvec + a^\dagger_\pvec a^\dagger_{-\pvec} + a^\dagger_{-\pvec} a^\dagger_{\pvec} + \frac{mgn}{p^2}\right),
+		\label{eqn:bog_H}
+	\end{equation}
+	which is specified by $g=4\pi\hbar^2a/m$, and is visibly diagonalized in the non-interacting case, where $g=0$. The off-diagonal scattering terms can be eliminated by following the Bogoliubov approach (which was actually first employed by Holstein and Primakoff in the context of spin waves \cite{schwabl} and then independently applied to the problem of interacting bosons by Bogoliubov \cite{bologiubov47}). The Bogoliubov transform amounts to the substitution of operators
+	% bogoliubov transform to diagonalize this H, bogo dispersion, population graphs inc depletion from LDA
+	% From Schwabl:
+	% Bogo transform first used in T. Holstein and H. Primakoff (Phys.
+	% Rev. 58, 1098 (1940) for spin-wave hamiltonians. Bogo rediscovered and got the name
+	\begin{align}
+		a_\pvec &= u_\pvec \hat{b}_\pvec + v_\pvec \hat{b}^\dagger_{-\pvec}\\
+		a_\pvec^\dagger &= u_\pvec\hat{b}_\pvec^\dagger + v_\pvec \hat{b}_{-\pvec}
+		\label{bogotrans}
+	\end{align}
+	whose inverse
+	\begin{align}
+		\hat{b}_\pvec &= u_\pvec a_\pvec - v_\pvec a^\dagger_{-\pvec}\\
+		\hat{b}_\pvec^\dagger &= u_\pvec a_\pvec^\dagger - v_\pvec a_{-\pvec}
+		\label{bogoinverse}
+	\end{align}
+	make clear their physical interpretation: the $\hat{b_\pvec}$ operators act on the subspaces corresponding to \emph{collective excitations} which are made up of superpositions of oppositely-moving single particles. This correspondence has been directly observed in experiments \cite{vogels02} using absorption imaging techniques; an unrealized goal in cold-atom science is the observation of this single-particle decomposition at the level of single atoms \todo{How would you observe this?  What would it look like?}. More will be said about the challenges of this goal in chapter Y. 
+	
+	The quasiparticles are pairs of bosons, whose total spin will also be an integer, and thus the $\hat{b}$ should obey the bosonic commutation relations. This constrains the coefficients such that $|u_\pvec|^2-|v_{-\pvec}|^2=1$, permitting the parametrization $u_\pvec = \cosh \alpha_\pvec$, $v_{-\pvec} = \sinh \alpha_\pvec$. One picks $\alpha_\pvec$ such that the off-diagonal terms in the transformed Hamiltonian vanish, which provides the form 
+	\begin{equation}
+		u_\pvec,v_{-\pvec} = \pm \sqrt{\frac{p^2/2m+gn}{2\epsilon(p)} \pm \frac{1}{2}},
+	\end{equation}
+	in terms of the Bogoliubov dispersion relation
+	\begin{equation}
+		\epsilon(p) = \sqrt{\frac{gn}{m}p^2+\left(\frac{p^2}{2m}\right)^2}.
+	\end{equation}
+	One could rewrite $\epsilon(p)$ in terms of the speed of sound $\chi=\sqrt{gn/m}$ to obtain the alternative form $\epsilon(p) = \sqrt{p^2\chi^2+\left(\frac{p^2}{2m}\right)^2}$, making clear the extreme behaviours of the excitations: At low momentum, they are wavelike phonons with $\epsilon\approx p\chi$ and at high momentum they are effectively free particles with $\epsilon\approx p^2/2m$, with the smooth intermediate region determined by the effective coupling strength $g$.
+
+	The population of the single-particle states can be calculated by substituting the quasiparticle field operators into the standard expectation value, giving
+	\begin{align}
+		n(\pvec) &= \langle\hat{a}^\dagger_\pvec \hat{a}_\pvec\rangle\\
+		&= \bra{\Psi}(u_\pvec\hat{b}_\pvec^\dagger + v_\pvec \hat{b}_{-\pvec})(u_\pvec \hat{b}_\pvec + v_\pvec \hat{b}^\dagger_{-\pvec})\ket{\Psi}\\
+		&=\bra{\Psi}(u_\pvec^2\hat{b}_\pvec^\dagger \hat{b}_\pvec  + v_\pvec^2 \hat{b}_{-\pvec} \hat{b}^\dagger_{-\pvec} + u_\pvec v_\pvec \left(\hat{b}_{-\pvec} \hat{b}_\pvec + \hat{b}_\pvec^\dagger  \hat{b}^\dagger_{-\pvec}\right))\ket{\Psi}.
+	\end{align}
+	In the steady-state, the expected value of the mode populations is constant and hence the third term is zero because it does not conserve particle number. It follows from the bosonic commutation relations that
+	\begin{align}
+		\bra{\Psi} \hat{b}_{-\pvec} \hat{b}^\dagger_{-\pvec}\ket{\Psi} &= \bra{\Psi} 1 + \hat{b}_\pvec^\dagger \hat{b}_\pvec\ket{\Psi}\\
+								&= \bra{\Psi}\Psi\rangle  + \bra{\Psi}\hat{b}^\dagger \hat{b}\ket{\Psi}
+	\end{align}
+	hence the second term survives and allows the population to be written as
+	\begin{equation}
+		n(\pvec) = (u_\pvec^2+v_\pvec^2)\langle\hat{b}_\pvec^\dagger \hat{b}_\pvec\rangle + v_\pvec^2,
+	\end{equation}
+	Where the quasiparticle population can be computed from thire Bose-Einstein statistics as
+	\begin{equation}
+		\langle\hat{b}^\dagger_\pvec \hat{b}_\pvec\rangle = \frac{1}{e^{\beta \epsilon(p)}-1},
+	\end{equation}
+	and the corresponding population of $\pvec\neq0$ single-particle modes is the thermal population. The $v_\pvec^2$ term persists even at $T=0$ and, owing to its nature as the zero-point energy of the quasiparticle vacuum, gives rise to a population outside the condensed mode known as the \emph{quantum depletion}, which is the focus of chapter Y.
+
+	% The experimental measurement of this feature of the condensate wavefunction is the subject of chapter Y, and more details are presented there. 
+
+	% We can find the single-particle population directly from the bogo transformation. We wind up with
+	% $<n_p> = <a+_p a_p> = |v_-p|^2 + |u_p|^2<b+_p b_p> + |v_-p|^2<b+_-p b_-p>$
+	
+	% Then one gets $n_p = (p^2/2m + mc^2)/(2 eps(p)) - 1/2$ 
+	% which goes like $m^2c^2/p^4$ at large p (???)
+	% This can be used to calculate the number of particles outside the condensate (schwabl 3.2.22-23) and also the momentum distribution
+	% The energy of large-k modes is just the free-particle energy plus the mean-field potential
+	
+	% See Pitaevskii chap 4 for more details, including means to include short-wavelength corrections that mitigate an ultraviolet divergence.
+
+	% For discussions of how the Bogoliubov picture connects condensation to superfluidity, see Bogolubov47 or Schwabl
+
+	% One can extend these to non-uniform gases by a local density approximation, as is done later in this thesis  (either in QD chapter or as latter part of TF section.

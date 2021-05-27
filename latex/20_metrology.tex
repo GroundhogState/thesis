@@ -8,7 +8,6 @@
 
 
 
-
 % https://quantummechanics.ucsd.edu/ph130a/130_notes/node417.html
 
 \begin{itemize}
@@ -62,3 +61,10 @@ Measuring nuclear size effects
 			RGL First non-rel calc of TO at 413 [55] disagreed with first measurement [56] indicating sensitivity to QED terms 
 
 Very recent completion of the $\alpha^7$ terms https://arxiv.org/pdf/2103.01037.pdf but refrain from determining the nuclear radius until after resolving some discrepancies
+
+
+Returning to multilevel atoms, a fine way to better approximate the atomic polarizability is to compute the dipole potential of an atom initially in the $\ket{1}$ state by summing over the level shifts associated with transitions to all other states, giving the form
+	\begin{equation}
+		\Delta U = \sum_i \frac{|\bra{1}H\ket{i}|^2}{\omega_i}.
+	\end{equation}
+	Because the polarizability arising from an atomic transition is negative (positive) when an electric field is blue (red) detuned with respect to the respective resonance, there exist wavelengths between transitions for which $\alpha(\omega)\propto\Delta U = 0$. These \emph{tune-out} wavelengths have utility for mixed-species traps and as precision test of QED \cite{henson15,mitroy13,TOforthcoming}. During the course of my PhD research, I undertook a measurement of the the 413nm tune-out wavelength in helium under the leadership of B M Henson, and we achieved a 25x improvement over the last measurement. This measurement was the major motivation for acquiring the tunable laser described in the next chapter, and used to perform the experiments described in chapter \ref{chap:spectroscopy}.

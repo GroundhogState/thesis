@@ -1,4 +1,4 @@
-\documentclass{book} % report offers chapter and abstract. book does not offer abstract. https://tex.stackexchange.com/questions/36988/regarding-the-book-report-and-article-document-classes-what-are-the-mai
+\documentclass[twoside]{book} % report offers chapter and abstract. book does not offer abstract. https://tex.stackexchange.com/questions/36988/regarding-the-book-report-and-article-document-classes-what-are-the-mai
 % However, book offers other nice things like openright and twoside, so the Abstract environment might well be defined manually instead (or change the class file)
 % For initial writing, will use report to get everything working, then consider porting to book for the nicer formatting.
 \usepackage{thesis_style}
@@ -10,43 +10,47 @@
 \addbibresource{latex/bibliography.bib}
 % http://www.heliumbec.com/wiki/User:Jacob possible graphics for front page
 \begin{document}
-% \include{latex/mtodo}
-	% \myemptypage
+
+% % \include{latex/mtodo}
+% 	% \myemptypage
+
 % \frontmatter
-% \include{latex/01_frontmatter}
-% % An abstract of 250-500 words is on the page or pages following the acknowledgement. The electronic version of the abstract must use standard text only.
-%  % table of contents appears following the abstract.
-% \include{latex/00_abstract}
+% \include{latex/00_frontmatter}
+% \include{latex/01_abstract}
 \setcounter{tocdepth}{1}
-% \tableofcontents
+\tableofcontents
 
-% \part*{Preface}
-% \chapter*{Overview}
-% \include{latex/11_overview}
+\mainmatter
+
+% \include{latex/10_overview}
+
 % \part{Background and technical introduction}
-% \include{latex/12_introduction}
-% \include{latex/13_experiment}
+\include{latex/11_introduction}
+\include{latex/12_apparatus}
+\include{latex/13_lattice_build}
 
-% \part{Laser spectroscopy of Helium}
+% % \part{Laser spectroscopy of Helium}
 % \include{latex/20_metrology}
 % \chapter{Frequency measurements of transitions between the $n=2$ and $n=5$ manifolds in $^4$He}
 % \include{latex/21_transitions}
-% \chapter*{A: Forbidden}
-% \chapter*{A: Tuneout}
+% \chapter{Precision measurement of the $2\triplet S_1 - 2 \triplet S/2\triplet P$ tune-out wavelength}
+% \include{latex/22_tuneout}
 
-% % % % \part*{Inflection point}
-
-% \part{Many-body physics in ultracold gases}
+% % \part{Many-body physics in ultracold gases}
 % \include{latex/30_manybody}
 % \chapter{Quantum depletion of a harmonically trapped Bose gas}
 % \include{latex/31_depletion}
-\include{latex/32_lattice}
 
 % \chapter{Conclusion}
 % \include{latex/40_conclusion}
-% \backmatter
+
+
+\backmatter
 \printbibliography
-% \bibliography{bibliography}
+
+
+
+
 % \include{latex/list_of_publications}
 % \appendix
 \end{document}
