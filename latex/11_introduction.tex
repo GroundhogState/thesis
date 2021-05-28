@@ -178,14 +178,13 @@
 	The interaction energy of the dipole and the electric field is $U_{dip} = -\frac{1}{2}\langle\textbf{p}\cdot\textbf{E}\rangle = -\frac{1}{2\varepsilon_0 c}Re(\alpha)I(\rvec)$, which inherits a spatial structure from the intensity $I(\rvec)$.
 	When the polarizability is positive (that is, when the light is red-detuned from $\omega_0$ and the denominator has a positive real part) then the dipole oscillates in-phase with the field and so the interaction energy is minimized at the intensity maxima.
 	This is the operational principle of optical dipole traps, wherein the \emph{dipole force} $F_{dip} = -\nabla U_{dip} \propto \nabla I(\rvec)$ therefore confines atoms to the focus of a red-detuned Gaussian beam \footnote{The dipole force can also be generated with blue-detuned beams to create repulsive potential barriers, or confine atoms atoms in the dark core of a blue-detuned Bessel beam}.
-	Ashkin made the first demonstration of the dipole force by trapping micron-sized particles in 1970 \cite{ashkin70}, and Letokhov suggested 1D confinement of atoms the next year \cite{}.
-	Ashkin suggested 3D trapping of atoms in 1978 \cite{ashkin78}, and shortly afterward the dipole force was demonstrated on neutral atoms by Bjorkholm \emph{et al.} \cite{}.
-	In 1986 Chu \emph{et al.} accomplished the first optical trap of neutral atoms \cite{chu86}, and the first BEC produced exclusively using optical trapping was achieved in 2001 \cite{barrett01}.
+	Ashkin made the first demonstration of the dipole force by trapping micron-sized particles in 1970 \cite{ashkin70}.
+	Ashkin suggested 3D trapping of atoms in 1978 \cite{ashkin78}, and in 1986 Chu \emph{et al.} accomplished the first optical trap of neutral atoms \cite{chu86}. 
 	In 1987 Ashkin demonstrated optical trapping of single cells, viruses, and bacteria \cite{ashkin87cell, ashkin87virus}, adding to the list of techniques propagated from physics labs into precision biology.
+	The first BEC produced exclusively using optical trapping was achieved in 2001 \cite{barrett01}.
 	Ashkin was awarded the Nobel prize in 2018 for his development of optical trapping.
 	The dipole force is most pertinent to chapter \ref{chap:lattice} as it is the basic principle underpinning optical lattice traps, and to chapter \ref{chap:tuneout} wherein the frequency at which $\alpha(\omega)=0$ is measured as a test of quantum electrodynamics.
 	
-	\todo{Add citations for dipole trap history}
 
 
 	In the case where the detuning $\Delta$ is small in comparison to $\omega_0$ (as will be the case throughout this dissertation), the dipole potential can be written in the form \cite{grimm00}
@@ -316,7 +315,7 @@
 	
 
 
-\section{Interactions between atoms}
+\section{Interacting atoms}
 
 	
 	Here we briefly review elastic scattering, and then turn to important inelastic scattering processes present in our experiments.
@@ -350,10 +349,13 @@
 
 	In molecular collisions the scattering process will obviously depend on the relative orientation of the molecules.
 	In collisions between single atoms, though, there is a more subtle orientation-dependence which arises from the total spin of the two-particle system.
-	The three possible configurations between pairs of \mhe atoms correspond to the singlet $^1\Sigma_g^+$, triplet $^3\Sigma_u^+$, and quintet $^5\Sigma_g^+$ Born-Oppenheimer molecular potentials, with total spin 0, 1, and 2\footnote{the subscript \emph{g} and \emph{u} are short for \emph{gerade} and \emph{ungerade} (German for even and odd) label the reflection symmetry of the two-body wavefunction, and the superscript + sign...}.
+	The three possible configurations between pairs of \mhe atoms correspond to the singlet $^1\Sigma_g^+$, triplet $^3\Sigma_u^+$, and quintet $^5\Sigma_g^+$ Born-Oppenheimer molecular potentials\footnote{the subscript \emph{g} and \emph{u} are short for \emph{gerade} and \emph{ungerade} (German for even and odd) label the reflection symmetry of the two-body wavefunction.}, with total spin 0, 1, and 2.
 	When the atoms are spin-polarized, as they are when confined in magnetic traps, then the only scattering that occurs is in the quintet channel.
-	The most accurate determination of the s-wave scattering length in this configuration is 7.512nm \cite{moal06}, in agreement with calculations performed the year before the measurements \cite{przybytek05}.
-	\todo{why is $a_{11}=a_{10}$?}
+	In low-energy scattering contexts dominated by s-wave scattering, odd partial waves do not contribute to the interaction potential and hence the triple $^3\Sigma_u^+$ potential is dominated by the quintet $^5\Sigma_g^+$ term for all interactions with nonzero total spin \cite{Leo01}. 
+	As such the inter-species scattering lengths $a_{1,1}$, $a_{1,0}$, $a_{1,-1}$, and $a_{-1,-1}$ are all equal \cite{Leo01,Vassen16}.
+	The most accurate determination of the s-wave scattering length in these configuration is 7.512 nm \cite{moal06}, in agreement with calculations performed the year before the measurements \cite{przybytek05}.
+	When the total spin is zero, the singlet term contributes and so $a_{1,-1}\approx8.8$ nm and $a_{0,0}\approx3.8$ nm \cite{Leo01,Vassen16}.
+	In general this thesis will be concerned with interactions between spin-polarized helium atoms and hence will use the abbreviation $a\equiv a_{1,1}$ unless specified otherwise.
 	
 	A powerful tool available in some cold atom experiments are Feshbach resonances\footnote{Feshbach resonances originated in Feshbach's work in nuclear physics (Feshbach 1958, 1962) and Fano worked on in atomic context (fano 1961), but these fano-feshbach resonances are referred to in general as feshbach resonances.
 	}.
@@ -400,7 +402,7 @@
 	
 	
 
-\section{Bose-Einstein condensation in dilute gases}
+\section{Bose-Einstein condensation}
 
 		% M H ANderson, J R Ensher, M R Mathews, C E Wieman, and E A cornell, observation of bose-einstein condensation in a dilute atomic vapor, Science 269, 198-201, July 1995
 		% K B Davis, M O Mewes, M R Andrews, N J van Druten, D S Durfee, D M Kurn, W Ketterle, Bose-Einstein condensation in a gas of sodium atoms - Physical Review Letters 75, 3969-3973, Nov 1995
@@ -440,7 +442,10 @@
 		\aleph = n \lambda_T^3
 	\end{equation}
 	exceeds the critical value of $\zeta(3)\approx2.612$. 
-	This is generally introduced of as the point where the volume over which the atoms are `delocalized'  exceeds the average volume per particle, and so the spin-statistics of the particles dictate the deviation from the statistics of an ideal gas \footnote{Although it is commonly said that at this point the 'wavefunctions overlap', the wavefunctions of the individual particles in a trapped gas overlap wherever the wavefunction is supported - that is, throughout the trap.}.
+	This is generally introduced of as the point where the volume over which the atoms are `delocalized'  exceeds the average volume per particle, and so the spin-statistics of the particles dictate the deviation from the statistics of an ideal gas.
+	Although it is commonly said that at this point the `wavefunctions overlap', the wavefunctions of the individual particles in a trapped gas overlap wherever the wavefunction is supported - that is, throughout the trap.
+
+	
 	However, in the presence of interactions, this criterion is unsatisfactory: Just as interactions between electrons preclude an expression of the stationary states of helium in terms of products of single-particle energy eigenstates, the stationary states of an interacting gas of $N$ atoms cannot be written as a prduct $\ket{\Psi} = \ket{\psi_i}^{\otimes N}$ of single-particle eigenstates $\ket{\psi_i}$.
 	The Penrose-Onsager criterion \cite{penrose56} provides an alternative in terms of the density matrix $\rho$ for the isolated composite system comprised of all the gas particles.
 	The single-particle density matrix is then the expected value of the one-body field operator
