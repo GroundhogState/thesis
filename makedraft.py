@@ -25,7 +25,7 @@ os.system('py ctodo.py')
 
 # compilecommand = 'pdflatex {fin} -jobname=drafts/{fin}/{datestr}/{datestr}_{fout}'.format(datestr=datestring,fin=fname_in,fout = fname_out)
 jobname = 'drafts/{datestr}/{datestr}_{fin}_{fout}'.format(datestr=datestring,fin=fname_in,fout = fname_out)
-compilecommand = 'pdflatex {fin} -jobname={jobname}'.format(fin=fname_in,jobname=jobname)
+compilecommand = 'pdflatex main -jobname={jobname}'.format(fin=fname_in,jobname=jobname)
 if refresh:
 	print('Deleting old draft!')
 	os.system('rm -rf drafts/{fin}/{datestr}'.format(datestr=datestring,fin=fname_in))
@@ -38,4 +38,4 @@ if recompile_bib==True:
 	print('Recompiling PDF...')
 	os.system(compilecommand)
 	os.system(compilecommand)
-# os.system('start "" {jobname}.pdf'.format(jobname=jobname))
+os.system('start "" {jobname}.pdf'.format(jobname=jobname))

@@ -7,11 +7,9 @@
 
 % % Preamble: A short list of key references/reviews for the student
 
-\todo{As a general comment, focus a bit more on what you actually did and include details that are important to your thesis rather than general information or speculation.
-	 Quite often you will talk about some concept generally, which is fine to start with as long as it is concise, but then you won't include any of the specifics for our experiment, so the reader doesn't know what the actual parameters we use actually are!}
 
 \chapter{Theoretical background}
-
+\label{chap:theory}
 	\begin{adjustwidth}{0cm}{0cm}
 	\begin{flushright}
 	\emph{``No one's mouth is big enough to utter the whole thing."\\} 
@@ -19,6 +17,7 @@
 	\end{flushright}
 	\end{adjustwidth}
 
+\todo{Waiting for Andrew comments}
 
 	{A} cold atom experimentalist draws on a panoply of tools (both conceptual and instrumental) which are all intricate and absorbing in their own right.
 	This chaper presents the essential ideas needed to give form and context to the content of the major works reported in this thesis.
@@ -148,9 +147,7 @@
 	\ref{polz_decomp}.
 	The $\sigma$ transitions couple to oscillations in the plane normal to the quantization axis, and correspond to transitions where $\Delta m_l=\pm 1$, driven by the $A_{\sigma^\pm}$ terms.
 	
-
-	\todo{orientation dependence goes here}
-	% If the electric field has polarization $\varepsilon$ and propagates along $\kvec$ and there is a magnetic field in the $\vec{B}$ direction.
+	
 
 	This description of the coupling between atomic states and the electric field is sufficient, with some further work, to derive the Einstein rate equations for absorption and stimulated emission \cite{FootAtomic}.
 	However, the more familiar phenomenon of spontaneous emission remains out of reach and requires the full-blown theory of quantum electrodynamics for an explanation, so we shall not proceed to derive it here.
@@ -171,23 +168,25 @@
 
 	\begin{equation}
 		\alpha(\omega) = \frac{6\pi\varepsilon_0c^3}{\omega_0^2}\frac{\Gamma}{\omega_0^2-\omega^2-\textrm{i}(\omega^3/\omega_0^2)\Gamma},
+		\label{eqn:lorentzian}
 	\end{equation}
 
 	Where the polarizability $\alpha(\omega)$, whose quantum-mechanical origin is a central interest in Chapter \ref{chap:TO}, determines the amplitude of the dipole response via $\pvec(t) = \alpha(\omega)E(t)$.
 	This reponse function features the characteristic full-width at half-maximum (FWHM) scale of each transition, which is the inverse of the lifetime $\tau=1/\Gamma$.
+
 	The interaction energy of the dipole and the electric field is $U_{dip} = -\frac{1}{2}\langle\textbf{p}\cdot\textbf{E}\rangle = -\frac{1}{2\varepsilon_0 c}Re(\alpha)I(\rvec)$, which inherits a spatial structure from the intensity $I(\rvec)$.
 	When the polarizability is positive (that is, when the light is red-detuned from $\omega_0$ and the denominator has a positive real part) then the dipole oscillates in-phase with the field and so the interaction energy is minimized at the intensity maxima.
 	This is the operational principle of optical dipole traps, wherein the \emph{dipole force} $F_{dip} = -\nabla U_{dip} \propto \nabla I(\rvec)$ therefore confines atoms to the focus of a red-detuned Gaussian beam \footnote{The dipole force can also be generated with blue-detuned beams to create repulsive potential barriers, or confine atoms atoms in the dark core of a blue-detuned Bessel beam}.
-	Ashkin made the first demonstration of the dipole force by trapping micron-sized particles in 1970 \cite{ashkin70}.
-	Ashkin suggested 3D trapping of atoms in 1978 \cite{ashkin78}, and in 1986 Chu \emph{et al.} accomplished the first optical trap of neutral atoms \cite{chu86}. 
-	In 1987 Ashkin demonstrated optical trapping of single cells, viruses, and bacteria \cite{ashkin87cell, ashkin87virus}, adding to the list of techniques propagated from physics labs into precision biology.
-	The first BEC produced exclusively using optical trapping was achieved in 2001 \cite{barrett01}.
+	Ashkin made the first demonstration of the dipole force by trapping micron-sized particles in 1970 \cite{Ashkin70}.
+	Ashkin suggested 3D trapping of atoms in 1978 \cite{Ashkin78}, and in 1986 Chu \emph{et al.} accomplished the first optical trap of neutral atoms \cite{Chu86}. 
+	In 1987 Ashkin demonstrated optical trapping of single cells, viruses, and bacteria \cite{Ashkin87cell, ashkin87virus}, adding to the list of techniques propagated from physics labs into precision biology.
+	The first BEC produced exclusively using optical trapping was achieved in 2001 \cite{Barrett01}.
 	Ashkin was awarded the Nobel prize in 2018 for his development of optical trapping.
 	The dipole force is most pertinent to chapter \ref{chap:lattice} as it is the basic principle underpinning optical lattice traps, and to chapter \ref{chap:tuneout} wherein the frequency at which $\alpha(\omega)=0$ is measured as a test of quantum electrodynamics.
 	
 
 
-	In the case where the detuning $\Delta$ is small in comparison to $\omega_0$ (as will be the case throughout this dissertation), the dipole potential can be written in the form \cite{grimm00}
+	In the case where the detuning $\Delta$ is small in comparison to $\omega_0$ (as will be the case throughout this dissertation), the dipole potential can be written in the form \cite{Grimm00}
 	\begin{equation}
 		U_{dip}(\textbf{r}) = \frac{3\pi c^2}{2\omega_0^3}\frac{\Gamma}{\Delta}I(\textbf{r}),
 	\end{equation}
@@ -248,7 +247,7 @@
 
 	which furnish the spin wavefunctions to form the $n\triplet L_{J}$ and $n\singlet L_{J}$ states, referred to as (triplet) ortho- and (singlet) para-helium, respectively\footnote{In what follows, we use the spectroscopic convention and label states by the $n^{2S+1}L_J$, where $J=S+L$ because the helium nucleus is spinless, and we drop the $(1s)$ term as the second electron will invariably be in the ground state in all cases we consider -  Doubly-excited helium is highly unstable because the first excited state (19.8eV) has about 80\% of the ionization energy of Helium (25.4eV).}.
 	It can be shown via degenerate perturbation theory that the exchange antisymmetry produces the \emph{exchange energy} difference between the singlet and triplet states, where the  orthohelium state has a lower energy.
-	 The $\metastable$ state, also denoted \mhe, distinguishes helium amongst the zoo of atomic species available to the cold atom physicist by virtue of its 19.8 eV excitation energy and $\approx 7800$s lifetime \cite{hodgman09}.
+	 The $\metastable$ state, also denoted \mhe, distinguishes helium amongst the zoo of atomic species available to the cold atom physicist by virtue of its 19.8 eV excitation energy and $\approx 7800$s lifetime \cite{Hodgman09}.
 	 This state is forbidden to decay to the ground state by the $\delta L\neq0$ selection rule and also because the dipole operator does not couple states of different spin, such as the \mhe state and the ground state.
 	Decay to the ground state from the metastable state is  therefore called \emph{doubly forbidden}.
 	Forbidden transitions can generally occur by higher-order interactions that are omitted from the dipole approximation, and the \mhe state in particular can decay via a magnetic dipole transition.
@@ -285,7 +284,7 @@
 	\begin{equation}
 		{\bf \mu} = -\mu_B\textbf{L} - g_s\mu_B \textbf{S}.
 	\end{equation}
-	Working in the $\ket{LSJm_J}$ basis, where $J$ and $m_J$ are the total angular momentum and its z-projection, yields the eigenenergies $E_Z = g_J \mu_b B M_J$.
+	Working in the $\ket{LSJm_J}$ basis, where $J$ and $m_J$ are the total angular momentum and its z-projection, yields the energies $E_Z = g_J \mu_b B M_J$.
 	The atomic g-factor can be written as
 	\begin{equation}
 		g_J = \frac{3}{2} + \frac{S(S+1)-L(L+1)}{2J(J+1)},
@@ -293,7 +292,7 @@
 	using the approximate value of the electron g-factor $g_s=2$.The eigenstates of the field-free atomic Hamiltonian will be $2J+1$-fold degenerate and specified by the $\ket{Lm_L S m_S}$ quantum numbers.
 	Adding the magnetic field interaction breaks this degeneracy and leads to the Zeeman splitting.
 	The field-free and magnetic-interaction terms can be written in a common basis in terms of the Clebsch-Gordan coefficiencts and then diagonalized, as described in chapter \ref{chap:spectroscopy}.
-	The aforementioned anomalous Zeeman effect arises in triplet states because the inter-level spacing depends on $m$ and $g_J$, which splits spectral lines as well as levels, whereas singlet states have $g_J=1$ and transitions between them do not fan out in the same fashion.
+	The anomalous Zeeman effect arises in triplet states because the inter-level spacing depends on $m$ and $g_J$, which splits spectral lines as well as levels, whereas singlet states have $g_J=1$ and transitions between them do not fan out in the same fashion.
 	
 	% This distinction, whose explanation was an early victory for quantum mechanics, is illustrated in Figure \ref{fig:ZeemanLines}.
 	
@@ -320,7 +319,7 @@
 	
 	Here we briefly review elastic scattering, and then turn to important inelastic scattering processes present in our experiments.
 	A detailed primer in atomic scattering physics can be found in the classic texts \cite{PitaevskiiStringari} and \cite{PethickSmith}, with more detail in the latter.
-	An exhaustive review of low-temperature scattering studies up to the turn of the millenium can be found in \cite{weiner99}.
+	An exhaustive review of low-temperature scattering studies up to the turn of the millenium can be found in \cite{Weiner99}.
 	I focus here on two-body collisions, which are the dominant interactions in the low-density regime of ultracold helium.
 	Low densities imply that low temperatures are required to achieve high phase space density and reach the degenerate regime, which are necessary conditions to minimize the two-body loss processes characteristic to metastable helium.
 	Two-body collisions are also the crucial enabler for thermalization during the evaporative cooling employed to reach such low temperatures, so long as the relaxation times are shorter than the sample lifetime.
@@ -338,8 +337,8 @@
 	where $k=\sqrt{2m^*E/\hbar}$ is the plane wave-vector of the initial approach and $\theta$ is the angle from the direction of incidence.
 	A general solution can found by expanding $f(\theta)$ into a convenient basis of \emph{partial waves} (spherical harmonics) which are labeled $s,p,d,f,..$ in order of increasing angular momentum.
 	In the low-energy limit, $f(\theta)$ is independent of angle and only the spherically symmetric s-wave term contributes, and the limit $f(\theta)\rightarrow-a$ is accordingly called the s-wave scattering length.
-	In the millikelvin regime the scattering physics is determined by just a few partial waves \cite{mcnamara07}, and in the ultracold (microkelvin or colder) regime only the s-wave scattering channel is significant.
-	The total cross section $|f(\theta)^2|/|\psi|^2$, which is the total probability that a near collision results in particle scattering, approaches $\sigma=8\pi a^2$ for polarized bosons\footnote{For fermion pairs with odd total spin, the cross section tends to zero because of the Pauli exclusion principle, and thus the s-wave scattering length vanishes.} \cite{przybytek05}.
+	In the millikelvin regime the scattering physics is determined by just a few partial waves \cite{Mcnamara07}, and in the ultracold (microkelvin or colder) regime only the s-wave scattering channel is significant.
+	The total cross section $|f(\theta)^2|/|\psi|^2$, which is the total probability that a near collision results in particle scattering, approaches $\sigma=8\pi a^2$ for polarized bosons\footnote{For fermion pairs with odd total spin, the cross section tends to zero because of the Pauli exclusion principle, and thus the s-wave scattering length vanishes.} \cite{Przybytek05}.
 	
 
 	The s-wave scattering length is also an important determinant of the energetics of degenerate matter such as BEC.
@@ -353,7 +352,7 @@
 	When the atoms are spin-polarized, as they are when confined in magnetic traps, then the only scattering that occurs is in the quintet channel.
 	In low-energy scattering contexts dominated by s-wave scattering, odd partial waves do not contribute to the interaction potential and hence the triple $^3\Sigma_u^+$ potential is dominated by the quintet $^5\Sigma_g^+$ term for all interactions with nonzero total spin \cite{Leo01}. 
 	As such the inter-species scattering lengths $a_{1,1}$, $a_{1,0}$, $a_{1,-1}$, and $a_{-1,-1}$ are all equal \cite{Leo01,Vassen16}.
-	The most accurate determination of the s-wave scattering length in these configuration is 7.512 nm \cite{moal06}, in agreement with calculations performed the year before the measurements \cite{przybytek05}.
+	The most accurate determination of the s-wave scattering length in these configuration is 7.512 nm \cite{Moal06}, in agreement with calculations performed the year before the measurements \cite{Przybytek05}.
 	When the total spin is zero, the singlet term contributes and so $a_{1,-1}\approx8.8$ nm and $a_{0,0}\approx3.8$ nm \cite{Leo01,Vassen16}.
 	In general this thesis will be concerned with interactions between spin-polarized helium atoms and hence will use the abbreviation $a\equiv a_{1,1}$ unless specified otherwise.
 	
@@ -361,43 +360,43 @@
 	}.
 	A detailed description is found in \cite{Chin10}, but from an operational standpoint they allow control of the scattering length as $a = \tilde{a}(1-\Delta/(B-B_0)$, where B is the strength of an ambient magnetic field, $B_0$ is the resonance value of the field, $\tilde{a}$ is the value when the field is far from a resonance and $\Delta$ sets the resonance width.
 	The scattering length can thus be tuned in size and even in sign.
-	Fundamentally, the stability of a BEC requires a positive s-wave scattering length\footnote{Although in some negative-temperature states created in an optical lattice, a BEC can be stable even with attractive interactions \cite{Braun13}}, and switching from stable to unstable configurations permits one to examine condensate collapse (as in the spectacular Bosenova experiments \cite{papers}) and also to explore the BEC-BCS crossover \cite{papers}.
-	The spinless nucleus of $^4$He prohibits coupling of bound states within an $m_J$ manifold from crossing an open-channel threshold, precluding this pathway to a Feshbach resonance \cite{goosen10}.
-	Nonetheless, Feshbach resonances induced by spin-spin interactions between helium atoms have been predicted \cite{venturi99, goosen10}, but have not observed to date \cite{borbely12}.
-	In a forthcoming work, the authors (including members of the ANU He* lab) describe calculations with a newer method predicting, unfortunately, the absence of Feshbach resonances between $^4$He-$^4$He collisions.
+	Fundamentally, the stability of a BEC requires a positive s-wave scattering length\footnote{Although in some negative-temperature states created in an optical lattice, a BEC can be stable even with attractive interactions \cite{Braun13}}, and switching from stable to unstable configurations permits one to examine condensate collapse (as in the spectacular Bosenova experiments \cite{Papers}) and also to explore the BEC-BCS crossover \cite{Papers}.
+	The spinless nucleus of $^4$He prohibits coupling of bound states within an $m_J$ manifold from crossing an open-channel threshold, precluding this pathway to a Feshbach resonance \cite{Goosen10}.
+	Nonetheless, Feshbach resonances induced by spin-spin interactions between helium atoms have been predicted \cite{Venturi99, goosen10}, but have not observed to date \cite{Borbely12}.
+	In a recent work \cite{Hirsh21}, the authors (including members of the ANU He* lab) describe calculations with a newer method predicting, unfortunately, the absence of Feshbach resonances between $^4$He-$^4$He collisions.
 	
 	Inelastic scattering processes are those which exchange energy between the internal and motional states of either atom.
-	They can be represented as a complex scattering potential \cite{leo01} which permits losses from on-shell scattering channels.
+	They can be represented as a complex scattering potential \cite{Leo01} which permits losses from on-shell scattering channels.
 	An important inelastic process characteristic of metastable noble gases \cite{VassenReview} is \emph{Penning ionization}.
 	 This can occur through the decay channels
 	\begin{equation}
 		\textrm{He}^*+\textrm{He}^*\rightarrow 
 		\begin{cases}
-			\textrm{He}+ He^+ + e-&\textrm{(PI)}\\
-			\textrm{He}_{2}^{+} + e-&\textrm{(AI)}
+			\textrm{He}+ \textrm{He}^+ + e^-&\textrm{(PI)}\\
+			\textrm{He}_{2}^{+} + e^-&\textrm{(AI)}
 		\end{cases}
 	\end{equation}
 	wherein the first channel is formally called Penning ionization and the second is  Auto-ionization and the rate of the latter is generally very small in comparison to the former \cite{Muller91}.
 	Indeed, the energy of the metastable state is sufficient to ionize any neutral atom (except helium or neon) from its ground state, and underpins the single-atom sensitivity of our solid state detector (described in section \ref{sec:DLD}).
-	Aside from attracting intensive study in its own right \cite{partridge10,stas06,mcnamara07}, this explosive potential was a significant hurdle for researchers attempting to achive Bose-Einstein condensation with helium.
-	The density achieved in early magneto-optical traps (MOTs) was limited to some hundredfold less than the alkali-metal MOTs of the day \cite{bardou92,kumukura92,mastwijk98}.
+	Aside from attracting intensive study in its own right \cite{Partridge10,Stas06,Mcnamara07}, this explosive potential was a significant hurdle for researchers attempting to achive Bose-Einstein condensation with helium.
+	The density achieved in early magneto-optical traps (MOTs) was limited to some hundredfold less than the alkali-metal MOTs of the day \cite{Bardou92,Kumukura92,Mastwijk98}.
 	Helium MOT densities were limited by losses through two-body collisions involving atoms in the $\metastable$ and those excited to the $2\triplet P_2$ state by the trapping beams, as opposed to rescattering pressure as in the case of alkali metals.
 	Indeed, while the Penning loss rate constant \footnote{The rate constant $\beta_{i,j}$ for losses via collisions between atoms in states $i$ and $j$ yields an absolute loss rate per volume per time through the product with the respective densities, $\Gamma_{i,j} = \beta_{i,j}n_i n_j$ cm$^{-3}$s$^{-1}$.} between pairs of $\metastable$ atoms is of order $2\times10^{-9}$ cm$^3$/s, the loss rate for $\metastable-2\triplet P_2$  collisions is around $10^{-7}$ cm$^3$/s.
-	Thus early MOTs had loss rates which were a population-weighted average of these rates, around $7\times10^-8$ cm$^3$/s \cite{weiner99}.
-	Such light-assisted losses  limited the population achievable in MOTs until larger beams and detunings were used \cite{tol99}.
-	These reduced Penning ionization rates to the order of $5\times10^{-9}$ cm$^3$/s at large detunings, an improvement of almost a factor of twenty.
-	In the dark, the rate constant is a factor of 50 lower again, but the process is  still too fast to permit access to magnetic traps of sufficient lifetime and density to reach degeneracy.
+	Thus early MOTs had loss rates which were a population-weighted average of these rates, around $7\times10^-8$ cm$^3$/s \cite{Weiner99}.
+	Such light-assisted losses  limited the population achievable in MOTs until larger beams and detunings were used \cite{Tol99}.
+	These reduced Penning ionization rates to the order of $5\times10^{-9}$ cm$^3$/s at large detunings.
+	In the dark, the rate constant is an order of magnitude or so lower again \cite{Mastwijk98}, but the process is  still too fast to permit access to magnetic traps of sufficient lifetime and density to reach degeneracy.
 	Fortunately, the inelastic scattering cross-sections depend on the molecular potentials in such a way that condensation becomes attainable: When all the atoms are polarized in the either of the $m_J=\pm1$ states, the incoming state has a total spin of 2, whereas the reaction products have a total spin of 1, and so this process is forbidden.
-	In reality, it does occur through a weak virtual spin-dipole transition \cite{shlyapnikov94} , but slowly enough that spin-polarized \mhe exhibits a $10^4$-fold reduction in ionization rate.
-	At field strengths above 50G, however, the suppression weakens \cite{shlyapnikov94,Borbely12}.
-	Other noble gases also exhibit highly energetic metastable states, but the lifetime and suppression of Penning ionization decreases with increasing mass \cite{orzel99, spoden05}.
+	In reality, it does occur through a weak virtual spin-dipole transition \cite{Shlyapnikov94} , but slowly enough that spin-polarized \mhe exhibits a $10^4$-fold reduction in ionization rate.
+	At field strengths above 50G, however, the suppression weakens \cite{Shlyapnikov94,Borbely12}.
+	Other noble gases also exhibit highly energetic metastable states, but the lifetime and suppression of Penning ionization decreases with increasing mass \cite{Orzel99, spoden05}.
 	Thus Helium may be the only noble gas ever to be Bose-condensed.
 	
 	% F bardou, O emile, J M courty, C I Westbrook, A Aspect, magneto-optical trapping of metastable ehlium: Collisions in the presence of resonant light, Europhysics letters 20, Dec 1992
 	% M Kumakura N Morita, visible observation of metastable helium atoms confined in an invisible/visible resonance trap, japanese journal of applied physics 31, march 1992
 	% H C Mastwijk, J W thomsen, P van der straten, A niehaus, optical collisions of cold, metastable helium atoms, physical review letters 80, june 1998
 
-	% \cite{shlyapnikov94} predicts 1e5x reduction in PI in spin-pol samples; relaxation-induced penning; virtual spin-dipole transitions (induced by spin-dipole interaction) to the zero spin state of the quasimolecule can lift the spin-conservation rule and lead to regular penning ionization	Direc dipole-exchange ionization is also a possibility but dominated by spin-relazation (relaxation-induced penning; virtual spin-dipole transitions to the zero spin state of the quasimolecule can life the spin-conservation rule and lead to regular penning ionization)
+	% \cite{Shlyapnikov94} predicts 1e5x reduction in PI in spin-pol samples; relaxation-induced penning; virtual spin-dipole transitions (induced by spin-dipole interaction) to the zero spin state of the quasimolecule can lift the spin-conservation rule and lead to regular penning ionization	Direc dipole-exchange ionization is also a possibility but dominated by spin-relazation (relaxation-induced penning; virtual spin-dipole transitions to the zero spin state of the quasimolecule can life the spin-conservation rule and lead to regular penning ionization)
 	
 	
 	
@@ -417,37 +416,47 @@
 	% Things I might like to put in later: Partition function Z = Tr(\exp(\beta H)), expectation values Tr(O rho)/Z, 
 
 	The `fifth state of matter'\footnote{The familiar first phases, solid, liquid, and gas, are vanishingly rare in cosmological terms.
-	The fourth, plasma, is the state of at leats 99\% of the ordinary matter in the universe \cite{plasmastuff}.
-	Helium comprises about 23\%, most of which being primordial baryons formed during the recombination epoch.}  has a long and storied history\cite{mukundanote}.
+	The fourth, plasma, is the state of at leats 99\% of the ordinary matter in the universe \cite{Plasmastuff}.
+	Helium comprises about 23\%, most of which being primordial baryons formed during the recombination epoch.}  has a long and storied history\cite{Mukundanote}.
 	Interest in BEC was amplified back in the middle of the 20th century when Fritz London proposed that Bose-Einstein condensation was connected to the superfluid phenomenon in liquid helium.
 	Nikolay Nikolayevich Bogolyubov formalized this connection and so, historically speaking, helium was the element which hosted the earliest experimental realization of Bose-Einstein condensation, albeit with a very small condensed fraction \footnote{Nikolay was a darling of Russian theoretical physics, receiving his PhD-equivalent qualification at 19 and made important contributions to quantum field theory. In his famous paper on the problem of interacting bosons, his name is transliterated as \emph{Bogolubov}. Bogolyubov and \emph{Bogoliubov} are also common transliterations.}.
-	While liquid helium is a rare thing in cosmological terms, BEC may have existed already for millions of years in the superdense quark matter of neutron stars \cite{haskell18, martin16,baym69,page11}, wresting the claim of cosmic novelty from human hands. 
+	While liquid helium is a rare thing in cosmological terms, BEC may have existed already for millions of years in the superdense quark matter of neutron stars \cite{Haskell18, martin16,Baym69,Page11}, wresting the claim of cosmic novelty from human hands. 
 	Nonetheless, the essentially pure atomic condensates and the emerging study of molecular condensates in laboratory settings are among the most extreme conditions in the universe, and are not believed to occur naturally elsewhere in the universe.
-	Following the oft-cited seven decades between the initial theoretical descriptions and the experimental realization of atomic Bose-Einstein condensates (BEC) \cite{anderson95,davis95,bradley95}, the field has become quite industrious at the eve of its centenary.
-	As pithily put by a review only five years after the Nobel-winning experiments, `Any attempt to review recent progress is out of date as soon as it is published' \cite{courteille01}.
+	Following the oft-cited seven decades between the initial theoretical descriptions and the experimental realization of atomic Bose-Einstein condensates (BEC) \cite{Anderson95,Davis95,Bradley95}, the field has become quite industrious at the eve of its centenary.
+	As pithily put by a review only five years after the Nobel-winning experiments, `Any attempt to review recent progress is out of date as soon as it is published' \cite{Courteille01}.
 	This is no less true today, as the number of ultracold quantum gas experiments worldwide now number nearly 200\footnote{See \url{everycoldatom.com}} and numerous companies have been founded on the promise of selling better sensors and computers using technologies based on BEC physics.
-	There are numerous treatments of the theory of Bose-Einstein condensation, for example the classic textbooks \cite{PitaevskiiStringari,PethickSmith} and review articles \cite{DalfovoReview, yukalov11_basics,courteille01}.
+	There are numerous treatments of the theory of Bose-Einstein condensation, for example the classic textbooks \cite{PitaevskiiStringari,PethickSmith} and review articles \cite{DalfovoReview, yukalov11_basics,Courteille01}.
 	The essential background for discussion here draws on these standard sources unless otherwise cited.
 	% anquez16 also cites Bogoliubov theory as being used in analysis of quantum phase transitions in spinor condensates
 
 
 	% There's something to be said here; there is a distinction between the ground state, which is global, and the single-particle states...
+	As for what a BEC \emph{is}, there are several workable operational definitions, but a precise and lab-relevant definition is surprisingly elusive.
 	The canonical description of Bose-Einstein condensation is the condition where the de Broglie wavelength associated with thermal kinetic energy
 	\begin{equation}
 		\lambda_T = \frac{h}{\sqrt{2\pi m k_B T}}
 	\end{equation}
 	is comparable to the interparticle spacing, coinciding with a macroscopic occupation of the single-particle ground state as the de Broglie waves of many bosons constructively interfere.
-	A precise criterion for this condition is when the phase space density
+	This condition can also be restated as the point when the phase space density
 	\begin{equation}
 		\aleph = n \lambda_T^3
 	\end{equation}
 	exceeds the critical value of $\zeta(3)\approx2.612$. 
 	This is generally introduced of as the point where the volume over which the atoms are `delocalized'  exceeds the average volume per particle, and so the spin-statistics of the particles dictate the deviation from the statistics of an ideal gas.
 	Although it is commonly said that at this point the `wavefunctions overlap', the wavefunctions of the individual particles in a trapped gas overlap wherever the wavefunction is supported - that is, throughout the trap.
-
+	Furthermore, the de Broglie wavelength pertains to the wavelength associated with the plane-wave motion of a free particle rather than the spatial scale of the `wavepacket' of a particle, and as given above is defined as the wavelength corresponding to the \emph{average} particle velocity, rather than fully characterizing the ensemble. 
+	Thus even above the critical temperature there are many states with long wavelengths who will be populated, and so the `delocalization' picture is not so sharp.
+	A more precise criterion is to compute, in the framework of the grand canonical ensemble, the number of particles in the ground state. For a Bose gas this yields
+	\begin{equation}
+		N_0 = \frac{1}{\exp((E_0-\mu)/k_B T)-1},
+	\end{equation}
+	where $E_0$ is the ground state energy of the single-particle Hamiltonian and $\mu$ is the chemical potential of an adjoining reservoir. 
+	One can then show that, above the critical temperature $T_c$, the ground-state population diverges, corresponding to Bose-Einstein condensation.
+	However, in laboratory realizations of BEC, there is no reservoir attached to the system under study, but rather an isolated gas at some finite entropy which contains both the thermal and condensed fractions (if the latter is present). 
 	
-	However, in the presence of interactions, this criterion is unsatisfactory: Just as interactions between electrons preclude an expression of the stationary states of helium in terms of products of single-particle energy eigenstates, the stationary states of an interacting gas of $N$ atoms cannot be written as a prduct $\ket{\Psi} = \ket{\psi_i}^{\otimes N}$ of single-particle eigenstates $\ket{\psi_i}$.
-	The Penrose-Onsager criterion \cite{penrose56} provides an alternative in terms of the density matrix $\rho$ for the isolated composite system comprised of all the gas particles.
+	Moreover, in the presence of interactions, these criterion faces another issue: the stationary states of an interacting gas of $N$ atoms cannot be written as a prduct $\ket{\Psi} = \ket{\psi_i}^{\otimes N}$ of single-particle eigenstates $\ket{\psi_i}$.
+	That is, while measurements are confined to observables of single particles, the single-particle states are not eigenstates and so it is not sensible to talk of their `macroscopic occupation'.
+	The Penrose-Onsager criterion \cite{Penrose56} provides an alternative in terms of the density matrix $\rho$ for the isolated composite system comprised of all the gas particles.
 	The single-particle density matrix is then the expected value of the one-body field operator
 	\begin{equation}
 		\rho^{(1)} = \Tr\left(\rho\hat{\Psi}^\dagger\hat{\Psi}\right),
@@ -455,13 +464,12 @@
 	whose eigenvalues $p_{l}^{1}$ give the occupation probability of the $l^{\rm th}$ eigenvector of $\rho^{(1)}$.
 	The eigenvectors themselves are the single-particle modes.
 	If any eigenvalue $p_{l}^{i}$ is proportional to $N$ in the limit $N\rightarrow\infty$, then the system is said to have undergone Bose-Einstein condensation (or, simply, \emph{condensed}) into the $l^\textrm{th}$ mode.
-	
 	Of course, real systems are subject to atom losses and heating, violating the assumptions of equilibrium underpinning both the approaches above.
-	Nonetheless, there are compelling reasons to call the experimentally realized ultracold gases `Bose-Einstein condensates' without any qualms.
-	As the saying goes, if it interferes like a condensate \cite{andrews97} , undergoes number fluctuations like a condensate \cite{kristensen19},  has HBT correlations like a condensate \cite{schellekens05,jeltes07}, Kibble-Zureks like a condensate \cite{anquez16}, and quacks like a condensate \cite{duck01}, then it probably \emph{is} a condensate.
-	Indeed, the Penrose-Onsager criterion was found to be a good characterization of a non-Hermitian polariton condensate \cite{manni12}.
-	\todo{I don't quite follow your arguments here...
-	are you saying dilute gases may not be BECs, or that Penrose-Onsager theory may not be valid, or both?}
+	
+	This is all to illustrate the point that the real world is full of intricacies and the `intuitive' pictures of BEC, despite being useful pedagogical tools, can skirt around some important physical features.
+	Ultimately though, this is a thesis concerned with experiments, and we shall say little more than remarking on the compelling agreement between theoretical and actual condensates irrespective of the preceding issues.
+	Indeed, the Penrose-Onsager criterion has been shown to be a good characterization of a non-Hermitian polariton condensate \cite{Manni12} in that off-diagonal long range order (i.e. phase coherence) emerges along with the growh of a single eigenvalue of the one-body density matrix.
+	As the saying goes, if it interferes like a condensate \cite{Andrews97} , undergoes number fluctuations like a condensate \cite{Kristensen19},  has HBT correlations like a condensate \cite{Schellekens05,Jeltes07}, Kibble-Zureks like a condensate \cite{Anquez16}, and quacks like a condensate \cite{Duck01}, then it probably \emph{is} a condensate.
 
 	While most atomic condensates, and all of those in this thesis, are trapped in non-uniform potentials, many important features of condensates are easier to state for homogeneous systems.
 	One can usually extend calculations to harmonically trapped systems by a local density approximation, wherein one performs a density-weighted average across a condensate, considering each volume element as a homogenous condensate in its own right.
@@ -469,7 +477,7 @@
 	I present some particular results in the case of a harmonically trapped gas at the end of this section.
 
 	% distinction worth making; the ground state is a global property of the configuration.
-	Interactions mean it is not the same as the product of single-particle ground states: I mean, it *is* actually in this case, I think, but the ground states are not solutions of a free hamiltonian (I guess they are in the bogo pictures though??)
+	% Interactions mean it is not the same as the product of single-particle ground states: I mean, it *is* actually in this case, I think, but the ground states are not solutions of a free hamiltonian (I guess they are in the bogo pictures though??)
 
 
 	% Potential for historical note about liquid helium
@@ -494,15 +502,14 @@
 	\begin{align}
 		\hat{\Psi} &= \psi_0 \hat{a}_0 + \sum_{i\neq0}\psi_i \hat{a}_i
 	\end{align}
-	in terms of an orthonormal basis of single-particle modes $\phi_i$ and corresponding field operators $\hat{a}_i$.
+	in terms of an orthonormal basis of single-particle modes $\psi_i$ and corresponding field operators $\hat{a}_i$.
 	In doing so we distinguish $\pvec=0$ as the condensed mode, and say that condensation occurs when $N_0=\langle\hat{a}^\dagger_0\hat{a}_0\rangle =\mathcal{O}(N)$.
 	The observation that the condensed mode has a population of order $N$ means that in the thermodynamic limit ($N\rightarrow\infty,~V\rightarrow\infty$), one particle here or there will not really make a measurable difference.
 	% More quantitatively, one could say $\hat{a}_0\psi_0 = 
-	This heuristic can be expressed quantitatively as the Bogoliubov approximation wherein the annihilation and creation operators for the condensed mode are replaced with complex numbers,
+	This heuristic can be expressed quantitatively as the Bogoliubov approximation wherein the annihilation and creation operators for the condensed mode are replaced with complex numbers as per
 	\begin{equation}
 		\hat{a}_0 = \sqrt{N_0}e^{i\alpha}, \hat{a}_0^\dagger= \sqrt{N_0}e^{-i\alpha}, 
 	\end{equation}
-	\todo{I don't quite understand why this follows from replacing the operators with complex numbers}
 	which permits the condensate wavefunction to take the form
 	\begin{align}
 		\hat{\Psi} &= \sqrt{N_0}e^{i\alpha} \psi_0 + \delta\hat{\Psi}\\
@@ -523,31 +530,28 @@
 	
 	% %%See also; assuming \Psi = \phi + \hat{\psi} with \int|phi|^2 >> \langle\psi^\dagger\psi\rangle permits discarding third-and-higher order terms in the full bosonic field hamiltonian, leading to GPE...
 	% how relates to Born approx?
-	The first term is the condensate wavefunction (the \emph{mean-field} term), and the second corresponds to the population of non-condensed modes thanks to the effect of interactions, which are captured by the quasiparticle picture sketched in the next section.	
-
-	The emergence of a condensate has many of the hallmarks of a classical phase transition: kinetic effects are necessary to redistribute energy and reach steady-state\footnote{\todo{Bose enhancement re: scattering into the	ground state.
-	}}; a unique critical temperature $T_c$ exists; below $T_c$ an \emph{order parameter} takes on a nonzero value; and condensation is equivalent to the spontaneous breaking of a U(1) gauge symmetry \cite{yukalov11_symmetry}.
+	The first term is the condensate wavefunction (the \emph{mean-field} term), and the second corresponds to the population of non-condensed modes thanks to the effect of interactions, which are captured by the quasiparticle picture sketched in the next section.	The emergence of a condensate has many of the hallmarks of a classical phase transition: kinetic effects are necessary to redistribute energy and reach steady-state; a unique critical temperature $T_c$ exists; below $T_c$ an \emph{order parameter} takes on a nonzero value; and condensation is equivalent to the spontaneous breaking of a U(1) gauge symmetry \cite{Yukalov11_symmetry}.
 	Above the critical temperature, $|\Psi_0|=0$, and in general it exhibits a discontinuous derivative at the critical temperature.
 	Hence, in the Landau-Ginzburg framework, condensation is a second-order phase transition\footnote{In the Ehrenfest picture one is instead concerned with the number of times one must differentiate some state function (e.g.
 	specific heat, compressibility, pressure, free energy) before finding a discontinuity at the critical point.
 	In this picture, the transition is first-order as one has continuous state functions with discontinuous derivatives.}.
 	The other hallmark of Landau-Ginzburg phase transitions is the spontaneous breaking of symmetry as one crosses from the disordered to the ordered phase (as when a solid breaks the translational symmetry of the fluid phase).
 	Condensates do exhibit such symmetry breaking: The Hamiltonian has a $U(1)$ gauge symmetry, but the ground state of a condensate spontaneously chooses a fixed but unpredictable phase $\alpha$.
-	By interfering two independently prepared condensates, one observes interference fringes \cite{andrews97}, and indeed, the fringe locations will change with each realization and measurement.
+	By interfering two independently prepared condensates, one observes interference fringes \cite{Andrews97}, and indeed, the fringe locations will change with each realization and measurement.
 	More directly, one can interfere light leakage from a reservoir-coupled photon condensate against a reference beam, and observe that phase jumps occur in the output when the condensate field drops to zero.
-	That is, the re-emergence of the condensate is heralded by the selection of a new, specific, phase, apparently uncorrelated with the phase that existed before it \cite{schmitt16}.
+	That is, the re-emergence of the condensate is heralded by the selection of a new, specific, phase, apparently uncorrelated with the phase that existed before it \cite{Schmitt16}.
 	
 	
 	Symmetry breaking is a subtle point discussed infrequently in standard textbooks.
-	It happens that one can substitute complex numbers for the field operators,  even when $\langle N_0\rangle \rightarrow 0$ and still obtain correct results \cite{ginibre67}.
+	It happens that one can substitute complex numbers for the field operators,  even when $\langle N_0\rangle \rightarrow 0$ and still obtain correct results \cite{Ginibre67}.
 	That is, condensation is not necessary for the Bogoliubov approximation to be valid.
 	However, it \emph{is} the case that the onset of condensation coincides with the ground state breaking\footnote{This is sometimes called `breaking the gauge symmetry'.
 	This is a misnomer, as a gauge symmetry is a property of the theory, not a state, and all consistent theories must be gauge symmetric throughout.
-	These subtleties are discussed at length in lucid terms in \cite{poniatowski19}} the $U(1)$ symmetry \cite{suto05} .
+	These subtleties are discussed at length in lucid terms in \cite{Poniatowski19}} the $U(1)$ symmetry \cite{Suto05} .
 	
 	% That this coincides with the validity of the `coherent state' approximation is quite profound: Like the transition from the quantized electromagnetic field to the Maxwell equations, BEC has the flavour of a classical field but one which is consitued by matter which has dispersed in some delocalized state.
 	% The interactions between atoms present a marked departure from the physics of the electric field, however, and yet the system remains in the grasp of human theorists thanks to the Bogoliubov approximation, which I introduce here and examine experimentally in chapter \ref{chap:QD}.
-	% %  First-order phase transition as the chemical potential has a discontinuous derivative \cite{ykalovreview}, cf ehrenfest critioerion of discontinuous derivative of a state function; the ginzburg-landau classification is in terms of the order parameters; BEC is a second-order transition as the order parameter is continuous with a discontinuous derivative.
+	% %  First-order phase transition as the chemical potential has a discontinuous derivative \cite{Ykalovreview}, cf ehrenfest critioerion of discontinuous derivative of a state function; the ginzburg-landau classification is in terms of the order parameters; BEC is a second-order transition as the order parameter is continuous with a discontinuous derivative.
 	% % Penrose and Onsager generalized the definition of condensation to include interacting particles and non-uniform systems.
 	%  In fact, the Bogoliubov picture of superfluidity actually refers to a condensation of non-interacting collective bosonic modes, rather than the condensation of the constituent atoms.
 	% The definitions coincide fairly well.../
@@ -565,7 +569,7 @@
 	(\ref{eqn:ham}) and produce an effective Schr\"{o}dinger equation.
 	By assuming slow variations in the density, integrating out short-wavelength modes as in the Born approximation, one can derive the Gross-Pitaevskii equation (GPE),
 	\begin{equation}
-		-\hbar\partial_t\Psi(r,t) = \left(-\frac{\hbar^2\nabla^2}{2m} + V(r,t) + g|\Psi(r,t)|^2\right)\Psi(r,t).
+		-\hbar\partial_t\Psi_0(r,t) = \left(-\frac{\hbar^2\nabla^2}{2m} + V(r,t) + g|\Psi_0(r,t)|^2\right)\Psi_0(r,t).
 		\label{eqn:GPE}
 	\end{equation}
 	which is valid for arbitary interactions dominated by the s-wave scattering length.
@@ -577,55 +581,49 @@
 		n(\textbf{r}) = \frac{\mu-V(\textbf{r})}{g},
 	\end{equation}
 	where $\mu$ is the chemical potential.
-	
+	The chemical potential for the harmonically trapped condensate also fixes the average energy per particle:
+	\begin{equation}
+		\mu = \frac{\hbar\bar{\omega}}{2}\left(\frac{15 N a}{a_{ho}}\right)^{2/5} = \frac{7}{5}\frac{E}{N}
+	\end{equation}
 	For a Bose gas confined in a harmonic potential of the form
 	\begin{equation}
 		V = \frac{1}{2} m \omega_x^2 x^2 + \frac{1}{2} m \omega_y^2 y^2 + \frac{1}{2} m \omega_z^2 z^2,
 	\end{equation}
-	this produces the famous inverted-parabola density profile,	for which the peak density of the condensate is
+	the condition $\mu-V(\textbf{r})=0$ determines the boundary of the condensate, giving the Thomas-Fermi radii $R_i = \sqrt{2\mu/m \omega_i^2}$, where $i\in\{x,y,z\}$.
+	This produces the famous inverted-parabola density profile with a peak density of
 	\begin{equation}
-		n_0 = \frac{1}{8 \pi}\left( (15N_0)^2 \left(\frac{m \bar{\omega}}{\sqrt{a_{1,1}} \hbar}\right)	 ^{6}\right)^{1/5}.
+		n_0 = \frac{1}{8 \pi}\left( (15N_0)^2 \left(\frac{m \bar{\omega}}{\sqrt{a \hbar}}\right)^{6}\right)^{1/5}.
 		\label{eqn:n0}
 	\end{equation}
 	The Thomas-Fermi approximation is valid when $N a/a_{ho}\gg1$, where $a_{ho} = \sqrt{\hbar/m\omega}$ is the length scale of the ground state of the harmonic oscillator.
+	This is when the mean-field energy significantly outweighs the kinetic term.
 	The phase space density for condensation is achieved at the (ideal) critical temperature 
 	\begin{align}
 		T_c^{0} &= \frac{\hbar \bar{\omega}}{k_B}\left(\frac{N}{\zeta(3)}\right)^{1/3}\\
 				&\approx0.94\frac{\hbar \bar{\omega} N^{1/3}}{k_B}.
 	\end{align}
-	where $\bar{\omega}=(\omega_x\omega_y\omega_z)^{1/3}$ is the geometric mean of the trapping frequencies.
-	The condensed fraction below the critical temperature is 
+	where $\bar{\omega}=(\omega_x\omega_y\omega_z)^{1/3}$ is the geometric mean of the trapping frequencies, and the condensed fraction below the critical temperature is 
 	\begin{equation}
-		\frac{N_0}{N} = 1 - \left(\frac{T}{T_c^{0}}\right)^3,
+		\frac{N_0}{N} = 1 - \left(\frac{T}{T_c^{0}}\right)^3.
 	\end{equation}
-	Interactions between particles reduce the critical temperature in a harmonic trap, and the resulting shift in the critical temperature can be written as 
+	The rest of the population, occupying excited single-particle states, is called the thermal fraction.
+	The population $N_T$ of the thermal fraction saturates as $\frac{N_T}{N} = \left(\frac{k_B T}{\hbar \bar{\omega}}\right)^3$, wherein any atoms added to the gas fall into the condensate mode, regardless of the density of the gas.
+	Real gases generally don't show such a feature, and this bifurcation is corrected by including the effect of interactions on the thermodynamics of the Bose gas.	 
+	Interactions between particles reduce the critical temperature in a harmonic trap, which can be understood in terms of repulsive interactions reducing the density at a given temperature and thus requiring a lower temperature to achieve a give $\aleph$.
+	The resulting shift in the critical temperature can be supplemented with a correction for the finite size of the condensate and written as
 	\begin{equation}
 		\frac{\delta T_c}{T_c^{0}} = -1.3 \frac{a}{a_{ho}} N^{1/6} -0.73\frac{ \langle\omega\rangle}{\omega_{ho} N^{1/3}}
 	\end{equation}
 	where the latter term, the correction for finite atom number, includes the arithmetic mean trapping frequency $\langle\omega\rangle$ and vanishes in the thermodynamic limit $(N\rightarrow\infty,~V\rightarrow\infty,~N/V$ finite).
-	This effect can be understood in terms of the reduction in density due to repulsive interactions, thus driving down the phase space density $n\lambda^3$ at a given temperature, lowering the temperature required for condensation.
-	These deviations from ideal behaviour have been observed in experiments \cite{tammuz11,smith11}.
+	These deviations from ideal behaviour have been observed in experiments \cite{Tammuz11,Smith11}.
 
 	% For an ideal gas, this is the expected fraction of the population in the ground state of the trap.
-	The rest of the population, occupying excited single-particle states, is called the thermal fraction.
-	The population $N_T$ of the thermal fraction saturates as $\frac{N_T} = \left(\frac{k_B T}{\hbar \bar{\omega}}\right)^3$, wherein any atoms added to the gas fall into the condensate mode, regardless of the density of the gas.
-	Real gases generally don't show such a feature, and this bifurcation is corrected by including the effect of interactions on the thermodynamics of the Bose gas.	 
-
-	The condition $\mu-V(\textbf{r})=0$ determines the boundary of the condensate, giving the Thomas-Fermi radii $R_i = \sqrt{2\mu/m \omega_i^2}$, where $i\in\{x,y,z\}$.
-	The chemical potential for the harmonically trapped condensate also fixes the average energy per particle:
-	\begin{equation}
-		\mu = \frac{\hbar\bar{\omega}}{2}\left(\frac{15 N a}{a_{ho}}\right)^{2/5} = \frac{7}{5}\frac{E}{N}
-	\end{equation}
-
 	As for the practical production of condensates, much quality literature has been written on the theory and techniques of atomic cooling technqiques employed to reach degeneracy.
 	These days, such techniques are standard across hundreds of laboratories and so space will not be spared for their general consideration here.
-	The curious reader is directed to \cite{MakingProbingUnderstanding,courtielle01,MetVdS, tychkovThesis} for detailed discussions.
-	 Rather, in the next chapter I discuss the specifications of the apparatus used in the course of this research to implement the general principles of atomic cooling and trapping to achieve condensation.
+	The curious reader is directed to \cite{MakingProbingUnderstanding,Courteille01,MetVdS, TychkovThesis} for detailed discussions.
+	Rather, in the next chapter I discuss the specifications of the apparatus used in the course of this research to implement the general principles of atomic cooling and trapping to achieve condensation.
 	
-	\todo{The last couple of pages I feel you could add a little more insight in terms of simple physical pictures of what is going on behind some of the maths.
-	 What you have isn't wrong and is perfectly fine as is, but a couple of simple physical insights can add a lot.
-	}
-
+	
 	% \subsubsection{Producing BEC}
 
 	% Ketterle96 evaporative cooling of trapped atoms

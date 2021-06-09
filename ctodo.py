@@ -43,7 +43,7 @@ with open(os.path.join(texdir,'mtodo.tex'),'w') as texout:
 						texout.write("\\end{itemize}\n")
 	texout.close()
 # write to text file for easy check-boxing
-with open('todo_%s.md'%datestring,'w') as mdout:
+with open('todo.md','w') as mdout:
 	mdout.write("To-do list:\n")
 	for f in the_files:
 		todolist = []
