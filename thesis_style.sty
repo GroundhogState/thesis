@@ -1,4 +1,13 @@
 \ProvidesPackage{thesis_style}
+
+\renewcommand{\baselinestretch}{1.5} %1.5 spacing
+\usepackage{geometry}
+\geometry{top = 20mm,
+    bottom = 20mm,
+    inner = 40mm,
+    outer = 20mm}
+
+
 \usepackage{graphicx}
 % \usepackage{wrapgfig}
 \usepackage{xcolor}
@@ -7,11 +16,12 @@
 \usepackage{hyperref}
 \usepackage{subcaption}
 \usepackage{changepage}
-\usepackage[a4paper, margin=3.5cm]{geometry}
+% \usepackage[a4paper, margin=3.5cm]{geometry}
 % https://tex.stackexchange.com/questions/50258/margins-of-book-class
 
 % https://mirror.aarnet.edu.au/pub/CTAN/macros/latex/contrib/lettrine/doc/lettrine.pdf
 \usepackage{lettrine}
+% \usepackage{floatrow}
 \usepackage{siunitx}
 %%% Formatting stuffs
 \usepackage{rotating}
@@ -19,6 +29,7 @@
 \usepackage{Typocaps}
 \newcommand{\dropcap}[1]{\dropcapaux#1\relax}
 \def\dropcapaux#1#2\relax{\lettrine[lines=3,lraise=-0.5,depth=1]{\typocap{#1}}{#2}}
+
 % \input Rothdn.fd
 % \newcommand*\initfamily{\usefont{U}{Rothdn}{xl}{n}}
 
@@ -45,6 +56,9 @@
 \newcommand{\todo}[1]{{\color{blue}{#1}\normalcolor}} % todo
 \newcommand{\com}[1]{{\color{red}{#1}\normalcolor}} %comment
 \newcommand{\commment}[1]{{\color{red}{#1}\normalcolor}} %comment
+\newcommand{\blu}[1]{{\color{blue}{#1}}}
+\newcommand{\org}[1]{{\begin{color}[rgb]{1.0,0.5,0}{#1}\end{color}}}
+\newcommand{\rem}[1]{{\begin{color}[rgb]{0.0,0.7,0}{#1}\end{color}}} 
 
 % Formatting
 % Paper reference box

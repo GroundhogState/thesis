@@ -1,291 +1,275 @@
 % \hypertarget{quantum-depletion}{%
 % \section{Quantum depletion}\label{quantum-depletion}}
 \chapter{Quantum depletion of a harmonically trapped Bose gas}
+\markboth{\thechapter. QUANTUM DEPLETION OF AN EXPANDING CONDENSATE}{}
 \label{chap:QD}
 
 \begin{adjustwidth}{3cm}{0cm}
 \begin{flushright}
-\emph{``Do not be content with the answer that is almost right; seek one that is exactly right...
-	The Way is a precise Art.
-	Do not walk to the truth, but dance."} - Eliezer Yudkowsky\footnote{\url{http://yudkowsky.net/rational/virtues/}}
+\emph{``Do not be content with the answer that is almost right; \\
+	seek one that is exactly right... The Way is a precise Art.\\
+	Do not walk to the truth, but dance."} 
+	\\- Eliezer Yudkowsky\footnote{\url{http://yudkowsky.net/rational/virtues/}}
 \end{flushright}
 \end{adjustwidth}
 
 
-\section{Introduction} 
-	One of Bogoliubov's seminal cotributions was to formalize the role of Bose-Einstein condensation in the physics of superfluidity \cite{Bogolubov47}.
-	the mechanism underlying superfluid formation is the Bose-Einstein condensation of collective excitations.
-	
-	By transforming from the picture of a homogeneous system of interacting bosons to that of a free Bose gas of non-interacting quasiparticles, Bogoliubov showed that the macroscopically-occupied quasiparticle ground state corresponds to the superfluid part of the Landau two-fluid model.
-	The population of excited quasiparticle modes then makes up the normal component of the fluid.
-	
-	This foundational theory is of broad relevance because the BEC and BCS regimes of superconductivity are characterized by superfluids of molecular dimers and of Cooper pairs, respectively.
-	  
 
-	In a bose gas, the collective excitations are constituted by oppositely-moving particles \cite{Vogels02}.
-	
-	Repulsive interactions between constituent particles lead to a zero-point population of quasiparticle modes, known as the quantum depletion, which persists even at zero temperature.
-	
-	The quantum depletion presents as an occupation of single particle modes with large momentum $p$ that decays like $p^{-4}$.
-	In liquid helium, the depleted fraction is large (of order 90\% of the fluid) due to the strong interparticle interactions, but is generally very small in weakly-interacting dilute gases.
-	Bogoliubov's theory makes accurate predictions of the total depleted population in ultracold atomic Bose-Einstein condensates (BECs) \cite{Xu06,Lopes17_depletion} and exciton-polariton condensates in solid substrates \cite{Pieczarka20}.
-	Therefore, detailed study of the quantum-depleted tails of the momentum distribution in ultracold gases is an attractive test for the Bogoliubov theory.
 
-	This has been challenging to date because the tails are usually beneath the noise floor of optical imaging techniques, wherein the momentum spectrum is mapped onto the far-field density distibution following ballistic expansion.
-	The use of Feshbach resonances to enhance the quantum depletion in strongly-interacting Bose gases has garnered recent attention \cite{Makotyn14,Fletcher17,Eigen18}.
-	Measurements of the momentum distribution in these settings \cite{Makotyn14,Eigen18} found tails that deviate from the power-law behaviour, and a handful of theories have emerged \cite{Kira15_coherent,Colussi20,Smith14} in effort to understand this finding.
-	
-	While the particulars are still under debate, the general picture is that three-body interactions play important roles in the dynamical response of the gas to a switch to a large scattering length.
-	In contrast, another meaurement in the a weakly interacting regime reported unexpectedly large momentum tails in the far-field density of a helium BEC released from a harmonic optical trap \cite{Chang16}.
-	
-	This is particularly surprising because conventional wisdom argues that the density decreases adiabatically during expansion, justifying treatment with a hydrodynamic approximation wherein the tails are predicted to vanish \cite{Qu16}.
-	
+	One of Bogoliubov's seminal contributions was to recognize the Bose-Einstein condensation of collective excitations as the mechanism underlying the physics of superfluidity \cite{Bogolubov47}.
+	The population of excited quasiparticle modes makes up the normal component in the Landau two-fluid model while the %macroscopically-occupied 
+	quasiparticle ground state comprises the superfluid part. \blu{The latter is composed of a macroscopically-occupied condensate and correlated particle pairs due to s-wave interactions between constituent particles \cite{Bogolubov47,Vogels02}} 
+	\blu{A consequence of these pairs is  %Bogoliubov's theory also predicts 
+	that excited} single-particle modes %at large momentum $p$ 
+	are populated even at zero temperature. % due to s-wave interactions between constituent particles.
+	This is the \emph{quantum depletion} of the condensate and presents as an occupation of single particle modes with large momentum $p$ that decays like $p^{-4}$ \cite{PitaevskiiStringari,Decamp18}.
 
-	These observations are also in conflict with quantitative predictions of the tail shape drawn from the theory of contact interactions developed by Tan \cite{Tan08_energetics,Tan08_momentum,Tan08_virial}.
-	The thermodynamic quantity called the \emph{contact} characterizes how s-wave contact interactions modify the short-range pair correlation function.
-	
-	The dual manifestation of this modification is that the contact determines the amplitude of the power-law decay of the momentum density in terms of the gas density and s-wave scattering length, which fully determine collisional dynamics in ultracold dilute gases.
-	
-	Two central properties of the contact, known as the adiabatic sweep theorem and generalized virial theorem \cite{Tan08_momentum,Tan08_virial}, have been verified via radio spectroscopy \cite{Baym07,Punk07,Braaten10} of degenerate Bose \cite{Wild12} and Fermi gases \cite{Stewart10,Sagi12}.
-	
-	While the Bogoliubov prescription breaks down in strongly-correlated systems \cite{Lopes17_quasiparticle}, Tan’s theory applies for arbitrary spin mixtures at any density, temperature, and geometry, and so both theories are expected to agree in the weakly interacting regime.
+	Since the realization of atomic Bose-Einstein condensates (BECs) there has been considerable experimental \cite{Stewart10,Wild12,Chang16,Makotyn14,Eigen18,Xu06,Vogels02,pieczarka20,Lopes17_depletion,Cayla20,Kuhnle11,Sagi12,Fletcher17,Lopes17_quasiparticle,Mukherjee19,Carcy19} and 
+	theoretical \cite{Colussi20,Kira15_coherent,Decamp18,Smith14,Qu16,Braaten10,Braaten11,Rakhimov20,Braaten08,Zhang09,Combescot09,Werner12_boson,Werner12_fermion,Sinatra00,Deuar11} interest in the 
+	Bogoliubov theory \cite{Vogels02,Steinhauer03,Lopes17_quasiparticle,Sinatra00,Deuar11} (and 
+	quantum depletion in particular \cite{Lopes17_depletion,Chang16,Xu06,pieczarka20,Cayla20}), 
+	and the intimately related thermodynamic 
+	contact \cite{Stewart10,Tan08_momentum,Tan08_energetics,Tan08_virial, Braaten10,Braaten11,Colussi20,Makotyn14,Eigen18,Decamp18,Smith14,Chang16,Qu16,Wild12,Hoinka15,Rakhimov20,Braaten08,Smith14,Kuhnle11,Sagi12,Fletcher17,Mukherjee19,Carcy19,Zhang09,Combescot09,Werner12_boson,Werner12_fermion} which Tan proved to be the amplitude of the $p^{-4}$ tail \cite{Tan08_momentum}.
+	In liquid helium, the depleted fraction is large (of order 93\% of the fluid \cite{Dmowski17,Glyde00,Moroni04}) due to the strong interparticle interactions, but is generally very small (less than 1\% \cite{Lopes17_depletion,Chang16}) in weakly-interacting dilute gases.
+	Observations of the large-momentum tails thus typically employ Feshbach resonances to enhance interactions in ultracold gases and produce a depleted fraction visible with optical imaging techniques, but the power-law tails have proven elusive \cite{Makotyn14,Eigen18}. 
+	A handful of theories have emerged \cite{Kira15_coherent,Colussi20,Smith14} which elucidate the role played by many-body interactions  in the evolution following a quench to a large scattering length, and thus modify the momentum distribution.
 
-	Thus, it is surprising that the prior work reported such strong tails as this apparently contravenes both the Tan and Bogoliubov theories in the weakly-interacting regime where both have otherwise been demonstrated to be accurate.
-	One possible implication of this finding would be that some feature of harmonically trapped helium condensates violate the minimal assumptions of both theories, which would warrant further study.
-	On the other hand, far-field measurements in general might not provide a straightforward means of examining the quantum depletion even in weakly interacting gases.
-	As far-field measurements play a central role in study of ultracold gases, it is important to verify the anomaly and understand its origin in order to glean further insight.
+	However, even measurements in the weakly-interacting regime have returned unexpected results.
+	A previous experiment reported the presence of power-law-like tails in the far-field momentum distribution after releasing a BEC of metastable helium from a harmonic optical trap \cite{Chang16}.
+	This was surprising because conventional wisdom argues that the density decreases adiabatically during expansion, motivating a hydrodynamic approximation wherein the tails are predicted to vanish \cite{Qu16,Xu06}. 
+	Moreover, the tails were reported to be approximately sixfold heavier than predicted by Bogoliubov theory.
+	A possible implication is that far-field measurements in general might not provide a straightforward means of examining the quantum depletion even in weakly interacting gases.
+	It is important to verify the anomaly and understand its origin because far-field measurements play a central role in study of ultracold gases.
 
-	To this end, we revisit the measurement of the momentum distribution of a helium condensate expanding from a harmonic trap.
+	To this end, we measure the momentum distribution of a helium condensate expanding from a harmonic trap. 
+	Our experiments cover a range of densities twice as large as the prior work and use a magnetic trap in place of an optical dipole trap, ensuring perfect spin-polarization of the condensate. 
+	We observe tails in the large-momentum part of the condensate wavefunction whose amplitude is \emph{proportional to} the predictions of the Tan and Bogoliubov theory.
+	However, we show that not much can be said with certainty about the exponent of a $p^{-\alpha}$ decay due to inherent difficulties one faces when analysing power-law distributions in general. 
+	We describe, in detail, the limitations of inference of power-law parameters from empirical data with particular emphasis on the relation between our findings and the results reported in \cite{Chang16}.
 	
-	We conducted experiments using a different apparatus, covering a range of densities twice as large as the prior work and using a magnetic trap in place of an optical dipole trap which ensures perfect spin-polarization of the condensate.
-	
-	We observe tails in the large-momentum part of the condensate wavefunction whose population is controllable in a manner consistent with the Tan and Bogoliubov theories.
-	However, we show that not much can be said with certainty about the $p^{-4}$ decay due to inherent difficulties one faces when analysing power-law distributions in general.
-	
-	We describe, in detail, the limitations of inference of power-law parameters from empirical data with particlar emphasis on the relation between our findings and the results reported in \cite{Chang16}.
-	
-	Our measurements are complemented by simulations of the time-dependence of the momentum distribution using a stochastic Time-Adaptive Bogoliubov (STAB) method in the positive-P framework \cite{Deuar11,Kheruntsyan12}.
-	
-	These show that the non-adiabatic release of the trap is responsible for survival of the depletion, and that the depleted particles acquire additional kinetic energy from the mean-field energy of the condensate during the subsequent adiabatic expansion.
-	
-	These factors result in an amplification of the momentum tails relative to the in situ values, and are not captured in the hydrodynamic approximation.
-	
-	
-	Finally, we discuss the concordance between our theoretical and experimental investigations in support of the visibility of the quantum depletion in the far-field and suggest productive means for future investigation.
+	Our measurements are complemented by numerical simulations of the dynamics of the momentum distribution after the trap release using a Stochastic Time-Adaptive Bogoliubov (STAB) method in the positive-P framework \cite{Deuar11,Kheruntsyan12}. 
+	These show that the non-adiabatic release of the trap is responsible for survival of the depletion, and that the depleted particles acquire additional kinetic energy from the mean-field energy of the condensate during the subsequent adiabatic expansion. 
+	These factors result in an amplification of the momentum tails relative to the in situ values \blu{by a factor of up to about two}, and are not captured in the hydrodynamic approximation. 
+	However, there remains a quantitative disagreement between simulation and the experiment \blu{because the experimental tails are even heavier by a large margin.}
+
 	
 \section{Background} 
-	The Hamiltonian of a homogeneous system of interacting bosons can be written in terms of plane-wave field operators $\hat{a_\kvec}$, labeled by the wavevector $\kvec=\textbf{p}/\hbar$, as
+
+	\noindent The Hamiltonian of a homogeneous system of interacting bosons can be written in terms of plane-wave field operators $\hat{a_\kvec}$, labeled by the wavevector $\kvec=\textbf{p}/\hbar$, as
+
 	\begin{equation}
-		\hat{H} = \sum_{\kvec} \frac{\hbar^2k^2}{2m}\hat{a}_{\kvec}^\dagger \hat{a}_\kvec + \frac{g n}{2}\sum_{\kvec,\kvec',{\bf l}}\hat{a}_{\kvec+{\bf l}}^\dagger\hat{a}_{\kvec'-{\bf l}}^\dagger \hat{a}_{\kvec'}\hat{a}_{\kvec},
+		\hat{H} = \sum_{\kvec} \frac{\hbar^2k^2}{2m}\hat{a}_{\kvec}^\dagger \hat{a}_\kvec + \frac{g n}{2}\sum_{\kvec,\kvec',{\bf q}}\hat{a}_{\kvec+{\bf q}}^\dagger\hat{a}_{\kvec'-{\bf q}}^\dagger \hat{a}_{\kvec'}\hat{a}_{\kvec},
 	\end{equation}
 	in terms of the particle density $n$ and the effective interaction strength $g=4\pi\hbar^2a^2/m$, where $a$ is the s-wave scattering length and $m$ is the atomic mass \cite{PitaevskiiStringari,PethickSmith}.
    
-    This Hamiltonian can be diagonalized by the Bogoliubov transformation to a free Bose gas of collective excitations through the operator transformation $\hat{b}_{\kvec}^\dagger = u_k \hat{a}_\kvec^\dagger + v_k \hat{a}_{-\kvec}$ \cite{Bogolubov47,PethickSmith}, where the $u_k$ and $v_k$ coefficients are given by
+    This Hamiltonian can be diagonalized by the Bogoliubov transformation to a free Bose gas of collective excitations through the operator transformation $\hat{b}_{\kvec}^\dagger = u_k \hat{a}_\kvec^\dagger + v_k \hat{a}_{-\kvec}$ \cite{Bogolubov47,PethickSmith}, wherein the collective excitations are superpositions of particles with opposite momenta \cite{Vogels02}. 
+    The $u_k$ and $v_k$ coefficients are given by
 	\begin{align}
 		u_{k}^2 &= \frac{1}{2}\left(\frac{\hbar^2k^2/2m + gn}{\epsilon(k)} + 1\right)~\textrm{and}\\
-		v_{k}^2 &= \frac{1}{2}\left(\frac{\hbar^2k^2/2m + gn}{\epsilon(k)} - 1\right),\\
+		v_{k}^2 &= \frac{1}{2}\left(\frac{\hbar^2k^2/2m + gn}{\epsilon(k)} - 1\right),
 	\end{align}
-	and where the denominator is the quasiparticle dispersion
+	where the denominator is the quasiparticle dispersion
 	\begin{equation}
 		\epsilon(k) = \sqrt{\left(\frac{\hbar^2k^2}{2m}\right)^2 + gn\frac{ \hbar^2k^2}{m}}.
 	\end{equation}
-	In the non-interacting ($a\rightarrow0$) limit, $u_k=1$ and $v_k=0$, so the transformation reduces to the identity and the dispersion is that of free particles.
-	
-	In general, the single-particle momentum density can be found using the inverse transformation and is given by
+	In the non-interacting ($a\rightarrow0$) limit, $u_k=1$ and $v_k=0$, so the transformation reduces to the identity and the dispersion is that of free particles. 
+	The occupation of single-particle momentum modes can be found using the inverse transformation and is given by
 	 \begin{align}
 	 \rho(\kvec) &= \langle\hat{a}_\kvec^\dagger\hat{a}_\kvec\rangle\\
 		 &=\left(u_{k}^{2}+v_{k}^{2}\right)\langle b_{\kvec}^{\dagger}b_{\kvec}\rangle + v_{k}^{2}.
 		 \label{eqn:popstats}
 	 \end{align}
-	wherein the quasiparticle population statistics follow the canonical ensemble as $\langle \hat{b}^\dagger_\kvec\hat{b}_\kvec\rangle = (\exp(\epsilon(k))-1)^{-1}$ \cite{PitaevskiiStringari,Chang16}.
-	At finite temperatures, quasiparticle modes are thermally populated and deplete the condensate.
-	 Even at zero temperature, when the thermal fraction vanishes, the $v_k^2$ term in Eqn (\ref{eqn:popstats}) persists giving a zero-point population of the quasiparticle vacuum \cite{Decamp18,Chang16}, which decays as $\lim_{k\rightarrow\infty}\rho(\kvec)\propto k^{-4}$ \cite{PethickSmith,PitaevskiiStringari,Chang16}.
+	wherein the quasiparticle population statistics follow the canonical ensemble as $\langle \hat{b}^\dagger_\kvec\hat{b}_\kvec\rangle = (\exp[\epsilon(k)/k_B T]-1)^{-1}$ \cite{PitaevskiiStringari,Chang16}. At finite temperatures, quasiparticle modes are thermally populated and deplete the condensate.  Even at zero temperature, when the thermal fraction vanishes, the $v_k^2$ term in Eqn (\ref{eqn:popstats}) persists giving a zero-temperature population of excited %quasiparticle modes 
+	\blu{particles \cite{Olshanii03,Decamp18,Chang16}} which decays as $\lim_{k\rightarrow\infty}\rho(\kvec)\propto k^{-4}$ \cite{PethickSmith,PitaevskiiStringari,Chang16}. 
+	Bogoliubov's theory makes accurate predictions of the total depleted population in ultracold atomic Bose-Einstein condensates (BECs) \cite{Xu06,Lopes17_depletion} and exciton-polariton condensates in solid substrates \cite{pieczarka20}.
+	In the case of a harmonically trapped gas, one can employ the local-density approximation (LDA) to compute the amplitude of the $k^{-4}$ tail by  integrating $v_k^2$ across a Thomas-Fermi distribution \cite{Chang16}. 
 
-	In the case of a harmonically trapped gas, one can employ the local-density approximation (LDA) to compute the amplitude of the $k^{-4}$ tail by  integrating $v_k^2$ across a Thomas-Fermi distribution \cite{Chang16}.
-	A simpler approach is afforded by Tan's original theorems.
-	The two-body contact is defined by \cite{Tan08_momentum,Braaten11}
+	% This observation is also in conflict with quantitative predictions of the tail amplitude drawn from the theory of contact interactions developed by Tan \cite{Tan08_energetics,Tan08_momentum,Tan08_virial}.
+	% The thermodynamic quantity called the \emph{contact} characterizes how s-wave contact interactions modify the short-range pair correlation function. 
+	% The contact determines the amplitude of the power-law decay of the momentum density in terms of the gas density and s-wave scattering length, which fully determine collisional dynamics in ultracold dilute gases. 
+	% Two central properties of the contact, known as the adiabatic sweep theorem and generalized virial theorem \cite{Tan08_momentum,Tan08_virial}, have been verified via radio spectroscopy \cite{Baym07,Punk07,Braaten10} of degenerate Bose \cite{Wild12} and Fermi gases \cite{Stewart10,sagi12}. 
+	% While the Bogoliubov prescription breaks down in strongly-correlated systems \cite{Lopes17_quasiparticle}, Tan’s theory applies for any density, temperature, and geometry, and so both theories are expected to agree in the weakly interacting regime.
+	% Thus, it is surprising that the prior work reported such strong tails as this apparently contravenes both the Tan and Bogoliubov theories in the weakly-interacting regime 
+	On the other hand, the amplitude of the tails was shown by Tan to be exactly the quantity called the \emph{contact} which is proportional to the derivative of the energy with respect to the s-wave scattering length \cite{Tan08_momentum, Braaten11}.
+	For a Bose gas at equilibrium in a harmonic trap, the tail amplitude can be calculated using Tan's original theorems. The two-body \emph{contact intensity} is defined by \cite{Tan08_momentum,Braaten11}
 	\begin{equation}
-		\mathcal{C} = \lim_{k\rightarrow\infty}k^4\rho(k),
+		C = \lim_{k\rightarrow\infty}k^4\rho(k),
 		\label{eqn:MomentumDef}
 	\end{equation}
-	where the contact $\mathcal{C}$ is the volume average of the local \emph{contact intensity} $\hat{C} = 32 \pi^2 a^2 \hat{n}^2$ \cite{Werner12_boson}.
-	The contact is also related to the total energy $E$ through the \emph{adiabatic sweep theorem} \cite{Tan08_energetics},
+	% is the local  $32 \pi^2 a^2 n_{x}^{2}$ \cite{Werner12_boson}, where $n_x$ is the density at position $x$. 
+	which is related to the total contact (or just \emph{contact})  $\mathcal{C} = \int C(r) d^3 r$.
+	The contact can be derived from the total energy $E$ through the \emph{adiabatic sweep theorem} \cite{Tan08_energetics},
 	\begin{equation}
 		\mathcal{C} = \frac{8\pi m a^2}{\hbar^2}\frac{\partial E}{\partial a}.
+		\label{eqn:sweep_theorem}
 	\end{equation}
 	In the Thomas-Fermi approximation, the energy of $N_0$ condensed bosonic atoms is related to the chemical potential via
 	\begin{equation}
 		\frac{E}{N_0} = \frac{5}{7}\mu = \frac{5}{7} \frac{\hbar \bar{\omega}}{2} \left(\frac{15 N_0 a}{a_\textrm{HO}}\right)^{2/5},
 		\label{mu}
 	\end{equation}
-	where $a_\textrm{HO} = \sqrt{\hbar/(m \bar{\omega})}$ is the harmonic oscillator length and $\bar{\omega}=\sqrt[\uproot{2}\scriptstyle 3]{\omega_x \omega_y \omega_z}$ is the geometric trapping frequency \cite{PitaevskiiStringari,PethickSmith}.
-	The sweep theorem yields
+	where $a_\textrm{HO} = \sqrt{\hbar/(m \bar{\omega})}$ is the harmonic oscillator length and $\bar{\omega}=\sqrt[\uproot{2}\scriptstyle 3]{\omega_x \omega_y \omega_z}$ is the geometric trapping frequency \cite{PitaevskiiStringari,PethickSmith}. The sweep theorem yields
 	\begin{equation}
 		\mathcal{C} = \frac{8\pi}{7} \left(15^{2}(a N_0)^{7} \left(\frac{m \bar{\omega}}{\hbar}\right)^{6}\right)^{1/5},
 		\label{eqn:TotalHarmonicContact}
 	\end{equation}
 	which can be simplified as $\mathcal{C} = 64\pi^2a^2 N_0 n_0/7$ by dividing out the peak density of a harmonically trapped condensate,
 	\begin{equation}
-		n_0 = \frac{1}{8 \pi}\left( (15N_0)^2 \left(\frac{m \bar{\omega}}{\sqrt{a \hbar}}\right)	 ^{6}\right)^{1/5}.
+		n_0 = \frac{1}{8 \pi}\left( (15N_0)^2 \left(\frac{m \bar{\omega}}{\hbar\sqrt{a}}\right)	 ^{6}\right)^{1/5}.
 		\label{eqn:n0}
 	\end{equation}
-	By substitution into Eqn.
-	(\ref{eqn:MomentumDef}) one arrives at the expression
+	Finally, one can compute the asymptotic momentum (density) distribution $n(k)$ through
 	\begin{equation}
-		\lim_{k\rightarrow\infty}\rho(k) = \frac{64\pi^2a^2}{7} \frac{N_0n_0}{k^4}
+		%(2\pi)^3 
+		\lim_{k\rightarrow\infty} n(k) = \blu{\frac{\mathcal{C}}{k^4}} = \frac{64\pi^2a^2}{7} \frac{N_0n_0}{k^4}
 		\label{eqn:pred_scaling}
 	\end{equation}
-	for the asympototic momentum distribution of a harmonically trapped gas spin-polarized bosonic atoms.
-	
-
-	
-	
+	for the asympototic momentum distribution of a harmonically trapped gas of spin-polarized bosonic atoms. 
+	\rem{Note that hereon we refer to the momentum distribution $n(k)$ rather than the occupation numbers $\rho(k) = n(k) d^3k$, and that }%the prefactor ensures the wavefunction is normalized with respect to the integral (2\pi)^{-3} \int d^3 k n(k) = 1$.}
+    \blu{the total number of atoms in this normalisation is $N=\frac{1}{(2\pi)^3}\int d^3 k\, n(k)$.}
+	%a) We never talked about wavefunctions  b) as defined, rho is the real number of particles, so it should sum just to N. As far as I can tell, this stuff is not correct;y normalised.
 
 \section{Experiment} 
-	Information about the momentum distribution of trapped gases is generally obtained by absorption-imaging measurements of the spatial distribution after some finite time of flight.
-	In contrast, metastable helium affords single-particle detection in the far-field regime and thus gives direct access to microscopic momentum information.
-	The metastable $\metastable$ state of helium, denoted He$^*$, is 19.8eV above the true ground state \cite{Hodgman09} which enables the use of a multichannel electron multiplier in combination with a delay-line detector (MCP-DLD) \cite{Manning10} for single-atom detection.
-	Such setups have permitted the observation of many-body momentum correlations \cite{Hodgman11,Dall13} and the Hanbury Brown-Twiss effect in both condensed \cite{Schellekens05,Jeltes07,Manning10,Dall11} and quantum depleted atoms \cite{Cayla20}.
+	Information about the momentum distribution of trapped gases is generally obtained by absorption-imaging measurements of the spatial distribution after some finite time of flight. In contrast, metastable helium affords single-particle detection in the far-field regime and thus gives direct access to microscopic momentum information. The metastable $\metastable$ state of helium, denoted He$^*$, is 19.8eV above the true ground state \cite{Hodgman09} which enables the use of a multichannel electron multiplier in combination with a delay-line detector (MCP-DLD) \cite{Manning10} for single-atom detection. Such setups have permitted the observation of many-body momentum correlations \cite{Hodgman11,Dall13} and the Hanbury Brown-Twiss effect in both condensed \cite{Schellekens05,Jeltes07,Manning10,Dall11,Perrin07,Perrin12} and quantum depleted atoms \cite{Cayla20}. 
 	
+	Investigations of the quantum depletion in \mhe are challenging because the absence of a known Feshbach resonance precludes control over the contact $\mathcal{C}\propto((a N_0)^7\bar{\omega}^6)^{1/5}$ via the scattering length $a$. 
+	Given the small fixed $a=7.512$nm \cite{Moal06}, we test the validity of Eqn. (\ref{eqn:pred_scaling}) in the far-field by varying the density of the gas, $n\propto\left(N_{0}\bar{\omega}^3\right)^{2/5}$ (c.f. Eqn (\ref{eqn:pred_scaling})). 
+	We used two trap configurations with geometric frequencies $\bar{\omega} = 2\pi \cdot201$ Hz and $\bar{\omega} = 2\pi \cdot393$ Hz, and varied the endpoint of the evaporative cooling ramp to adjust the number of atoms in the condensate. 
 	
-	Investigations of the quantum depletion in \mhe are challenging because the absence of a known Feshbach resonance precludes control over the contact $\mathcal{C}\propto((a N_0)^7\bar{\omega}^6)^{1/5}$ via the scattering length $a$.
-	
-	Given the small fixed $a=7.512$nm \cite{Moal06}, we test the validity of Eqn.
-	(\ref{eqn:pred_scaling}) in the far-field by varying the density of the gas, $n\propto\left(N_{0}\bar{\omega}^3\right)^{2/5}$ (c.f.
-	Eqn (\ref{eqn:pred_scaling}).
-	
-	We used two trap configurations with geometric frequencies $\bar{\omega} = 2\pi \cdot201$ rad Hz and $\bar{\omega} = 2\pi \cdot393$ rad Hz, and varied the endpoint of the evaporative cooling ramp to adjust the number of atoms in the condensate.
-	
-	
-	Our experimental sequence, depicted schematically in Fig.
-	\ref{fig:sequence}, began with BECs with between $2\times 10^5$ and $5\times 10^5$ $^4$He atoms polarized in the $\metastable(m_J=1)$ state and cooled to $\sim$ 300 nK by forced evaporative cooling in a harmonic magnetic trap generated by field coils in a Bi-planar Quadrupole Ioffe configuration \cite{Dall07}.
-	
+	Our experimental sequence, depicted schematically in Fig. \ref{fig:sequence}, began with BECs with between $2\times 10^5$ and $5\times 10^5$ $^4$He atoms polarized in the $\metastable(m_J=1)$ state and cooled to $\sim$ 300 nK by forced evaporative cooling in a harmonic magnetic trap generated by field coils in a Bi-planar Quadrupole Ioffe configuration \cite{Dall07}. 
 	After the trap is switched off, we transferred about one quarter of the atoms to the magnetically insensitive $m_J=0$ state with a radio-frequency (RF) Landau-Zener sweep to avoid distortion by stray magnetic fields.
-	We deflected the $m_J=\pm 1$ clouds outside the detector field of view by implementing a Stern-Gerlach scheme immediately after the RF pulse.
-	
-	The centre of mass of the cloud then impacts on the detector after a $\tau = 417$ms time of flight following the trap switch-off.
-	
-	We interleaved the measurements just described with calibrations to determine the shot-to-shot variation in atom number, trapping frequencies, magnetic state transfer efficiency , and noise contributions.
-	The technical aspects of these calibrations are discussed later in section \ref{sec:exp_details}.
+	We deflected the $m_J=\pm 1$ clouds outside the detector field of view by implementing a Stern-Gerlach scheme immediately after the RF pulse. 
+	The centre of mass of the cloud then impacts on the detector after a $\tau = 417$ms time of flight following the trap switch-off. 
+	We interleaved the measurements just described with calibrations to determine the shot-to-shot variation in atom number, trapping frequencies, magnetic state transfer efficiency, and noise contributions. The technical aspects of these calibrations are discussed later in section \ref{sec:exp_details}.
 
 	
 
 
-	\begin{figure}[t]
-	    \includegraphics[width=0.4\textwidth]{fig/depletion/exp_cartoon}
-	    \caption{Sketch of experimental sequence.
-	A BEC is released from a harmonic trap with (a) and expands during freefall before being split into a superposition of the $m_J\in\{-1,0,1\}$ states (b) by an RF chirp.
-	A magnetic field gradient separates the clouds (c) ensuring that only the magnetically insentitive $m_J=0$ cloud lands on the detector (d), from which the momentum information is reconstructed.
-	The quantum depletion lies in the dilute tails at large momentum (inset, solid line).}
+	% \begin{figure}
+	%     \includegraphics[width=0.4\textwidth]{fig/QD/exp_cartoon}
+	%     \caption{Sketch of the experimental sequence. A BEC is released from a harmonic trap %with 
+	%     (a) and expands during freefall before being split into a superposition of the $m_J\in\{-1,0,1\}$ states (b) by an RF chirp. A magnetic field gradient separates the clouds (c) ensuring that only the magnetically insentitive $m_J=0$ cloud lands on the detector (d), from which the momentum information is reconstructed. The quantum depletion lies in the dilute tails at large momentum (inset, solid line).}
+	%     \label{fig:sequence}
+	% \end{figure}
+
+
+\begin{figure}
+  \begin{minipage}[t]{0.4\textwidth}
+  \vspace{0pt}
+	    \caption{Sketch of the experimental sequence. A BEC is released from a harmonic trap %with 
+	    (a) and expands during freefall before being split into a superposition of the $m_J\in\{-1,0,1\}$ states (b) by an RF chirp. A magnetic field gradient separates the clouds (c) ensuring that only the magnetically insentitive $m_J=0$ cloud lands on the detector (d), from which the momentum information is reconstructed. The quantum depletion lies in the dilute tails at large momentum (inset, solid line).}
 	    \label{fig:sequence}
-	\end{figure}
-
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.5\textwidth}
+  \vspace{0pt}
+  \includegraphics[width=\textwidth]{fig/QD/exp_cartoon}
+  \end{minipage}
+\end{figure}
 	
 
 
-\subsection{Analysis} 
+\subsection{Analysis of dilute tails} 
+\label{sec:analysis}
 
-	\begin{figure}[t]
-	        \includegraphics[width=0.5\textwidth]{fig/depletion/exp_density}
-	        \caption{The empirical density of particle momenta for two traps (a), where the thermal parts (dashed lines) exponentially decay and give way to the depletion region, marked with grey dashed line proportional to $k^{-4}$.
-	        In (b) we illustrate the large hidden systematic errors in a fit to the density which a power law.
-	Leaving $\alpha$ as a free parameter gives a wide variation in best-fit exponents and scale coefficients.
-	Blue squares show the amplitude coefficient $C_\alpha$ given a fixed exponent $\alpha$ fixed at five values within the range of fit results, applied to all data sets.
-	The choice of $\alpha$ powerfully determines the coefficient $C_\alpha$, but the error bars (standard errors in fit parameters) are smaller than the markers in all cases.}
+	\begin{figure}
+	        \includegraphics[width=\textwidth]{fig/QD/fit_issues_a}
+	        \caption{The empirical density (a) of particle momenta in the far field release from two traps, where the thermal parts (fits shown by dashed lines) decay super-exponentially as $e^{-k^2}$ and give way to the depletion region. A combined fit of the form $n_T(k) + C_4/k^4$ (green dot-dash lines) yields temperatures consistent with the thermal fit and also an amplitude $C_4$ of the depleted tail.
+	        In (b) we illustrate the large systematic errors in a fit to the density using a power law ansatz. Leaving $\alpha$ as a free parameter gives a wide variation in best-fit exponents and scale coefficients between each data set (red diamonds). Significant errors are only returned by a few of the fits. The red square shows the mean fitted $\alpha$ and (geometric) mean $C_\alpha$ with standard deviation (in $\alpha$) shown as error bars. Blue circles show the amplitude coefficient $C_\alpha$ obtained from the same data sets with $\alpha$ fixed at values within the range of the free fit results. The choice of $\alpha$ powerfully determines the coefficient $C_\alpha$, but the error bars (standard errors in fit parameters) are smaller than the markers in all cases. N.B. both plots have logarithmic vertical scales.}
 	        \label{fig:contact_determination_issues}
 	\end{figure}
 
 
-	In Fig.
-	\ref{fig:contact_determination_issues} (a) we show the empirical density $n(k)$ for two data collection runs at the extreme values of $n_0$ we used.
-	The three regimes of the condensate, thermal depletion, and quantum depletion span over five orders of magnitude in density.
-	The thermal part of the distribution is well fitted by the momentum distribution of an ideal Bose gas,
+	In Fig. \ref{fig:contact_determination_issues} (a) we show the empirical density $n(k)$ for two data collection runs at the extreme values of $n_0$ we used. The three regimes of the condensate, thermal depletion, and quantum depletion span over five orders of magnitude in density. The thermal part of the distribution is well fitted by the momentum distribution of an ideal Bose gas,
 	\begin{equation}
-		n_T(k) =\frac{N_T}{\zeta(3)} ~\left(\frac{\lambda_{dB}}{2\pi}\right)^3 g_{3/2}\left(\exp\left(-\frac{k^2 \lambda_{dB}^2}{4\pi}\right)\right)
+		\frac{n_T(k)}{\blu{(2\pi)^3}} =\frac{N_T}{\zeta(3)} ~\left(\frac{\lambda_{dB}}{2\pi}\right)^3 g_{3/2}\left(\exp\left(-\frac{k^2 \lambda_{dB}^2}{4\pi}\right)\right)
 		\label{eqn:th_fun}
 	\end{equation}
-	wherein the thermal de Broglie wavelength $\lambda_{dB} = \sqrt{2\pi\hbar^2/(m k_B T)}$  yields an estimate of the temperature $T$ which ranges from 100 to 320 nK in our experiments.
-	Here, $g_{3/2}(\cdot)$ is the standard Bose integral, $\zeta(\cdot)$ is the Riemann zeta function, and $N_T$ is the number of atoms in the thermal part.
-	The thermal population decays exponentially with $k$, and hence cannot account for the counts we observe beyond $k\gtrsim 6~\micron^{-1}$.
-	
-	In rest of this section we present evidence in support of the identification of these counts with the quantum depletion.
-	
-	First, though, we show that the otherwise ubiquitous approach of a least-squares regression with a density function is inappropriate in this context.
+	wherein the thermal de Broglie wavelength $\lambda_{dB} = \sqrt{2\pi\hbar^2/(m k_B T)}$ yields an estimate of the temperature $T$ which ranges from 100 to 320 nK in our experiments. Here, $g_{3/2}(\cdot)$ is the standard Bose integral, $\zeta(\cdot)$ is the Riemann zeta function, and $N_T$ is the number of atoms in the thermal component. 
+	Note that for a non-interacting gas in the thermodynamic limit, the \blu{number of thermal atoms} %thermal fraction 
+	is simply $\blu{N_T^{\rm id}} = \zeta(3)(k_B T / \hbar\bar{\omega})^3\blu{=\eta_T N}$, but for our condensates the critical temperature is reduced by $\approx20\%$ by interactions \cite{PitaevskiiStringari,PethickSmith}. 
+	We account for this and the attendant twofold increase in the thermal fraction \blu{$\eta_T$}  (relative to the non-interacting case) by explicitly using $N_T$ as a fit parameter.
+	%As $\eta_T$ is used to compute the condensed number (see below), we extract it directly from the time-of-flight profiles as described in section \ref{sec:th_spin}.
+	\textcolor{red}{[[removed a sentence here, moved another]]} %\eta_T seemed to be off-topic.
+	The thermal population decays super-exponentially with $k$, and hence cannot account for the counts we observe beyond $k\gtrsim 6~\micron^{-1}$. %this sentence moved down 
+	In the rest of this section we present evidence in support of the identification of these counts with the quantum depletion. 
+	First, though, we show that the otherwise ubiquitous approach of a least-squares regression with a density function is unsuitable for the purpose of inferring power-law-like behaviour of the dilute tails.
 
-\subsubsection{Issues with analysis of power laws}	
+\subsubsection{Difficulties with analysis of power laws}	
 \label{sec:pow_issues}
 
-	Proceeding with a routine fit of the $k$-space histogram with an additional term of the form $C/k^\alpha$ would appear to be an unobjectionable way to estimate the parameters of the purported quantum-depleted tail.
-	However, fitting histograms with power laws is prone to return biased estimates of parameters and to drastically under-report uncertainties, especially when data is available over less than a couple of decades of dynamic range \cite{Clauset09,Virkar14}.
-	
-	As the authors of \cite{Clauset09} note, ``In practice, we can rarely, if ever, be certain that an observed quantity is drawn from a power-law distribution.
-	The most we can say is that our observations are consistent with the hypothesis that $x$ is drawn from [a power law]"
+	Proceeding with a routine fit of the $k$-space histogram with an additional term of the form $C_\alpha/k^\alpha$ would appear to be an unobjectionable way to estimate the parameters of the purported quantum-depleted tail.
+	However, fitting histograms with power laws is prone to return biased estimates of parameters and to drastically under-report uncertainties, especially when data is available over less than a couple of decades of dynamic range \cite{Clauset09,Virkar14}. 
+	As the authors of \cite{Clauset09} note, ``In practice, we can rarely, if ever, be certain that an observed quantity is drawn from a power-law distribution. The most we can say is that our observations are consistent with the hypothesis that $x$ is drawn from [...] a power law"
 	In this section, we demonstrate some of the problems with a least-squares regression using our data as a case study.
 	In the next section we discuss our alternative approach and the inherent limitations of analysing data of this nature.
+	Hereafter we use $C_\alpha$ to refer to a fit parameter, as distinct from the total contact $\mathcal{C}$ computed using the sweep theorem (Eqn. (\ref{eqn:sweep_theorem})), and $C_\textrm{sim}$ as determined from our numerical simulations. \blu{All three have dimensions m${}^{-1}$ like $\mathcal{C}$.}
 	
-	If we augment the fit function (Eqn.
-	(\ref{eqn:th_fun})) with power-law term and leave $\alpha$ as a free parameter, the average exponent of over all runs is 4.2(4).
-	
+	If we augment the \blu{thermal} fit function (Eqn. (\ref{eqn:th_fun})) with a power-law term and leave $\alpha$ as a free parameter, the average exponent over all runs is 4.2(4). 
 	For comparison, the prior work \cite{Chang16} reported power-law tails with an exponent 4.2(2).
-	At first glance, one could simply determine the amplitude of the tails by fixing the exponent to 4, and perhaps achieve better results by using a fit weighting proportional to $k^4$.
-	 
-	Indeed if we do so, we find an average $C_{\alpha=4}$ which is approximately 8(2) times greater than the coefficient of Eqn.
-	(\ref{eqn:pred_scaling}), and in general agreement with ref.
-	\cite{Chang16}.
-	However, there are issues which undermine the reliability of this otherwise standard approach.
+	At first glance, one could simply determine the amplitude of the tails by fixing the exponent to 4.
+	Indeed if we do so, we find an average $C_{\alpha=4}$ which is approximately 8(2) times greater than the coefficient predicted by Eqn. (\ref{eqn:pred_scaling}), and in general agreement with Ref. \cite{Chang16}.
+	However, there are issues which undermine the utility of this otherwise standard approach.
 
-	First, in Fig.
-	\ref{fig:contact_determination_issues} (b) we illustrate how the choice of scaling exponent $\alpha$ leads to an exponential change in the scale coefficient $C_\alpha$ that one obtains from fitting to a fixed dataset.
-	The coefficient $C_\alpha$ varies over about three orders of magnitude \emph{either way} as one uses different exponents $\alpha$ which lie within the range of uncertainties reported here and in the prior work \cite{Chang16}.
+	First, in Fig. \ref{fig:contact_determination_issues} (b) we illustrate how the choice of scaling exponent $\alpha$ leads to an exponential change in the scale coefficient $C_\alpha$ that one obtains from fitting to a fixed dataset.
+	The red diamonds in Fig. \ref{fig:contact_determination_issues} (b) show the fit exponent and amplitude obtained from a fit (of the form $\blu{n(k)} %$\hat{n}(k) 
+	= n_T(k) + C_\alpha/k^\alpha$) to each data set, each representing a different BEC density. 
+	The variation in the fit exponent is small (mean 4.2, standard deviation 0.4) but the corresponding variation in fit amplitude spans over six orders of magnitude.
+	Although the mean $\alpha$ from the fits is only half a standard deviation (one standard-error interval) different from 4, the corresponding difference in amplitude $C$ varies exponentially with $\alpha$.
+	The blue circles in Fig. \ref{fig:contact_determination_issues} (b) show the amplitudes returned from fits to all datasets when $\alpha$ is constrained at one of a range of values within about one standard deviation of the mean $\alpha$. 
+	The coefficient $C_\alpha$ varies over about three orders of magnitude \emph{either way} as $\alpha$ varies within the range of uncertainties reported here and in the prior work \cite{Chang16}. 
+	These fits scarcely differ in their goodness-of-fit criterion (the mean square error) and so offer no obvious way to reconcile the expected distribution with these divergent statistical conclusions.
 	
-	Furthermore, this problem is not reflected in the error estimates in the fitting routines: The error bars representing the uncertainty in fit amplitude are smaller than the markers used in Fig.
-	\ref{fig:contact_determination_issues} (b).
+	Furthermore, this problem is not reflected in the error estimates in the fitting routines: The error bars representing the uncertainty in parameters from the fixed-$\alpha$ fits are smaller than the markers used in Fig. \ref{fig:contact_determination_issues} (b). 
+	A fit reveals that $d \log_{10} C_\alpha/d\alpha \approx 6.8$, from which we can infer the exponent that would yield an amplitude in good agreement with Eqn. (\ref{eqn:pred_scaling}). 
+	This turns out to be approximately 3.9, which lies within one standard deviation from the mean exponent obtained from the regression just described. 
+	It is easy to see that a well-intentioned choice of $\alpha$, which is not statistically different from the best-fit estimates, can lead to a conclusion which either agrees perfectly or disagrees catastrophically with the predictions of Eqn. (\ref{eqn:pred_scaling}).
+	In particular if one assumes that the data conforms to a power law with $\alpha=4$, one is forced to conclude that the Tan theory is wrong \blu{for describing the observed high momentum tails}, but the inherent uncertainty in this approach precludes the possibility of such a definitive statement.
 	
-	A linear fit shows that $d \log_{10} C/d\alpha \approx 6.8$, from which we can infer the exponent that would yield an amplitude in good agreement with Eqn.
-	(\ref{eqn:pred_scaling}).
-	
-	This turns out to be approximately 3.9, which lies within one standard deviation from the mean exponent obtained from the regression we just described.
-	
-	Conversely, we can estimate that the best-fit exponents reported in the prior work would lead to scale coefficients a factor of about 23 greater than their conclusions, and the associated variance could be even larger.
-	It is easy to see that a well-intentioned choice of $\alpha$, which is not statistically different from the best-fit estimates, can lead to  conclusion which either agrees perfectly or disagrees catastrophically with the predictions of Eqn.
-	(\ref{eqn:pred_scaling}).
-	In particular if one assumes that the data conforms to a power law with $\alpha=4$, one is forced to conclude that the Tan theory is wrong, but the inherent -- hidden -- uncertainty in this approach precludes the possibility of such a definitive statement.
 
+	Second, a deceptively reassuring result can be found by multiplying the empirical density by $k^4$, observing a flat region, and identifying this with \blu{a $k^{-4}$ tail.} %the quantum depletion. 
+	The fitting procedure would be to appropriately scale the model of the thermal region (i.e. multiply Eqn. (\ref{eqn:th_fun}) by $k^4$) and add a constant term to fit the tail.
+	\footnote{Applying a fit of the form $\blu{f_{\rm fit}(k)=}n_T(k)k^4+C$ to data scaled as $\blu{f(k)} = k^4 n(k)$ minimizes the error term $\sum_i (k_{i}^{4}n(k_i)-k_{i}^4n_{fit}(k_i))$ which is equivalent to weighting the error terms \blu{for the original $n(k)$ data} by $k^4$. 
+	Moreover, the fit is highly sensitive to the choice of weighting function.
+	If one constrains the exponent in the fit \blu{of such an $f(k)$} at $\alpha=4$, then changing the \blu{power of the} \emph{weighting function} of the squared errors in the fit from \blu{$k^4$} by 0.1 \blu{to $k^{4\pm0.1}$} changes the fitted \blu{$C$} %$C_\alpha$  
+	by a factor of ten.}
+	Unfortunately this offers no recourse from the issues described above and is not a definitive test for the presence of a power law or a way to obtain its parameters.
+	Suppose the density actually decays as $n(k) \propto k^{-(\alpha+\delta)}$ with an exponent different by some $\delta$ from the expected value.
+	Following the rescaling operation $n'(k) = k^\alpha n(k)$, one has a \blu{function} %density 
+	which would have the form $n'(k) \propto k^{-\delta}$. 
+	Considering the range of $k$ examined in this (and the prior \cite{Chang16}) work, the scaled \blu{function} %density 
+	at the upper and lower end of the range would be predicted to differ by a factor $(k_\textrm{max}/k_\textrm{min})^\delta \approx 2^{0.1}\approx1.07$.
+	This variation is dominated by the statistical fluctuations in the tails of the individual density profiles, and so would not be distinguishable by eye (or by fit) in a plot of the scaled density.
+	
+	This points to one of the primary challenges with power laws; the exponents are strongly entwined with the rate of occurrence of rare events, which by definition are subject to large statistical fluctuations and thus subvert even the most meticulous investigations.
 
-	Second, a deceptively reassuring result can be found by multiplying the empirical density by $k^4$, observing a flat region, and adding a constant term in an appropriately scaled model of the thermal region (i.e.
-	Eqn.
-	(\ref{eqn:th_fun}) multiplied by $k^4$).
-	
-	In fact, this offers no recourse from the issues described above and is not a definitive test for the presence of a power law or a way t obtain its parameters.
-	Suppose the density decays as some $C k^{-(\alpha+\epsilon)}$: then following the rescaling operation $k^\alpha n(k)$, one then has a density which would be expected to be have the form $C k^{-\epsilon}$.
-	
-	A variation in the (true) $\alpha$ within the systematic variation above leads difference of a factor of $O(2^{0.1})\approx1.07$ over the range $5\micron^{-1}\lesssim k\lesssim10\micron^{-1}$ range reported here and in \cite{Chang16}.
-	This variation is dominated by the statistical fluctuations arising in the individual density profiles from random sampling, and is not distinguishable from the run-to-run variation in the power law.
-	
-	Despite this, fitting such a weighted distribution is similarly sensitive to the choice of weighting function
-	For example, fixing the fit exponent at $\alpha=4$ and changing the \emph{weighting function} (not the form of the fit) in the fit from $k^4$ to $k^{4.1}$ returns a coefficient different by a factor of ten.
-	This points to one of the primary challenges with power laws; the exponent are strongly entwined with the rate of occurrence of rare events, which by definition are subject to large statistical errors and thus subvert even the most meticulous investigations.
+	\rem{Moreover, the question of whether the data conforms to a power law at all is not amenable to a decisive conclusion.
+	A log-normal distribution can also appear as straight lines over regions of a log-log plot and produce similarly accurate predictions as the power law \cite{virkar14,Clauset09}, as we discuss in the next section.
+	This underscores the challenge of identifying power-law behaviour in range-limited data, because even with these parameters the log-normal distribution eventually diverges from the power law, albeit over far a far larger domain than available in either Helium experiment.}
 
 	In sum, these problems with fitting power laws are ubiquitous, and made more difficult by the small range of $k$ which are visible in the helium experiments.
-	In general, estimating the exponent of a purported power law is difficult and requires data spanning several orders of magnitude in scale \cite{Goldstein04,Clauset09,Virkar14,Hanel17}, which are not present in either helium experiment.
-	The preferred statistical tools for analysing power law distributions are maximum likelihood estimators, as discussed in lucid terms in Refs.
-	\cite{Clauset09,Virkar14}.
+	In general, estimating the exponent of a purported power law is difficult and requires data spanning several orders of magnitude in scale \cite{Goldstein04,Clauset09,Virkar14,Hanel17}, which are not present in either \blu{of the} helium experiment\blu{s to date}.
+	The preferred statistical tools for analysing power law distributions are maximum likelihood estimators, as discussed in lucid terms in Refs. \cite{Clauset09,Virkar14}.
 	However, in these particle detection experiments the limited sampling region and presence of spurious detection events (described below) mean that such estimators are not appropriate.
 	In the next section we describe an alternative approach which does not require -- and conversely cannot determine -- a precise value of the scaling exponent.
-	We hope this discussion provides the theoretical and experimental community with an understanding of some problems with heavy-tailed distributions and points the way towards a sound analysis of such phenomena in future works.
-	 % which neither assumes the data conforms to the theory under test nor requires precise determination of the exponent of the power law.
+	This approach permits a test of the Tan theory's validity in the far-field without assuming any specific properties of (and is clear about what can and cannot be said about) the actual underlying density distribution.
+	% We hope this discussion provides the theoretical and experimental community with an understanding of some problems with heavy-tailed distributions and points the way towards a sound analysis of such phenomena in future works.
+	 % which neither assumes the data conforms to the theory under test nor requires precise determination of the exponent of the power law. 
 	
-	
-	\begin{figure}[t]
+	\begin{figure}
 	\begin{center}
-		\includegraphics[width=\columnwidth]{fig/depletion/exp_results}
-			\caption{A linear fit (a) shows that the product $N_0n_0$ is a good predictor of the number of counts within a region $(k_\textrm{min},k_\textrm{max})$, consistent with Eqn (\ref{eqn:pred_scaling}).
-	The gradient $\Lambda_\textrm{fit}$ can be predicted using Eqn (\ref{eqn:pred_scaling}) but the two results disagree by a factor of about 8.
-	The number of counts, hence $\Lambda$, depend on the choice of $k$ bounds, as shown in (b,c).
-	This dependence does not provide estimates of $C$ or $\alpha$ because multiple hypotheses can produce indistinguishable behavior.
-	In (b,c) we show predictions based on Eqn (\ref{eqn:pred_scaling}), along with the predictions of a density function $n(k)$ that is approximately 8(3) times Eqn.
-	(\ref{eqn:pred_scaling}) and one that has exactly the amplitude $\mathcal{C}$ but a modified exponent.
-	In (b), the deviation from the predictions at $k_\textrm{min}\lesssim6~\micron^{-1}$ is because the collection area starts to overlap with the thermal region.
+		\includegraphics[width=\columnwidth]{fig/QD/exp_results_plus}
+			\caption{\blu{Analysis of Tan's tails.} A linear fit (a) shows that the product $N_0n_0$ is a good predictor of the number of counts within the region $(k_\textrm{min}=6~\micron^{-1},k_\textrm{max}~\micron^{-1})$, consistent with Eqn (\ref{eqn:pred_scaling}) 
+			(solid orange line, dashed lines 95\% CI). The gradient \blu{$\Lambda$} %$\Lambda_\textrm{fit}$ 
+			\blu{in Eqn. (\ref{eqn:Lambda})} can be predicted using Eqn (\ref{eqn:pred_scaling}) (\blu{$\Lambda_{\rm pred}$} solid purple line) but this disagrees with the experiment by a factor of about 8. Our simulations (dashed line) show an increase in counts after release but by less than in the experiment. 
+			% As shown in (b,c), $\Lambda$ depends on the choice of $k$ bounds (with $k_\textrm{max}$ and $k_\textrm{min}$ fixed, respectively).
+			In (b,c) we show predictions of $\Lambda$ based on Eqn (\ref{eqn:pred_scaling}) (\blu{$\Lambda_{\rm pred}$}, blue), along with the predictions \blu{from Eqn. (\ref{eqn:Lambda}) using} a density function $n(k)\blu{=\mathcal{AC}/k^4}$ that \blu{has an additional prefactor $\mathcal{A}=$8(3)} %times Eqn. (\ref{eqn:pred_scaling})
+			(green) and one that has %exactly the amplitude $\mathcal{C}$ but 
+			a modified exponent of \blu{$\alpha=3.86(2)$ via $n(k)=\mathcal{C}/k^{\alpha}$} (yellow). 
+			The \blu{experimental} data \blu{$\Lambda_{\rm fit}$} (points) cannot distinguish between either of these two alternative hypotheses, and therefore provides limited information about \blu{the prefactor $\mathcal{A}$ or exponent }% $C$ or
+			$\alpha$.
+			The error bars show the 95\% CI of the fit parameter $\Lambda_\textrm{fit}$, and parentheses enclose the uncertainty in the least-significant digit which is consistent with the 95\% CI.
+			In (b), the deviation from the predictions at $k_\textrm{min}\lesssim6~\micron^{-1}$ is because the collection area starts to overlap with the thermal region.
+			\rem{A log-normal distribution produces nearly identical predictions (red, offset vertically for visibility).}
 			}
 
 		\label{fig:exp_results}
@@ -293,34 +277,30 @@
 	\end{figure}
 
 \subsubsection{Testing Tan's Tails}
+\label{sec:good_test}
 
-	The prediction of the momentum tail shape (via Eqn.
-	(\ref{eqn:pred_scaling})) captures a great deal of information, which can be split into two independently testable hypotheses.
-	
+	The prediction of the high-$k$ tail shape (via Eqn. (\ref{eqn:pred_scaling})) captures a great deal of information, which can be split into two independently testable hypotheses. 
 	The first claim which we test is that the amplitude of this tail scales in proportion to the product $n_0 N_0$, and the second is the exponent of the density decay.
-	Under the null hypothesis that the \emph{in situ} depletion survives the expansion and escapes the condensate undisturbed, one can integrate Eqn.
-	(\ref{eqn:pred_scaling}) to predict the number of atoms whose wavevector has a modulus in the interval $k\in (k_\textrm{min}, k_\textrm{max})$, 
+	Under the null hypothesis that the \emph{in situ} depletion survives the expansion and escapes the condensate undisturbed, one can integrate Eqn. (\ref{eqn:pred_scaling}) to predict the number of atoms whose wavevector has a modulus in the interval $k\in (k_\textrm{min}, k_\textrm{max})$ \footnote{Note that the integral of $n(k)$ is most easily performed in spherical coordinates and requires the Jacobian $(2\pi)^{-3}d \kvec$ to ensure normalization},
 
 	\begin{equation}
 		N_{k_\textrm{min},k_\textrm{max}} =\frac{\mathcal{C}}{2\pi^2}\left(\frac{1}{k_\textrm{min}}-\frac{1}{k_\textrm{max}}\right)
 		\label{eqn:pred_num}
 	\end{equation}
-	Note that the integral of $n(k)$ is taken with the differential form $(2\pi^{-3})\d\kvec$ in spherical coordinates.
-	For fixed $k_\textrm{min}$ and $k_\textrm{max}$, Eqn.
-	(\ref{eqn:pred_num}) has the form $N_{k_\textrm{min},k_\textrm{max}} = \Lambda N_0n_0$ (c.f.
-	Eqn.
-	\ref{eqn:pred_scaling}).
-	
-	We can test this form directly by measuring the number of counts detected in the interval $(k_\textrm{min},k_\textrm{max})$ after producing a BEC of $N_0$ atoms with peak density $n_0$.
-	
+	For fixed $k_\textrm{min}$ and $k_\textrm{max}$, Eqn. (\ref{eqn:pred_num}) has the form \blu{
+	\begin{equation}
+	N_{k_\textrm{min},k_\textrm{max}} = \Lambda N_0n_0
+			\label{eqn:Lambda}
+	\end{equation}
+	}%
+(c.f. Eqn. \ref{eqn:pred_scaling}). 
+	We can test this form directly by measuring the number of counts detected in the interval $(k_\textrm{min},k_\textrm{max})$ after producing a BEC of $N_0$ atoms with peak density $n_0$. 
 	The figure of merit for this description will be the goodness of fit of a simple linear regression.
 	
-	As above, we choose $k_\textrm{min}=6~\micron^{-1}$ which lies outside the thermal part for all our data sets.
-	However, the $k$-space field of view is restricted by the detector radius to $k\lesssim5\times 10^6$ m$^{-1}$ in the $(x,y)$ plane, which is only just sufficient to reach past the edge of the thermal region.
-	
-	We thus face a tradeoff in the choice of $k_\textrm{max}$, therefore we define the bounds of our region of interest (ROI) by the minimum elevation angle $\phi_c=\pi/3$ rad and an upper bound of $k_\textrm{max} = 10\micron^{-1}$.
-	This amounts to an ROI consisting of two vertically oriented conical sections, each with half-angle $\pi/6$, encompassing a total solid angle of $0.13\times 4\pi$ steradians.
-	
+	As above, we choose $k_\textrm{min}=6~\micron^{-1}$ which lies outside the thermal part for all our data sets (see Fig. \ref{fig:contact_determination_issues} a).
+	However, the $k$-space field of view is restricted by the detector radius to $k\lesssim5\times 10^6$ m$^{-1}$ in the $(x,y)$ plane, which is only just sufficient to reach past the edge of the thermal region. 
+	We thus face a tradeoff in the choice of $k_\textrm{max}$, therefore we define the bounds of our region of interest (ROI) by the minimum elevation angle $\phi_c=\pi/3$ rad above the $(x,y)$ plane and an upper bound of $k_\textrm{max} = 10\micron^{-1}$.
+	This amounts to an ROI consisting of two vertically oriented conical sections, each with half-angle $\pi/6$ from the $z$ axis, encompassing a total solid angle of $0.13\times 4\pi$ steradians. 
 	We must also account for the detector quantum efficiency of 0.08(2) and state-transfer efficiency of 25(2)\%, and combine all these factors into the total efficiency $\epsilon\approx0.23(5)\%$.
 	After we discuss the results of this analysis, we will  examine the (lack of) effect of uncertainty in $\epsilon$ and the choice of $\phi_c$.
 	% We find that the observed number $N_\textrm{exp}$ is 
@@ -335,65 +315,55 @@
 %     so that would be approx 0.8(3) times Tan theor
 
 
-	A linear fit of the form $\hat{N}_{k_\textrm{min},k_\textrm{max}} = \Lambda_\textrm{fit} n_0 N_0 + c$ yields a vertical intercept $c$ consistent with zero (c=-0.9,  95\% CI (-3.1, 1.2)) and a good correlation ($r^2\approx0.8$, $p=1\times10^{-3}$), providing evidence supporting the expected linear relationship.
-	
-	The correlation coefficient between the (normalized) variables $N_\textrm{exp}$ and $N_0n_0\propto(N_0^7\bar{\omega}^6)^{1/5}$ is 0.9.
-	We conclude that the product $N_0n_0$ is a predictor of the depleted population, which is consistent with Eqn.
-	\ref{eqn:pred_scaling}.
+	A linear fit of the form $\hat{N}_{k_\textrm{min},k_\textrm{max}} = \Lambda_\textrm{fit} n_0 N_0 + \beta$ yields \blu{an intercept} %a vertical intercept $c$ 
+	consistent with zero ($\beta$=-0.9,  95\% CI (-3.1, 1.2)) and a good correlation ($r^2\approx0.8$, $p=1\times10^{-3}$), providing evidence supporting the expected linear relationship. 
+	The correlation coefficient between the %(normalized) 
+	variables \blu{$N_{k_{\rm min},k_{\rm max}}$} %$N_\textrm{exp}$ 
+	and $N_0n_0\propto(N_0^7\bar{\omega}^6)^{1/5}$ is 0.9.
+	We conclude that the product $N_0n_0$ is a predictor of the depleted population, which is consistent with Eqn. (\ref{eqn:pred_scaling}).
 	We tested other combinations of the independent variables and found no physically-motivated combination provides a better fit.
-	For comparison, a linear fit proves that the atom number itself is a poor predictor of the detected number ($r^2=0.05~,p=0.54$), as is the density alone ($r^2=0.4~,p=0.04$).
+	For comparison, a linear fit proves that the atom number \blu{$N$} itself is a poor predictor of the detected number ($r^2=0.05~,p=0.54$), as is the density \blu{$n_0$} alone ($r^2=0.4~,p=0.04$).
 
-	The gradient $\Lambda_\textrm{fit}$ is of particular interest because it can be predicted using Eqn.
-	\ref{eqn:pred_num}.
+	The gradient $\Lambda_\textrm{fit}$ is of particular interest because it can be predicted using Eqn. (\ref{eqn:pred_num}).
 	Given an ROI, one can calculate $\Lambda_\textrm{pred} = 32 \epsilon a^2(k_{\textrm{min}}^{-1}-k_{\textrm{max}}^{-1})/7$.
 	We find that the predicted slope disagrees with the empirical fit by a factor of $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}= 8.3$, 95\% CI $(5.5,11)$.
 
 
 	We are then tasked with reconciling the nonlinear scaling of the detected counts, which is consistent with the quantum depletion, and the disagreement over the absolute number of detected counts.
-	We may look to understand the disagreement in terms of the deviation from Eqn.
-	(\ref{eqn:pred_scaling}).
-	We focus on the two most parsimonious alternatives: whether the tail amplitude is simply larger than expected (i.e.
-	$n(k)=A\mathcal{C}/k^4$), or whether the tail decay is somehow modified (i.e.
-	$n(k)=\mathcal{C}/k^{4+\delta})$.
+	We may look to understand the disagreement in terms of the deviation from Eqn. (\ref{eqn:pred_scaling}).
+	We focus on the two most parsimonious alternatives: whether the tail amplitude is simply larger than expected (i.e. $n(k)=A\mathcal{C}/k^4$), or whether the tail decay is somehow modified (i.e. $n(k)=\mathcal{C}/k^{4+\delta})$.
 	The former would imply that the derivation using the sweep theorem (or Bogoliubov theory in a local density approximation \cite{Chang16}) misses something essential about the system.
-	The latter could point to some physical effect, either analogous to the prethermal dynamics of unitary gases \cite{Makotyn14,Eigen18,Colussi20,Kira15_coherent,Smith14} or another factor particular to the dilute regime.
+	The latter could be due to some physical effect, either analogous to the prethermal dynamics of unitary gases \cite{Makotyn14,Eigen18,Colussi20,Kira15_coherent,Smith14} or, as discussed in later sections, modifications of the momentum distribution by interactions with the mean-field potential.
 	
-	Ultimately, such a distinction between these hypotheses is not possible given the data at hand.
+	% Specifically, through the appearance of the $k$ boundary values in Eqn. \ref{eqn:pred_num}, one could look to the $k$-depndence of $\Lambda_\textrm{pred}$ for a test of the density \emph{ansatze} above.
+	Ultimately, \blu{it turns out that} such a distinction between these hypotheses is not possible given the data at hand. 
+	Specifically, the density profiles $n(k)=A\mathcal{C}/k^4$ with $A=8(3)$ and $n(k)=\mathcal{C}/k^{\alpha}$ with $\alpha=3.86(2)$ both predict the variation of $\Lambda_{\rm pred}$ with $k_\textrm{min}$ and $k_\textrm{max}$ with comparable accuracy (Fig. \ref{fig:exp_results} (b,c)).
+	Note that the $\alpha=3.86(2)$ is consistent with the observation above (in section \ref{sec:pow_issues}) that an exponent of $\approx3.9$ reproduces the precise amplitude expected in Eqn. (\ref{eqn:pred_scaling}).
+	It is thus not possible to tell whether we have a tail with the expected exponent but a greater amplitude, or the correct amplitude but a slower decay, or some combination of the two, or indeed another form altogether.
+	\rem{In Fig. \ref{fig:exp_results} (b,c) show, in red, predictions obtained by assuming log-normally distributed $k$ with parameters $(\mu,\sigma) \approx (1.235,0.95)$ and normalized to the relevant amplitude.
+	The predictions are essentially identical over the ROI and so we can conclude only that the data is consistent with (a range of) power-law distributions, not that it \emph{is} drawn from a power law.}
+	Without the ability to precisely determine the exponent $\alpha$, or whether a power-law is present at all, there is insufficient evidence to conclude which of these is correct, and therefore little can be said with certainty about which aspect of Eqn. (\ref{eqn:pred_scaling}) is incorrect or what physical effects might underpin this disagreement.
+	Indeed, the predicted $k^{-4}$ behaviour is only a strict constraint inasmuch as it can be shown to persist (exactly) after the expansion, which as we argued above is not demonstrable, and argue below is not necessarily expected.
+	\rem{Ultimately, as we detail in the Discussion (section \ref {sec:discussion}), the most prudent way through this dilemma is via alternative experimental designs.}
 	
-	% Specifically, through the appearance of the $k$ boundary values in Eqn.
-	\ref{eqn:pred_num}, one could look to the $k$-depndence of $\Lambda_\textrm{pred}$ for a test of the density \emph{ansatze} above.
-	Specifically, the density profiles $n(k)=A\mathcal{C}/k^4$ with $A=8(3)$ and $n(k)=\mathcal{C}/k^{\alpha}$ with $\alpha=3.86(2)$ both predict the variation of $\Lambda_{pred}$ with $k_\textrm{min}$ and $k_\textrm{max}$ with comparable accuracy (Fig.
-	\ref{fig:exp_results} (b,c)).
-	% In other words, if one insists on fitting a distribution of the form $k^{-4}$ then one concludes that the prediction for $\mathcal{C}$ is wrong by a factor of 8(3).
-	It is thus not possible to tell whether we have a tail with the expected exponent but a greater weight, or the correct weight but a slower decay, or some combination of the two.
-	% Indeed, the space of possible alternative hypotheses is practically infinite: One could find equally-apt distributions by modifying the power and coefficient together.
-	Without the ability to precisely determine the exponent $\alpha$, there is insufficient evidence to conclude which of these is correct, therefore little can be said with certainty about which aspect of Eqn.
-	(\ref{eqn:pred_scaling}) is incorrect or what physical effects might underpin this disagreement.
-	Indeed, the predicted $k^{-4}$ behaviour is only a strict constraint inasmuch as it can be shown to persist (exactly) after the expansion, which as we argued above is not feasible, and argue below is not necessarily expected.
-	One conclusion remains robust: There are about ten times as many detections in the depletion region as one would expect based on the Tan theory.
 	
+	One conclusion remains robust: There are \blu{almost} about ten times as many detections in the depletion region as one would expect based on the Tan theory \blu{\emph{in situ}}. 
 	Later in this section we provide technical details of our experiments and rule out several systematic factors which could lead to this disagreement.
+	% In other words, if one insists on fitting a distribution of the form $k^{-4}$ then one concludes that the prediction for $\mathcal{C}$ is wrong by a factor of 8(3).
+	% Indeed, the space of possible alternative hypotheses is practically infinite: One could find equally-apt distributions by modifying the power and coefficient together.
 
-	% Although our method provides a direct test of one aspect of Eqn.
-	(\ref{eqn:pred_scaling}), it does not circumvent the fundamental challenges of analysing power laws.
-	
+	% Although our method provides a direct test of one aspect of Eqn. (\ref{eqn:pred_scaling}), it does not circumvent the fundamental challenges of analysing power laws. 
 
 	Nonetheless, the particular nonlinear scaling of detected counts with the predictor $N_0n_0$ is concordant with the tails' originating in the quantum depletion.
-	Furthermore, our simulations indicate that the quantum depletion can survive the condensate expansion, presenting depleted tails in the far-field with modified amplitude.
-	
+	Furthermore, our simulations indicate that the quantum depletion can survive the condensate expansion, presenting depleted tails in the far-field with modified amplitude. 
 	We are therefore faced with the conclusion that tails are indeed a signature of quantum depletion, albeit subject to some effect during expansion into which the present analysis can see no further.
-	Given the similarity in settings and findings, the same could be said for the prior work \cite{Chang16}.
-	% Comparing our work to \cite{Chang16}, given the similarity between experiments and consistency of the regression results above, our work can be said to corroborate their findings, albeit withthe prior work appears subject to the same limitations.
 	
 	
-	% Our results could be seen as a count against the interpretation of these tails as a signature of the quantum depletion.
-	
-	% However, we note two pieces of evidence that give weight to this interpretation.
-	
+	% Our results could be seen as a count against the interpretation of these tails as a signature of the quantum depletion. 
+	% However, we note two pieces of evidence that give weight to this interpretation. 
 	% First, we are not aware of any other proposed physical effect which exhibits this specific nonlinear scaling relationship with respect to the atom number.
 	% Second, we find evidence in our simulations (see below) that the momentum-space signature of the quantum depletion does survive the condensate expansion, and indeed appears in excess of the predicted \emph{in-situ} depletion.
-	
-	
+ 	
 	
 
 
@@ -401,38 +371,65 @@
 \label{sec:exp_details}
 \subsubsection{Trap configuration}
 
-	We prepared our BECs with via forced evaporative cooling in a harmonic magnetic trap with trap frequencies $(45,425,425)$ Hz and a DC bias stabilized by our auxiliary field compensation coils \cite{Dall07,Dedman07}.
-	For the tight trap we increased the coil current after the cooling sequence to obtain trapping frequencies $(71,902,895)$ Hz, ramping the field as a sigmoid step function to minimize in-trap oscillations.
-	Note that the weak ($x$) axis of the trap is horizontal, with tight vertical confinement.
-	The trap remained on for 150ms before switching the trap off with a $1/e$ time of $\approx38\mu$s.
-	The condensates were allowed to expand for 2ms before we transferred some of the condensate into the magnetically insensitive $m_J=0$ state via Landau-Zener sweep to prevent distortion by stray magnetic fields.
-	The RF pulse was created by a  function generator, amplified, and applied to the experiment chamber by a coiled antenna inserted into the BiQUIC coil housing.
-	The pulse swept from 1.6-2.6MHz over 1ms and was centred on the fine structure resonance between the $m_J$ states.
-	The determination of the transfer efficiencies $\eta_j$ for each of the $m_J = j$ states is discussed below.
-	The sweep was $10^6$-fold wider than the Doppler broadening of the BEC which ensured uniform transfer at all momenta.
-	Immediately after the RF sweep, the bias coils are switched off and auxiliary push coils in the vertical (Z) and weak horizontal (X) axes are activated using a fast MOSFET switch to implement a Stern-Gerlach separation of the $m_J = -1,~0,$ and $+1$ pulses.
+	We prepared our BECs with via forced evaporative cooling in a harmonic magnetic trap with trap frequencies $(45,425,425)$ Hz and a DC bias stabilized by our auxiliary field compensation coils \cite{Dall07,Dedman07}. For the tight trap we increased the coil current after the cooling sequence to obtain trapping frequencies $(71,902,895)$ Hz, ramping the field as a sigmoid step function to minimize in-trap oscillations. Note that the weak ($x$) axis of the trap is horizontal, with tight vertical confinement. The trap was switching off with a $1/e$ time of $\approx38\mu$s. The condensates were allowed to expand for 2ms before we transferred some of the initial $m_J=1$ condensate into the magnetically insensitive $m_J=0$ state via a Landau-Zener sweep to preserve it against distortion by stray magnetic fields during the free fall to the detector. The RF pulse was created by a  function generator, amplified, and applied to the experiment chamber by a coiled antenna inserted into the BiQUIC coil housing. The pulse swept from 1.6-2.6MHz over 1ms and was centred on the resonance between the $m_J$ states. The determination of the transfer efficiencies $\eta_J$ for each of the $m_J$ states is discussed below. The sweep was $10^6$-fold wider than the RF width of the BEC which ensured uniform transfer at all momenta. Immediately after the RF sweep, the bias coils are switched off and auxiliary push coils in the vertical (Z) and weak horizontal (X) axes are activated using a fast MOSFET switch to implement a Stern-Gerlach separation of the $m_J = -1,~0,$ and $+1$ pulses.
 
-	We use a Roentdek DLD80 multichannel plate and delay-line detector stack \cite{Manning10} located 859mm below the trap, which registers the arrival times and positions $(t_i,x_i,y_i)$ of each atom, indexed by $i$.
-	
-	The velocity of each atom relative to the centre of mass of each cloud is calculated by $(v_x,v_y,v_z) = t_{i}^{-1}(x_i-\bar{x},y_i-\bar{y},g_0(\tau^2-t_{i}^{2}))$, where $g_0$ is the local gravitational acceleration and the overbar denotes the within-shot average and $\tau$ ms is the time of flight of the centre of mass of the cloud.
-	
+	We use a Roentdek DLD80 multichannel plate and delay-line detector stack \cite{Manning10} located 859mm below the trap, which registers the arrival times and positions $(t_i,x_i,y_i)$ of each atom, indexed by $i$. 
+	The velocity of each atom relative to the centre of mass of each cloud is calculated by $(v_x,v_y,v_z) = t_{i}^{-1}(x_i-\bar{x},y_i-\bar{y},g_0(\tau^2-t_{i}^{2}))$, where $g_0$ is the local gravitational acceleration and the overbar denotes the within-shot average and $\tau$ ms is the time of flight of the centre of mass of the cloud. 
 	The far-field momentum is thus obtained via $m\textbf{v} = \hbar\kvec$.
-	The velocity conversion assumes a point source but carries a negligible error of a few ppm as the in-trap BEC size is smaller than the detector resolution.
-	
-	The space and time resolution of the detector are 100 $\mu$m and 3 $\mu$s, respectively \cite{Henson18}, and the detector efficiency of $8(2)\%$ was determined from the collection efficiency of correlated atoms on the opposite sides of scattering halos \cite{Shin19,Shin20,Jaskula10}.
+	The velocity conversion assumes a point source but carries a negligible error of a few ppm as the in-trap BEC size is smaller than the detector resolution. 
+	The space and time resolution of the detector are 100 $\mu$m and 3 $\mu$s, respectively \cite{Henson18}, and the detector efficiency of $8(2)\%$ was determined from the collection efficiency of correlated atoms on the opposite sides of scattering halos \cite{shin19,shin20,Jaskula10}. 
+
+	\rem{The dominant uncertainty in the collection efficiency $\epsilon$ is the 25\% error in the detector quantum efficiency (QE), whereas the other factors (cutoff angle $\phi_c$ and transfer efficiency $\eta_0$) are more precisely known.
+	We performed the analysis described above for a range of $\phi_c$ and values of the QE and found that the excess of counts (expressed as $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$) was not significantly affected, which we summarize in Table \ref{tab:choice_indep}.}
+
+	% \begin{table}
+	% \centering
+	% 	\begin{tabular}{c c c c}
+	% 		\hline\hline
+	% 		% $k$ lim. ($\micron^{-1}$) & fit $r^2$ &  $\Lambda_\textrm{fit}$ & $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$\\  
+	% 		% \hline
+	% 		% (6,7)  &  0.88     & 0.2(0.1,0.2) &   9.1(6.5,11.7)\\
+	% 		% (6,8)  &  0.85     & 0.3(0.2,0.3) &   8.4(5.7,11.1)\\
+	% 		% (6,9)  &  0.83     & 0.3(0.2,0.4) &   8.1(5.3,10.8)\\
+	% 		% (7,10)  &   0.79     & 0.2(0.2,0.3) &   7.8(4.8,10.8)\\
+	% 		% (8,10)  &   0.79     & 0.1(0.1,0.2) &   8.0(4.9,11.2)\\
+	% 		% \hline
+	% 		QE & fit $r^2$ &  $\Lambda_\textrm{fit}$ & $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$\\      
+	% 		\hline
+	% 		0.05    &   0.83   &   0.2(0.1,0.3)  &  6.8(4.5,9.1)\\
+	% 		0.06    &   0.83   &   0.3(0.2,0.4)  &  7.4(4.9,9.8)\\
+	% 		0.07    &   0.83   &   0.3(0.2,0.4)  &  7.8(5.2,10.5)\\
+	% 		0.08    &   0.83   &   0.4(0.3,0.5)  &  8.3(5.5,11)\\
+	% 		0.09    &   0.83   &   0.5(0.3,0.6)  &  8.7(5.8,11.6)\\
+	% 		0.1     &   0.83   &   0.6(0.4,0.7)  &  9.0(6.0,12.1)\\
+	% 		0.11    &   0.83   &   0.6(0.4,0.8)  &  9.4(6.2,12.5)\\
+	% 		\hline
+	% 		$\phi_c$ & fit $r^2$ &  $\Lambda_\textrm{fit}$ & $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$\\
+	% 		\hline
+	% 		80$^\circ$    &   0.82   &   0.1(0.0,0.1) &  9.3(6.0,12.7)\\
+	% 		70$^\circ$    &   0.86   &   0.2(0.1,0.3) &  9.2(6.4,12)\\
+	% 		60$^\circ$    &   0.83   &   0.4(0.3,0.5) &  8.3(5.5,11)\\
+	% 		\hline\hline
+	% 	\end{tabular}
+	% 	\caption{Neither the uncertainty in the collection efficiency nor the choice of elevation angle cutoff $\phi_c$ have a significant effect on the findings. A change in quantum efficiency (QE) presents by changing the value of $\epsilon$ used in the prediction and also through the factor of $N_{0}^7/5$ used to compute the condensate density $n_0$. These effects combine to produce a weak scaling of $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$ with respect to $\epsilon$.  Re-running the analysis using different QE yields fits that barely differ in the goodness-of-fit criterion and present comparable results for $\Lambda_\textrm{fit}$. We also find that the choice of collection area defined by the elevation angle cutoff $\phi_c$ has a weak effect on the result, but below statistical significance. Terms in brackets are the upper and lower 95\% confidence intervals.}
+	% 	\label{tab:choice_indep}
+	% \end{table}
+	%  % we show in Tab. \ref{tab:choice_indep}, this has no significant effect on the conclusion (namely, on the comparison $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$)
 	
 
-	\com{While the determination of the factor $\epsilon$ is important, the dominant uncertainty is the 25\% error in the detector efficiency.
-	The collection area cutoff $\phi_c$ also factors in but this is precisely known.
-	
-	We performed the analysis described above for a range of $\phi_c$ and values of the QE and found that the excess of counts (expressed as $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$) was not significantly effected, which we summarize in Tab.
-	\ref{tab:choice_indep}.}
 
-	\begin{table}[b]
+	\begin{table}
+
+  \begin{minipage}[t]{0.45\textwidth}
+  		\vspace{0pt}
+		\caption{Neither the uncertainty in the collection efficiency nor the choice of elevation angle cutoff $\phi_c$ have a significant effect on the findings. A change in quantum efficiency (QE) presents by changing the value of $\epsilon$ used in the prediction and also through the factor of $N_{0}^7/5$ used to compute the condensate density $n_0$. These effects combine to produce a weak scaling of $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$ with respect to $\epsilon$.  Re-running the analysis using different QE yields fits that barely differ in the goodness-of-fit criterion and present comparable results for $\Lambda_\textrm{fit}$. We also find that the choice of collection area defined by the elevation angle cutoff $\phi_c$ has a weak effect on the result, but below statistical significance. Terms in brackets are the upper and lower 95\% confidence intervals.}
+		\label{tab:choice_indep}
+  \end{minipage}\hfill
+  	  \begin{minipage}[t]{0.5\textwidth}
+	  \vspace{0pt}
 		\begin{tabular}{c c c c}
 			\hline\hline
-			% $k$ lim.
-	($\micron^{-1}$) & fit $r^2$ &  $\Lambda_\textrm{fit}$ & $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$\\  
+			% $k$ lim. ($\micron^{-1}$) & fit $r^2$ &  $\Lambda_\textrm{fit}$ & $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$\\  
 			% \hline
 			% (6,7)  &  0.88     & 0.2(0.1,0.2) &   9.1(6.5,11.7)\\
 			% (6,8)  &  0.85     & 0.3(0.2,0.3) &   8.4(5.7,11.1)\\
@@ -450,86 +447,53 @@
 			0.1     &   0.83   &   0.6(0.4,0.7)  &  9.0(6.0,12.1)\\
 			0.11    &   0.83   &   0.6(0.4,0.8)  &  9.4(6.2,12.5)\\
 			\hline
-			Half-angle & fit $r^2$ &  $\Lambda_\textrm{fit}$ & $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$\\
+			$\phi_c$ & fit $r^2$ &  $\Lambda_\textrm{fit}$ & $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$\\
 			\hline
-			10$^\circ$    &   0.82   &   0.1(0.0,0.1) &  9.3(6.0,12.7)\\
-			20$^\circ$    &   0.86   &   0.2(0.1,0.3) &  9.2(6.4,12)\\
-			30$^\circ$    &   0.83   &   0.4(0.3,0.5) &  8.3(5.5,11)\\
+			80$^\circ$    &   0.82   &   0.1(0.0,0.1) &  9.3(6.0,12.7)\\
+			70$^\circ$    &   0.86   &   0.2(0.1,0.3) &  9.2(6.4,12)\\
+			60$^\circ$    &   0.83   &   0.4(0.3,0.5) &  8.3(5.5,11)\\
 			\hline\hline
 		\end{tabular}
-		\caption{The uncertainty in the detector quantum efficiency (QE) does not have a significant effect on the findings.
-	Re-running the analysis using different QE yields fits that barely differ in the goodness of whose gradients do not significantly change.
-	We also find that the choice of collection area has a weak effect, below statistical significance, on the result.
-	Terms in brackets are the upper and lower 95\% confidence intervals.}
-		\label{tab:choice_indep}
-	\end{table}
-	 % we show in Tab.
-	\ref{tab:choice_indep}, this has no significant effect on the conclusion (namely, on the comparison $\Lambda_\textrm{fit}/\Lambda_\textrm{pred}$)
-	% This could affect the outcome in two ways, first by changing the value of $\chi$ used in the prediction, and second through the factor of $N_{0}^7/5$ used to compute the condensate density $n_0$.
-	
-
+  \end{minipage}
+\end{table}
 
 
 \subsubsection{Peak density calibration}
 
-    The quantum depletion and contact are both predicted to depend solely on the condensed number and trapping frequencies via the condensate density, hence it is important to determine both quantities accurately.
-	
-    % In the Thomas-Fermi approximation, the peak density of the condensate can be written as $n_0 = \mu/g$, where $\mu$ is the chemical potential, $g=4\pi\hbar^2a_{1,1}/m$ is the effective interaction strength, $m\approx6.6\times10^{-27}$ kg is the atomic mass, and $a=7.512$ nm is the s-wave scattering length between pairs of atoms in the $m_J=1$ state \cite{Moal06}.
-	
-    The sole experimental parameters in the expression for the peak density (Eqn.
-	\ref{eqn:n0}) are the geometric trap frequency $\bar{\omega} = \left(\omega_x\cdot\omega_y\cdot\omega_z\right)^{1/3}$, and $N_0$, the number of atoms in the condensate.
-	
-    We simultaneously determine the total atom number $N$ and trap frequency $\bar{\omega}$ in a single shot using a pulsed atom laser and use the thermal fraction (as below) to determine the condensed number $N_0$.
-	
+    The quantum depletion and contact are both predicted to depend solely on the condensed number and trapping frequencies via the condensate density, hence it is important to determine both quantities accurately. 
+    % In the Thomas-Fermi approximation, the peak density of the condensate can be written as $n_0 = \mu/g$, where $\mu$ is the chemical potential, $g=4\pi\hbar^2a_{1,1}/m$ is the effective interaction strength, $m\approx6.6\times10^{-27}$ kg is the atomic mass, and $a=7.512$ nm is the s-wave scattering length between pairs of atoms in the $m_J=1$ state \cite{Moal06}. 
+    The sole experimental parameters in the expression for the peak density (Eqn. (\ref{eqn:n0})) are the geometric trap frequency $\bar{\omega} = \left(\omega_x\cdot\omega_y\cdot\omega_z\right)^{1/3}$, and $N_0$, the number of atoms in the condensate. 
+    We simultaneously determine the total atom number $N$ and trap frequency $\bar{\omega}$ in a single shot using a pulsed atom laser and use the thermal fraction $\eta_T$ (section \ref{sec:th_spin}) to determine the condensed number $N_0 = (1-\eta_T)N$. 
 
-	The pulsed atom laser consists of a series of Fourier-broadened RF pulses centred on the minimum Zeeman splitting in the trap.
-	
-	The pulse transfers atoms in the trap to the untrapped $m_J=0$ state with an approximately constant transfer rate across the cloud.
-	
-	We outcouple approximately 2\% of the atoms per 100$\mu$s pulse for $\approx$200 pulses, which eventually depletes the entire trap.
-	
-	The atom laser thus prevents the detector from saturating and allows an accurate determination of the atom number, up to a factor of the quantum efficiency.
-	
-	We determine the trapping frequencies by inducing centre-of-mass oscillations with a magnetic impulse, and find the oscillation period from the atom laser pulses \cite{Henson18ML}.
+	The pulsed atom laser consists of a series of Fourier-broadened RF pulses centred on the minimum Zeeman splitting in the trap. 
+	The pulse transfers atoms in the trap to the untrapped $m_J=0$ state with an approximately constant transfer rate across the cloud. 
+	We outcouple approximately 2\% of the atoms per 100$~\mu$s pulse for $\approx$200 pulses, which eventually depletes the entire trap. 
+	The atom laser thus prevents the detector from saturating and allows an accurate determination of the atom number, up to a factor of the quantum efficiency. 
+	We determine the trapping frequencies by inducing centre-of-mass oscillations with a magnetic impulse, and find the oscillation period from the atom laser pulses \cite{henson18ML}.
 
 
 \subsubsection{Determining spin transfer efficiency}
+\label{sec:th_spin}
 
-	To calibrate the transfer efficiencies, we applied a weaker Stern-Gerlach than for the depletion measurement, resolving each $m_J$ cloud on the detector, as illustrated in Fig.
-	\ref{fig:frac_cal}.
-	
+	To calibrate the transfer efficiencies, we applied a weaker Stern-Gerlach than for the depletion measurement, resolving each $m_J$ cloud on the detector, as illustrated in Fig. \ref{fig:frac_cal}. 
 
-	\begin{figure}[!t]
+	\begin{figure}
 	\begin{center}
-		\includegraphics[width=\columnwidth]{fig/depletion/frac_cal_profile}
-		\caption{Determining the RF transfer efficiency.
-	The time-of-flight profiles of each pulse are resolved (a) by applying a weak Stern-Gerlach pulse during the time of flight.
-	The pulses are aligned with respect their centre-of-mass (b) and used to determine the pointwise fraction ((c), dotted line).
-	Detector saturation is evident in the peaks (dashed lines), but not in the thermal tails (solid lines), which are used to compute the transfer efficiency.
-	Because of its lower flux, the $m_J=-1$ pulse does not show evidence of saturation (d) and is used to determine the thermal fraction.}
+		\includegraphics[width=\columnwidth]{fig/QD/frac_cal_profile}
+		\caption{Determining the RF transfer efficiency. The time-of-flight profiles of each pulse are resolved (a) by applying a weak Stern-Gerlach pulse during the time of flight. The pulses are aligned with respect their centre-of-mass (b) and used to determine the pointwise fraction ((c), dotted line). Detector saturation is evident in the peaks (dashed lines), but not in the thermal tails (solid lines), which are used to compute the transfer efficiency. Because of its lower flux, the $m_J=-1$ pulse does not show evidence of saturation (d) and is used to determine the thermal fraction and hence $N_0$.}
 		\label{fig:frac_cal}
 	\end{center}
 	\end{figure}
 
-	The efficiencies $\eta_J$ cannot be calculated by counting the atoms in each cloud because the detector saturates during the peak condensate flux, but we can compare the thermal parts.
-	
-	We align each cloud along the time (Z) axis and compute the pointwise fraction of the atomic flux $\phi(t)$ accounted for by each cloud, $\eta_j(t) = \phi_j(t)/\sum_j\phi_j(t)$, as depicted in Fig.
-	\ref{fig:frac_cal}.
-	
-	The ratio of densities between the clouds is roughly constant in the thermal part, indicating the absence of important saturation effects and a spin transfer that is independent of $k$.
-	
-	The fraction of the original cloud transferred into each $m_J$ state is determined by taking the average $\langle\eta_j(t)\rangle$ over the thermal tails.
-	
+	The efficiencies $\eta_J$ cannot be calculated by counting the atoms in each cloud because the detector saturates during the peak condensate flux, but we can compare the thermal parts. We align each cloud along the time (Z) axis and compute the pointwise fraction of the atomic flux $\phi(t)$ accounted for by each cloud, $\eta_j(t) = \phi_j(t)/\sum_j\phi_j(t)$, as depicted in Fig. \ref{fig:frac_cal} (a-c).
+	The ratio of densities between the clouds is roughly constant in the thermal part (Fig. \ref{fig:frac_cal} (c)), indicating the absence of saturation effects in the thermal part and a spin transfer efficiency that is independent of $k$. 
+	The fraction of the original cloud transferred into each $m_J$ state is determined by taking the average $\langle\eta_j(t)\rangle$ over the thermal tails. 
 	We find these efficiencies are approximately 74\%, 24\%, and 2\% in all runs for the $m_J=+1$, 0, and -1 states, respectively.
 	
-	While the $m_J=0$ and $m_J=1$ clouds clearly saturate the detector, the small fraction ($\approx2\%$) of the atoms transferred to the $m_J=-1$ state does not (Fig.
-	\ref{fig:frac_cal} (d)).
-	
-	A bimodal fit to the condensed and thermal parts, plus constant background, yields the thermal and condensed fractions.
+	While the $m_J=0$ and $m_J=1$ clouds clearly saturate the detector, the small fraction ($\approx2\%$) of the atoms transferred to the $m_J=-1$ state does not (Fig. \ref{fig:frac_cal} (d)). 
+	A bimodal fit to the condensed and thermal parts, plus constant background, yields the thermal fraction $\eta_T$ and condensed fraction $1-\eta_T$.
 
-	% \com{After a 2ms expansion the cloud is even more dilute than the trap, with a peak density that has approximately halved.
-	Therefore the Because the contact in a mixed-species condensate \cite{Vassen16,Werner12_boson}, even if the condensate were still as dense as the in-trap distribution, the contact is reduced relative to the spin-polarized condensate.
-	Considering also the reduced density after 2ms expansion, the production rate of quantum-depleted quasiparticles is expected to \emph{decrease} during this process, hence the observed effect is unlikely to emerge at this stage.}
+	% \com{After a 2ms expansion the cloud is even more dilute than the trap, with a peak density that has approximately halved. Therefore the Because the contact in a mixed-species condensate \cite{Vassen16,Werner12_boson}, even if the condensate were still as dense as the in-trap distribution, the contact is reduced relative to the spin-polarized condensate. Considering also the reduced density after 2ms expansion, the production rate of quantum-depleted quasiparticles is expected to \emph{decrease} during this process, hence the observed effect is unlikely to emerge at this stage.}
 	
 
 % \subsection{Determination of thermal fraction}
@@ -537,12 +501,8 @@
 
 % 	\begin{figure}[!h]
 % 	\begin{center}
-% 		\includegraphics[width=0.8\textwidth]{fig/depletion/m1_frac_anal}
-% 		\caption{Comparison of thermal fits in the unsaturated $m_J=-1$ pulse including 138 shots.
-	% The weak (X) and strong horizontal (Y) trapping axes are shown in (a) and (b), respectively.
-	% \org{would be helpful to label $v_x$ and $v_y$ to make it self-evident at 1st glance.} Both projections display a bimodal peak, with the condensate (dotted lines) and thermal parts (thick solid lines) easily distinguished.
-	% Fitting a Gaussian profile (thin solid line) to the velocity distribution of the thermal part yields the thermal number and temperature.
-	% Subtracting the fit leaves the condensate profile (c) which can be \blu{\dots something\dots} yields the condensed number.}
+% 		\includegraphics[width=0.8\textwidth]{fig/QD/m1_frac_anal}
+% 		\caption{Comparison of thermal fits in the unsaturated $m_J=-1$ pulse including 138 shots. The weak (X) and strong horizontal (Y) trapping axes are shown in (a) and (b), respectively. \org{would be helpful to label $v_x$ and $v_y$ to make it self-evident at 1st glance.} Both projections display a bimodal peak, with the condensate (dotted lines) and thermal parts (thick solid lines) easily distinguished. Fitting a Gaussian profile (thin solid line) to the velocity distribution of the thermal part yields the thermal number and temperature. Subtracting the fit leaves the condensate profile (c) which can be \blu{\dots something\dots} yields the condensed number.}
 % 		\label{fig:thermal_frac}
 % 	\end{center}
 % 	\end{figure}
@@ -551,23 +511,17 @@
 \subsubsection{Noise sources}
 \label{sec:spinpop}
 
-	In early tests of our measurement sequence we noticed a contamination of the signal by spurious counts.
-	
-	We inferred these were remnant counts from the $m_J=+1$ cloud as they were still visible when we ran an experimental sequence without the Landau-Zener transfer.
-	
-	This contamination appeared in a particular region of our detection image, and as such we were able to correct for it by subtracting their contribution from the counts collected during measurement shots.
-	
-	Generally, fewer atoms can be attributed to this noise than would be required to explain the discrepancy described in the main text.
-	
-	While the cause of the cross-contamination is unclear, we observe that the count density outside the region of interest is similar in both the shots with the RF pulse and those without.
-	
-	We hypothesize that the remnant counts are atoms transferred into the $m_J=0$ state by non-ideal behaviour of the Stern-Gerlach pulses.
-	
-	We note that only about one in a million atoms from the $m_J=1$ cloud present in this manner in a given shot.
-
-	\com{Such counts constitute about 10(5)\% of the detection events in the ROI.
-	Because it is not possible to distinguish \emph{which} atoms are spurious and which are genuine quantum-depleted particles, the preferred power-law analysis (the maximum-likelihood estimator) is not available.
-	Basic MLEs are built assuming one has a sample drawn from a distribution of a single category; the probabilistic combination of two different sources of events falls outside the scope of this framework.}
+	In early tests of our measurement sequence we noticed a contamination of the signal by spurious counts. 
+	We inferred these were remnant counts from the $m_J=+1$ cloud as they were still visible when we ran an experimental sequence without the Landau-Zener transfer. 
+	This contamination appeared in a particular region of our detection image, and as such we were able to correct for it by subtracting their contribution from the counts collected during measurement shots. 
+	While the cause of the cross-contamination is unclear, we observe that the count density outside the region of interest is similar in both the shots with the RF pulse and those without. 
+	We hypothesize that the remnant counts are atoms transferred into the $m_J=0$ state by non-ideal behaviour of the Stern-Gerlach pulses. 
+	We note that only about one in a million atoms from the $m_J=1$ cloud are present in this manner in a given shot.
+	\rem{Such counts constitute about 10(5)\% of the detection events in the ROI. 
+	The calibration without the Landau-Zener transfer enables us to correct for their contribution by subtracting the counts measured in the calibration runs from the total used in Sec \ref{sec:good_test}.
+	% Generally, this contribution is much smaller than the discrepancy described reported above, and . 
+	However, because it is not possible to distinguish \emph{which} individual atoms are spurious and which are genuine quantum-depleted particles, the preferred power-law analysis (the maximum-likelihood estimator) is not available. 
+	Basic MLEs are built assuming one has a sample of data drawn from a single category; the probabilistic combination of two indistinguishable categories of events falls outside the scope of this framework.}
 
 
 % \begin{table}
@@ -588,9 +542,7 @@
 % 		41(2) & 4.6(2) & 0.12 & 302(3)  & 6.6(2) & 0.7(2) & 10(6) \\ 
 % 		\hline \hline 
 % 		\end{tabular}
-% 		\caption{Summary of results for each data run.
-	The peak density is determined from measurements of the trapping frequencies and the condensed number (via $N_0=N_\textrm{tot}(1-\eta_\textrm{Th})$, using the total number $N_\textrm{tot}$ and thermal fraction $\eta_\textrm{Th}$).
-	The number $N_\textrm{Detect}$ of atoms detected in the region of interest (results shown here for the largest ROI) can be compared to the predictions of the Tan theory, as in the main text.}
+% 		\caption{Summary of results for each data run. The peak density is determined from measurements of the trapping frequencies and the condensed number (via $N_0=N_\textrm{tot}(1-\eta_\textrm{Th})$, using the total number $N_\textrm{tot}$ and thermal fraction $\eta_\textrm{Th}$). The number $N_\textrm{Detect}$ of atoms detected in the region of interest (results shown here for the largest ROI) can be compared to the predictions of the Tan theory, as in the main text.}
 % 		\label{tab:run_results}
 % 	\end{table}
 
@@ -601,57 +553,44 @@
 
 % \subsubsection{Barriers to employing MLEs}
 
-% 	The presence of these counts is one factor preventing a straightforward application of a maximum-likelihood estimator (MLE) to determine parameters of the power-law region.
-	
+% 	The presence of these counts is one factor preventing a straightforward application of a maximum-likelihood estimator (MLE) to determine parameters of the power-law region. 
 % 	The basic principle of the MLE is to assume a functional form for the probability distribution $p(x|\theta)$ underlying the observed data $x$, and dependent on some parameters $\theta$.
-% 	The zero of the derivative of the \emph{likelihood} function $L(\theta|x)$ with respect to the parameters $\theta$ then yields the most-probable parameter values given a set of observations $x$.
-	
-% 	In our context, one can assume a functional form for the probability distribution underlying atomic detection events (via a wavefunction ansatz).
-	
+% 	The zero of the derivative of the \emph{likelihood} function $L(\theta|x)$ with respect to the parameters $\theta$ then yields the most-probable parameter values given a set of observations $x$. 
+% 	In our context, one can assume a functional form for the probability distribution underlying atomic detection events (via a wavefunction ansatz). 
 % 	The detector dark counts can also be incorporated by assuming a uniform distribution, although this entails a cumbersome procedure to retain proper normalization.
 % 	However, the dark counts present less than one detection per shot, on average, and thus might be ignorable without major consequence.
-% 	The major obstacle to implementing an MLE is the finite detection region.
-	
+% 	The major obstacle to implementing an MLE is the finite detection region. 
 % 	Specifically, because the normalization condition 
 	
 
 %     \begin{figure}[!b]
 % 	\begin{center}
-% 		\includegraphics[width=\columnwidth]{fig/depletion/spinpop}
-% 		\caption{Measured contribution of the detector dark counts and spurious spin counts to the time-of-flight profile.
-% 	We accounted for the pulse at around 550ms and subtracted it from the measured profiles when computing the contact.
-% 	After removing this background term, the density profiles above and below the condensate agree, indicating convergence on the true signal.
-% 	For reference, the peak flux of the $m_J=0$ condensate is about a thousandfold greater than the peak shown here.}
-% % 		\label{fig:spinpop}
-% % 	\end{center}
-% % 	\end{figure}
+% 		\includegraphics[width=\columnwidth]{fig/QD/spinpop}
+% 		\caption{Measured contribution of the detector dark counts and spurious spin counts to the time-of-flight profile. We accounted for the pulse at around 550ms and subtracted it from the measured profiles when computing the contact. After removing this background term, the density profiles above and below the condensate agree, indicating convergence on the true signal. For reference, the peak flux of the $m_J=0$ condensate is about a thousandfold greater than the peak shown here.}
+% 		\label{fig:spinpop}
+% 	\end{center}
+% 	\end{figure}
 
-% % 	\begin{figure}[!h]
-% % 	\begin{center}
-% % 		\includegraphics[width=\textwidth]{fig/depletion/profile_overlay}
-% % 		\caption{Comparison of average time-of-flight profiles over a single data run for the quantum depletion measurement shots (blue, 871 shots), transfer efficiency calibration (black, 112 shots), detector dark counts (red, 871 shots), and spurious counts (dot-dash, 895 shots).
-% 	The time window bounded by $|k|\leq 10\mu$m is indicated with dotted lines.
-% 	Shaded area is the standard error over the entire run.}
-% % 		\label{fig:tof_profile}
-% % 	\end{center}
-% % 	\end{figure}
+% 	\begin{figure}[!h]
+% 	\begin{center}
+% 		\includegraphics[width=\textwidth]{fig/QD/profile_overlay}
+% 		\caption{Comparison of average time-of-flight profiles over a single data run for the quantum depletion measurement shots (blue, 871 shots), transfer efficiency calibration (black, 112 shots), detector dark counts (red, 871 shots), and spurious counts (dot-dash, 895 shots). The time window bounded by $|k|\leq 10\mu$m is indicated with dotted lines. Shaded area is the standard error over the entire run.}
+% 		\label{fig:tof_profile}
+% 	\end{center}
+% 	\end{figure}
 
 
 
 
-% % Note that the temps disagree between axes, but within axes between clouds they are consistent(....ish).
-% 	This means we can use the profile ratio method, which is also consistent with comparing the thermal number from the fits.
-% % Perhaps comment on the thermal-subtracted part; the TF profile should have a sharp cutoff, but the smooth edges are suggestive evidence of this roll-off
+% Note that the temps disagree between axes, but within axes between clouds they are consistent(....ish). This means we can use the profile ratio method, which is also consistent with comparing the thermal number from the fits.
+% Perhaps comment on the thermal-subtracted part; the TF profile should have a sharp cutoff, but the smooth edges are suggestive evidence of this roll-off
 
-% % \begin{figure}
-% % 	\centering
-% % 	\includegraphics[width=0.5\textwidth]{fig/depletion/counts_per_run}
-% % 	\caption{Number of counts detected in the region of interest in the depletion measurement (a), the spin mixing calibration (b), and the dark count calibration (c).
-% 	An average of 3.0(5) counts were detected in the ROI in the spin-mixing calibration shot, and the background count rate was 0.4(2) counts per shot.
-% 	Separate lines indicate separate \emph{runs}, i.e.
-% 	sequences of shots with fixed parameters.}
-% % 	\label{fig:num_counts}
-% % \end{figure}
+% \begin{figure}
+% 	\centering
+% 	\includegraphics[width=0.5\textwidth]{fig/QD/counts_per_run}
+% 	\caption{Number of counts detected in the region of interest in the depletion measurement (a), the spin mixing calibration (b), and the dark count calibration (c). An average of 3.0(5) counts were detected in the ROI in the spin-mixing calibration shot, and the background count rate was 0.4(2) counts per shot. Separate lines indicate separate \emph{runs}, i.e. sequences of shots with fixed parameters.}
+% 	\label{fig:num_counts}
+% \end{figure}
 
 
 
@@ -662,140 +601,152 @@
 
 \section{Numerical simulations}
 \label{STAB}
-	\begin{figure}[b]
-	        \includegraphics[width=\columnwidth]{fig/depletion/sim_results}
-	        \caption{(a) Steady-state values of the simulated contact.
-	Simulations of condensates released from a cigar-shaped trap (CT) are consistent with the Tan theory (TT) before release, and show an increase in contact after the trap release (CE).
-	A slow relaxation of the transverse trapping frequencies (CS) shows a decrease in line with the predicted value of the lower density.
-	Spherical traps (ST,SE) lack any directions of tight confinement, wherein a longer interaction time prevents the escape of depleted particles as seen in cigar traps.
-	(b) the time-dependence of the contact stabilizes after a time on the order of $1/\omega_x$, several hundred $\mu$s.
-	The difference between in-trap and expanded contact increases with the density of the condensate but is consistently about 1.7 times the Tan theory.
-	For comparison, the experimental control pulses are implemented after 2ms of expansion.
-	When the transverse trapping frequencies are reduced by half (dotted line), the in-situ contact relaxes.}
+	\begin{figure}
+	        \includegraphics[width=\columnwidth]{fig/QD/sim_results}
+	        \caption{Simiulations of release from the trap. (a) Steady-state values of the simulated contact. Simulations of condensates released from a cigar-shaped trap (CT) are consistent with the Tan theory (TT) before release, and show an increase in contact after the trap release (CE). A slow relaxation of the transverse trapping frequencies (CS) shows a decrease in line with the predicted value of the lower density. Spherical traps (ST,SE) lack any directions of tight confinement, wherein a longer interaction time prevents the escape of depleted particles as seen in cigar traps. (b) the time-dependence of the contact stabilizes after a time on the order of $1/\omega_x$, several hundred $\mu$s. The difference between in-trap and expanded contact increases with the density of the condensate but is consistently about 1.7 times the Tan theory. For comparison, the experimental control pulses are implemented after 2ms of expansion. When the transverse trapping frequencies are reduced by half (dotted line), the in-situ contact relaxes.}
 	        \label{fig:sim_fig}
 	\end{figure}
-	We performed simulations of the BEC expansion from harmonic traps using the first principles STAB method \cite{Deuar11,Kheruntsyan12}.
-	
-	The simulations included a cigar-shaped trap (marked CT in Fig.
-	\ref{fig:sim_fig}) with parameters matched to the experimental conditions.
-	
-	The in-trap state was consistent with the adiabatic sweep theorem before release from the trap.
-	
-	Following expansion from the cigar trap (CE in Fig.
-	\ref{fig:sim_fig})), the simulated tail amplitude increased and stabilized within a few hundred microseconds, much sooner than the 2ms delay between the trap release and application of the rf and Stern-Gerlach pulses.
-	
-	Fig.
-	\ref{fig:sim_fig} shows time evolution of the tail amplitude for the simulated traps using the same ROI as the experimental setup.
-	 
-	In this configuration the steady-state value of the momentum tails was a factor of 1.64(9) above the predictions of Eqn.
-	(\ref{eqn:pred_scaling}).
-	
+	In order to \blu{understand} whether any depletion could survive the expansion and to investigate what effects are taking place during the initial release, we performed simulations of the BEC expansion from harmonic traps using the first principles STAB method \cite{Deuar11,Kheruntsyan12}. 
+	The simulations included a cigar-shaped trap (marked CT in Fig. \ref{fig:sim_fig} (a)) with parameters matched to the experimental conditions. 
+	The in-trap state was consistent with the adiabatic sweep theorem before release from the trap at time $t=0$. 
+	Following expansion from the cigar trap (CE in Fig. \ref{fig:sim_fig} (a)), the simulated tail amplitude increased and stabilized within a few hundred microseconds, much sooner than the 2ms delay between the trap release and application of the rf and Stern-Gerlach pulses. 
+	Fig. \ref{fig:sim_fig} shows the time evolution of the tail amplitude \blu{$C_{\rm sim}$ extracted from a $n(k)=C_{\rm sim}/k^4$ fit to the simulated density} %for the simulated traps 
+	using \blu{an ROI with the same cutoff elevation angle $\phi_c=\pi/3$ as in the experiment.}  
+	In this configuration the steady-state value of the momentum tails was a factor of 1.64(9) above the predictions of Eqn. (\ref{eqn:pred_scaling}). 
+	\blu{An analysis of the occupation of the tails according to (\ref{eqn:pred_num}), gives very similar factors $\mathcal{A}_{\rm sim}$ for the increase in the strength of the tails (relative to \emph{in-situ} predictions) during evolution, as shown in Table~\ref{tab:Nminmax}.}
 
-	To understand the disagreement with earlier theory \cite{Qu16}, which predicted no depletion survival, we also investigated the effect of adiabatic expansion on the in-trap depletion by simulating a slow decrease of the transverse trapping frequencies by a factor of two (CS), and found that the in-trap contact decreased roughly as predicted by Eqn.
-	(\ref{eqn:pred_scaling}) in these instances --- see the dashed line in Fig.~\ref{fig:sim_fig}.
-	
-	We also found that the factor of disagreement (i.e.
-	$C_\textrm{sim}/C_\textrm{Tan}$) between Eqn.
-	(\ref{eqn:pred_num}) and the simulated tails depends on the angle choice of cutoff angle $\phi_c$.
-	
-	Put another way, the momentum distribution in the simulations is anisotropic and takes the form $f(\theta,\phi)/k^4$ - note that the average of an angle-dependent power law decay preserves the power-law behaviour.
-	We find that $C_\textrm{sim}$ is larger for smaller collection regions that are more tightly concentrated about the vertical (strong) trapping axis, whereas larger collection angles (including areas closer to the weak axis) produce a lower $C_\textrm{sim}$.
-	In particular, with cone half-angles of 10, 20, and 30 degrees, $C_\textrm{sim}$ was 2.2(3), 1.9(2), and 1.6(1) times $C_\textrm{Tan}$, respectively.
-	We note that the experimental results (Tab.
-	\ref{tab:choice_indep}) could be said to display a similar trend, but the result is not statisically significant.
-	The implementation of the simulations is discussed in detail in the publication \cite{Ross21}.
+	To understand the disagreement with earlier theory \cite{Qu16}, which predicted no depletion survival, we also investigated the effect of adiabatic expansion on the in-trap depletion by simulating a slow decrease of the transverse trapping frequencies by a factor of two (CS), and found that the in-trap contact \blu{$C_{\rm sim}$ as well as the the tail strength $N_{k_{\rm min},k_{\rm max}}$} decreased roughly as predicted by Eqn. (\ref{eqn:pred_scaling}) in these instances --- see the dashed line in Fig.~\ref{fig:sim_fig} (b) \blu{and Table~\ref{tab:Nminmax}.} 
+	We also found that the relative factors between Eqn. (\ref{eqn:pred_num}) and the simulated tails (i.e. $C_\textrm{sim}/\mathcal{C}$ \blu{and $\mathcal{A}_{\rm sim}$) depend} on choice of cutoff angle $\phi_c$. 
+	% Put another way, the momentum distribution in the simulations is anisotropic and takes the form $f(\theta,\phi)/k^4$ - note that the average of an angle-dependent power law decay preserves the power-law behaviour.
+	\rem{We find that $C_\textrm{sim}$ \blu{and $\mathcal{A}_\textrm{sim}$ are} larger for smaller collection regions that are more tightly concentrated about the %vertical 
+	(strong) trapping axis, whereas larger collection angles (including areas closer to the weak axis) produce a lower $C_\textrm{sim}$. 
+	\blu{This is shown in Table~\ref{tab:Nminmax} while also }
+	%That is, 
+	with $\phi_c$ values of 60, 70, and 80 degrees, %(in line with Tab. \ref{tab:choice_indep}),
+	$C_\textrm{sim}$ was 1.6(1), 1.9(2), and 2.2(3) times $\mathcal{C}$, respectively.
+	We note that the experimental results (Tab. \ref{tab:choice_indep}) could be said to display a similar trend, but the result is not statistically significant.
+	}
+	Details regarding the implementation of the simulations can be found in \todo{Cite paper}
+% \begin{widetext}
+
+	% \end{widetext}
+
+
+\begin{table}
+\blu{
+	\begin{center}
+	%\renewcommand{\arraystretch}{0.1}
+	\setlength{\tabcolsep}{0.5pt}
+	{\fontsize{8}{11}\selectfont
+	\begin{tabular}{c|ccc|c|c}
+	\hline\hline
+	$n_oN$	&$k_{\rm min}$&$k_{\rm max}$ & $\phi_c$ & $N_{k_{\rm min},k_{\rm max}}$	&ratio $\mathcal{A}_{\rm sim}$ 	\\
+	($10^6\mu$m${}^{-3}$)& \multicolumn{2}{c|}{($\mu$m${}^{-1}$)}& (deg) &final& 	final/in situ\\
+	\hline
+	\multicolumn{6}{l}{Rapid release from trap (CE)}\\
+	5.237(16)   & 2.0 & 3.5 & 60 & 193(8)    & 1.38(5)\\
+	12.09(6)    & 2.25 & 3.5 & 60 & 362(10)   & 1.43(4)\\
+    6.86(3)     & 2.75 & 4.0 & 60 & 163(4)   & 1.45(4)\\
+    19.90(8)    & 3.0 & 4.0 & \ \ 40 & \ \ 423(8)    & \ \ \ 1.37(3) \\
+    19.90(8)    & 3.0 & 4.0 & \ \ 50 & \ \ 408(8)    & \ \ \ 1.56(3) \\
+    19.90(8)    & 3.0 & 4.0 & 60 & 368(7)    & 1.80(4) \\
+    19.90(8)    & 3.0 & 4.0 & \ \ 70 & \ \ 282(6)    & \ \ \ 2.00(4) \\
+    19.90(8)    & 3.0 & 4.0 & \ \ 80 & \ \ 157(5)    & \ \ \ 2.19(6) \\
+	\hline
+	\multicolumn{6}{l}{Rapid release, spherical (SE)}\\
+	5.35(2)     & 2.0 & 3.25 & 60 & 120(9)    & 0.92(6)\\
+	12.23(6)    & 2.0 & 3.0 & 60 & 256(11)   & 1.05(4)\\
+    20.38(10)   & 3.0 & 4.0 & 60 & 232(10)    & 1.10(5) \\
+	\hline
+	\multicolumn{6}{l}{Slow ramp down of trap (CS)}\\
+	5.237(16)   & 2.0 & 3.5 & 60 & 55(10)   & 0.37(6)\\
+	12.09(6)    & 2.0 & 3.5 & 60 & 103(21)   & 0.31(5)\\
+	6.86(3)     & 2.5 & 4.0 & 60 & 50(8)   & 0.34(6)\\   
+	19.90(0)    & 2.5 & 4.0 & 60 & 181(14)   & 0.54(4)\\
+	\hline\hline
+	\end{tabular}
+	}%fontsize
+	\end{center}
+	\caption{
+	Tail strength data in simulations. Based on final times in the simulations described in Table~\ref{tab:simdata}, referenced by the value of $n_0N$. $N_{k_{\rm min},k_{\rm max}}$ is calculated as per (\ref{eqn:pred_num}). The ratio $\mathcal{A}_{\rm sim}$ of tail strength  in the expanded cloud compared to Tan theory predictions is obtained by dividing $N_{k_{\rm min},k_{\rm max}}$  at the final time by its value in situ at $t=0$. $k_{\rm max}$ is chosen to still contain all $4\pi$ steradians inside the square lattice, while  $k_{\rm min}$ to avoid overlap with the expanding condensate.
+	\label{tab:Nminmax}}
+	}
+\end{table}
+
+
+%\org{NOTE: orange text are just explanatory notes for us that should be removed in the final cut.}
 
 
 \section{Discussion}
 \label{sec:discussion}
 
-	In sum, we find that the number of atoms in the large-$k$ tails is predicted by the product $N_0n_0\propto(N_{0}^7\bar{\omega}^6)^{1/5}$, in line with Tan's theory of the contact (Eqns.
-	\ref{eqn:pred_scaling},\ref{eqn:pred_num}).
 	
+
+	In sum, we find that the number of atoms in the large-$k$ tails is predicted by the product $N_0n_0\propto(N_{0}^7\bar{\omega}^6)^{1/5}$, in line with Tan's theory of the contact (Eqns. \ref{eqn:pred_scaling},\ref{eqn:pred_num}). 
 	However, the sensitivity of this relationship is significantly different than expected by a factor of order 8(3), which is not accounted for by any known systematic effects.
-	The method we employ makes a clear distinction between what can and cannot be inferred about the form of the momentum tails, and indeed we find there is no decisive evidence in favour of tails that decay with $k^{-4}$.
+	As we discussed in section \ref{sec:analysis}, there are fundamental challenges in the analysis of heavy-tailed distributions which preclude any decisive evidence regarding the functional form of the momentum tails.
+	We surmise that the tails are indeed a signature of quantum depletion (per the first point), albeit subject to some physical effect during the expansion as discussed below, \blu{or some nonequilibrium enhancement in the trapped state}.
+	%well we do mention vague possibilities in-trap, so it glares a bit to exclude them here and not later.
 	We do note that the prior work \cite{Chang16} reported results which fall within the uncertainty range of our analysis.
-	Indeed, Fig.
-	4 in \cite{Chang16} could be said to display the relevant scaling with respect to $N_0n_0$ but the reported values of the apparent contact should be considered along with the caveats discussed in Section \ref{sec:pow_issues}.
+	Indeed, Fig. 4 in \cite{Chang16} could be said to display the relevant scaling with respect to $N_0n_0$, but the reported values of the apparent contact should be considered alongside the caveats discussed in Section \ref{sec:pow_issues}.
 	
 	Taken together with the simulations, our findings show that the survival of the quantum depletion into the far-field is plausible, but not as a straightforward mapping into the far-field density.
-	In a non-interacting ballistic expansion, the far-field density distribution would be a direct realization of the in-trap momentum distribution of the cloud.
-	
-	However, this correspondence is known not to faithful because the dispersal of the mean-field energy into kinetic energy, known as the release energy, imparts some acceleration to the atoms during early expansion.
-	
-	This effect is responsible for the famous inversion of the cloud aspect ratio upon release from harmonic traps.
-	
+	In a non-interacting ballistic expansion, the far-field density distribution would be a direct realization of the in-trap momentum distribution of the cloud. 
+	However, this correspondence is known not to faithful because the dispersal of the mean-field energy into kinetic energy, known as the release energy, imparts some acceleration to the atoms during early expansion. 
+	This effect is responsible for the famous inversion of the cloud aspect ratio upon release from harmonic traps. 
 
 	As such we interpret our results as an indication that the depleted atoms are accelerated by the non-uniform mean-field energy of the condensate during the expansion.
-	In detail, after a quench into the free particle regime, the condensate expands hydrodynamically on timescales of $1/\omega$.
-	
+	In detail, after a quench into the free particle regime, the condensate expands hydrodynamically on timescales of $1/\omega$. 
 	This is an adiabatic process for the low momentum depletion, whereby some depleted atoms are absorbed back into the condensate in agreement with \cite{Qu16}.
-	However, the characteristic time for reabsorption is $\hbar/gn_0$, slow enough that quasiparticles in the particle branch of the Bogoliubov dispersion have sufficient velocity to escape the expanding cloud without being reabsorbed and thus transition to free atoms.
-	
+	However, the characteristic time for reabsorption is $\hbar/gn_0$, slow enough that quasiparticles in the particle branch of the Bogoliubov dispersion have sufficient velocity to escape the expanding cloud without being reabsorbed and thus transition to free atoms. 
 	This effect leads to the persistence of populated high-$k$ modes in the far-field, which were detected in the experiment.
 
-	Moreover, an atom inside the BEC experiences an effective force from the gradient of the mean-field potential $\textbf{F} = -4\pi\hbar^2 m^{-1}a \nabla  n(x)$.
-	
-	This endows escaping depleted particles with a greater momentum, increasing the weight of the tails in the far-field.
-	
-	This effect is exacerbated in light atoms like $^{4}$He, whereas it would be suppressed by a $\sim500$-fold in $^{87}$Rb experiments \cite{Makotyn14} because the acceleration scales with $1/m^2$.
-	
+	Moreover, an atom inside the BEC experiences an effective force from the gradient of the mean-field potential $\textbf{F} = -4\pi\hbar^2 m^{-1}a \nabla  n(x)$. 
+	This endows escaping depleted particles with a greater momentum, increasing the amplitude of the tails in the far-field. 
 	Further, it is much easier for depletion atoms to escape and be accelerated in the transverse x-y directions from an elongated cloud because the distances $R_{TF}=\frac{1}{\omega}\sqrt{2gn_0/m}$ are reduced by $\bar{\omega}/\omega_{x,y}$, whereas the initial mean depletion velocities \textit{in situ} $v\sim \sqrt{2gn_0/m}$ are isotropic.
 	Indeed, spherical clouds (SE) exhibit a much weaker effect than the elongated clouds (CE) owing to the longer escape time.
-	This also presents as an increase in $C_\textrm{sim}$ for smaller collection regions.
-	
+	This also presents as an increase in $C_\textrm{sim}$ \blu{and $\mathcal{A}_{\rm sim}$ for} collection regions \blu{with a higher $\phi_c$}. 
 	The statistical uncertainty in the experimental findings preclude a definitive comparison on this particular point.
+	% This effect is exacerbated in light atoms like $^{4}$He, whereas it would be suppressed by a $\sim500$-fold in $^{87}$Rb experiments \cite{Makotyn14} because the acceleration scales with $1/m^2$. 
 
 	The interpretation just described is supported by another observation within the simulations:
-	During the expansion we observe a decrease in the total number of depleted particles (reabsorption) and a simultaneous increase of the large-k population (forcing).
-	
-	This constitutes a partial explanation of the experimenal findings too, and results in tail amplitudes which are consistent with the quantum depletion multiplied by a constant factor.
-	
+	During the expansion we observe a decrease in the total number of depleted particles (reabsorption) and a simultaneous increase of the large-k population (forcing). 
+	This \blu{also corroborates the above interpretation} %constitutes a partial explanation 
+	of the experimental findings, and results in tail amplitudes which are consistent with the quantum depletion multiplied by a constant factor. 
 	However, a mystery remains: Why is there an excess of particles in the depletion region which is so much greater than accounted for by this picture? 
-	This issue should be resolved if far-field observations are to be interpreted in terms of the in-trap physics of interest.
-	
+	This issue should be resolved if far-field observations are to be interpreted in terms of the in-trap physics of interest. 
 	
 	As we discussed, our systematic uncertainties are unable to account for the observed excess population of the quantum-depleted tails.
-	Futher, despite the ultracold clouds being realized at finite temperatures, the thermal population of quasiparticles cannot account for the observed counts.
-	
-	The thermal quasiparticles in the Bogoliubov picture simply reflect a change of basis which maps identically onto the thermal population of constituent particles \footnote{See, for example, \cite{PethickSmith} Chap.
-	8.3.}.
-	
-	Quasiparticles whose wavenumber exceeds that of the speed of sound lie within the particle-like branch of the bogoliubov spectrum, which for our considerations is on the order of $k\gtrsim2~\micron^{-1}$, well within the thermal velocities.
-	
-	Hence, given the exponential decay of thermally populated states, the large-$k$ tails are unambiguously \emph{not} thermal effects.
-	
+	Futher, despite the ultracold clouds being realized at finite temperatures, the thermal population of quasiparticles cannot account for the observed counts. 
+	The thermal quasiparticles in the Bogoliubov picture simply reflect a change of basis which maps onto the thermal population of constituent particles of the same momentum \footnote{See, for example, \cite{PethickSmith} Chap. 8.3. or \cite{Vogels02}}. 
+	Quasiparticles whose wavenumber exceeds that of the speed of sound lie within the particle-like branch of the Bogoliubov spectrum, which for our considerations is on the order of $k\gtrsim2~\micron^{-1}$, well within the thermal velocities. \blu{Therefore the phonon/particle changeover is not responsible for the inflections seen at much higher $k$ in Fig.~\ref{fig:contact_determination_issues}(a).} 
+	Hence, given the doubly-exponential decay of thermally populated states, the large-$k$ tails are unambiguously \emph{not} thermal effects. 
 
-	In conclusion, our work expands the growing suite of far-field investigations of quantum depletion \cite{Cayla20,Chang16} and confirms that quantum depletion can, remarkably, survive past the lifetime of its original condensate.
-	
-	Our simulations clarify how the depletion can be visible in the far-field momentum distribution here and in earlier experiments, and that the hydrodynamic approximation does not capture sufficient short-wavelength information to make detailed predictions about the high-momentum behaviour.
-	
-	We thus find a partial explanation for the deviation of the far-field distribution from both the predicted in-situ depletion and the hydrodynamic reabsorption: The interplay between coherent absorption of Bogoliubov excitations and the dispersal of the chemical potential into kinetic energy, to which helium is particularly sensitive, result in a growth of the $k^{-4}$ tails of the momentum distribution during freefall.
-	
-
-	It would be informative to determine whether the outstanding discrepancy originates in the trapped condensate or is due to some unknown non-equilibrium effect during expansion.
-	This question invites complementary studies of the \emph{in situ} depletion in \mhe BECs.
-	
+	The utility and ubiquity of far-field imaging (including in MCP-DLD setups using helium) stems from the relative simplicity of implementation and interpretation.
+	A systematic deviation from the expected \emph{in-situ} amplitude of the high-$k$ tails could mean that such techniques are not the appropriate tool to study the details of the quantum-depleted momentum distribution.
+	It is plausible that meaningful inferences about the in-trap physics could follow from  a better understanding of the mechanism underlying the anomaly.
+	Toward this, it would be informative to determine whether the outstanding discrepancy originates in the trapped condensate or is due to some unknown non-equilibrium effect during expansion.
+	This question invites complementary studies of the \emph{in situ} depletion in \mhe BECs. 
 	Such an investigation requires an \emph{in situ} probe of the contact, such as RF spectroscopy or Bragg spectroscopy.
-	The latter may be the most fruitful of the two simply because of the difficulty of interpreting the results from the former, which we sketch here.
+	The latter may be the most fruitful of the two simply because of the difficulty of interpreting the results from the former, which we sketch here. 
 	
-	
-	The basic principle of RF contact spectroscopy is to apply a monochromatic RF probe which is detuned from the resonance between two spin states, coupling atoms in the initial spin state to an untrapped channel.
-	
+	The basic principle of RF contact spectroscopy is to apply a monochromatic RF probe which is detuned from the resonance between two spin states, coupling atoms in the initial spin state to an untrapped channel. 
 	One then performs a differential measurement of the atom number and expects the signal strength to scale as $\omega_\textrm{RF}^{3/2}$ with the detuning from the RF resonance.
-	The loss rate is also proportional to the difference of reciprocal scattering lengths $\Gamma\propto(1/a_\textrm{i,i}-1/a_\textrm{i,f})$ between pairs of atoms in initial-initial ($a_{i,i}$) and initial-final ($a_{i,f}$) spin states \cite{Braaten10,Wild12}.
-	
-	For He$^*$ (spin 1) the scattering lengths $a_{1,1}$ and $a_{1,0}$ are identical \cite{Leo01}, rendering the preferred $m_J=1-m_J=0$ transition unusable.
-	
-	On the other hand, $a_{1,-1} = 3/7 a_{1,1}$ \cite{Vassen16}, and the singlet transition can be driven without populating the $m_J=0$ state.
-	
-	In principle this could produce a detectable flux of atoms to perform sensitive in-trap contact measurements, however, collisions in the $^1\Sigma_{g}^{+}$ channel have large Penning ionization rates which lead to significant trap losses \cite{Leo01}.
-	
-	The ionization products would be detectable by in-vacuum channel electron multipliers but require theoretical work to disentangle from the spectroscopic signal.
-	
-	Further, while other atomic species offer Feshbach resonances by which to tune the inter-species scattering length (and hence signal or ionization rate), \mhe has no such feature.
-	
+	The loss rate is also proportional to the difference of reciprocal scattering lengths $\Gamma\propto(1/a_\textrm{i,i}-1/a_\textrm{i,f})$ between pairs of atoms in initial-initial ($a_{i,i}$) and initial-final ($a_{i,f}$) spin states \cite{Braaten10,Wild12}. 
+	For He$^*$ (spin 1) the scattering lengths $a_{1,1}$ and $a_{1,0}$ are identical \cite{Leo01}, rendering the preferred $m_J=1-m_J=0$ transition unusable. 
+	On the other hand, $a_{1,-1} = 3/7 a_{1,1}$ \cite{Vassen16}, and the singlet transition can be driven without populating the $m_J=0$ state. 
+	In principle this could produce a detectable flux of atoms to perform sensitive in-trap contact measurements, however, collisions in the $^1\Sigma_{g}^{+}$ channel have large Penning ionization rates which lead to significant trap losses \cite{Leo01}. 
+	The ionization products would be detectable by in-vacuum channel electron multipliers but require theoretical work to disentangle from the spectroscopic signal. 
+	Further, while other atomic species offer Feshbach resonances by which to tune the inter-species scattering length (and hence signal or ionization rate), \mhe has no such feature. 
 	While such a measurement is not \emph{prima facie} impossible, Bragg spectroscopy may yield more readily interpretable results.
+
+	In conclusion, our work expands the growing suite of far-field investigations of quantum depletion \cite{Cayla20,Chang16}.
+	The inherent challenges of analysing heavy-tailed distributions make definitive comparison of the decay exponent impossible, but we find statistically robust evidence that the  quantum depletion can, remarkably, survive past the lifetime of its original condensate. 
+	Our simulations clarify how the depletion can be visible in the far-field momentum distribution here and in earlier experiments, and that the hydrodynamic approximation does not capture sufficient short-wavelength information to make detailed predictions about the high-momentum behaviour. 
+	We thus find a partial explanation for the deviation of the far-field distribution from both the predicted in-situ depletion and the hydrodynamic reabsorption: The interplay between coherent absorption of Bogoliubov excitations and the dispersal of the \blu{interaction energy} %chemical potential 
+	into kinetic energy result in a growth of the $k^{-4}$ tails of the momentum distribution during freefall. 
+
+	
 
 
 
@@ -975,7 +926,7 @@
 
 
 % % 	\begin{figure}[t]
-% % 	    \includegraphics[width=0.4\textwidth]{fig/depletion/main/exp_cartoon}
+% % 	    \includegraphics[width=0.4\textwidth]{fig/QD/main/exp_cartoon}
 % % 	    \caption{Sketch of experimental sequence.
 % 	A BEC is released from a harmonic trap with (a) and expands during freefall before being split into a superposition of the $m_J\in\{-1,0,1\}$ states (b) by an RF chirp.
 % 	A magnetic field gradient separates the clouds (c) ensuring that only the magnetically insentitive $m_J=0$ cloud lands on the detector (d), from which the momentum information is reconstructed.
@@ -989,7 +940,7 @@
 % % \section{Analysis} 
 
 % % 	\begin{figure}[t]
-% % 	        \includegraphics[width=0.5\textwidth]{fig/depletion/main/contact_determination_rev}
+% % 	        \includegraphics[width=0.5\textwidth]{fig/QD/main/contact_determination_rev}
 % % 	        \caption{The empirical density of particle momenta (a) for different peak densities, where fits to the thermal parts (dashed lines) display exponential decay, which give way to the depletion region, which decays appears to decay with $k^{-4}$ (grey dot-dashed line).
 	
 % % 	        In (b) we demonstrate the sensitivity of the fitting parameters to constraints in the power law.
@@ -1142,7 +1093,7 @@
 % 	What is surprising is that the amplitude is so much greater than expected, and so we turn to our simulations for further insight.
 	
 % % 	\begin{figure}[t]
-% % 	        \includegraphics[width=0.5\textwidth]{fig/depletion/main/results_comp}
+% % 	        \includegraphics[width=0.5\textwidth]{fig/QD/main/results_comp}
 % % 	        \caption{Comparison of simulations and experiments.
 % 	The inset is a zoomed view.
 % 	 From our empirical data (ED) we determine the empirical contact $C_\textrm{exp}$ which is linear in the product $N_0n_0$ (as predicted by Eqn.
@@ -1187,7 +1138,7 @@
 
 % % \begin{figure*}[!t]
 % % 	\begin{center}
-% % 		\includegraphics[width=\textwidth]{fig/depletion/main/frac_cal_profile}
+% % 		\includegraphics[width=\textwidth]{fig/QD/main/frac_cal_profile}
 % % 		\caption{Determining the RF transfer efficiency.
 % 	The time-of-flight profiles of each pulse are resolved (a) by applying a weak Stern-Gerlach pulse during the time of flight.
 % 	The pulses are aligned with respect their centre-of-mass (b) and used to determine the pointwise fraction ((c), dotted line).
@@ -1215,7 +1166,7 @@
 
 % % % 	\begin{figure}[!h]
 % % % 	\begin{center}
-% % % 		\includegraphics[width=0.8\textwidth]{fig/depletion/main/m1_frac_anal}
+% % % 		\includegraphics[width=0.8\textwidth]{fig/QD/main/m1_frac_anal}
 % % % 		\caption{Comparison of thermal fits in the unsaturated $m_J=-1$ pulse including 138 shots.
 % 	The weak (X) and strong horizontal (Y) trapping axes are shown in (a) and (b), respectively.
 % 	\org{would be helpful to label $v_x$ and $v_y$ to make it self-evident at 1st glance.} Both projections display a bimodal peak, with the condensate (dotted lines) and thermal parts (thick solid lines) easily distinguished.
@@ -1248,7 +1199,7 @@
 
 % %     \begin{figure}[!b]
 % % 	\begin{center}
-% % 		\includegraphics[width=\columnwidth]{fig/depletion/main/spinpop}
+% % 		\includegraphics[width=\columnwidth]{fig/QD/main/spinpop}
 % % 		\caption{Measured contribution of the detector dark counts and spurious spin counts to the time-of-flight profile.
 % 	We accounted for the pulse at around 550ms and subtracted it from the measured profiles when computing the contact.
 % 	After removing this background term, the density profiles above and below the condensate agree, indicating convergence on the true signal.
@@ -1259,7 +1210,7 @@
 
 % % 	% \begin{figure}[!h]
 % % 	% \begin{center}
-% % 	% 	\includegraphics[width=\textwidth]{fig/depletion/main/profile_overlay}
+% % 	% 	\includegraphics[width=\textwidth]{fig/QD/main/profile_overlay}
 % % 	% 	\caption{Comparison of average time-of-flight profiles over a single data run for the quantum depletion measurement shots (blue, 871 shots), transfer efficiency calibration (black, 112 shots), detector dark counts (red, 871 shots), and spurious counts (dot-dash, 895 shots).
 % 	The time window bounded by $|k|\leq 10\mu$m is indicated with dotted lines.
 % 	Shaded area is the standard error over the entire run.}
@@ -1276,7 +1227,7 @@
 
 % % % \begin{figure}
 % % % 	\centering
-% % % 	\includegraphics[width=0.5\textwidth]{fig/depletion/main/counts_per_run}
+% % % 	\includegraphics[width=0.5\textwidth]{fig/QD/main/counts_per_run}
 % % % 	\caption{Number of counts detected in the region of interest in the depletion measurement (a), the spin mixing calibration (b), and the dark count calibration (c).
 % 	An average of 3.0(5) counts were detected in the ROI in the spin-mixing calibration shot, and the background count rate was 0.4(2) counts per shot.
 % 	Separate lines indicate separate \emph{runs}, i.e.
@@ -1333,7 +1284,7 @@
 	
 
 % % 	\begin{figure}[t]
-% % 	        \includegraphics[width=0.5\textwidth]{fig/depletion/main/time_dep_theory}
+% % 	        \includegraphics[width=0.5\textwidth]{fig/QD/main/time_dep_theory}
 % % 	        \caption{Simulations of condensates released from a cigar-shaped trap show an increase in contact after the trap release, stabilizing after a time on the order of $1/\omega_x$, several hundred $\mu$s.
 % 	The relative difference between in-trap and expanded contact increases with the density of the condensate.
 % 	For comparison, the experimental control pulses are implemented after 2ms of expansion.
@@ -2078,7 +2029,7 @@
 % % % by operating at trapping frequencies $2\pi\cdot(45,425,425)$Hz and $2\pi\cdot(72,889,893)$Hz, and by varying both the thermal fraction and the total trapped population.
 
 % % \begin{figure}[b]
-% %     \includegraphics[width=0.4\textwidth]{fig/depletion/main/main/exp_cartoon}
+% %     \includegraphics[width=0.4\textwidth]{fig/QD/main/main/exp_cartoon}
 % %     \caption{Sketch of experimental sequence.
 % 	A BEC is releaed from a harmonic trap (a) and expands during freefall before being split into a superposition of the $m_J\in\{-1,0,1\}$ states (b) by an rf chirp.
 % 	A magnetic field gradient separates the clouds (c) ensuring that only the magnetically insentitive $m_J=0$ cloud lands on the detector (d), from which the momentum information is reconstructed.
@@ -2135,7 +2086,7 @@
 % 	The results of analysing our entire dataset are summarized in Table \ref{tab:results}.
 
 % % \begin{figure}[t]
-% %         \includegraphics[width=0.5\textwidth]{fig/depletion/main/main/contact_determination}
+% %         \includegraphics[width=0.5\textwidth]{fig/QD/main/main/contact_determination}
 % %         \caption{Number of atoms detected in the region of interest.
 % 	In (a), the mean of $N_{k_1,k_2}$ is shown for each run (solid lines), along with the predicted $\mathcal{N}_{k_1,k_2}$ (dotted lines), for fixed $k_2=10\micron^{-1}$.
 % 	The tail amplitude computed via Eqn.
@@ -2167,7 +2118,7 @@
 % 	constant model: 0.371, p-value = 0.559
     
 % % \begin{figure}[b]
-% %         \includegraphics[width=0.5\textwidth]{fig/depletion/main/main/contact_plot_with_theory}
+% %         \includegraphics[width=0.5\textwidth]{fig/QD/main/main/contact_plot_with_theory}
 % %         \caption{Comparison of simulations and experiments.
 % 	(a) The contact from empirical data (ED) exceeds the prediction by the Tan theory (TT), with trend (and 1$\sigma$ confidence interval) shown as a solid line (grey area).
 % 	The simulated contact of BECs in a cigar-shaped trap (CT) are consistent with (TT) before release but compare well with our measurements after expansion (CE).
@@ -2267,7 +2218,7 @@
 
 % % \begin{figure}[!h]
 % %     \centering
-% %     \includegraphics[width=0.7\textwidth]{fig/depletion/main/som/counts_per_run}
+% %     \includegraphics[width=0.7\textwidth]{fig/QD/main/som/counts_per_run}
 % %     \caption{Number of counts detected in the region of interest across in the depletion measurement (a), the spin mixing calibration (b), and the dark count calibration (c).
 % 	An average of 3.0(5) counts were detected in the ROI in the spin-mixing calibration shot, and the background count rate was 0.4(2) counts per shot.}
 % %     \label{fig:num_counts}
@@ -2303,7 +2254,7 @@
     
 % % \begin{figure}[!h]
 % %     \begin{center}
-% %         \includegraphics[width=0.7\textwidth]{fig/depletion/main/som/frac_cal_profile}
+% %         \includegraphics[width=0.7\textwidth]{fig/QD/main/som/frac_cal_profile}
 % %         \caption{Determining the rf transfer efficiency.
 % 	The time-of-flight profiles of each pulse are aligned with respect their centre-of-mass (a).
 % 	The pointwise fraction ((b), dotted line) is uniform where saturation is not evident (solid lines).
@@ -2321,7 +2272,7 @@
 
 % %     \begin{figure}[!h]
 % %     \begin{center}
-% %         \includegraphics[width=0.7\textwidth]{fig/depletion/main/som/m1_frac_anal}
+% %         \includegraphics[width=0.7\textwidth]{fig/QD/main/som/m1_frac_anal}
 % %         \caption{Comparison of thermal fits in the unsaturated $m_J=-1$ pulse including 138 shots.
 % 	The weak (X) and strong horizontal (Y) trapping axes are shown in (a) and (b), respectively.
 % 	Both projections display a bimodal peak, with the condensate (dotted lines) and thermal parts (thick solid lines) easily distinguished.
@@ -2343,7 +2294,7 @@
 
 % %     % \begin{figure}[!h]
 % %     % \begin{center}
-% %     %   \includegraphics[width=\textwidth]{fig/depletion/main/som/profile_overlay}
+% %     %   \includegraphics[width=\textwidth]{fig/QD/main/som/profile_overlay}
 % %     %   \caption{Comparison of average time-of-flight profiles over a single data run for the quantum depletion measurement shots (blue, 871 shots), transfer efficiency calibration (black, 112 shots), detector dark counts (red, 871 shots), and spurious counts (dot-dash, 895 shots).
 % 	The time window bounded by $|k|\leq 10\mu$m is indicated with dotted lines.
 % 	Shaded area is the standard error over the entire run.}
@@ -2380,7 +2331,7 @@
 
 % %     \begin{figure}[!h]
 % %     \centering
-% %         \includegraphics[width=0.7\textwidth]{fig/depletion/main/som/pal_shot}
+% %         \includegraphics[width=0.7\textwidth]{fig/QD/main/som/pal_shot}
 % %         \caption{A kicked pulsed atom laser with motion sampled at 11ms intervals.
 % 	The oscillations in the centre-of-mass position of each pulse are shown along the Y axis over time (a).
 % 	The apparent frequency can be determined for each axis (b).
@@ -2412,7 +2363,7 @@
 	
 % % \begin{figure}[!h]
 % %     \centering
-% %         \includegraphics[width=0.7\textwidth]{fig/depletion/main/som/sawtooth_plot}
+% %         \includegraphics[width=0.7\textwidth]{fig/QD/main/som/sawtooth_plot}
 % %         \caption{Aliasing of the trap frequency oscillations under different sampling regimes.
 % 	The fitted oscillation frequency is shown in each axis for a range of sampling frequencies.
 % 	The sawtooth function is a one-parameter fit which determines the underlying frequency of the centre-of-mass oscillations.}
@@ -2596,11 +2547,11 @@
 
 
 % %     \begin{figure}
-% %     \includegraphics[width=\textwidth]{fig/depletion/main/partition_QD_files_profile_overlay_st.eps}
+% %     \includegraphics[width=\textwidth]{fig/QD/main/partition_QD_files_profile_overlay_st.eps}
 % %     \label{fig:qd-tof1}
 % %     \end{figure}
 % %     \begin{figure}
-% %     \includegraphics[width=\textwidth]{fig/depletion/main/partition_QD_files_profile_overlay_hf.eps}
+% %     \includegraphics[width=\textwidth]{fig/QD/main/partition_QD_files_profile_overlay_hf.eps}
 % %     \end{figure}
 
 % % \subsubsection{Peak density}
@@ -2623,7 +2574,7 @@
 	
 
 % %     \begin{figure}
-% %     \includegraphics[width=\textwidth]{fig/depletion/main/calibrate_QD_shots_01_stats.eps}
+% %     \includegraphics[width=\textwidth]{fig/QD/main/calibrate_QD_shots_01_stats.eps}
 % %     \label{fig:qd-n0_by_time}
 % %     \caption
 % %     \title
@@ -2689,7 +2640,7 @@
 % 	Further, the uniformity of the determined ratio across the thermal fraction is evidence that the RF transfer efficiency is independent of the particle momentum.
 
 % %     \begin{figure}
-% %     \includegraphics[width=\textwidth]{fig/depletion/main/frac_cal.eps}
+% %     \includegraphics[width=\textwidth]{fig/QD/main/frac_cal.eps}
 % %     \label{fig:qd-fraction_calibration}
 % %     \caption
 % %     \title

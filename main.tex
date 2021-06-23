@@ -1,4 +1,9 @@
-\documentclass[twoside]{book} % report offers chapter and abstract. book does not offer abstract. https://tex.stackexchange.com/questions/36988/regarding-the-book-report-and-article-document-classes-what-are-the-mai
+\documentclass[12pt,a4paper,twoside]{book} 
+%  Formatting guidelines:
+% https://policies.anu.edu.au/ppl/document/ANUP_012815 
+% Should fix margins for printing
+
+% report offers chapter and abstract. book does not offer abstract. https://tex.stackexchange.com/questions/36988/regarding-the-book-report-and-article-document-classes-what-are-the-mai
 % However, book offers other nice things like openright and twoside, so the Abstract environment might well be defined manually instead (or change the class file)
 % For initial writing, will use report to get everything working, then consider porting to book for the nicer formatting.
 \usepackage{thesis_style}
@@ -14,32 +19,32 @@
 % % \include{latex/mtodo}
 % 	% \myemptypage
 
-% \frontmatter
-% \include{latex/00_frontmatter}
-% \include{latex/01_abstract}
+\frontmatter
+\include{latex/00_frontmatter}
+\include{latex/01_abstract}
 \setcounter{tocdepth}{1}
 \tableofcontents
 
 \mainmatter
 
-% \include{latex/10_overview}
+\include{latex/10_overview}
 
-% \part{Background and technical introduction}
-% \include{latex/11_introduction}
+\part{Background and technical introduction}
+\include{latex/11_introduction}
 \include{latex/12_apparatus}
-% \include{latex/13_lattice_build}
+\include{latex/13_lattice_build}
 
-% \part{Laser spectroscopy of Helium}
-% \include{latex/20_metrology}
-% \include{latex/21_transitions}
-% \include{latex/22_tuneout}
+\part{Laser spectroscopy of Helium}
+\include{latex/20_metrology}
+\include{latex/21_transitions}
+\include{latex/22_tuneout}
 
-% \part{Many-body physics in ultracold gases}
+\part{Many-body physics in ultracold gases}
 % \include{latex/30_manybody}
-% \include{latex/31_depletion}
+\include{latex/31_depletion}
 
-% \chapter{Conclusion}
-% \include{latex/40_conclusion}
+
+\include{latex/40_conclusion}
 
 
 \backmatter

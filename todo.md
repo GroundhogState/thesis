@@ -1,28 +1,8 @@
 To-do list:
-# 00_abstract.tex
-	[] Write abstract
-	[] Ensure list is up to date
-# 00_frontmatter.tex
-	[] Acknolwedgements
-# 10_overview.tex
-	[] Make sensible; precis = thesis outline
-	[] Prologue = context/history of the field/where this thesis fits in
 # 11_introduction.tex
 	[] Waiting for Andrew comments
 # 12_apparatus.tex
 	[] These are wrong, will fix
-# 12_apparatus_test.tex
-	[] Fix references; generally a big task. Standardize citation formats with py script?
-	[] Whenever a general discussion is presented, ensure it closes with a direct connection to the experiment with adequate specifications.
-	[] Properly caption this figure
-	[] check math. Include specific laser intensities/detunings for some parts of the experiment.
-	[] this; dig out zeeman code
-	[] Is it just a pair of coils? I thought there was one on each window...
-	[] how to get number from sat fluro
-	[] Define far-field.
-	[] Caption this figure and link with the text. Add pictures of detector elsewhere.
-	[] Maybe include a figure showing this dark rate?
-	[] So what parameters do we use for our atom lasers then?  All this background is fine, but in a chapter on the experiment you need some more details of what our system actually has
 # 13_lattice_build.tex
 	[] Find the balance between digression (for motivation's sake) and cohesion with the Overview chapter
 	[] Heavy edits on motivation
@@ -45,6 +25,7 @@ To-do list:
 	[] Possibly don't need this section. But could pare down significantly to give context. Just need to discuss the QD chapter.
 	[] How would you observe this?  What would it look like?
 # 31_depletion.tex
+	[] Cite paper
 	[] Density plots out to larger $|k|$ to show descent into noise floor? How far could we push it until we hit dark counts?
 	[] cite more experiments
 	[] Density plots out to larger $|k|$ to show descent into noise floor? How far could we push it until we hit dark counts?

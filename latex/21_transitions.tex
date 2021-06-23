@@ -25,6 +25,7 @@
 % https://www.sciencedirect.com/science/article/abs/pii/S0009261421003237
 %  doubly excited states of He
 \chapter{Frequency measurements of transitions between the $n=2$ and $n=5$ manifolds in $^4$He}
+\markboth{\thechapter. TRANSITION FREQUENCY MEASUREMENTS}{}
 \label{chap:transitions}
 \todo{Shorter title or fix page headers}
 \todo{Put figures in the right place}
@@ -47,7 +48,7 @@ We perform laser absorption spectroscopy with ultracold $^4$He atoms to measure 
 
 \section{Introduction}
 
-  \dropcap{The} appearance of ordinary matter arises from interactions between charged particles and light.
+  {The} appearance of ordinary matter arises from interactions between charged particles and light.
 	This phenomenon is the domain of the theory of quantum electrodynamics (QED), which provides the most accurate quantitative predictions of any physical theory to date.
 	The theory of QED is the workhorse of modern atomic structure calculations, whose only inputs are the CODATA values of three physical constants: the proton-electron mass ratio, the Rydberg constant, and the fine structure constant $\alpha$.
 	These constants of nature can be constrained with state-of-the-art atomic spectroscopy, which is accurate enough to match theoretical uncertainties in table-top experiments.
@@ -61,7 +62,7 @@ We perform laser absorption spectroscopy with ultracold $^4$He atoms to measure 
 	Measurements of the $2^{3\!}P_1-2^{3\!}P_2$ interval by Kato \emph{et al.}, accurate to 25Hz, would constrain $\alpha$ to less than one ppb given a similarly accurate measurement of the $2^{3\!}P_0 - 2^{3\!}P_1$ transition and QED calculations including terms of order $\alpha^7$ \cite{Kato18}.
 	
 
-  \begin{figure}[b]
+  \begin{figure}
       \centering
       \includegraphics[width=0.45\textwidth]{fig/spectroscopy/level-diagram-tight-latex-pdf.pdf}
       \caption{Energy level diagram for the helium atom.
@@ -134,16 +135,31 @@ Alternatively, atoms may decay to other untrapped magnetic states of the metasta
 	In both cases a photon scattering signal clearly manifests in the reduction of the total trapped final number $N$ relative to the final number $N_c$ in calibration shots.
 	We define our signal to be the relative number loss $(N_c-N)/N_c$ to compensate for drift in the trap population over time.
 
-
-
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.5\textwidth]{fig/spectroscopy/ci-plot-51D2-eps-converted-to.pdf}
-    \caption{Line profile for the spin-forbidden $\PStateManifold_2 -  5^{1\!}D_2$ transition, showing normalized atom number loss versus probe laser frequency $\nu$, as measured in an {16.8(1)}G (red) and {10.06(7)}G (blue) background field, with Lorentzian fits (black dotted line, with prediction confidence interval shaded).
+\begin{figure}
+  \begin{minipage}[t]{0.6\textwidth}
+  \vspace{0pt}
+        \includegraphics[width=\textwidth]{fig/spectroscopy/ci-plot-51D2-eps-converted-to.pdf}
+    \includegraphics[width=\textwidth]{fig/spectroscopy/ci-plot-53S1}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.38\textwidth}
+  \vspace{0pt}
+   \caption{Line profile for the spin-forbidden $\PStateManifold_2 -  5^{1\!}D_2$ and the $2\triplet P_2 - 5\triplet S_1$ resonances, showing normalized atom number loss versus probe laser frequency $\nu$, as measured in an {16.8(1)}G (red) and {10.06(7)}G (blue) background field, with Lorentzian fits (black dotted line, with prediction confidence interval shaded).
 	Error bars account for detector efficiency and calibration model uncertainty.
 	For comparison, theoretical predictions (vertical bars) Zeeman shifted from the predicted zero-field value \cite{Drake07} according to the field calibration, whose uncertainty (shaded width) is dominated by background field measurements.}
     \label{fig:1D_2_line}
-  \end{figure}
+  \end{minipage}
+\end{figure}
+
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.66\textwidth]{fig/spectroscopy/ci-plot-51D2-eps-converted-to.pdf}
+%     \includegraphics[width=0.66\textwidth]{fig/spectroscopy/ci-plot-53S1}
+%     \caption{Line profile for the spin-forbidden $\PStateManifold_2 -  5^{1\!}D_2$ and the $2\triplet P_2 - 5\triplet S_1$ resonances, showing normalized atom number loss versus probe laser frequency $\nu$, as measured in an {16.8(1)}G (red) and {10.06(7)}G (blue) background field, with Lorentzian fits (black dotted line, with prediction confidence interval shaded).
+% 	Error bars account for detector efficiency and calibration model uncertainty.
+% 	For comparison, theoretical predictions (vertical bars) Zeeman shifted from the predicted zero-field value \cite{Drake07} according to the field calibration, whose uncertainty (shaded width) is dominated by background field measurements.}
+%     \label{fig:1D_2_line}
+%   \end{figure}
 
 
 % Laser
@@ -181,13 +197,13 @@ We correct for the linear Zeeman shift to estimate the field-free transition fre
 	\ref{tab:results}) are consistent with current predictions \cite{Drake07} within $2\sigma$ after accounting for all systematic uncertainties (Tab.
 	\ref{tab:errors}).
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.48\textwidth]{fig/spectroscopy/ci-plot-53S1-eps-converted-to.pdf}
-    \caption{Measured atom loss versus laser frequency for the $2\triplet P_2 - 5\triplet S_1$ resonance in comparison to Zeeman-shifted predictions \cite{Drake07}, shown as for Fig.
-	\ref{fig:1D_2_line}}
-    \label{fig:5_3S_1}
-\end{figure}
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.48\textwidth]{fig/spectroscopy/ci-plot-53S1-eps-converted-to.pdf}
+%     \caption{Measured atom loss versus laser frequency for  resonance in comparison to Zeeman-shifted predictions \cite{Drake07}, shown as for Fig.
+% 	\ref{fig:1D_2_line}}
+%     \label{fig:5_3S_1}
+% \end{figure}
 
 \section{5$\triplet$D fine structure}
 
@@ -219,17 +235,26 @@ which minimizes the squared error between observed and predicted transition freq
 \end{equation}
 %
 
-\begin{figure}[t]
-  \includegraphics[width=0.5\textwidth]{fig/spectroscopy/ci-plot-53D-eps-converted-to.pdf}
-  \caption{Line profiles for the $\PStateManifold_2 -  5^{3\!}D$ transitions, shown as for Figs.
+\begin{figure}
+	\centering
+	\includegraphics[width=\textwidth]{fig/spectroscopy/ci-plot-53D}
+   \caption{Line profiles for the $\PStateManifold_2 -  5^{3\!}D$ transitions, shown as for Figs.
 	\ref{fig:1D_2_line} and \ref{fig:5_3S_1}.
 	The normalized loss is shown versus probe laser frequency for the two different field strengths with a common horizontal scale.
 	Theory lines indicate predictions from \cite{Drake07} after applying the relevant Zeeman shift.
-	N.B.
-	the scale break here and in Fig.
-	\ref{fig:fitting_3D} coincide.}
-  \label{fig:combined_5D_lines}
+	N.B.	the scale break here and in Fig.	\ref{fig:fitting_3D} coincide.}
+    \label{fig:combined_5D_lines}
 \end{figure}
+
+% \begin{figure}
+%   \includegraphics[width=0.5\textwidth]{fig/spectroscopy/ci-plot-53D-eps-converted-to.pdf}
+%   \caption{Line profiles for the $\PStateManifold_2 -  5^{3\!}D$ transitions, shown as for Figs.
+% 	\ref{fig:1D_2_line} and \ref{fig:5_3S_1}.
+% 	The normalized loss is shown versus probe laser frequency for the two different field strengths with a common horizontal scale.
+% 	Theory lines indicate predictions from \cite{Drake07} after applying the relevant Zeeman shift.
+% 	N.B.	the scale break here and in Fig.	\ref{fig:fitting_3D} coincide.}
+%   \label{fig:combined_5D_lines}
+% \end{figure}
 
 %
 where $\hat{\mu}_z = \mu_B(\hat{L}_z + g_s \hat{S}_z)/\hbar$ is the coupling of the orbital and spin angular momenta of the electron with a magnetic field of strength B pointing in the $z$-direction, $\mu_B$ is the Bohr magneton and $g_s$ is the electron spin $g$-factor.
@@ -256,31 +281,40 @@ where $C_{J,m_L} = \langle LSJ m_J|L m_L S m_S\rangle$ is shorthand for the Cleb
 %
 %
 
-\begin{table*}[t]
+\begin{table*}
+\centering
+  % \begin{tabular}{c c c c c c c c c c c}
+  %     \hline\hline
+  %     Transition                        & &  $f_\textrm{exp}$ & &  $f_\textrm{theory}$ & Ref.
+		% &  $f_\textrm{exp}-f_\textrm{theory}$      & &  $\textrm{FWHM}_{\textrm{exp}}$  & &  $\textrm{FWHM}_{{\textrm{pred}}}$ \\
+  %     \hline
+  %       $2\triplet P_2 - 5^3\mathrm{S}_1$ & &  {727,303,248(3)} & &  727,303,244.6(4)   & \cite{Drake07} &  {3(3)}    & &  3.4(5)  & &  1.5\\ % A = 
+  %       $2\triplet P_2 - 5^3\mathrm{D}_1$ & &  {744,396,496(7)} & &  744,396,511.1(7)   & \cite{Yerokhin20} &  {-16(7)}    & &  5.8(6)  & &  2.6\\
+  %       $2\triplet P_2 - 5^3\mathrm{D}_2$ & &  {744,396,220(7)} & &  744,396,227.6(7)   & \cite{Yerokhin20} &  {-8(7)}    & &  4.2(5)  & &  2.6\\
+  %       $2\triplet P_2 - 5^3\mathrm{D}_3$ & &  {744,396,194(7)} & &  744,396,208.3(7)   & \cite{Yerokhin20} &  {-14(7)}    & &  4.0(1)  & &  2.6\\
+  %       $2\triplet P_2 - 5^1\mathrm{D}_2$ & &  {744,430,343(7)} & &  744,430,343.1(7)   & \cite{Yerokhin20} &  {0(7)}    & &  3.2(1)  & &  2.2\\  % 744430344
+  %     \hline\hline
+  %   \end{tabular}
+
+    \begin{tabular}{c c c c c c c c c c c}
+      \hline\hline
+      Transition                        &  $f_\textrm{exp}$ &  $f_\textrm{theory}$ & Diff.
+		  &  $\textrm{FWHM}_{\textrm{exp}}$  &  $\textrm{FWHM}_{{\textrm{pred}}}$ \\
+      \hline
+        $2\triplet P_2 - 5^3\mathrm{S}_1$ &  {727,303,248(3)} &   727,303,244.6(4)   &  {3(3)}      &  3.4(5)  &  1.5\\ % A = 
+        $2\triplet P_2 - 5^3\mathrm{D}_1$ &  {744,396,496(7)} &   744,396,511.1(7)   &  {-16(7)}     &  5.8(6)  &  2.6\\
+        $2\triplet P_2 - 5^3\mathrm{D}_2$ &  {744,396,220(7)} &   744,396,227.6(7)   &  {-8(7)}      &  4.2(5)  &  2.6\\
+        $2\triplet P_2 - 5^3\mathrm{D}_3$ &  {744,396,194(7)} &   744,396,208.3(7)   &  {-14(7)}     &  4.0(1)  &  2.6\\
+        $2\triplet P_2 - 5^1\mathrm{D}_2$ &  {744,430,343(7)} &   744,430,343.1(7)   &  {0(7)}      &  3.2(1)  &  2.2\\  % 744430344
+      \hline\hline
+    \end{tabular}
 \caption{Summary of results for each transition.
 	After correcting for the AOM and vapor cell shifts we extract the centre frequencies from Lorentzian fits with statistical error at the $10\textrm{kHz}$ level.
 	We obtain the field-free energies after correcting for Zeeman shifts, shown with theoretical predictions in the row below.
 	We show the difference between our measurements and theoretical predictions for direct comparison.
 	Observed full width at half maximum line widths (FWHM) of the Lorentzian fit to each line are shown in comparison to predicted linewidths as given in \cite{Drake07}.
+	$f_\textrm{theory}$ for the $2\triplet P_2 - 5^3\mathrm{S}_1$ line comes from \cite{Drake07}, all others from \cite{Yerokhin20}
 	All values are in MHz with uncertainty in the final digit in parentheses.}
-        \begin{tabular}{c c c c c c c c c c c}
-      \hline\hline
-      Transition                        & &  Frequency $f_\textrm{exp}$ & &  Frequency $f_\textrm{theory}$ & Ref.
-	&  $f_\textrm{exp}-f_\textrm{theory}$      & &  $\textrm{FWHM}_{\textrm{exp}}$  & &  $\textrm{FWHM}_{{\textrm{pred}}}$ \\
-      \hline
-        $2\triplet P_2 - 5^3\mathrm{S}_1$ & &  {727,303,248(3)} & &  727,303,244.6(4)   & \cite{Drake07} &  {3(3)}    & &  3.4(5)  & &  1.5\\ % A = 
-        $2\triplet P_2 - 5^3\mathrm{D}_1$ & &  {744,396,496(7)} & &  744,396,511.1(7)   & \cite{Yerokhin20} &  {-16(7)}    & &  5.8(6)  & &  2.6\\
-        $2\triplet P_2 - 5^3\mathrm{D}_2$ & &  {744,396,220(7)} & &  744,396,227.6(7)   & \cite{Yerokhin20} &  {-8(7)}    & &  4.2(5)  & &  2.6\\
-        $2\triplet P_2 - 5^3\mathrm{D}_3$ & &  {744,396,194(7)} & &  744,396,208.3(7)   & \cite{Yerokhin20} &  {-14(7)}    & &  4.0(1)  & &  2.6\\
-        $2\triplet P_2 - 5^1\mathrm{D}_2$ & &  {744,430,343(7)} & &  744,430,343.1(7)   & \cite{Yerokhin20} &  {0(7)}    & &  3.2(1)  & &  2.2\\  % 744430344
-        % $2\triplet P_2 - 5^3\mathrm{S}_1$ & &  727,303,250(2) & &  727,303,244.6(4)   & \cite{Drake07} &    5(2)    & &  3.4(5)  & &  1.5\\ % A = 
-        % $2\triplet P_2 - 5^3\mathrm{D}_1$ & &  744,396,497(7) & &  744,396,511.1(7)   & \cite{Yerokhin20} &  -14(7)    & &  5.8(6)  & &  2.6\\
-        % $2\triplet P_2 - 5^3\mathrm{D}_2$ & &  744,396,218(7) & &  744,396,227.6(7)   & \cite{Yerokhin20} &  -10(7)    & &  4.2(5)  & &  2.6\\
-        % $2\triplet P_2 - 5^3\mathrm{D}_3$ & &  744,396,200(7) & &  744,396,208.3(7)   & \cite{Yerokhin20} &   -8(7)    & &  4.0(1)  & &  2.6\\
-        % $2\triplet P_2 - 5^1\mathrm{D}_2$ & &  744,430,347(7) & &  744,430,343.1(7)   & \cite{Yerokhin20} &    4(7)    & &  3.2(1)  & &  2.2\\  % 744430344
-      \hline\hline
-    \end{tabular}
-  
   \label{tab:results}
 \end{table*}
 The solution of Eqn.
@@ -295,26 +329,68 @@ The solution of Eqn.
 	\ref{tab:errors}).
 	
 
-\begin{figure}[t]
-    \centering
-    \includegraphics[width=0.48\textwidth]{fig/spectroscopy/fitting-lines-eps-converted-to.pdf}
-    \caption{Determining the $5\triplet D$ fine-structure splitting.
+
+% \usepackage{floatrow}
+
+
+
+% \begin{figure}
+% \floatbox[{\capbeside\thisfloatsetup{capbesideposition={left,top},capbesidewidth=4cm}}]{figure}[\FBwidth]
+% {\caption{A test figure with its caption side by side}\label{fig:test}}
+% {\includegraphics[width=5cm]{name}}
+% \end{figure}
+
+% \begin{figure}
+% \floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top},capbesidewidth=4cm}}]{figure}[\FBwidth]
+% {\caption{A test figure with its caption side by side}\label{fig:test}}
+% {\includegraphics[width=5cm]{name}}
+% \end{figure}
+
+
+\begin{figure}
+\centering
+	\includegraphics[width=0.8\textwidth]{fig/spectroscopy/fitting-lines}
+	\caption{Determining the $5\triplet D$ fine-structure splitting.
 	The values for the $|J,m_J\rangle=5\triplet D_J(m_J)$ levels (grey lines) at $B=0$ are fixed by solving the optimization problem (Eqn.
 	\ref{eqn:opt-problem}), constrained by the fitted peak centres (filled circles).
 	The saturated peaks are not used to constrain the levels, but are shown with hollow circles and the corresponding frequencies predicted by our method are shown in dotted lines.}
     \label{fig:fitting_3D}
 \end{figure}
 
+
+% \begin{figure}
+% 	\begin{minipage}[t]{0.38\textwidth}
+% 			\vspace{0pt}
+% 			\caption{Determining the $5\triplet D$ fine-structure splitting.
+% 	The values for the $|J,m_J\rangle=5\triplet D_J(m_J)$ levels (grey lines) at $B=0$ are fixed by solving the optimization problem (Eqn.
+% 	\ref{eqn:opt-problem}), constrained by the fitted peak centres (filled circles).
+% 	The saturated peaks are not used to constrain the levels, but are shown with hollow circles and the corresponding frequencies predicted by our method are shown in dotted lines.}
+%     \label{fig:fitting_3D}
+% 	\end{minipage}\hfill
+% 	\begin{minipage}[t]{0.6\textwidth}
+% 		\vspace{0pt}
+% 		\includegraphics[width=\textwidth]{fig/spectroscopy/fitting-lines-eps-converted-to.pdf}
+% 	\end{minipage}
+
+% \end{figure}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.48\textwidth]{fig/spectroscopy/fitting-lines-eps-converted-to.pdf}
+%     \caption{Determining the $5\triplet D$ fine-structure splitting.
+% 	The values for the $|J,m_J\rangle=5\triplet D_J(m_J)$ levels (grey lines) at $B=0$ are fixed by solving the optimization problem (Eqn.
+% 	\ref{eqn:opt-problem}), constrained by the fitted peak centres (filled circles).
+% 	The saturated peaks are not used to constrain the levels, but are shown with hollow circles and the corresponding frequencies predicted by our method are shown in dotted lines.}
+%     \label{fig:fitting_3D}
+% \end{figure}
+
 \section{Shifts, broadening, and errors}
 
-\begin{table}[b]
-\caption{Error budget for the determination of the peak centre frequencies.
-	 The master laser for our pump beam is described in \cite{Shin16}.
-	AOM stabilities were checked with an RF spectrum analyser.
-	See \cite{Thomas20} for measurement of the Cesium cell shift and probe beam lock drift.
-	The shift and uncertainty from the Zeeman shift (ZS) varies between the lines, so these contributions are omitted from the total.
-	All values are in MHz.}
-  \label{tab:errors}
+
+
+
+\begin{table}
+\centering
   \begin{tabular}{c c c}
       \hline\hline
           Source & Shift & Broadening  \\
@@ -334,6 +410,13 @@ The solution of Eqn.
           \textbf{Total} (all other levels) & -190.9(6.7)+ZS& 2.2\\
       \hline\hline
   \end{tabular}
+\caption{Error budget for the determination of the peak centre frequencies.
+	 The master laser for our pump beam is described in \cite{Shin16}.
+	AOM stabilities were checked with an RF spectrum analyser.
+	See \cite{Thomas20} for measurement of the Cesium cell shift and probe beam lock drift.
+	The shift and uncertainty from the Zeeman shift (ZS) varies between the lines, so these contributions are omitted from the total.
+	All values are in MHz.}
+  \label{tab:errors}
   
 \end{table}
 
@@ -374,17 +457,31 @@ The Zeeman shift of the $2\triplet P_2 - 5L, L\neq D$ transitions by is given by
 For the $5\triplet D$ states, we varied the input magnetic field constraints within the range of experimental uncertainty ($0.3$G) to estimate the uncertainty in the iterative method described above.}
 
 
-\begin{figure}[b]
-\includegraphics[width=0.5\textwidth]{fig/spectroscopy/rf_spec_subfig-eps-converted-to.pdf}
-\caption{Determination of magnetic field for Zeeman shift correction.
+\begin{figure}
+	\centering
+  \includegraphics[width=0.9\textwidth]{fig/spectroscopy/rf_spec_subfig-eps-converted-to.pdf}
+  \caption{Determination of magnetic field for Zeeman shift correction.
 	The number $n_\text{D}$ of atoms detected after probing the trap with 300ms of RF radiation is shown in (a) versus the frequency of the applied radiation.
 	Each point is an average of three shots.
 	A Bose-Einstein fit models the population density $n_\text{T}$ of the $2\triplet S_1$ state at a given field strength.
 	In (b) the calculated absorption profile of the gas in the vicinity of the 1083nm pump transition is shown, along with the spectral profile of the pump laser.
 	The pump laser selectively excites atoms with a certain Zeeman splitting, leading to a population of atoms in the $2\triplet P_2$ state (c) that is concentrated around a specific magnetic field strength.
 	The resulting Zeeman broadening is dominated by the probe beam linewidth.}
-\label{fig:RF_spec}
+  \label{fig:RF_spec}
 \end{figure}
+
+
+% \begin{figure}
+% \includegraphics[width=0.5\textwidth]{fig/spectroscopy/rf_spec_subfig-eps-converted-to.pdf}
+% \caption{Determination of magnetic field for Zeeman shift correction.
+% 	The number $n_\text{D}$ of atoms detected after probing the trap with 300ms of RF radiation is shown in (a) versus the frequency of the applied radiation.
+% 	Each point is an average of three shots.
+% 	A Bose-Einstein fit models the population density $n_\text{T}$ of the $2\triplet S_1$ state at a given field strength.
+% 	In (b) the calculated absorption profile of the gas in the vicinity of the 1083nm pump transition is shown, along with the spectral profile of the pump laser.
+% 	The pump laser selectively excites atoms with a certain Zeeman splitting, leading to a population of atoms in the $2\triplet P_2$ state (c) that is concentrated around a specific magnetic field strength.
+% 	The resulting Zeeman broadening is dominated by the probe beam linewidth.}
+% \label{fig:RF_spec}
+% \end{figure}
 
 % The probe laser can only excite atoms pumped into the $2\triplet P_2$ state, which has a population distributed over a finite range of magnetic field strengths.
 	The peak of the response to the probe laser is given by the convolution of the probe laser spectrum and the density of pumped states over the magnetic field strengths.
@@ -400,13 +497,28 @@ Kinetic effects do not contribute any significant uncertainty in our frequency m
 	Because there are two counterpropagating pump beams, the resulting contribution is a negligible broadening, especially in comparison with the thermal broadening.
 	The difference between predicted and observed line widths is well accounted for by these broadening effects.
 
-\begin{figure}[t]
-\includegraphics[width=0.48\textwidth]{fig/spectroscopy/power-drift-combined-eps-converted-to.pdf}
+
+\begin{figure}
+  \begin{minipage}[t]{0.6\textwidth}
+  \vspace{0pt}
+  \includegraphics[width=\textwidth]{fig/spectroscopy/power-drift-combined-eps-converted-to.pdf}
+  \end{minipage}\hfill
+  \begin{minipage}[t]{0.38\textwidth}
+  \vspace{0pt}
 \caption{Top: Variation in fitted centre frequency for single scans across the $5\triplet D_1$ line versus applied laser power.
 	The measurements at increasing beam power were not taken in chronological order Bottom: Variation in fit center frequency for the $2\triplet P_2 - 5\singlet D_2$ between scans.
 	The value of the fitted peak centre $f_\textrm{c}$ is shown for each field strength, relative to the mean $\mu$ of all values for that field strength.}
 \label{fig:power_drift_combined}
+  \end{minipage}
 \end{figure}
+
+% \begin{figure}
+% \includegraphics[width=0.48\textwidth]{fig/spectroscopy/power-drift-combined-eps-converted-to.pdf}
+% \caption{Top: Variation in fitted centre frequency for single scans across the $5\triplet D_1$ line versus applied laser power.
+% 	The measurements at increasing beam power were not taken in chronological order Bottom: Variation in fit center frequency for the $2\triplet P_2 - 5\singlet D_2$ between scans.
+% 	The value of the fitted peak centre $f_\textrm{c}$ is shown for each field strength, relative to the mean $\mu$ of all values for that field strength.}
+% \label{fig:power_drift_combined}
+% \end{figure}
 
 Other precision measurements of transition frequencies have been shown to be subject to line pulling effects \cite{Marsman15,Marsman15PRA}.
 	These effects arise in multilevel transitions because of interference between the laser-driven transition path and off-resonant driving through transitions with neighbouring intermediate states.
