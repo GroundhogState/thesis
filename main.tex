@@ -1,6 +1,6 @@
 \documentclass[12pt,a4paper,twoside]{book} 
 %  Formatting guidelines:
-% https://policies.anu.edu.au/ppl/document/ANUP_012815 
+% 
 % Should fix margins for printing
 
 % report offers chapter and abstract. book does not offer abstract. https://tex.stackexchange.com/questions/36988/regarding-the-book-report-and-article-document-classes-what-are-the-mai
@@ -16,43 +16,59 @@
 % http://www.heliumbec.com/wiki/User:Jacob possible graphics for front page
 \begin{document}
 
-% % \include{latex/mtodo}
+% \include{latex/mtodo}
 % 	% \myemptypage
 
-\frontmatter
-\include{latex/00_frontmatter}
-\include{latex/01_abstract}
-\setcounter{tocdepth}{1}
-\tableofcontents
 
-\mainmatter
+% \frontmatter
+% \include{latex/00_frontmatter}
+% \include{latex/01_abstract}
+% \setcounter{tocdepth}{1}
+% \tableofcontents
 
-\include{latex/10_overview}
+% \mainmatter
 
-\part{Background and technical introduction}
-\include{latex/11_introduction}
-\include{latex/12_apparatus}
+% \include{latex/10_overview}
+
+% \part{Background and technical introduction}
+% \include{latex/11_introduction}
+% \include{latex/12_apparatus}
 \include{latex/13_lattice_build}
+% \part{Experiments with ultracold metastable helium atoms}
+% \include{latex/21_transitions}
+% \include{latex/22_tuneout}
+% \include{latex/31_depletion}
 
-\part{Laser spectroscopy of Helium}
-\include{latex/20_metrology}
-\include{latex/21_transitions}
-\include{latex/22_tuneout}
+% \include{latex/40_conclusion}
 
-\part{Many-body physics in ultracold gases}
-% \include{latex/30_manybody}
-\include{latex/31_depletion}
-
-
-\include{latex/40_conclusion}
-
+%%https://tex.stackexchange.com/questions/172496/adding-appendix-chapters-without-sections-in-table-of-contents
+% \begin{appendices}
+    % \chapter{Lattice calculations}
+    % \include{appendix/A1_lattice}
+    % \includepdf[pages=-]{appendix/BandPractise} 
+% \end{appendices}
 
 \backmatter
+
+\begingroup
+\setstretch{1.0}
 \printbibliography
+\endgroup
 
+% \newpage
+% \begin{center}
+% \vfill
+% \emph{``The key to discoveries is to look at those\\
+%  places where there is still a paradox.\\
+% It’s like the tip of an iceberg.\\
+% If there is a point of \\
+% dissatisfaction, \\
+% take a closer \\
+% look at it.'' \\}
+%  \end{center}
+% \begin{center}
+% ~E. Arikan
+%  \end{center}
+ % \vfill
 
-
-
-% \include{latex/list_of_publications}
-% \appendix
 \end{document}

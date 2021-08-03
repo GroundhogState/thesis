@@ -2,7 +2,7 @@
 % Funding details?
 % Fancy greyscale/white bg/symmetric pic for front cover
 % Fix 'supervisor panel' alignment
-\cleardoublepage
+% \cleardoublepage
 % Title page
 \begin{titlepage}
 \begin{center}
@@ -29,6 +29,12 @@ All rights reserved}
 % ^ copyright text centre bottom
 \end{center}
 \end{titlepage}
+
+% for previewing a book print
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
 
 % Declaration & supervisors
 \begin{flushleft}
@@ -82,6 +88,13 @@ Jacob A. Ross
 \end{center}
 \end{figure*}
 
+% % blank page here to left-justify dedication, or switch justifications...
+% \newpage
+% \thispagestyle{empty}
+% \mbox{}
+% \newpage
+
+
 \newpage
 % Dedication
 \noindent\large{For my parents - finally you can see me in robes.}\newline
@@ -95,6 +108,22 @@ Jacob A. Ross
 \end{flushright}
 
 
+
+% Acknowledgements
+
+
+\begin{adjustwidth}{6cm}{0cm}
+\begin{flushright}
+\emph{
+``Who are we? And more than that: \\
+I consider this not only one of the tasks,\\
+ but \emph{the} task, of science, \\
+the only one that really counts.''}\\
+- Erwin Schr\"{o}dinger, \footnote{\emph{Science and Humanism: Physics in Our Time}, p.51, Cambridge Univ.
+    Press, 1952.}\\
+\end{flushright}
+\end{adjustwidth}
+
 \newpage
 \thispagestyle{empty}
 \vspace{7cm}
@@ -103,9 +132,7 @@ Jacob A. Ross
 \includegraphics[width=0.8\textwidth]{fig/misc/spidey.jpeg}
 \caption{A meme.}
 \end{figure*}
-
-\vfill
-% Acknowledgements
+\cleardoublepage
 \section*{Acknowledgements}
 
 It's a long list, if I'm honest.

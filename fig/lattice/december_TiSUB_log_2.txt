@@ -1,0 +1,25 @@
+Date,	Time,	Duty cycle,	pressure
+19/12,	14:30,	runs at 24 sec ON and 60 secs OFF,	The pressure spikes to 9.7x10^-9 torr and decays to 2.6x10^-9 torr
+15:30,	,	The pressure spikes to 1.1x10^-8 torr and decays to 2.4x10^-9 torr
+16:30,	,	The pressure spikes to 8.8X10^-9 torr and decays to 2.4x10^-9 torr
+17:15,	,	The pressure spikes to 1.0X10^-8 torr and decays to 2.3Xx10^-9 torr
+20/12,	8:20,	Over night was running at 24 sec ON and 60 secs OFF,	The pressure spikes to 1.3x10^-8 torr and decays to 1.8x10^-9 torr
+8:50,	Turn T-sub off,	The pressure is 1.7x10^-9 torr
+11:00,	runs at 25 sec ON and 60 secs OFF,	The pressure spikes to 1.0x10^-7 torr and decays to 2.5x10^-9 torr
+12:10,	runs at 25 sec ON and 60 secs OFF,	The pressure spikes to 7.3x10^-8 torr and decays to 2.5x10^-9 torr
+14:20,	runs at 25 sec ON and 60 secs OFF,	The pressure spikes to 4.0x10^-8 torr and decays to 2.2x10^-9 torr
+15:40,	runs at 25 sec ON and 60 secs OFF,	The pressure spikes to 4.2x10^-8 torr and decays to 2.1x10^-9 torr
+21/12,	17:00,	runs at 30 sec ON and 60 secs OFF,	The pressure spikes to 4x10^-8 torr and decays to 1.3x10^-9 torr
+24/12,	12:10,	Set to run at 32 sec ON and 60 secs OFF,	The pressure was spiking to 2.5x10^-9 torr and decaying to 1.0x10^-9 torr, so we increased the ON time. The pressure now spikes to 2.3x10^-8 torr
+27/12,	11:30,	Set to run at 36 sec ON and 60 secs OFF,	The pressure was spiking to 8.3x10^-10 torr and decaying to 6.1x10^-10 torr, which is improving. We increased the ON time again. The pressure now spikes to 2.3x10^-9 torr
+29/12,	17:30,	Set to run at 45 sec ON and 60 secs OFF,	The pressure was spiking to 5.0x10^-10 torr and decaying to 4.5x10^-10 torr. We increased the ON time. The pressure now spikes to 1.0x10^-9 torr
+01/01,	09:15,	Set to run at 60 sec ON and 60 secs OFF,	The pressure was spiking to 3.9x10^-10 torr and decaying to 3.7x10^-10 torr. We increased the ON time. The pressure now spikes to 6.2x10^-10 torr
+03/01,	10:30,	New filament. Set to run at 18 sec ON and 60 secs OFF,	The pressure was constant at 3.3x10^-10 torr. The filament was not passing any current. We changed to filament opposite ground pin. We decreased the ON time because of the new filament. The pressure now spikes to 9.8x10^-10 torr and recovers to 4.4x10^-10 torr.
+14:00,	Set to run at 18 sec ON and 60 secs OFF,	The pressure spikes to 8.8x10^-10 torr and recovers to 3.6x10^-10 torr.
+16:30,	Set to run at 18 sec ON and 60 secs OFF,	The pressure spikes to 7.3x10^-10 torr and recovers to 3.6x10^-10 torr.
+04/01,	9:20,	Set to run at 20 sec ON and 60 secs OFF,	The pressure spikes to 5.5x10^-10 torr and recovers to 3.6x10^-10 torr. We increased the ON time. The pressure now spikes to 6.0x10^-9 torr
+07/01,	9:20,	Set to run at 25 sec ON and 60 secs OFF,	The pressure spikes to 4.1x10^-10 torr and recovers to 3.1x10^-10 torr. We increased the ON time. The pressure now spikes to 2.4x10^-9 torr
+16:40,	Set to run at 28 sec ON and 60 secs OFF,	The pressure spikes to 4.0x10^-10 torr and recovers to 3.0x10^-10 torr. We increased the ON time. The pressure now spikes to 1.8x10^-9 torr
+08/01,	9:00,	Switched off,	The pressure spikes to 4.8x10^-10 torr and recovers to 3.0x10^-10 torr.
+17:00,	Set to run at 30 sec ON and 60 secs OFF,	The pressure spikes to 9.4x10^-10 torr and recovers to 3.4x10^-10 torr.
+09/01,	9:00,	Switched off,	The pressure spikes to 4.8x10^-10 torr and recovers to 3.2x10^-10 torr.

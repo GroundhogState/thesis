@@ -1,17 +1,20 @@
 
 \chapter{Experimental infrastructure}
 \markboth{\thechapter. EXPERIMENTAL INFRASTRUCTURE}{}
+\label{chap:exp}
 	\begin{adjustwidth}{0cm}{0cm}
 	\begin{flushright}
-	\emph{``Every sensor is a temperature sensor.
+	\emph{``Every sensor is a temperature sensor.\\
 	 Some sensors measure other things too."\\} 
 	- Engineer's aphorism\footnote{Quoted without attribution in Elecia White's \emph{Making Embedded Systems}, O'Reilly media, 2011}
 	\end{flushright}
 	\end{adjustwidth}
-
-	While nature abhors a vacuum, experimentalists abhor a background.
+	\todo{Chapter with Andrew}
+	{While} nature abhors a vacuum, experimentalists abhor a background.
 	Ultracold atom experiments require ultra-high vacuum (UHV) conditions because collisions with a background gas can easily overcome the frail forces that hold the atoms in their traps.
-	This dissertation spans works conducted on two experimental apparatus built around the skeletal structure of their respective vacuum systems.
+	% H F Hess, Evaporative cooling of magnetically trapped and compressed spin-oolarized hydrogen, Physical Review B 34, 3476-3479, Sept 1986
+	% W Ketterle and N J van Druten, Evaporative cooling of traped atoms, advanes in atomic molecular and optical physics 37, 181-236, 1996
+	% O J Luiten, M W reynolds, J T M Walraven, Kinetic theory of the evaporative cooling of a trappe dgas, Physical Reveiw A 53, 381-389 Jan 1996s works conducted on two experimental apparatus built around the skeletal structure of their respective vacuum systems.
 	The major works discussed in chapters \ref{chap:spectroscopy} and \ref{chap:QD} were undertaken on a machine which has been in productive operation for many years\footnote{This machine is described in great detail in past publications (in particular \cite{Swansson04,Dall07_BEC}) and PhD dissertations \cite{HodgmanThesis,ManningThesis,ShinThesis,DallThesis}.
 	This chapter present a summary description, and the motivated reader is referred to the aforementioned sources for more information, and to the texts \cite{FootAtomic,MetVdS} for general details about cooling and trapping techniques.}.
 	This machine achieved BEC in 2007 \cite{Dall07_BEC}, utilizing a bright cold beam of helium \cite{Swansson04} and optimized Zeeman slower \cite{Dedman04}.
@@ -62,6 +65,9 @@
 	First, helium's spinless nucleus means it has no hyperfine structure and precludes some other forms of sub-Doppler cooling.
 	Second, Doppler cooling is sufficient to reach phase space densities high enough to seed evaporative cooling sequences which achieve condensation. 
 	
+	% H F Hess, Evaporative cooling of magnetically trapped and compressed spin-oolarized hydrogen, Physical Review B 34, 3476-3479, Sept 1986
+	% W Ketterle and N J van Druten, Evaporative cooling of traped atoms, advanes in atomic molecular and optical physics 37, 181-236, 1996
+	% O J Luiten, M W reynolds, J T M Walraven, Kinetic theory of the evaporative cooling of a trappe dgas, Physical Reveiw A 53, 381-389 Jan 1996
 	Doppler cooling effectively produces a velocity-dependent force by exploiting both radiative pressure and the Doppler effect, which I illustrate here with reference to a two-level atom with resonant frequency $\omega_0$.
 	An atom moving with velocity $\vec{v}$ with respect to the source of a laser (approximated as a plane wave with wavevector $\vec{k} = \omega/c$ in the reference frame of the laser emitter) will see a radiation field with a Doppler-shifted frequency $\omega' = (1 - \vec{k}\cdot \vec{v}/c)\omega$.
 	If the laser is detuned from the transition one has the resonance condition $\vec{k} \cdot \vec{v}/c = (1 - \omega_0/\omega)$, hence if the detuning $\Delta = \omega-\omega_0$ is negative (i.e. the laser is \emph{red} of the resonance) then the light is Doppler-shifted into resonance in the atomic frame for some $\vec{k} \cdot \vec{v}/c<0$, i.e. when the atom is moving toward the source of the laser. 
@@ -114,6 +120,7 @@
 % \end{table}
 
 \begin{table}
+\centering
 \begin{tabular}{l c c c c}
 \hline
    		& $\Delta$ (MHz) & $\Delta$ (FWHM)  &  $I$ (mW/mm$^2$)  &  ($I/I_{sat}$)\\
@@ -184,7 +191,7 @@
 	\begin{figure}
 		\centering
 		\includegraphics{fig/apparatus/figure_4_beams}
-		\caption{Schematic of the figure-4 configuration used for transverse cooling of the source beam in the collimation stage. Before insertion into the chamber, a cylindrical lens expands the beam into an ellipse with a roughly 5:1 aspect ratio. The long axis is parallel to the helium beamline. The retro-reflection mirror (right) is in fact a corner mirror which deflects the laser beam parallel to the helium beam before reflecting it back along the optical beam path.  
+		\caption{\todo{Is this necessary?}Schematic of the figure-4 configuration used for transverse cooling of the source beam in the collimation stage. Before insertion into the chamber, a cylindrical lens expands the beam into an ellipse with a roughly 5:1 aspect ratio. The long axis is parallel to the helium beamline. The retro-reflection mirror (right) is in fact a corner mirror which deflects the laser beam parallel to the helium beam before reflecting it back along the optical beam path.  
 		This extends the interaction zone to about 10cm. 
 		The beams are offset in the image plane here for clarity, but in reality they are offset along the axis of the helium beam.
 		In the schematic, the beam passes through the four-way intersection of the laser beams. 
@@ -199,7 +206,7 @@
 	% P D Lett, W D Phillips, S L Rolston, CE Tanner, R N Watts, C I Wetbrook, Optical Molasses, journal of the optical society of america B 6, 2084-2107, Nov 1981
 	% W Rooijakkers, Wo Hogervorst, W Vassen, an intense collimated beam of metastable helium atoms by two-dimensional laser cooling, Optics COmmunications 123, january 1996
 
-	Zeeman slowers, so named for the exploitation of the Zeeman effect, are necessary to slow atoms from thermal velocities imparted from their sources to below the capture velocity of the magneto-optical traps located at the end of the slower.
+	Zeeman slowers, so named for the exploitation of the Zeeman effect (in the earier days of cold atom science they were sometimes called \emph{Zeeman-compensated slowers} \cite{Mastwijk98}), are necessary to slow atoms from thermal velocities imparted from their sources to below the capture velocity of the magneto-optical traps located at the end of the slower.
 	An atom moving with respect to a laser source (as described in section \ref{sec:doppler_basics}) in magnetic field $\textbf{B} = B\hat{b}$ will have its electronic resonances shifted by the Doppler and Zeeman effects, which can be summarized as
 	\begin{equation}
 		\omega_{0,lab} = \omega_{0}\left(1 + \frac{k\cdot v}{c}\right) + \frac{\mu_B }{\hbar}\left(g_e m_e - g_g m_g\right),
@@ -294,12 +301,13 @@
 		\caption{Schematic of the generation and control system for the main cooling laser operating at 1083.331nm described in the text. Light from the laser diode is filtered by the cavity resonance and internal diffraction grating, which is actuated by a piezoelectric crystal. Part of the light is picked off with an in-fibre beamsplitter and sent to the experiments. The rest passes through an in-fibre AOM which increases the frequency by 253 MHz and outputs light into the saturated-absorption spectroscopy system (lower right). The SAS offset is in turn modulated at 90kHz and the demodulated signal (output of the LIA) is proportional to the gradient of the SAS signal, which is minimized at the absorption peak. Hence the demodulated output serves as the error signal for a PID controller that feeds back to the piezoelectric actuator of the frequency-selective diffraction grating. Further details about the spectroscopy technique can be found in \cite{ShinThesis,FootAtomic}.}
 		\label{fig:main_laser}
 	\end{figure}
+	\com{sub-100kHz linewith}
 	
 	The principal light source for both machines is the 1083.331nm cooling and trapping laser.
 	The light source is an external-cavity diode laser (ECDL) which is depicted in Figure \ref{fig:main_laser}, and detailed in the publication \cite{Shin16} and in PhD thesis of D. K. Shin \cite{ShinThesis}.
 	The output of the ECDL passes through an in-fibre beamsplitter, from which one output is blue-shifted by 253MHz by an acousto-optical modulator (AOM) and locked to a helium gas cell by saturation absorption spectroscopy.
 	The remaining arm is coupled by optical fibres to the fibre amplifiers of both experiments.
-	Each experiment features its own fibre amplifier that produces up to 5 Watts of laser power from the $\approx$3 mW supplied by the ECDL and then distributes the light to the laser cooling and trapping chambers (as depicted in Fig. \ref{fig:distribution_optics}).
+	Each experiment features its own fibre amplifier that produces up to 5 Watts of laser power from the $\approx$3 mW supplied by the ECDL and then distributes the light to the laser cooling and trapping chambers via a suite of dedicated AOMs (summarized in Tab. \ref{tab:biquic_beams} depicted in section \ref{sec:new_optics}).
 
 	
 	% N Herschbach, Trrapped Triplet helium atoms: inelastic collisions and evaporative cooling, PhD thesis VU Amsterdam 2003
@@ -308,12 +316,12 @@
 	% http://www.heliumbec.com/wiki/February_2017_Bake
 	% https://imgur.com/a/4BxKh
 	% http://www.heliumbec.com/wiki/Titanium_Sublimation
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.6\textwidth]{fig/apparatus/distribution_optics}
-		\caption{Partial schematic of the control and distribution system for cooling light in the lattice machine. The fibre amplifier supplies light to each of several AOMs in cat's-eye configuration (two shown, one marked with dashed beamline). Half-wave plates control the optical power supplied to each AOM via polarizing beamsplitters. Pairs of mirrors permit alignment through a focus lens into the AOM crystal. The first diffracted mode is spatially selected by an aperture on the outgoing side, which is reflected and re-focused by a lens of equal focal length. A quarter-wave plate ensures that the the polarization is rotate from H to V after the second pass through the AOM hence is transmitted through the beamsplitter and then to the beam-forming optics before insertion into the vacuum chamber. }
-		\label{fig:distribution_optics}
-	\end{figure}
+	% \begin{figure}
+	% 	\centering
+	% 	\includegraphics[width=0.6\textwidth]{fig/apparatus/distribution_optics}
+	% 	\caption{Partial schematic of the control and distribution system for cooling light in the lattice machine. The fibre amplifier supplies light to each of several AOMs in cat's-eye configuration (two shown, one marked with dashed beamline). Half-wave plates control the optical power supplied to each AOM via polarizing beamsplitters. Pairs of mirrors permit alignment through a focus lens into the AOM crystal. The first diffracted mode is spatially selected by an aperture on the outgoing side, which is reflected and re-focused by a lens of equal focal length. A quarter-wave plate ensures that the the polarization is rotate from H to V after the second pass through the AOM hence is transmitted through the beamsplitter and then to the beam-forming optics before insertion into the vacuum chamber. }
+	% 	\label{fig:distribution_optics}
+	% \end{figure}
 
 	In each machine, a suite of AOMs are used to independently control the power and frequency of each of several specialized beams \footnote{The active component of an AOM is a crystal is driven at radio frequencies by an amplified voltage-controlled oscillator.	An acoustic standing wave, constituted by phonons with frequency matched to the driving frequency, scatters light into discrete diffraction modes width momenta shifted by the phonon-lattice momentum.	The action is analogoous to a diffraction grating, and described by the Kapitza-Dirac mechanism.	Thus the AOM transduces electronic signals into optical frequency shifts.	An analogous effect, with the role of atoms and light interchanged, is the operating principle of optical lattices.}.
 	The AOM suites are supplied by light picked off from the output of the fibre amplifier by a half-waveplate and beamsplitter pair per AOM.
@@ -403,7 +411,7 @@
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.6\textwidth]{fig/apparatus/mcp_dld_schematic}
+		\includegraphics[width=\textwidth]{fig/apparatus/mcp_dld_schematic}
 		\caption{Schematic sketch of the MCP-DLD detector. The twin plates of the multi-channel electron multiplier (MCP) have a 2.4kV potential between the upper and lower surfaces which accelerates electrons along the pores after they are freed from the surface by the energy released from \mhe impact events. The resultant shower of electrons deposits a charge excess on a winding of the delay-line detector (DLD), which disperses as oppositely-travelling current pulses along the line. The arrival times ($t_{i,1}$ and $t_{i,2}$) of each pulse along each axis are received by the TDC and used to infer the respective coordinate of the electron cascade (only the winding along $x$ is shown for simplicity, but in the BiQUIC machine the DLD consists of two orthogonal windings).}
 		\label{fig:MCP_DLD}
 	\end{figure}
@@ -474,6 +482,7 @@
 	 \newpage
 
 \subsection*{Atom lasers}
+	\label{sec:atomlaser}
 
 
 	% 	NB - the Einstein coefficients have a cubic dependence on frequency (See also the natural lifetime) and so optical transitions tend to exhibit spontaneous decay more quickly than the Rabi oscillations, but radio transitions (as in the fine structure states) fall much more slowly and coherent oscillations can be seen 
@@ -507,10 +516,11 @@
 	A simple explanation of the mechanism of an atom laser requires a two-level atom with magnetically trapped and untrapped states labeled $\ket{1}$ and $\ket{0}$.
 	An RF pulse tuned to the splitting $\omega_{10}$ induces an oscillation between the two states with Rabi frequency $\Omega$ for a duration $t$.
 	For an ensemble of $N$ atoms, the independent single-particle oscillations produce a many-body product state which evolves as \cite{Mewes97}
-	\begin{equation}
-		(\cos(\Omega t/2)\ket{0} + \sin(\Omega t/2)\ket{1})^{\otimes N} = \sum_{n=0}^{ N}\sqrt{\frac{N!}{n!(N-n)!}}\cos(\Omega t/2)^{N-n}\sin(\Omega t/2)^n\ket{N-n,n},
+	\begin{align}
+		(\cos(\Omega t/2)\ket{0} + \sin(\Omega t/2)\ket{1})^{\otimes N} \\
+		= \sum_{n=0}^{ N}\sqrt{\frac{N!}{n!(N-n)!}}\cos(\Omega t/2)^{N-n}\sin(\Omega t/2)^n\ket{N-n,n},
 		\label{eqn:PAL_Rabi}
-	\end{equation}
+	\end{align}
 	where $\ket{N-n,n}$ denotes the state with $n$ atoms coupled out of the trapped state and $N-n$ atoms remaining.
 	The outcoupled fraction is then $\sin^2(\Omega t/2)$.
 	% \footnote{There is the question of when the atoms actually leave the trap.
@@ -677,41 +687,6 @@
 
 	% % Get Herwig Ott paper [7] for thesis ref
 
-	% % Collim 67Isat, -5Gamma
-	% % 5W fibre amp for cooling beam
-	% % ZS 92Isat -160Gamma
-	% % MOT1 87Isat horz 110ISat vert -22Gamma detuning
-	% % 1.5mm hole in chamber
-	% % <3e-11 mTorr
-	% % push 110Isat 3.5Gamma for low-velocity intense source LVIS
-	% % Flux into 2nd MOT is 9e8 atoms/sec using faraday cup and picoammeter
-	% % Second MOT gradient 4.4G/cm (in weak or strong axes?)
-	% % -33Gamma and 140, 37 Isat
-	% % 1.7e8 atoms loaded at 2.5mK in 1 second, as measured using saturated fluro on an InGaAs PD [26]
-	% % 451mm fall to detector
-	% % 	DLD not operational yet so measure the current pulses on the plates frmo the charge depletion when atoms impact the plates.
-	% Fast amplifier and a discriminator then recorded using a digital counter to extract 1D tof distribution.
-	% % MOT compression - ramps to 1.42G/cm in 10ms while linearly ramping lasers to -0.4Gamma and decreasing intensity by a hundredfold, then switching off and the +1s remain trapped
-	% % Then compress the mag trap to 16.6G/cm in 100\mu s, and ramp the bias up in 100ms to provide a 10G bias in the QUIC trap.
-	% Has radial 89Hz and 57Hz z freqs.
-	% Have 5.3e7 atoms at 0.44mK.
-	% Measured using absorption imaging along the x axis using an InGaAs CCd.
-	% Flipper mirrors allow operation on the MOT axis but mean imaging not available during MOT.
-	% % 1D Doppler cooling [tychkov paper 25], with .01Isat and sigma+ polz directed vertically down along the bias direction.
-	% Detuned -Gamma/2.
-	%  After 500mss have 4.9e7 atoms at 83\mu K.
-	% Ready for dipole transfer.
-	% % 100kHz seed at 1550nm feeds a 30W amplifier, but produces 6W (y axis) and 1W (10degrees from X, in the XY plane) after AOM and fibre coupling losses.
-	% Waists are 73 and 55 micron respectively, crossing the centre of the biased trap, 6mm above the centre of the horz coils
-	% % Trap freqs 1.1,1.2,1.7 kHz and 150muK deep
-	% % Doppler cooling seems more effective with dipole beams on as it works at better at high density [25 tychkov] - indeed improving final atom number by some 50%.
-	% So they are ramped on over 100ms prior to doppler cooling
-	% % QUIC trap linearly relazed to an unbiased trap with 1.1G/cm gradient and then switched off with a FET.
-	% Additional square coil is switched on to create a uniform 1.6G field pointing in z direction.
-	% Turned on before the QUIC rampdown starts.
-	% Eventually found that the earth's field was sufficient to maintain the quantiation axis and suppress Penning ionization, so is switched off after 700ms in ODT.
-	% Measure 5e6 atoms at 13.5muK, 0.5 PSD
-	% % Trap depth reduced by exponential rampdown of power over 1 sec.
 	
 
 	% % Can extract mu via R_tf ^2 / 2t_tof ^2, and so from TF picture get N_0 = (2mu)^{5/2}/(15\sqrt{m}\hbar\bar{\omega}^3 a).

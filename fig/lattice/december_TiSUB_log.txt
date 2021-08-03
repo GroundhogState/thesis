@@ -1,0 +1,14 @@
+Date	Time	Duty cycle
+10-Dec	17:20	runs at 30 sec ON and 96 secs OFF
+11-Dec	9:20	previous night was running at 30 sec ON and 96 secs OFF
+9:50	runs at 42 sec ON and 96 secs OFF	The pressure spikes to 1.3x10^-7 torr and decays to 4.8x10^-9 torr
+10:50	Turn T-sub off	
+11:30	The pressure is 2.3x10^-9 torr	
+16:40	runs at 42 sec ON and 96 secs OFF	The pressure spikes to 2.4x10^-8 torr and decays to 2.4x10^-9 torr
+12-Dec	9:00	previous night was running at 42 sec ON and 96 secs OFF
+9:20	runs at 60 sec ON and 96 secs OFF	The pressure spikes to 2.0x10^-9 torr and decays to 1.6x10^-9 torr
+9:25	filament dead	
+16:20	runs at 30 sec ON and 60 secs OFF	The pressure spikes to 7.6x10^-9 torr and decays to 1.5x10^-9 torr
+17:15	runs at 42 sec ON and 60 secs OFF	The pressure spikes to 3.9x10^-9 torr and decays to 1.5x10^-9 torr
+13-Dec	9:00	previous night was running at 42 sec ON and 60 secs OFF
+9:30	runs at 96 sec ON and 96 secs OFF	The pressure spikes to 3.7x10^-9 torr and decays to 1.4x10^-9 torr

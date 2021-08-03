@@ -18,14 +18,14 @@
 	\end{flushright}
 	\end{adjustwidth}
 
-\todo{Waiting for Andrew comments}
 
-	{A} cold atom experimentalist draws on a panoply of tools (both conceptual and instrumental) which are all intricate and absorbing in their own right.
+
+	\dropcap{A} cold atom experimentalist draws on a panoply of tools (both conceptual and instrumental) which are all intricate and absorbing in their own right.
 	This chaper presents the essential ideas needed to give form and context to the content of the major works reported in this thesis.
 	We will glance at the Hydrogen atom to establish a language with which to elucidate the deceptively simple structure of Helium.
 	 We must be equipped with some study of the coupling between electromagnetic fields and light, given the ubiquitous use of laser sources and magnetic trapping in this dissertation, and the focus\footnote{The \emph{focus} of a lens or mirror is the point of maximum concentration of light that is refracted or reflected from a distant or uniform source.
 	Originally, the term referred to the fireplace at the centre of traditional single-room dwellings; still the brightest point of light, but also the source itself.} on laser spectroscopy.
-	Of course, the fun doesn't end when the lights turn off: Even in the dark, helium exhibits explosive two-body interactions, which both pave the road towards absolute zero while imposing limits on the size and lifetime of atomic condensates.
+	Of course, the fun doesn't end when the lights turn off: Even in the dark, helium exhibits explosive two-body interactions, which impose limits on the size and lifetime of atomic condensates.
 	Finally, we will review the basic features of the emergence of macroscopic coherence in the form of a Bose-Einstein condensate.
 	
 	% \footnote{A neophyte physicist may feel a compulsion to delve even deeper, under the weight of one's curiosity.
@@ -35,14 +35,14 @@
 
 \section{Atoms and light}
 
-	The discussion in this section is a short tour of atomic physics.
+	The discussion in this section is a short tour of the relevant atomic physics.
 	Many high-quality textbooks, including \cite{FootAtomic,BinneyBook}, go into much greater detail than is required for this thesis.
 	In this section, only the essential points are presented, omitting lengthy calculations, with references provided for the complete working.
 	Our picture of atoms, their structure, and the interaction with electromagnetic fields, will be made in terms of their modern description in the language of quantum mechanics.
 
-	Quantum mechanics is the study of systems whose state at a any time $t$ is completely specified by wavefunction $\ket{\psi(t)}$ and whose dynamics are determined by the time-dependent Schr\"{o}dinger equation,
+	Quantum mechanics is the study of systems whose state at a any time $t$ is completely specified by a wavefunction $\ket{\psi(t)}$ and whose dynamics are determined by the time-dependent Schr\"{o}dinger equation,
 	\begin{equation}
-		i\frac{\partial}{\partial t}\ket{\psi(t)} = \hat{H}\ket{\psi(t)}.
+		i\hbar\frac{\partial}{\partial t}\ket{\psi(t)} = \hat{H}\ket{\psi(t)}.
 		\label{eqn:TDSE}
 	\end{equation}
 	The wavefunction $\ket{\psi}$ is represented by a \emph{state vector} that is an element of the complex Hilbert space $\mathcal{H}$.
@@ -51,32 +51,35 @@
 	The Hamiltonian $\hat{H}$ is a linear operator with the Hermitian property $\hat{H}^\dagger=H$, where the dagger denotes the conjugate transpose operation \footnote{Formally, $\mathcal{H}$ is a vector space $\mathbb{C}^D$ of dimension $D$ which is complete with respect to the $L^2$ norm $||x||=\sqrt{\braket{x}{x}}$ induced by the inner product $\braket{x}{y}\rightarrow\mathbb{C}$, and $\hat{H}\in\mathcal{B}$, the Banach space of bounded linear operators $\hat{O}:\mathcal{H}\rightarrow\mathcal{H}$.
 	$\mathcal{B}$ is also a vector space with a norm (the trace norm) but not an inner product.
 	The states themselves are defined up to scalar multiplication, and hence are actually rays in $\mathcal{H}$ better thought of as points in projective space; we will simply assume they are normalized as $\bra{\psi}\psi\rangle=1$ for brevity.
-	We will say no more of the tremendous consternations which stem from the Born rule.}.	The Hermitian property guarantees $\hat{H}$ is \emph{normal}, $[\hat{H}^\dagger, \hat{H}]=0$ and therefore the time-independent Schr\"{o}dinger equation
-	\begin{equation}
-		\hat{H}\ket{\psi} = E\ket{\psi}
-		\label{eqn:TISE}
-	\end{equation}
+	We will say no more of the consternations stemming from the Born rule.}.	
+	The Hermitian property guarantees $\hat{H}$ is \emph{normal}, $[\hat{H}^\dagger, \hat{H}]=0$ and therefore the time-independent Schr\"{o}dinger equation
+
+	% \begin{equation}
+	% 	\hat{H}\ket{\psi} = E\ket{\psi}
+	% 	\label{eqn:TISE}
+	% \end{equation}
 	specifies the eigenvectors $\ket{e_n}$ of $\hat{H}$ which provide a complete orthonormal basis for $\mathcal{H}$.
 	This allows any (pure) quantum state to be written in the form $\ket{\psi} = \sum_n a_n\ket{e_n}$.
+	
 	An interpretation of this fact in the light of the Born rule is that the energy eigenstates $\ket{e_i}$ correspond to distinguishable  and mutually exclusive  states of a system, which can be discriminated if their energy eigenvalues $E_i$ are different.
 	In the cases where eigenvalues coincide, there exists at least one other observable that distinguishes the degenerate energy eigenstates.
 
 	
 	
-	The energy eigenbasis for a single charged particle bound in a central potential\footnote{Better known as the hydrogen atom} have the form,
+	The energy eigenbasis for a single charged particle bound in a central potential\footnote{Better known as the hydrogen atom.} have the form,
 	\begin{equation}
 	\psi_{nlm}(r,\theta,\phi) = 
 	\sqrt{\left(\frac{2}{na_0 ^*}\right)^3\frac{(n-l-1)!}{2n(n+l)!}}e^{-\rho/2}\rho^l L_{n-l-1}^{2l+1}(\rho) Y^{m}_{l}(\theta,\phi)
 	\end{equation}
 	when written in spherical coordinates $(r,\theta,\phi)$, where $\rho = 2r/na_0 ^*$ and $a_0 ^* = \frac{4\pi\epsilon_0 \hbar^2}{\mu e^2}$ is the reduced Bohr radius.
-	The radial Laguerre polynomials $L_{n-l-1}^{2l+1}(r)$ and the spherical harmonics $Y_{l,m}(\theta,\phi)$ are labeled by the angular momentum $l$, the magnetic quantum number $m$, and the energy is fixed by the principal quantum number $n$ as $E_n = -hcR_\infty/n^2$.
+	The radial Laguerre polynomials $L_{n-l-1}^{2l+1}(r)$ and the spherical harmonics $Y_{l}^{m}(\theta,\phi)$ are labeled by the angular momentum $l$, the magnetic quantum number $m$, and the energy is fixed by the principal quantum number $n$ as $E_n = -hcR_\infty/n^2$.
 	The bound-state energy $E_n$ is negative - one must do work to ionize the atom and produce the free ion-electron pair whose energy is defined to be zero.
 	The quantum numbers $l$ and $m$ distinguish states that are otherwise degnerate in $n$, and serve to lift the degeneracy via the Zeeman shift as I discuss in a later section.
 	Here,  $h=2\pi\hbar$ is the Planck constant, $\varepsilon_0$ is the electric permittivity of free space, and $\mu$ is the Bohr magneton.
 	
 	
 
-	Let us consider an atom immersed in an electric field oscillating with frequency $\omega = 2 \pi f$ rad Hz, and write the Hamiltonian in the form
+	Let us consider an atom immersed in an electric field oscillating with frequency $\omega = 2 \pi f$ (with $f$ in Hz), and write the Hamiltonian in the form
 	\begin{equation}
 		\hat{H}(t) = \hat{H}_0 + \hat{H}_{I}(t)
 	\end{equation}
@@ -91,24 +94,17 @@
 	\begin{equation}
 		i\hbar\dot{c}_n(t) = \sum_m e^{-i(E_m-E_n)t/\hbar}\bra{\psi_m}\hat{H}_I\ket{\psi_n},
 	\end{equation} 
-	which can be solved succinctly after making two simplifications.
-	First, let us assume (without loss of generality) that the atom is initially in the state $\psi_1$, where $c_1(0)=1$ and $c_i(0)=0~\forall i\neq1$.
-	Then at a time $t$ the probability that the atom is in the state $\psi_k$ is \cite{FootAtomic,BinneyBook}
-	\begin{equation}
-		P_k(t) = 4|\bra{\psi_k}H_i\ket{\psi_1}|^2 \frac{\sin^2(\frac{1}{2}(\omega_k-\omega)t)}{(\omega_k-\omega)^2},
-	\end{equation}
-	where $\omega_k = (E_1-E_k)/\hbar$.
-	An immediate consequence is that the denominator in Eqn, (1.7) suppresses excitation into $\ket{\psi_k}$ unless $\omega$ is close to the resonant frequency $\omega_k$.
-	This weak driving permits us to make a further simplification and consider an atom with only \emph{two} states, labeled 1 and 2, with a resonant frequency $\omega_0 =(E_2-E_1)/\hbar$.
-	Further, the numerator captures the essential feature that the state oscillates between states in response to the driving field.
-	We are now ready to impart a physical meaning to the coupling term: An atom exposed to an oscillating field will respond by oscillating between energy eigenstates, each of which having their own charge distribution through space.
-	This produces an oscillating electric dipole whose interaction with the electric field can be simplified by working in the \emph{dipole approximation}: Assume the electric field has a constant value throughout space, but oscillates in time as $\textbf{E}(t) = \textbf{E}_0 \textrm{Re}(e^{-i\omega t}\hat{\varepsilon})$, where $\hat{\varepsilon}$ is the unit polarization vector, and $\textbf{r} = r\hat{\textbf{r}}$.
+	which can be solved succinctly after making some simplifications.
+	Let us first assume (without loss of generality) that the atom is initially in the state $\psi_1$, where $c_1(0)=1$ and $c_i(0)=0~\forall i\neq1$.
+	Second, that the light field is oscillating close to resonance with the transition to a state $\psi_2$, and that all other resonances are far enough away that we can approximate the atom with a two-level system with a resonant frequency $\omega_0 =(E_2-E_1)/\hbar$
+	Finally, suppose that the wavelength of the light is much larger than the atom. 
+	This is the \emph{dipole approximation}, wherein the electric field has a constant value throughout space, but oscillates in time as $\textbf{E}(t) = \textbf{E}_0 \textrm{Re}(e^{-i\omega t}\hat{\varepsilon})$, where $\hat{\varepsilon}$ is the unit polarization vector, and $\textbf{r} = r\hat{\textbf{r}}$.
 	The interaction energy is then given by retaining only the dipole operator $-e\textbf{r}$ from the multipole expansion of the electronic charge distribution\footnote{This is a good approximation when the wavelength $\lambda = c/f$, fixed by the vacuum speed of light $c$, is much larger than the atom This is universally applicable for our purposes as the size of the helium atom is $\approx 30$pm, some 0.1\% of the shortest wavelength of light used in this thesis}.
 	The interaction Hamiltonian can then be written as
 	\begin{equation}
 		\hat{H}_I = e\textbf{r}\cdot\textbf{E}(t),
 	\end{equation}
-	and the excitation probability can be written in the more familiar form \cite{FootAtomic,BinneyBook}
+	and the excitation probability can be written in the form \cite{FootAtomic,BinneyBook}
 	\begin{equation}
 		P_2(t) = \Omega^2 \frac{\sin^2(\frac{1}{2}(\omega_0-\omega)t)}{(\omega_0-\omega)^2},
 		\label{eqn:transition_prob}
@@ -118,9 +114,9 @@
 		\Omega = \frac{\bra{\psi_1}e\textbf{r}\cdot\textbf{E}\ket{\psi_2}}{\hbar},
 	\end{equation}
 	which is, in general, the frequency of oscillation between pairs of states in response to some external driving function.
-
+	We are now ready to impart a physical meaning to the coupling term: An atom exposed to an oscillating field will respond by oscillating between energy eigenstates, each of which having their own charge distribution through space.
 	
-	The dipole operator $-e\textbf{r}$ inherits the structure of the orbitals, which allows a separation of the expectation value in the preceding equation into radial and angular parts, $\bra{2}\textbf{r}\cdot\hat{\varepsilon}\ket{1} = \bra{2}R\ket{1}\mathcal{I}$.
+	The dipole operator $-e\textbf{r}$ only couples to the radial part of the wavefunction, which allows a separation of the expectation value in the preceding equation into radial and angular parts, $\bra{2}\textbf{r}\cdot\hat{\varepsilon}\ket{1} = \bra{2}R\ket{1}\mathcal{I}$.
 	Setting aside the radial part $R$, the angular integral $\mathcal{I}$ can be written as a contraction over the spherical harmonic basis functions, 
 	\begin{equation}
 		\mathcal{I}=\int_{0}^{2\pi}\int_{0}^{\pi} Y^{*}_{l_2,m_2}(\theta,\phi)\hat{r}\cdot\hat{\varepsilon}Y_{l_1,m_1}(\theta,\phi)\sin\theta d\theta d\phi
@@ -155,12 +151,12 @@
 	Instead we will have to be satisfied with a classical model which captures some of the essential features so far left unmentioned.
 
 
-% Can potentially shoehorn the OBEs in here 
+	% Can potentially shoehorn the OBEs in here 
 
 	\subsection*{Classical oscillator model}
 
 	In the \emph{Lorentz oscillator} picture, one approximates an atom by a positive charge fixed at the origin with a harmonically-coupled negative charge with a single degree of freedom $x(t)$ whose potential is zero at $x(t)=0$.
-	The electron's equation of motion is $\ddot{x} + \Gamma\dot{x} + \omega_0^2x = -e E(e)/m_e$, where
+	The electron's equation of motion is $\ddot{x} + \Gamma\dot{x} + \omega_0^2x = -e E/m_e$, where
 	\begin{equation}
 		\Gamma = \frac{e^2\omega^2}{6\pi \varepsilon_0 m_e c^3}
 	\end{equation}
@@ -172,18 +168,18 @@
 		\label{eqn:lorentzian}
 	\end{equation}
 
-	Where the polarizability $\alpha(\omega)$, whose quantum-mechanical origin is a central interest in Chapter \ref{chap:TO}, determines the amplitude of the dipole response via $\pvec(t) = \alpha(\omega)E(t)$.
-	This reponse function features the characteristic full-width at half-maximum (FWHM) scale of each transition, which is the inverse of the lifetime $\tau=1/\Gamma$.
+	where the polarizability $\alpha(\omega)$, whose quantum-mechanical origin is a central interest in Chapter \ref{chap:TO}, determines the amplitude of the dipole response via $\pvec(t) = \alpha(\omega)E(t)$.
+	This response function features the characteristic full-width at half-maximum (FWHM) scale of each transition, which is the inverse of the lifetime $\tau=1/\Gamma$.
 
 	The interaction energy of the dipole and the electric field is $U_{dip} = -\frac{1}{2}\langle\textbf{p}\cdot\textbf{E}\rangle = -\frac{1}{2\varepsilon_0 c}Re(\alpha)I(\rvec)$, which inherits a spatial structure from the intensity $I(\rvec)$.
 	When the polarizability is positive (that is, when the light is red-detuned from $\omega_0$ and the denominator has a positive real part) then the dipole oscillates in-phase with the field and so the interaction energy is minimized at the intensity maxima.
-	This is the operational principle of optical dipole traps, wherein the \emph{dipole force} $F_{dip} = -\nabla U_{dip} \propto \nabla I(\rvec)$ therefore confines atoms to the focus of a red-detuned Gaussian beam \footnote{The dipole force can also be generated with blue-detuned beams to create repulsive potential barriers, or confine atoms atoms in the dark core of a blue-detuned Bessel beam}.
+	This is the operational principle of optical dipole traps, wherein the \emph{dipole force} $F_{dip} = -\nabla U_{dip} \propto \nabla I(\rvec)$ therefore confines atoms to the focus of a red-detuned Gaussian beam \footnote{The dipole force can also be generated with blue-detuned beams to create repulsive potential barriers, or confine atoms atoms in the dark core of a blue-detuned Bessel beam.}.
 	Ashkin made the first demonstration of the dipole force by trapping micron-sized particles in 1970 \cite{Ashkin70}.
 	Ashkin suggested 3D trapping of atoms in 1978 \cite{Ashkin78}, and in 1986 Chu \emph{et al.} accomplished the first optical trap of neutral atoms \cite{Chu86}. 
-	In 1987 Ashkin demonstrated optical trapping of single cells, viruses, and bacteria \cite{Ashkin87cell, ashkin87virus}, adding to the list of techniques propagated from physics labs into precision biology.
+	In 1987 Ashkin demonstrated optical trapping of single cells, viruses, and bacteria \cite{Ashkin87cell, Ashkin87virus}, adding to the list of techniques propagated from physics labs into precision biology.
 	The first BEC produced exclusively using optical trapping was achieved in 2001 \cite{Barrett01}.
 	Ashkin was awarded the Nobel prize in 2018 for his development of optical trapping.
-	The dipole force is most pertinent to chapter \ref{chap:lattice} as it is the basic principle underpinning optical lattice traps, and to chapter \ref{chap:tuneout} wherein the frequency at which $\alpha(\omega)=0$ is measured as a test of quantum electrodynamics.
+	The dipole force is most pertinent to chapter \ref{chap:lattice} as it is the basic principle underpinning optical lattice traps, and to chapter \ref{chap:tuneout} wherein the frequency at which Re$(\alpha(\omega))=0$ is measured as a test of quantum electrodynamics.
 	
 
 
@@ -218,12 +214,12 @@
 	The presence of a second electron also introduces another defining feature of quantum mechanics: spin.
 	The electron wavefunctions must be antisymmetric under exchange of particle labels because all fermions obey the Pauli exclusion principle.
 	On the other hand, the Hamiltonian is invariant under exchange of the electrons.
-	If we denote the exchange operator by $\hat{X}$, then we have $[\hat{H},\hat{X}] = 0$, implying $\hat{X}$ and $\hat{E}$ have the same eigenstates.
+	If we denote the exchange operator by $\hat{X}$, then we have $[\hat{H},\hat{X}] = 0$, implying $\hat{X}$ and $\hat{H}$ have the same eigenstates.
 	Therefore the energy eigenbasis satisfies $\hat{X}\ket{e} = -\ket{e}$.
 	
 	% Because the electron wavefunctions have the quantum numbers $\ket{n,L,m_L,S,m_S}$ which can be separated into the product of spatial ($\ket{n,L,m_L}$) and spin ($\ket{S,m_S}$) parts.
 	
-	It must be, then, that a given eigenstate must be of the separable into odd and even parts as either $\ket{\psi} =  \psi^{S}_{space}\psi^{A}_{spin}$ or $\psi=\psi^{A}_{space}\psi^{S}_{spin}$
+	It must be, then, that a given eigenstate must be separable into odd and even parts as either $\ket{\psi} =  \psi^{S}_{space}\psi^{A}_{spin}$ or $\ket{\psi}=\psi^{A}_{space}\psi^{S}_{spin}$
 	We can enumerate the possibilities for the symmetric (spin) wavefunctions, 
 	
 	\begin{align}
@@ -236,31 +232,31 @@
 	\psi^A_\text{spin} = (\ket{\uparrow\downarrow}-\ket{\downarrow\uparrow}))/\sqrt{2}
 	\end{equation}
 
-	\noindent which are all degenerate in energy because the atomic Hamiltonian does not couple to the spin sector.
+	\noindent which are all degenerate in energy because the atomic Hamiltonian does not couple to the spin part of the wavefunction.
 	For a singly-excited helium atom, as will always be the case in this thesis, the interaction term splits the spatial part of the wavefunction for a given set of quantum numbers into symmetric and antisymmetric forms
 	$$
-	\psi^{A}_{space} = \frac{1}{\sqrt{2}}\left(u_{1s}(1)u_{nl} - u_{1s}(2)u_{nl}(1)\right)
+	\psi^{A}_{space} = \frac{1}{\sqrt{2}}\left(\ket{1\textrm{s},nl}  - \ket{nl,1\textrm{s}}\right)
 	$$
 	$$
-	\psi^{S}_{space} = \frac{1}{\sqrt{2}}\left(u_{1s}(1)u_{nl} + u_{1s}(2)u_{nl}(1)\right)
+	\psi^{S}_{space} = \frac{1}{\sqrt{2}}\left(\ket{1\textrm{s},nl} +\ket{nl,1\textrm{s}}\right)
 	$$
-
+	in terms of the spatial parts $\ket{n_1,l_1,n_2,l_2}$ of the two-electron wavefunction, with one electron fixed in the 1s state.
 
 	which furnish the spin wavefunctions to form the $n\triplet L_{J}$ and $n\singlet L_{J}$ states, referred to as (triplet) ortho- and (singlet) para-helium, respectively\footnote{In what follows, we use the spectroscopic convention and label states by the $n^{2S+1}L_J$, where $J=S+L$ because the helium nucleus is spinless, and we drop the $(1s)$ term as the second electron will invariably be in the ground state in all cases we consider -  Doubly-excited helium is highly unstable because the first excited state (19.8eV) has about 80\% of the ionization energy of Helium (25.4eV).}.
 	It can be shown via degenerate perturbation theory that the exchange antisymmetry produces the \emph{exchange energy} difference between the singlet and triplet states, where the  orthohelium state has a lower energy.
-	 The $\metastable$ state, also denoted \mhe, distinguishes helium amongst the zoo of atomic species available to the cold atom physicist by virtue of its 19.8 eV excitation energy and $\approx 7800$s lifetime \cite{Hodgman09}.
+	 The $\metastable$ state, also denoted \mhe, distinguishes helium amongst the zoo of atomic species available to the cold atom physicist by virtue of its 19.8 eV excitation energy and $\approx 7800$s lifetime \cite{Hodgman09_mhe}.
 	 This state is forbidden to decay to the ground state by the $\delta L\neq0$ selection rule and also because the dipole operator does not couple states of different spin, such as the \mhe state and the ground state.
 	Decay to the ground state from the metastable state is  therefore called \emph{doubly forbidden}.
 	Forbidden transitions can generally occur by higher-order interactions that are omitted from the dipole approximation, and the \mhe state in particular can decay via a magnetic dipole transition.
 	Nonetheless, the two-hour lifetime is effectively a ground state for the purposes of ultracold helium experiments, which generally last less than a minute.
 	Fortuitously, the metastable state is connected to the $2\triplet P_2$ state by a transition with a wavelength of 1083.331nm, which is far more readily accessible with compact laser systems than the $\leq 63$nm X-ray transitions from the true ground state.
-	The $2\triplet P_2$ state also provides an essentially closed transition cycle for laser cooling as its decay is dominated by transitions to the \mhe state, obviating the need for complicated optical repumping schemes.
+	The $2\triplet P_2$ state also provides an essentially closed transition cycle for laser cooling as its decay is dominated by transitions to the \mhe state, obviating the need for complicated optical repumping schemes as required for laser cooling of alkali atoms.
 	There is also a forbidden transition to the true ground state, but as this decay is some billionfold slower, it is negligible for our purposes (nonetheless, it was measured in the ANU lab \cite{Hodgman09_23P}).
 
 	The astute reader will notice the absence of presentation of an explicit form for the electron wavefunctions in the helium atom.
-	Indeed	helium is not analytically solvable because its eigenfunctions are not separable into a form $\Psi = \psi_1\otimes\psi_2$.
+	Indeed,	helium is not analytically solvable because its eigenfunctions are not separable into a form $\Psi = \psi_1\otimes\psi_2$.
 	A variational approach is required for tractable and accurate calculations, which was developed by Hylleraas \cite{Hylleraas1920,Hylleraas1929,Hylleraas1930}.
-	In the intervening century, numerical methods for calculating the energy levels and transition rates in the Helium atom have kept pace with precision experiments, and have incorporated the effects of relativity, nuclear recoil, and finite optical wavelength. A more detaild survey of recent progress is given in chapter \ref{chap:spectroscopy}.
+	In the intervening century, numerical methods for calculating the energy levels and transition rates in the Helium atom have kept pace with precision experiments, and have incorporated the effects of relativity, nuclear recoil, and finite optical wavelength. A more detailed survey of recent progress is given in chapter \ref{chap:spectroscopy}.
 
 	
 
@@ -270,27 +266,28 @@
 	
 	
 
-\subsection*{Magnetic fields and the Zeeman effect}
+	\subsection*{Magnetic fields and the Zeeman effect}
 
 	The inclusion of spin introduces another important feature of atomic spectra, the Zeeman effect, whose discovery heralded a `watershed' moment of modern physics.
-	The Zeeman effect refers to the phenomenon of spectral line splitting that occurs when an atom is immersed in a DC magnetic field.
+	The Zeeman effect refers to the phenomenon of spectral line splitting that occurs when an atom is immersed in a DC magnetic field\footnote{Oscillating magnetic fields have other effects on atoms, for example inducing magnetic dipole (or higher order) transitions involving spin-flips.}.
 	The interaction energy of an atom in a magnetic field, 
 	% \footnote{Along with  the discoveries of X-rays, radioactivity, and the observation that `cathode rays' had a mass-to-charge ratio equal to particles within atoms, now known as \emph{electrons}\cite{FootAtomic}}.
 	
 	% H spectrum provided observations to challenge class mech, then QM, then RQM, and indeed the current QED
 	\begin{equation}
-		H = -\mu\cdot \textbf{B},
+		H = -\text{\boldmath$\mu$}\cdot \textbf{B},
 	\end{equation}
-	has contributions from both orbital and spin angular momenta ($\textbf{L}$ and $\textbf{S}$, respectively) through the atom's magnetic moment 
+	has contributions from both orbital and spin angular momenta ($\textbf{L}$ and $\textbf{S}$, respectively) through the atom's magnetic moment,
 	\begin{equation}
-		{\bf \mu} = -\mu_B\textbf{L} - g_s\mu_B \textbf{S}.
+		\text{\boldmath$\mu$} = -\mu_B\textbf{L} - g_s\mu_B \textbf{S}.
 	\end{equation}
-	Working in the $\ket{LSJm_J}$ basis, where $J$ and $m_J$ are the total angular momentum and its z-projection, yields the energies $E_Z = g_J \mu_b B M_J$.
+	Working in the $\ket{LSJm_J}$ basis, where $J$ and $m_J$ are the total angular momentum and its z-projection, yields the energies $E_Z = g_J \mu_b B m_J$.
 	The atomic g-factor can be written as
 	\begin{equation}
 		g_J = \frac{3}{2} + \frac{S(S+1)-L(L+1)}{2J(J+1)},
 	\end{equation}
-	using the approximate value of the electron g-factor $g_s=2$.The eigenstates of the field-free atomic Hamiltonian will be $2J+1$-fold degenerate and specified by the $\ket{Lm_L S m_S}$ quantum numbers.
+	using the approximate value of the electron g-factor $g_s=2$.
+	The eigenstates of the field-free atomic Hamiltonian will be $2J+1$-fold degenerate and specified by the $\ket{Lm_L S m_S}$ quantum numbers.
 	Adding the magnetic field interaction breaks this degeneracy and leads to the Zeeman splitting.
 	The field-free and magnetic-interaction terms can be written in a common basis in terms of the Clebsch-Gordan coefficiencts and then diagonalized, as described in chapter \ref{chap:spectroscopy}.
 	The anomalous Zeeman effect arises in triplet states because the inter-level spacing depends on $m$ and $g_J$, which splits spectral lines as well as levels, whereas singlet states have $g_J=1$ and transitions between them do not fan out in the same fashion.
@@ -299,8 +296,8 @@
 	
 
 	% More than merely splitting lines, the Zeeman effect also induces a polarization-dependence  relative to the quantization axis.
-	The classical dipole envisions only circular polarization is visible along the quantization axis (z oscillation is not visible), but from transverse directions one can see the z oscillation and also the one-dimensional oscillations (eg along x when viewing the y axis) - so in a spatially varying mag field...
-	And we're nearly at the point of being able to project the Stokes vectors into the local field
+	% The classical dipole envisions only circular polarization is visible along the quantization axis (z oscillation is not visible), but from transverse directions one can see the z oscillation and also the one-dimensional oscillations (eg along x when viewing the y axis) - so in a spatially varying mag field...
+	% And we're nearly at the point of being able to project the Stokes vectors into the local field
 	
 
 
@@ -314,7 +311,6 @@
 	The varied and central roles of interactions will be revisited in later chapters, traversing the spectrum from isolated, to weakly-interacting, to distinctly many-body systems.
 	
 
-
 \section{Interacting atoms}
 
 	
@@ -325,7 +321,7 @@
 	Low densities imply that low temperatures are required to achieve high phase space density and reach the degenerate regime, which are necessary conditions to minimize the two-body loss processes characteristic to metastable helium.
 	Two-body collisions are also the crucial enabler for thermalization during the evaporative cooling employed to reach such low temperatures, so long as the relaxation times are shorter than the sample lifetime.
 
-	Neglecting spin-orbit and relativistic effects the two-body scattering problem reduces to the Keplerian Schr\"{o}dinger equation in the centre-of-momentum frame,
+	Neglecting spin-orbit and relativistic effects the two-body scattering problem reduces to the Schr\"{o}dinger equation in the centre-of-momentum frame,
 	\begin{equation}
 	\left(\frac{\hbar^2}{2m^*}\Delta + V(r) - E\right)\psi(r) = 0,
 	\end{equation}
@@ -335,11 +331,11 @@
 	\psi(r) \propto e^{ikz} + f(\theta)\frac{e^{ikr}}{r},
 	\end{equation}
 
-	where $k=\sqrt{2m^*E/\hbar}$ is the plane wave-vector of the initial approach and $\theta$ is the angle from the direction of incidence.
+	where $k=\sqrt{2m^*E/\hbar}$ is the plane wave-vector of the initial approach and $\theta$ is the angle of scattering from the direction of incidence.
 	A general solution can found by expanding $f(\theta)$ into a convenient basis of \emph{partial waves} (spherical harmonics) which are labeled $s,p,d,f,..$ in order of increasing angular momentum.
 	In the low-energy limit, $f(\theta)$ is independent of angle and only the spherically symmetric s-wave term contributes, and the limit $f(\theta)\rightarrow-a$ is accordingly called the s-wave scattering length.
 	In the millikelvin regime the scattering physics is determined by just a few partial waves \cite{Mcnamara07}, and in the ultracold (microkelvin or colder) regime only the s-wave scattering channel is significant.
-	The total cross section $|f(\theta)^2|/|\psi|^2$, which is the total probability that a near collision results in particle scattering, approaches $\sigma=8\pi a^2$ for polarized bosons\footnote{For fermion pairs with odd total spin, the cross section tends to zero because of the Pauli exclusion principle, and thus the s-wave scattering length vanishes.} \cite{Przybytek05}.
+	The total cross section, which is the total probability that a near collision results in particle scattering, approaches $\sigma=8\pi a^2$ for polarized bosons\footnote{For fermion pairs with odd total spin, the cross section tends to zero because of the Pauli exclusion principle, and thus the s-wave scattering length vanishes.} \cite{PitaevskiiStringari,Przybytek05}.
 	
 
 	The s-wave scattering length is also an important determinant of the energetics of degenerate matter such as BEC.
@@ -351,24 +347,27 @@
 	In collisions between single atoms, though, there is a more subtle orientation-dependence which arises from the total spin of the two-particle system.
 	The three possible configurations between pairs of \mhe atoms correspond to the singlet $^1\Sigma_g^+$, triplet $^3\Sigma_u^+$, and quintet $^5\Sigma_g^+$ Born-Oppenheimer molecular potentials\footnote{the subscript \emph{g} and \emph{u} are short for \emph{gerade} and \emph{ungerade} (German for even and odd) label the reflection symmetry of the two-body wavefunction.}, with total spin 0, 1, and 2.
 	When the atoms are spin-polarized, as they are when confined in magnetic traps, then the only scattering that occurs is in the quintet channel.
-	In low-energy scattering contexts dominated by s-wave scattering, odd partial waves do not contribute to the interaction potential and hence the triple $^3\Sigma_u^+$ potential is dominated by the quintet $^5\Sigma_g^+$ term for all interactions with nonzero total spin \cite{Leo01}. 
-	As such the inter-species scattering lengths $a_{1,1}$, $a_{1,0}$, $a_{1,-1}$, and $a_{-1,-1}$ are all equal \cite{Leo01,Vassen16}.
+	In low-energy scattering contexts dominated by s-wave scattering, odd partial waves do not contribute to the interaction potential and hence the triplet $^3\Sigma_u^+$ potential is dominated by the quintet $^5\Sigma_g^+$ term for all interactions with nonzero total spin \cite{Leo01}. 
+	As such the inter-species scattering lengths $a_{1,1}$, $a_{-1,-1}$, $a_{0,1}$, and $a_{0,-1}$ are all equal \cite{Leo01,Vassen16}.
 	The most accurate determination of the s-wave scattering length in these configuration is 7.512 nm \cite{Moal06}, in agreement with calculations performed the year before the measurements \cite{Przybytek05}.
 	When the total spin is zero, the singlet term contributes and so $a_{1,-1}\approx8.8$ nm and $a_{0,0}\approx3.8$ nm \cite{Leo01,Vassen16}.
 	In general this thesis will be concerned with interactions between spin-polarized helium atoms and hence will use the abbreviation $a\equiv a_{1,1}$ unless specified otherwise.
 	
+
 	A powerful tool available in some cold atom experiments are Feshbach resonances\footnote{Feshbach resonances originated in Feshbach's work in nuclear physics (Feshbach 1958, 1962) and Fano worked on in atomic context (fano 1961), but these fano-feshbach resonances are referred to in general as feshbach resonances.
 	}.
-	A detailed description is found in \cite{Chin10}, but from an operational standpoint they allow control of the scattering length as $a = \tilde{a}(1-\Delta/(B-B_0)$, where B is the strength of an ambient magnetic field, $B_0$ is the resonance value of the field, $\tilde{a}$ is the value when the field is far from a resonance and $\Delta$ sets the resonance width.
+	A detailed description is found in \cite{Chin10}, but from an operational standpoint they allow control of the scattering length as $a = \tilde{a}(1-\Delta/(B-B_0))$, where B is the strength of an ambient magnetic field, $B_0$ is the resonance value of the field, $\tilde{a}$ is the value when the field is far from a resonance and $\Delta$ sets the resonance width.
 	The scattering length can thus be tuned in size and even in sign.
-	Fundamentally, the stability of a BEC requires a positive s-wave scattering length\footnote{Although in some negative-temperature states created in an optical lattice, a BEC can be stable even with attractive interactions \cite{Braun13}}, and switching from stable to unstable configurations permits one to examine condensate collapse (as in the spectacular Bosenova experiments \cite{Papers}) and also to explore the BEC-BCS crossover \cite{Papers}.
+	However, the stability of a BEC with arbitrary population requires a positive s-wave scattering length.
+	Attractive interactions leading to instability and collapse of a condensate with number above a critical value $N_\textrm{cr}\sim\mathcal{O}(a_{ho}/|a|)$, where $a_{ho} = \sqrt{\hbar/m\omega}$ is the length scale of the ground state of the harmonic trap housing the atoms \footnote{And in some negative-temperature states created in an optical lattice, a BEC can be stable with attractive interactions \cite{Braun13}} \cite{PitaevskiiStringari}.
+	Switching from stable to unstable configurations permits one to examine condensate collapse (as in the spectacular Bosenova experiments \cite{Cornish00}) and also to explore the BEC-BCS crossover \cite{Bourdel04}.
 	The spinless nucleus of $^4$He prohibits coupling of bound states within an $m_J$ manifold from crossing an open-channel threshold, precluding this pathway to a Feshbach resonance \cite{Goosen10}.
-	Nonetheless, Feshbach resonances induced by spin-spin interactions between helium atoms have been predicted \cite{Venturi99, goosen10}, but have not observed to date \cite{Borbely12}.
-	In a recent work \cite{Hirsh21}, the authors (including members of the ANU He* lab) describe calculations with a newer method predicting, unfortunately, the absence of Feshbach resonances between $^4$He-$^4$He collisions.
+	Nonetheless, Feshbach resonances induced by spin-spin interactions between helium atoms have been predicted \cite{Venturi99, Goosen10}, but have not observed to date \cite{Borbely12}.
+	In a recent work \cite{Hirsch21}, the authors (including members of the ANU He* lab) describe calculations with a newer method predicting, unfortunately, the absence of Feshbach resonances between $^4$He-$^4$He collisions.
 	
 	Inelastic scattering processes are those which exchange energy between the internal and motional states of either atom.
 	They can be represented as a complex scattering potential \cite{Leo01} which permits losses from on-shell scattering channels.
-	An important inelastic process characteristic of metastable noble gases \cite{VassenReview} is \emph{Penning ionization}.
+	An important inelastic process characteristic of metastable noble gases is \emph{Penning ionization} \cite{VassenReview}.
 	 This can occur through the decay channels
 	\begin{equation}
 		\textrm{He}^*+\textrm{He}^*\rightarrow 
@@ -383,14 +382,13 @@
 	The density achieved in early magneto-optical traps (MOTs) was limited to some hundredfold less than the alkali-metal MOTs of the day \cite{Bardou92,Kumukura92,Mastwijk98}.
 	Helium MOT densities were limited by losses through two-body collisions involving atoms in the $\metastable$ and those excited to the $2\triplet P_2$ state by the trapping beams, as opposed to rescattering pressure as in the case of alkali metals.
 	Indeed, while the Penning loss rate constant \footnote{The rate constant $\beta_{i,j}$ for losses via collisions between atoms in states $i$ and $j$ yields an absolute loss rate per volume per time through the product with the respective densities, $\Gamma_{i,j} = \beta_{i,j}n_i n_j$ cm$^{-3}$s$^{-1}$.} between pairs of $\metastable$ atoms is of order $2\times10^{-9}$ cm$^3$/s, the loss rate for $\metastable-2\triplet P_2$  collisions is around $10^{-7}$ cm$^3$/s.
-	Thus early MOTs had loss rates which were a population-weighted average of these rates, around $7\times10^-8$ cm$^3$/s \cite{Weiner99}.
+	Thus early MOTs had loss rates which were a population-weighted average of these rates, around $7\times10^{-8}$ cm$^3$/s \cite{Weiner99}.
 	Such light-assisted losses  limited the population achievable in MOTs until larger beams and detunings were used \cite{Tol99}.
-	These reduced Penning ionization rates to the order of $5\times10^{-9}$ cm$^3$/s at large detunings.
-	In the dark, the rate constant is an order of magnitude or so lower again \cite{Mastwijk98}, but the process is  still too fast to permit access to magnetic traps of sufficient lifetime and density to reach degeneracy.
+	The Penning ionization rate is some 20-fold lower at large detunings compared to near-resonant light \cite{Mastwijk98}, reducing this loss rate to the order of $5\times10^{-9}$ cm$^3$/s at large detunings.
 	Fortunately, the inelastic scattering cross-sections depend on the molecular potentials in such a way that condensation becomes attainable: When all the atoms are polarized in the either of the $m_J=\pm1$ states, the incoming state has a total spin of 2, whereas the reaction products have a total spin of 1, and so this process is forbidden.
-	In reality, it does occur through a weak virtual spin-dipole transition \cite{Shlyapnikov94} , but slowly enough that spin-polarized \mhe exhibits a $10^4$-fold reduction in ionization rate.
+	In reality, it does occur through a weak virtual spin-dipole transition \cite{Shlyapnikov94}, but slowly enough that spin-polarized \mhe exhibits a $10^4$-fold reduction in the Penning ionization rate.
 	At field strengths above 50G, however, the suppression weakens \cite{Shlyapnikov94,Borbely12}.
-	Other noble gases also exhibit highly energetic metastable states, but the lifetime and suppression of Penning ionization decreases with increasing mass \cite{Orzel99, spoden05}.
+	Other noble gases also exhibit highly energetic metastable states, but the lifetime and suppression of Penning ionization decreases with increasing mass \cite{Orzel99, Spoden05}.
 	Thus Helium may be the only noble gas ever to be Bose-condensed.
 	
 	% F bardou, O emile, J M courty, C I Westbrook, A Aspect, magneto-optical trapping of metastable ehlium: Collisions in the presence of resonant light, Europhysics letters 20, Dec 1992
@@ -400,8 +398,6 @@
 	% \cite{Shlyapnikov94} predicts 1e5x reduction in PI in spin-pol samples; relaxation-induced penning; virtual spin-dipole transitions (induced by spin-dipole interaction) to the zero spin state of the quasimolecule can lift the spin-conservation rule and lead to regular penning ionization	Direc dipole-exchange ionization is also a possibility but dominated by spin-relazation (relaxation-induced penning; virtual spin-dipole transitions to the zero spin state of the quasimolecule can life the spin-conservation rule and lead to regular penning ionization)
 	
 	
-	
-
 \section{Bose-Einstein condensation}
 
 		% M H ANderson, J R Ensher, M R Mathews, C E Wieman, and E A cornell, observation of bose-einstein condensation in a dilute atomic vapor, Science 269, 198-201, July 1995
@@ -413,7 +409,7 @@
 		% Raab et al, trapping of neutral sodium atoms with radiation pressure, phys rev lett 59, 1987
 		% P D Lett et al, observation of atoms laser cooled below the Doppler limit, phys rev lett 61, 1988
 
-% \subsection{What is a BEC?}
+	% \subsection{What is a BEC?}
 	% Things I might like to put in later: Partition function Z = Tr(\exp(\beta H)), expectation values Tr(O rho)/Z, 
 
 	The `fifth state of matter'\footnote{The familiar first phases, solid, liquid, and gas, are vanishingly rare in cosmological terms.
@@ -421,12 +417,12 @@
 	Helium comprises about 23\%, most of which being primordial baryons formed during the recombination epoch.}  has a long and storied history\cite{Mukundanote}.
 	Interest in BEC was amplified back in the middle of the 20th century when Fritz London proposed that Bose-Einstein condensation was connected to the superfluid phenomenon in liquid helium.
 	Nikolay Nikolayevich Bogolyubov formalized this connection and so, historically speaking, helium was the element which hosted the earliest experimental realization of Bose-Einstein condensation, albeit with a very small condensed fraction \footnote{Nikolay was a darling of Russian theoretical physics, receiving his PhD-equivalent qualification at 19 and made important contributions to quantum field theory. In his famous paper on the problem of interacting bosons, his name is transliterated as \emph{Bogolubov}. Bogolyubov and \emph{Bogoliubov} are also common transliterations.}.
-	While liquid helium is a rare thing in cosmological terms, BEC may have existed already for millions of years in the superdense quark matter of neutron stars \cite{Haskell18, martin16,Baym69,Page11}, wresting the claim of cosmic novelty from human hands. 
+	While liquid helium is a rare thing in cosmological terms, BEC may have existed already for millions of years in the superdense quark matter of neutron stars \cite{Haskell18, Martin16,Baym69,Page11}, wresting the claim of cosmic novelty from human hands. 
 	Nonetheless, the essentially pure atomic condensates and the emerging study of molecular condensates in laboratory settings are among the most extreme conditions in the universe, and are not believed to occur naturally elsewhere in the universe.
-	Following the oft-cited seven decades between the initial theoretical descriptions and the experimental realization of atomic Bose-Einstein condensates (BEC) \cite{Anderson95,Davis95,Bradley95}, the field has become quite industrious at the eve of its centenary.
+	Following the oft-cited seven decades between the initial theoretical descriptions and the experimental realization of atomic Bose-Einstein condensates (BEC) \cite{Davis95,Bradley95,Anderson95}, the field has become quite industrious at the eve of its centenary.
 	As pithily put by a review only five years after the Nobel-winning experiments, `Any attempt to review recent progress is out of date as soon as it is published' \cite{Courteille01}.
-	This is no less true today, as the number of ultracold quantum gas experiments worldwide now number nearly 200\footnote{See \url{everycoldatom.com}} and numerous companies have been founded on the promise of selling better sensors and computers using technologies based on BEC physics.
-	There are numerous treatments of the theory of Bose-Einstein condensation, for example the classic textbooks \cite{PitaevskiiStringari,PethickSmith} and review articles \cite{DalfovoReview, yukalov11_basics,Courteille01}.
+	This is no less true today, as the number of ultracold quantum gas experiments worldwide\footnote{See \url{everycoldatom.com}} now number nearly 200 and numerous companies have been founded on the promise of selling better sensors and computers using technologies based on BEC physics.
+	There are numerous treatments of the theory of Bose-Einstein condensation, for example the classic textbooks \cite{PitaevskiiStringari,PethickSmith} and review articles \cite{DalfovoReview, Yukalov11_basics,Courteille01}.
 	The essential background for discussion here draws on these standard sources unless otherwise cited.
 	% anquez16 also cites Bogoliubov theory as being used in analysis of quantum phase transitions in spinor condensates
 
@@ -455,7 +451,7 @@
 	One can then show that, above the critical temperature $T_c$, the ground-state population diverges, corresponding to Bose-Einstein condensation.
 	However, in laboratory realizations of BEC, there is no reservoir attached to the system under study, but rather an isolated gas at some finite entropy which contains both the thermal and condensed fractions (if the latter is present). 
 	
-	Moreover, in the presence of interactions, these criterion faces another issue: the stationary states of an interacting gas of $N$ atoms cannot be written as a prduct $\ket{\Psi} = \ket{\psi_i}^{\otimes N}$ of single-particle eigenstates $\ket{\psi_i}$.
+	Moreover, in the presence of interactions, these criterion faces another issue: the stationary states of an interacting gas of $N$ atoms cannot be written as a product $\ket{\Psi} = \ket{\psi_i}^{\otimes N}$ of single-particle eigenstates $\ket{\psi_i}$.
 	That is, while measurements are confined to observables of single particles, the single-particle states are not eigenstates and so it is not sensible to talk of their `macroscopic occupation'.
 	The Penrose-Onsager criterion \cite{Penrose56} provides an alternative in terms of the density matrix $\rho$ for the isolated composite system comprised of all the gas particles.
 	The single-particle density matrix is then the expected value of the one-body field operator
@@ -488,7 +484,7 @@
 	
 	% Something something grand-canonical ensemble; role of chemical potential; tracing out reservoir
 	% We have the other formlation, \rho = \exp(\beta \hat{H});
-\subsection*{Bogoliubov theory}
+	\subsection*{Bogoliubov theory}
 	The fundamental theoretical object of interest is the Hamiltonian of a bosonic quantum field with two-body interactions,
 	\begin{equation}
 		\hat{H} \int\left(\frac{\hbar^2}{2m}\nabla\hat{\Psi}^\dagger(\textbf{r})\nabla\hat{\Psi}(\textbf{r})\right)d\textbf{r} + \frac{1}{2}\int\left(\hat{\Psi}^\dagger(\textbf{r}')\hat{\Psi}^\dagger(\textbf{r})V(\textbf{r}'-\textbf{r}) \hat{\Psi}(\textbf{r}')\hat{\Psi}(\textbf{r})\right)d\textbf{r}'d\textbf{r}
@@ -507,7 +503,7 @@
 	In doing so we distinguish $\pvec=0$ as the condensed mode, and say that condensation occurs when $N_0=\langle\hat{a}^\dagger_0\hat{a}_0\rangle =\mathcal{O}(N)$.
 	The observation that the condensed mode has a population of order $N$ means that in the thermodynamic limit ($N\rightarrow\infty,~V\rightarrow\infty$), one particle here or there will not really make a measurable difference.
 	% More quantitatively, one could say $\hat{a}_0\psi_0 = 
-	This heuristic can be expressed quantitatively as the Bogoliubov approximation wherein the annihilation and creation operators for the condensed mode are replaced with complex numbers as per
+	This argument can be expressed quantitatively as the Bogoliubov approximation wherein the annihilation and creation operators for the condensed mode are replaced with complex numbers as per
 	\begin{equation}
 		\hat{a}_0 = \sqrt{N_0}e^{i\alpha}, \hat{a}_0^\dagger= \sqrt{N_0}e^{-i\alpha}, 
 	\end{equation}
@@ -548,7 +544,7 @@
 	That is, condensation is not necessary for the Bogoliubov approximation to be valid.
 	However, it \emph{is} the case that the onset of condensation coincides with the ground state breaking\footnote{This is sometimes called `breaking the gauge symmetry'.
 	This is a misnomer, as a gauge symmetry is a property of the theory, not a state, and all consistent theories must be gauge symmetric throughout.
-	These subtleties are discussed at length in lucid terms in \cite{Poniatowski19}} the $U(1)$ symmetry \cite{Suto05} .
+	These subtleties are discussed at length in lucid terms in \cite{Poniatowski19}.} the $U(1)$ symmetry \cite{Suto05}.
 	
 	% That this coincides with the validity of the `coherent state' approximation is quite profound: Like the transition from the quantized electromagnetic field to the Maxwell equations, BEC has the flavour of a classical field but one which is consitued by matter which has dispersed in some delocalized state.
 	% The interactions between atoms present a marked departure from the physics of the electric field, however, and yet the system remains in the grasp of human theorists thanks to the Bogoliubov approximation, which I introduce here and examine experimentally in chapter \ref{chap:QD}.
@@ -564,7 +560,7 @@
 	
 	
 	
-\subsection*{Harmonically trapped condensates}
+	\subsection*{Harmonically trapped condensates}
 
 	Turning back toward harmonic gases, we can begin from the full Hamiltonian (Eqn.
 	(\ref{eqn:ham}) and produce an effective Schr\"{o}dinger equation.
@@ -576,16 +572,16 @@
 	which is valid for arbitary interactions dominated by the s-wave scattering length.
 	 If one further assumes that the condensate density varies on scales larger than the healing length $\xi = \hbar/\sqrt{2mgn}$, one can make the Thomas-Fermi approximation and ignore the kinetic term in the GPE, whereby the condensate density profile can be written as
 
-	% in the Thomas-Fermi approximation, whereby one assumes  the density varies 	he GPE is a common starting point for numerical simulations of BEC physics, but the salient feature for our purposes is the introduction of the effective interaction energy $g=4\pi\hbar^2a/m$.
-	The importance can be seen by noting that 
+	
 	\begin{equation}
 		n(\textbf{r}) = \frac{\mu-V(\textbf{r})}{g},
 	\end{equation}
 	where $\mu$ is the chemical potential.
-	The chemical potential for the harmonically trapped condensate also fixes the average energy per particle:
+	The chemical potential for the harmonically trapped condensate also fixes the average energy per particle as
 	\begin{equation}
-		\mu = \frac{\hbar\bar{\omega}}{2}\left(\frac{15 N a}{a_{ho}}\right)^{2/5} = \frac{7}{5}\frac{E}{N}
+		\mu = \frac{\hbar\bar{\omega}}{2}\left(\frac{15 N a}{a_{ho}}\right)^{2/5} = \frac{7}{5}\frac{E}{N},
 	\end{equation}
+	recalling $a_{ho} = \sqrt{\hbar/m\omega}$ is the length scale of the ground state of the harmonic oscillator.
 	For a Bose gas confined in a harmonic potential of the form
 	\begin{equation}
 		V = \frac{1}{2} m \omega_x^2 x^2 + \frac{1}{2} m \omega_y^2 y^2 + \frac{1}{2} m \omega_z^2 z^2,
@@ -596,7 +592,7 @@
 		n_0 = \frac{1}{8 \pi}\left( (15N_0)^2 \left(\frac{m \bar{\omega}}{\sqrt{a \hbar}}\right)^{6}\right)^{1/5}.
 		\label{eqn:n0}
 	\end{equation}
-	The Thomas-Fermi approximation is valid when $N a/a_{ho}\gg1$, where $a_{ho} = \sqrt{\hbar/m\omega}$ is the length scale of the ground state of the harmonic oscillator.
+	The Thomas-Fermi approximation is valid when $N a/a_{ho}\gg1$. 
 	This is when the mean-field energy significantly outweighs the kinetic term.
 	The phase space density for condensation is achieved at the (ideal) critical temperature 
 	\begin{align}
@@ -638,75 +634,75 @@
 	% time-dependent stuff and expansion profiles;
 	% from Castin \& Dum
 	% After release from the trap, the mean-field interaction disperses into kinetic energy of the particles, contravening the assumptions of the Thomas-Fermi approximation.
-% 	The subsequent expansion from a harmonic trap can be characterized by a scaling $R_i(t) = \lamba_i(t)R_i(0)$, where $R_i(t)$ is the position of an infinitestimal volume of the cloud at time $t$ in the $i$th coordinate.
-% 	The scaling parameters $\lambda$ evolve as per the coupled second-order ODEs
-% 	% \begin{equation}
-% 	% 	\ddot{\lambda_j} = \frac{\omega_j(0)^2}{\lambda_j\lambda_1\lambda_2\lambda_3}-\omega_j(t)\lambda_j
-% 	% \end{equation}
+	% 	The subsequent expansion from a harmonic trap can be characterized by a scaling $R_i(t) = \lamba_i(t)R_i(0)$, where $R_i(t)$ is the position of an infinitestimal volume of the cloud at time $t$ in the $i$th coordinate.
+	% 	The scaling parameters $\lambda$ evolve as per the coupled second-order ODEs
+	% 	% \begin{equation}
+	% 	% 	\ddot{\lambda_j} = \frac{\omega_j(0)^2}{\lambda_j\lambda_1\lambda_2\lambda_3}-\omega_j(t)\lambda_j
+	% 	% \end{equation}
 
-% 	% In this generalization of TF to the time-dependent setting, the condensate density evolves like
-% 	% \begin{equation}
-% 	% 	N|\Phi_{TF}(r,t)|^2 = \frac{\mu-\sum_j \frac{m\omega_j^2(0)r_j^2}{\lambda_j^2(t)}}{g\lambda_1\lambda_2\lambda_3},
-% 	% \end{equation}
+	% 	% In this generalization of TF to the time-dependent setting, the condensate density evolves like
+	% 	% \begin{equation}
+	% 	% 	N|\Phi_{TF}(r,t)|^2 = \frac{\mu-\sum_j \frac{m\omega_j^2(0)r_j^2}{\lambda_j^2(t)}}{g\lambda_1\lambda_2\lambda_3},
+	% 	% \end{equation}
 
-% 	% In the case of an instantaneous switching-off of a cigar-shaped trap ($\omega_3=\omega_x\gg\omega_1=\omega_2=\omega_\perp), the scaling parameters evolve like 
-% 	% \begin{align}
-% 	% 	\frac{d^2}{d\tau^2} \lamba_\perp &= \frac{1}{\lamba_\perp^3\lambda_z}\\
-% 	% 	\frac{d^2}{d\tau^2} \lamba_x &= \frac{\varepsilon^2}{\lamba_\perp^2\lambda_x^2},
-% 	% \end{align}
-% 	% where $\varepsilon = \omega_x(0)/\omega_\perp(0)\ll1$.
-% 	These equations are amenable to numerical integration, but the aspect ratio of an expanded condensate can be written in a relatively straightforward manner as
-% 	% \begin{align}
-% 	% 	\frac{W_x(t)}{W_\perp(t)} = \frac{\lambda_z(t)}{\lambda_\perp(t)}\frac{1}{\varepsilon}.
-% 	% \end{align}
-% 	% hence, if one has prior knowledge of the trapping frequencies, one can use the aspect ratio as measured at a single point in time $t$ to determine the scaling parameters from a low-order series expansion in the form
-% 	% \begin{align}
-% 	% 	\lambda_\perp(t) = \sqrt{1+(\omega_\perp(0)t)^2}\\
-% 	% 	\lambda_x(t) = 1+\varepsilon^2(\omega_\perp(0)t) \arctan(\omega_\perp(0)t)) - \ln\sqrt{1+(\omega_\perp(0)t)^2}).
-% 	% \end{align}
-
-
-% 	% from Tychkov
-	
+	% 	% In the case of an instantaneous switching-off of a cigar-shaped trap ($\omega_3=\omega_x\gg\omega_1=\omega_2=\omega_\perp), the scaling parameters evolve like 
+	% 	% \begin{align}
+	% 	% 	\frac{d^2}{d\tau^2} \lamba_\perp &= \frac{1}{\lamba_\perp^3\lambda_z}\\
+	% 	% 	\frac{d^2}{d\tau^2} \lamba_x &= \frac{\varepsilon^2}{\lamba_\perp^2\lambda_x^2},
+	% 	% \end{align}
+	% 	% where $\varepsilon = \omega_x(0)/\omega_\perp(0)\ll1$.
+	% 	These equations are amenable to numerical integration, but the aspect ratio of an expanded condensate can be written in a relatively straightforward manner as
+	% 	% \begin{align}
+	% 	% 	\frac{W_x(t)}{W_\perp(t)} = \frac{\lambda_z(t)}{\lambda_\perp(t)}\frac{1}{\varepsilon}.
+	% 	% \end{align}
+	% 	% hence, if one has prior knowledge of the trapping frequencies, one can use the aspect ratio as measured at a single point in time $t$ to determine the scaling parameters from a low-order series expansion in the form
+	% 	% \begin{align}
+	% 	% 	\lambda_\perp(t) = \sqrt{1+(\omega_\perp(0)t)^2}\\
+	% 	% 	\lambda_x(t) = 1+\varepsilon^2(\omega_\perp(0)t) \arctan(\omega_\perp(0)t)) - \ln\sqrt{1+(\omega_\perp(0)t)^2}).
+	% 	% \end{align}
 
 
-
-% % \begin{equation}
-% 	% Z(\beta,\mu) = \sum_{N'=0}^{\infty} e(\beta\mu N') Q_{N'}(\beta)
-% 	% \end{equation}
-% 	% where $Q_{N'}$ is the canonical partitionfunction for $N'$ particles.
-% 	This is assuming that P(System|Reservoir) = P(system)P(reservoir) ie states of sys and res are independent.
-% 	One gets the thermodynamic potentials
-% 	% \begin{equation}
-% 	% \Omega = E - TS - \mu N = - k_B T \ln Z
-% 	% \end{equation}
-
-% 	% Consider now a system described by single-particle hamiltonians $\hat{H} - \sum_i\hat{H}^{(1)}_i$, then the schrodinger equation $H^{(1)}\phi_i(r) = \varepsilon_i\phi_i(r)$ specifies the many-body eigenstate.
-	
-% 	% In the idal bose gas one can find $\Omega = k_B T\sum_i \ln(1-e^{\beta(\mu-\varepsilon_i)})$ which then gives the number of particles via 
-
-% 	% \begin{equation}
-% 	% N = -\frac{\partial \Omega}{\partial\mu},
-% 	% \end{equation}
-
-% 	% or in terms of the occupation numbers (what's the general principle here? something something conjugates)
-% 	% \begin{equation}
-% 	% \bar{n}_i = -\frac{\partial Z}{\partial \beta \varepsilon_i} = \frac{1}{\exp(\beta(\varepsilon_i-\mu))-1}
-% 	% \end{equation}
-% 	% which is the famous Bose-Einstein statistics.
-% 	One must have $\mu<\varepsilon_0$ which would otherwise entail a negative number of particles in the ground state.
-% 	In the limit $\mu\rightarrow\varepsilon_0$ the condensed number $N_0=\bar{n}_0$ grows rapidly.
-	
+	% 	% from Tychkov
+		
 
 
-% 	% Which contains the one-body density $n(r) = n^{(1)}(r,r)$ on the diagonal, where $\int dr n(r) = N$.
-% 	One can also work in the Fourier basis via $\Psi(p) = (2\pi\hbar)^{-3/2}\int dr exp(-ip\cdot r/\hbar)\Psi(r)$.
-	
-	
-% 	% Below the critcal temperature the density has the form $n(p) = N_0\delta(p) + \tilde{n}(p)$, where $N_0$ is the condensed number.
-% 	This means that one has $n^{1}(s)\rightarrow n_0=N_0/V$ which involves offdiagonal parts of the one body density.
-% 	% If we have the single-particle eigenfunctions $\phi_i$ then we can also write $n^{1}(r,r') = \sum_i n_i \phi_{i}^*(r)\phi_{i}(r')$ where $n_i$ are the occupation numbers of the single particle states.
-% 	One can conveniently separate the condensed and noncondensed parts 
-% 	% $n^{1}(r,r') = N_0 \psi_0^*(r)\phi_0(r') + \sum_{i\neq0} n_i \phi_{i}^*(r)\phi_{i}(r')$
-% 	% wherein the latter term is replaced by an integral in the thermodynamic limit which vanishes at infinity (incoherence??)
+
+	% % \begin{equation}
+	% 	% Z(\beta,\mu) = \sum_{N'=0}^{\infty} e(\beta\mu N') Q_{N'}(\beta)
+	% 	% \end{equation}
+	% 	% where $Q_{N'}$ is the canonical partitionfunction for $N'$ particles.
+	% 	This is assuming that P(System|Reservoir) = P(system)P(reservoir) ie states of sys and res are independent.
+	% 	One gets the thermodynamic potentials
+	% 	% \begin{equation}
+	% 	% \Omega = E - TS - \mu N = - k_B T \ln Z
+	% 	% \end{equation}
+
+	% 	% Consider now a system described by single-particle hamiltonians $\hat{H} - \sum_i\hat{H}^{(1)}_i$, then the schrodinger equation $H^{(1)}\phi_i(r) = \varepsilon_i\phi_i(r)$ specifies the many-body eigenstate.
+		
+	% 	% In the idal bose gas one can find $\Omega = k_B T\sum_i \ln(1-e^{\beta(\mu-\varepsilon_i)})$ which then gives the number of particles via 
+
+	% 	% \begin{equation}
+	% 	% N = -\frac{\partial \Omega}{\partial\mu},
+	% 	% \end{equation}
+
+	% 	% or in terms of the occupation numbers (what's the general principle here? something something conjugates)
+	% 	% \begin{equation}
+	% 	% \bar{n}_i = -\frac{\partial Z}{\partial \beta \varepsilon_i} = \frac{1}{\exp(\beta(\varepsilon_i-\mu))-1}
+	% 	% \end{equation}
+	% 	% which is the famous Bose-Einstein statistics.
+	% 	One must have $\mu<\varepsilon_0$ which would otherwise entail a negative number of particles in the ground state.
+	% 	In the limit $\mu\rightarrow\varepsilon_0$ the condensed number $N_0=\bar{n}_0$ grows rapidly.
+		
+
+
+	% 	% Which contains the one-body density $n(r) = n^{(1)}(r,r)$ on the diagonal, where $\int dr n(r) = N$.
+	% 	One can also work in the Fourier basis via $\Psi(p) = (2\pi\hbar)^{-3/2}\int dr exp(-ip\cdot r/\hbar)\Psi(r)$.
+		
+		
+	% 	% Below the critcal temperature the density has the form $n(p) = N_0\delta(p) + \tilde{n}(p)$, where $N_0$ is the condensed number.
+	% 	This means that one has $n^{1}(s)\rightarrow n_0=N_0/V$ which involves offdiagonal parts of the one body density.
+	% 	% If we have the single-particle eigenfunctions $\phi_i$ then we can also write $n^{1}(r,r') = \sum_i n_i \phi_{i}^*(r)\phi_{i}(r')$ where $n_i$ are the occupation numbers of the single particle states.
+	% 	One can conveniently separate the condensed and noncondensed parts 
+	% 	% $n^{1}(r,r') = N_0 \psi_0^*(r)\phi_0(r') + \sum_{i\neq0} n_i \phi_{i}^*(r)\phi_{i}(r')$
+	% 	% wherein the latter term is replaced by an integral in the thermodynamic limit which vanishes at infinity (incoherence??)
 

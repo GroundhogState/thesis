@@ -1,5 +1,6 @@
 # gitignore: All the drafts
 drafts/*
+reviews/*
 sample_thesis/*
 # huge numbers of qd figs
 fig/depletion/runs/*
@@ -12,4 +13,5 @@ fig/apparatus/ComponentLibrary/*
 # Various image types not used
 *.png
 *.epsc
+
 

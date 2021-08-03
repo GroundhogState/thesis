@@ -24,29 +24,14 @@
 
 % https://www.sciencedirect.com/science/article/abs/pii/S0009261421003237
 %  doubly excited states of He
-\chapter{Frequency measurements of transitions between the $n=2$ and $n=5$ manifolds in $^4$He}
+\chapter{Frequency measurements of resonances between the second and fifth manifolds in {$^4$}\mhe}
 \markboth{\thechapter. TRANSITION FREQUENCY MEASUREMENTS}{}
 \label{chap:transitions}
-\todo{Shorter title or fix page headers}
-\todo{Put figures in the right place}
 
-\section{Abstract}
-We perform laser absorption spectroscopy with ultracold $^4$He atoms to measure the energy intervals between the $2\triplet P_2$ level and five levels in the n = 5 manifold.
-	The laser light perturbs the cold atomic cloud during the production of Bose-Einstein condensates and decreases the phase space density, causing a measurable decrease in the number of atoms in the final condensate.
-	We improve on the precision of previous measurements by at least an order of magnitude, and report the first observation of the spin-forbidden $2^{3\!}P_2 - 5^{1\!}D_2$ transition in helium.
-	Theoretical transition energies agree with the observed values within our experimental uncertainty.
+\blankfootnote{The contents of this chapter relate to the work published in \textbf{Frequency measurements of transitions from the $2\triplet P_2$ state to the $5\singlet D_2$, $5\triplet S_1$, and $5\triplet D$ states in ultracold helium} by J. A. Ross, K. F. Thomas, B. M. Henson, D. Cocks, K. G. H. Baldwin, S. S. Hodgman, A. Truscott, \href{https://journals.aps.org/pra/abstract/10.1103/PhysRevA.102.042804}{\emph{Physical Review A} \textbf{102}} (2020)}
 
-% We use laser absorption spectroscopy to measure the energy intervals between the $2^{3\!}P_2$ level of $^4$He and five levels in the $n=5$ manifold with a tunable laser.
-	The number of atoms lost from a Bose-Einstein condensate (BEC) acts as a proxy measurement for the descrease in phase space density caused by interactions between the atoms and the laser light.
-	We improve on the precision of previous measurements by an order of magnitude and report the first observation of the spin-forbidden $2^{3\!}P_2 - 5^{1\!}D_2$ transition in helium.
-	The theoretical transition energies agree with the observed values within experimental error.
-% \end{abstract}
 
-% \maketitle
 
-% FINAL TODO
-
-\section{Introduction}
 
   {The} appearance of ordinary matter arises from interactions between charged particles and light.
 	This phenomenon is the domain of the theory of quantum electrodynamics (QED), which provides the most accurate quantitative predictions of any physical theory to date.
@@ -57,21 +42,28 @@ We perform laser absorption spectroscopy with ultracold $^4$He atoms to measure 
 
   In 1964 Schwartz proposed the determination of $\alpha$ from the fine structure intervals of the $2\triplet P$ manifold in helium \cite{Schwartz64}, which are subject to strong QED effects.
 	The contemporary knowledge of helium's structure greatly exceeds Schwartz's anticipation of parts-per-million accuracy.
-	For example, the $2\triplet S_1 - 2\triplet P$ and $2\triplet P - 3\triplet D$ intervals measured by Cancio Pastor \textit{et al.} \cite{Pastor04} and Luo \emph{et al.} \cite{Luo16}, respectively, both have relative uncertainties better than 50 parts per \emph{trillion}, providing Lamb shift measurements accurate to several ppm.
+	For example, the $2\triplet S_1 - 2\triplet P$ and $2\triplet P - 3\triplet D$ intervals measured by Cancio Pastor \textit{et al.} \cite{Pastor04} and Luo \emph{et al.} \cite{Luo15}, respectively, both have relative uncertainties better than 50 parts per \emph{trillion}, providing Lamb shift measurements accurate to several ppm.
 	The measurement of the $\PStateManifold$ fine structure splitting by Smiciklas \textit{et al.} to sub-kilohertz precision determines $\alpha$ to several ppb \cite{Smiciklas10}.
 	Measurements of the $2^{3\!}P_1-2^{3\!}P_2$ interval by Kato \emph{et al.}, accurate to 25Hz, would constrain $\alpha$ to less than one ppb given a similarly accurate measurement of the $2^{3\!}P_0 - 2^{3\!}P_1$ transition and QED calculations including terms of order $\alpha^7$ \cite{Kato18}.
+	The corresponding QED calculations to seventh order have been completed \cite{Patkos21}. The authors note, however, that the predicted energies of the $2\triplet S - 3 \triplet D$ and $2\triplet P - 3 \triplet D$ transitions disagree significantly with experiments, and refrain from computing the nuclear charge radius until these discrepancies are resolved.
 	
 
   \begin{figure}
-      \centering
-      \includegraphics[width=0.45\textwidth]{fig/spectroscopy/level-diagram-tight-latex-pdf.pdf}
-      \caption{Energy level diagram for the helium atom.
-	The transitions measured in this work (blue) are driven by a tunable laser referred to in the text as the \emph{probe beam}.
-	A laser tuned to the $2\triplet S_1-2\triplet P_2$ transition (red, referred to as \emph{pump beam}) populates the lower state of the target transitions.
-	 The doubly forbidden $1^{1\!}S_0 - 2^{3\!}S_1$ transition is excited in a high voltage discharge source.
-	Transitions across the dotted line are \emph{forbidden} by the $\Delta S=0$ selection rule.
-	Level splittings are not to scale.}
+  	
+  	\begin{minipage}[t]{0.38\textwidth}
+			\vspace{0pt}
+      \caption{Energy level diagram for $^4$He showing the transitions measured in this work (blue) are driven by a tunable laser referred to in the text as the \emph{probe beam}.
+				A laser tuned to the $2\triplet S_1-2\triplet P_2$ transition (red, referred to as \emph{pump beam}) populates the lower state of the target transitions.
+				 The doubly forbidden $1^{1\!}S_0 - 2^{3\!}S_1$ transition is excited in a high voltage discharge source.
+				Transitions across the dotted line are \emph{forbidden} by the $\Delta S=0$ selection rule.
+				Level splittings are not to scale.}
       \label{fig:lvl_diag}
+      \end{minipage}
+      \hfill
+      \begin{minipage}[t]{0.6\textwidth}
+      \vspace{0pt}
+      \includegraphics[width=\textwidth]{fig/spectroscopy/level-diagram-tight-latex-pdf.pdf}
+      \end{minipage}
   \end{figure}
 
   A concurrent issue is the so-called `proton radius puzzle': Determinations of the proton charge radius from Lamb shift measurements in muonic and electronic hydrogen \cite{Pohl10, Bezginov19}, electron-hydrogen scattering experiments \cite{Beyer17,Xiong19}, and isotope shifts in light muonic atoms \cite{Kalinowski19,Pohl16} disagree significantly with both the CODATA recommended value and with other recent experiments \cite{Fleurbaey18}.
@@ -80,74 +72,54 @@ We perform laser absorption spectroscopy with ultracold $^4$He atoms to measure 
 	The completed calculation of QED effects to order $\alpha^7$ will allow determination of the absolute nuclear charge radii accurate to better than 1\% \cite{Pachucki17}.
 	Along with these $\alpha^7$ contributions, measurement of the $2\triplet P-2\triplet S$ spacing to within 1.4kHz would allow a determination of the nuclear charge radius to below 0.1\% accuracy, better than expected from the muonic helium Lamb shift \cite{Wienczek19}.
 	 
-
   Notable among recent studies of helium's structure are the measurements of \emph{forbidden} transitions between the singlet and triplet manifolds.
 	Such transitions are made possible in reality due to relativistic effects and are extremely narrow, therefore precise measurements of their spectral features can provide stringent tests of QED \cite{Lach01}.
-	The present work complements existing measurements of forbidden lines in helium at 1557nm \cite{Rooij11,Rengelink18}, 887nm \cite{Notermans14}, and 427nm \cite{Thomas20}.
+	The work in this chapter complements existing measurements of forbidden lines in helium at 1557nm \cite{Rooij11,Rengelink18}, 887nm \cite{Notermans14}, and 427nm \cite{Thomas20}.
 
-  In this work, we report on frequency measurements of the transitions from the $2^3P_2$ state to five states in the $n=5$ manifold of $^4$He, illustrated in Fig.
+	This chapter concerns frequency measurements of the transitions from the $2^3P_2$ state to five states in the $n=5$ manifold of $^4$He, illustrated in Fig.
 	\ref{fig:lvl_diag}.
-	
-  Our results improve on the precision of past measurements \cite{Martin60} by at least an order of magnitude.
-  We resolve the fine structure splitting of the $\PStateManifold_2 - 5\triplet D$ transition.
-	As far as we can ascertain, our work includes the first observation of the spin-forbidden $2^3P_2 - 5^1D_2$ transition in helium, whose transition rate is four orders of magnitude smaller than the other transitions reported here.
+	Below, I describe the laser absorption spectroscopy technique we used to measure the energy intervals between the $2\triplet P_2$ level and five levels in the n = 5 manifold.
+	These measurements improve on the precision of previous measurements by at least an order of magnitude \cite{Martin60}, and resolve the fine structure splitting of the $\PStateManifold_2 - 5\triplet D$ transition.
+	Theoretical transition energies agree with the observed values within our experimental uncertainty.
+	These include the first direct measurement of the spin-forbidden $2^{3\!}P_2 - 5^{1\!}D_2$ transition in helium, whose transition rate is four orders of magnitude smaller than the other transitions discussed here.  
 
-  
+\section{Measurement technique}
 
-\section{Experiment}
-
-% Sequence
-We performed our measurements by disrupting a laser cooling stage in the production of a Bose-Einstein condensate (BEC) of $^{4}\textrm{He}$ atoms.
-	Our experimental sequence begins with $\sim10^8$ atoms in the metastable $2\triplet S_1$ state, cooled to  $\sim1 \textrm{mK}$ in a magneto-optical trap.
-	Throughout the sequence, all laser cooling light is tuned to the $2\triplet S_1 - 2\triplet P_2$ transition at 1083.331nm \cite{Shin16}.
-	The light is then switched off, leaving only the $m_J=1$ atoms in a magnetic trap generated by field coils in a BiQUIC configuration \cite{Dall07}.
-	Next, during a Doppler cooling stage, we illuminated the atoms with $\sim$30$\mu$W$/m^2$ of $\sigma^+$ polarized cooling light in an approximately uniform magnetic field set by the high bias of the BiQUIC coils, further cooling the atoms to $\sim200\mu \textrm{K}$.
-	Finally, we applied forced evaporative cooling by RF radiation, cooling the sample below the critical temperature to form a BEC.
+	The experimental sequence began with $\sim10^8$ atoms in the metastable $2\triplet S_1$ state, cooled to  $\sim1 \textrm{mK}$ in a magneto-optical trap, which were then transferred to a magnetic trap by switching off the light.
+	Next, during the Doppler cooling stage, we illuminated the atoms with $\sim$30$\mu$W$/m^2$ of $\sigma^+$ polarized cooling light in an approximately uniform magnetic field set by the high bias of the BiQUIC coils, further cooling the atoms to $\sim200\mu \textrm{K}$ \com{Doesn't figure 5.5 show that the field is not uniform? }.
+	Finally, forced evaporative cooling lowers the sample below the critical temperature to form a BEC.
 	Each iteration of this procedure produced a BEC of $\sim 5\times10^5$ atoms in a cigar-shaped harmonic trap with trapping frequencies $\omega = 2\pi (425,425,45)$ Hz.
+	To perform the absorption measurements, we disturbed the Doppler cooling stage by applying a probe beam tuned near the target transition, resulting in a reduction in the number of atoms cooled to degeneracy. 
 	
 
-% Detection
-At the end of the experimental sequence the atoms are in the metastable $2^3S_1(m_J=1)$ state, which has a lifetime of $7870$ seconds \cite{Hodgman09}.
-	The metastable state is 19.8eV above the true ground state, and this large internal energy enables single-atom detection by a multi-channel plate and delay-line detector stack \cite{Manning10}, located $\sim$850mm below the trap.
-	The detector has a quantum efficiency of $\sim 8\%$ and saturates at high atom fluxes, precluding accurate number measurements by simply dropping a BEC on the detector.
-	Instead, we used a \emph{pulsed atom laser}, wherein broadband radio-frequency pulses transfer $\sim$2\% of the trap population {at a time} to the untrapped $2\triplet S_1(m_J=0)$ state \cite{Manning10,Henson18}.
-	The resulting coherent matter-wave pulse{s} fall onto the detector, {depleting the entire trapped population after $\sim$200 pulses over 2 seconds.
+	At the end of the experimental sequence a pulsed atom laser, described in section \ref{sec:atomlaser}, transfers $\sim$2\% of the trap population at a time to the untrapped $m_J=0$ state \cite{Manning10,Henson18_BCR}.
+	The resulting coherent matter-wave pulses fall onto the detector, {depleting the entire trapped population after $\sim$200 pulses over 2 seconds.
 	This allows}  the atom number and temperature to be accurately determined without saturating the detector.
-	Each iteration of the BEC preparation sequence followed by detection is referred to as a \emph{shot}.
-	Our data collection protocol consisted of a cycle of one calibration shot with the probe beam switched off, followed by one measurement shot at each of two magnetic field strengths with the probe beam on.
+	Our data collection protocol consisted of a cycle of one calibration shot with the probe beam switched off, followed by one measurement shot (with the probe beam on) at each of two magnetic field strengths used in the in-trap cooling stage.
 	
-
-The physical basis of our measurement is the sensitivity of forced evaporative cooling to the initial conditions of the helium atoms.
+	The physical basis of the measurement is the sensitivity of forced evaporative cooling to the initial conditions of the helium atoms.
 	The precise effect of photon scattering on the final cloud properties depends on the exact details of the evaporation sequence, and is hard to model exactly.
-	Instead, we give a qualitative picture of the role evaporative cooling plays in transforming photon scattering to a measurable change in trap population.
-	
+	Instead, what follows is a qualitative picture of the role evaporative cooling plays in transforming photon scattering to a measurable change in trap population.
 
-During the Doppler cooling stage of BEC creation, the 1083nm cooling beam acts as an optical pump and excites atoms to the $2\triplet P_2(m_J=2)$ state.
-	From the $2\triplet P_2$ state they may decay, with a $\sim$97ns lifetime, back to the trapped metastable state or absorb photons from the probe beam and become excited again to the target state.
+	During the Doppler cooling stage of BEC creation, the 1083nm cooling beam acts as an optical pump and excites atoms to the $2\triplet P_2(m_J=2)$ state.
+	From the $2\triplet P_2$ state they may decay, with a lifetime of $\sim$97ns, back to the trapped metastable state or absorb photons from the probe beam and become excited again to the target state.
 	Doubly-excited atoms may decay back to the trapped $m_J=+1$ state of the $2\triplet S_1$ level, in which case the photon absorption and emission events add heat to the cloud by imparting a nonzero average impulse to the atoms.
-	An initially hotter cloud therefore reduces the efficiency of evaporative cooling, resulting in a higher atom loss during the process and a lower final number in the trap.
-	
+	This leads to an initially hotter cloud, which in turn reduces the efficiency of evaporative cooling, resulting in a higher atom loss during evaporation and a lower final number in the trap. Alternatively, atoms may decay to other untrapped magnetic states of the metastable state, or to the true ground state via a spin-flip transition to the singlet manifold.
 
-Alternatively, atoms may decay to other untrapped magnetic states of the metastable state, or to the true ground state via a spin-flip transition to the singlet manifold.
 	Decay to untrapped states reduces the initial atom number and can even impart heat to the cloud as these atoms leave the trap - via scattering with trapped atoms.
 	This heating will be much smaller than in the previous case because the scattering rate will be small in such a dilute gas.
 	However, reducing the initial trap population also manifests as a reduced final atom number.
 	In both cases a photon scattering signal clearly manifests in the reduction of the total trapped final number $N$ relative to the final number $N_c$ in calibration shots.
-	We define our signal to be the relative number loss $(N_c-N)/N_c$ to compensate for drift in the trap population over time.
+	As such, the signal is defined to be the relative number loss $(N_c-N)/N_c$ to compensate for drift in the trap population over time.
 
 \begin{figure}
-  \begin{minipage}[t]{0.6\textwidth}
-  \vspace{0pt}
-        \includegraphics[width=\textwidth]{fig/spectroscopy/ci-plot-51D2-eps-converted-to.pdf}
+      \includegraphics[width=\textwidth]{fig/spectroscopy/ci-plot-51D2.pdf}
     \includegraphics[width=\textwidth]{fig/spectroscopy/ci-plot-53S1}
-  \end{minipage}\hfill
-  \begin{minipage}[t]{0.38\textwidth}
-  \vspace{0pt}
-   \caption{Line profile for the spin-forbidden $\PStateManifold_2 -  5^{1\!}D_2$ and the $2\triplet P_2 - 5\triplet S_1$ resonances, showing normalized atom number loss versus probe laser frequency $\nu$, as measured in an {16.8(1)}G (red) and {10.06(7)}G (blue) background field, with Lorentzian fits (black dotted line, with prediction confidence interval shaded).
+   \caption{Line profile for (a) the spin-forbidden $\PStateManifold_2 -  5^{1\!}D_2$  and (b) the $2\triplet P_2 - 5\triplet S_1$  resonances, showing normalized atom number loss versus probe laser frequency $\nu$, as measured in a {16.5(3)}G (red) and {10.2(3)}G (blue) background field, with Lorentzian fits (black dotted line, with prediction confidence interval shaded).
 	Error bars account for detector efficiency and calibration model uncertainty.
 	For comparison, theoretical predictions (vertical bars) Zeeman shifted from the predicted zero-field value \cite{Drake07} according to the field calibration, whose uncertainty (shaded width) is dominated by background field measurements.}
-    \label{fig:1D_2_line}
-  \end{minipage}
+    \label{fig:simple_lines}
+
 \end{figure}
 
 
@@ -158,66 +130,45 @@ Alternatively, atoms may decay to other untrapped magnetic states of the metasta
 %     \caption{Line profile for the spin-forbidden $\PStateManifold_2 -  5^{1\!}D_2$ and the $2\triplet P_2 - 5\triplet S_1$ resonances, showing normalized atom number loss versus probe laser frequency $\nu$, as measured in an {16.8(1)}G (red) and {10.06(7)}G (blue) background field, with Lorentzian fits (black dotted line, with prediction confidence interval shaded).
 % 	Error bars account for detector efficiency and calibration model uncertainty.
 % 	For comparison, theoretical predictions (vertical bars) Zeeman shifted from the predicted zero-field value \cite{Drake07} according to the field calibration, whose uncertainty (shaded width) is dominated by background field measurements.}
-%     \label{fig:1D_2_line}
+%     \label{fig:simple_lines}
 %   \end{figure}
 
 
 % Laser
-To generate the probe beam light, we used 532nm light from a Lighthouse Photonics Sprout module to pump a tunable M-squared SolsTi:S titanium-sapphire laser, tuned near 800nm, and frequency-doubled the output in an M-squared ECD-X module to produce the target wavelengths.
-	A sample of the Ti:S output was fibre coupled to a High Finesse WS8 wavemeter.
-	A software lock used the wavemeter output to stabilize the laser and to scan the probe beam frequency across the region of interest.
-	We calibrated the wavemeter by saturated absorption spectroscopy of cesium in a vapor cell.
-	Our frequency reference was the $6S_{1/2}(F=3)-8S_{1/2}(F=3)$ two-photon transition in cesium at $364507238.36(1)$MHz \cite{Wu13}.
-	To minimize wavemeter drifts over time, we calibrated the wavemeter daily, observing maximum drifts of order 1MHz over this timescale.
 	
 
-We used the first diffracted mode of an acousto-optical modulator (AOM) to control the probe beam power.
-	The output of the AOM was fibre coupled to the vacuum insertion optics, where a photodiode provided the input for PID control of the beam power.
-	The profile and polarization of the beam were set manually with lenses and waveplates prior to vacuum entry.
-	Additional details about the experimental setup can be found in the supplementary materials of Ref.
-	\cite{Thomas20}.
-
-
-To make our measurements of the transition frequencies for the $5\singlet D_2$ and $5\triplet S_1$ states, we illuminated the atoms with the probe light for periods of order 100 ms during the Doppler cooling stage.
+	We illuminated the atoms with the probe light (generated by the system described in section \ref{sec:spec_laser}) during the Doppler cooling stage, then measured the relative number loss as a function of frequency.
+	For the $5\singlet D_2$ and $5\triplet S_1$ states, the exposure time was of order 100 ms.
 	The exact duration differed for each line to obtain a good SNR without saturating the atom loss.
 	The light was $\sigma^-$ polarized to drive transitions to the $m_J=1$ states of the upper levels.
 	For the forbidden $5\singlet D_2$ transition the beam was focused on the atom cloud with a waist of approximately $100\mu$m and a peak intensity of order $5\times 10^3$ W/m$^2$.
 	For all other measurements the beam was collimated with a peak intensity of order $ 5$ W/m$^2$.
-	We took measurements at two points in the Doppler cooling stage with a bias field strengths of {16.5(3)} and {10.2(3)} Gauss, which we calibrated independently by RF spectroscopy.
-	For each field strength we obtained the atom loss (with respect to calibration shots) versus probe laser frequency.
-	After correcting for the measured AOM and vapor cell shifts, we fit the measured response with a Lorentzian function, as shown in Figs.
-	\ref{fig:1D_2_line} and \ref{fig:5_3S_1}.
+	The Doppler cooling stage uses two magnetic field strengths and so measurements could be made with bias field strengths of {16.5(3)} and {10.2(3)} Gauss, which were calibrated independently by RF spectroscopy.
+	For each field strength, the atom loss (with respect to calibration shots) versus probe laser frequency can be fitted by a Lorentzian lineshape to obtain the centre frequency and full-width at half-maximum (FWHM).
+	Results of these fits are shown in Fig.
+	\ref{fig:simple_lines}, after corrections for the AOM and vapor cell shifts (see the supplementary material of \cite{Thomas20} for details on the latter).
 	{The transduction from photon scattering to atom loss via evaporative cooling is complicated and not linear.
-	However, we found that fits using a nonlinear function of the Lorentzian lineshape differed from the simple Lorentzian fit by substantially less than the statistical uncertainty.}
+	However, fits using a nonlinear function of the Lorentzian lineshape differed from the simple Lorentzian fit by substantially less than the statistical uncertainty.}
 
-We correct for the linear Zeeman shift to estimate the field-free transition frequencies with sub-MHz statistical uncertainty.
+	After correcting for the linear Zeeman shift, the field-free transition frequencies are fixed with sub-MHz statistical uncertainty.
 	This determines the $2\triplet P_2-5\singlet D_2$ and $2\triplet P_2-5\triplet S_1$ transition energies to be 3MHz and 5MHz larger, respectively, than the predictions presented in \cite{Drake07}.
-	However, the absolute accuracy of these measurements is limited by our instrumentation.
-	Our results (Tab.
-	\ref{tab:results}) are consistent with current predictions \cite{Drake07} within $2\sigma$ after accounting for all systematic uncertainties (Tab.
-	\ref{tab:errors}).
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.48\textwidth]{fig/spectroscopy/ci-plot-53S1-eps-converted-to.pdf}
-%     \caption{Measured atom loss versus laser frequency for  resonance in comparison to Zeeman-shifted predictions \cite{Drake07}, shown as for Fig.
-% 	\ref{fig:1D_2_line}}
-%     \label{fig:5_3S_1}
-% \end{figure}
+	However, the absolute accuracy of these measurements is limited by the instrumentation.
+	The results (Tab.	\ref{tab:results}) are consistent with current predictions \cite{Drake07} within $2\sigma$ after accounting for all systematic uncertainties (Tab.	\ref{tab:errors}).
 
 \section{5$\triplet$D fine structure}
 
-Unlike the $5\singlet D_2$ and $5\triplet S_1$ levels, the $5\triplet D$ manifold splits into fine structure sublevels, leading to multiple absorption peaks and requiring a more involved analysis.
-	We drove transitions to the $5\triplet D_J, J\in\{1,2,3\}$ levels with a combination of $\pi$ and $\sigma^-$ polarized light (in the atomic frame) and obtained four peaks, as shown in Fig.
-	\ref{fig:combined_5D_lines}.
-	The saturated peak near -300MHz (relative to the predicted $2\triplet P_2 - 5\triplet D_1$ interval) is in fact two peaks corresponding to the $5\triplet D_2(m_J=1)$ and $5\triplet D_3(m_J=2)$ states, which are separated by less than their linewidth.
-	This illustrates a shortcoming of our technique, namely the limited dynamic range.
+	Unlike the $5\singlet D_2$ and $5\triplet S_1$ levels, the $5\triplet D$ manifold splits into fine structure sublevels, leading to multiple absorption peaks and requiring a more involved analysis.
+	For this measurement, the final quarter-wave plate in the insertion optics was rotated to give a combination of $\pi$ and $\sigma^-$ polarized light (in the atomic frame) as opposed to pure $\sigma^-$ light.
+	This light drove transitions to the $5\triplet D_J, J\in\{1,2,3\}$ levels and obtained four peaks, as shown in Fig.	\ref{fig:combined_5D_lines}.
+	The saturated peak near -300MHz (relative to the predicted $2\triplet P_2 - 5\triplet D_1$ interval) is in fact two peaks corresponding to the $5\triplet D_2(m_J=1)$ and $5\triplet D_3(m_J=2)$ states, which are separated by less than their linewidth. 
+	This illustrates a shortcoming of the technique, namely the limited dynamic range.
 	For measurements of single peaks this is not an issue as the total irradiated energy can be adjusted to obtain a good signal-to-noise ratio without completely depleting the BEC.
 	In this case, however, there is a trade-off between keeping the small peaks above the noise floor and preventing the superposed peaks from saturating.
-	This limitation could be eased with a larger initial condensate because the dynamic range is essentially limited by the atom loss.
+	This limitation could be eased with a larger initial condensate because the dynamic range is essentially limited by the atom loss, or with much larger magnetic field strengths which would ensure the lines are separated by much more than their linewidth.
+	The other peaks correspond to transitions to the $5\triplet D_2(m_J=2)$, $5\triplet D_2(m_J=1)$, and $5\triplet D_1(m_J=1)$ states, which are used in the analysis described below.
 
-The Zeeman shift of the $J=2$ and $J=3$ levels is comparable to the interval between them, and so the mixing of levels means the correction is no longer proportional to $B$.
-	Instead, we solve the eigenvalue optimization problem 
+	The Zeeman shift of the $J=2$ and $J=3$ levels is comparable to the interval between them, and so the mixing of levels means the correction is no longer proportional to $B$.
+	Instead, the Zeeman shift can be corrected for by solving the eigenvalue optimization problem 
 %
 \begin{equation}
 \textrm{min}_{E_{\textrm{fs}}} \sum_{J,m_J} \left(\nu_{{J,m_J}}^{\textrm{{pred}}}(E_{\textrm{fs}},B) - \nu_{{J,m_J,B}}^{\textrm{{obs}}}\right)^2,
@@ -226,8 +177,8 @@ The Zeeman shift of the $J=2$ and $J=3$ levels is comparable to the interval bet
 %
 which minimizes the squared error between observed and predicted transition frequencies ($\nu^{\textrm{{obs}}}$ and $\nu^{{\textrm{pred}}}$ respectively), summed over all relevant $|J,m_J\rangle$ states and magnetic field strengths $B$.
 	The optimized variable $E_{\textrm{fs}}=(E_1,E_2,E_3)$ is the bare fine-structure splitting of the $5\triplet D$ levels.
-	In the argument below we assume only the formalism of atomic structure theory and the data from our experiment.
-	To determine the bare $5\triplet D$ transition energies from our data, consider the Hamiltonian
+	In the argument below, the only assumption is the formalism of atomic structure theory and the data from the experiment.
+	To determine the bare $5\triplet D$ transition energies from the data, consider the Hamiltonian
 %
 \begin{equation}
     \hat{H}(B) = \hat{H}_{\textrm{fs}} - B\hat{\mu}_z,
@@ -238,8 +189,8 @@ which minimizes the squared error between observed and predicted transition freq
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{fig/spectroscopy/ci-plot-53D}
-   \caption{Line profiles for the $\PStateManifold_2 -  5^{3\!}D$ transitions, shown as for Figs.
-	\ref{fig:1D_2_line} and \ref{fig:5_3S_1}.
+   \caption{Line profiles for the $\PStateManifold_2 -  5^{3\!}D$ transitions, shown as for Fig.
+	\ref{fig:simple_lines}.
 	The normalized loss is shown versus probe laser frequency for the two different field strengths with a common horizontal scale.
 	Theory lines indicate predictions from \cite{Drake07} after applying the relevant Zeeman shift.
 	N.B.	the scale break here and in Fig.	\ref{fig:fitting_3D} coincide.}
@@ -249,7 +200,7 @@ which minimizes the squared error between observed and predicted transition freq
 % \begin{figure}
 %   \includegraphics[width=0.5\textwidth]{fig/spectroscopy/ci-plot-53D-eps-converted-to.pdf}
 %   \caption{Line profiles for the $\PStateManifold_2 -  5^{3\!}D$ transitions, shown as for Figs.
-% 	\ref{fig:1D_2_line} and \ref{fig:5_3S_1}.
+% 	\ref{fig:simple_lines}.
 % 	The normalized loss is shown versus probe laser frequency for the two different field strengths with a common horizontal scale.
 % 	Theory lines indicate predictions from \cite{Drake07} after applying the relevant Zeeman shift.
 % 	N.B.	the scale break here and in Fig.	\ref{fig:fitting_3D} coincide.}
@@ -257,29 +208,99 @@ which minimizes the squared error between observed and predicted transition freq
 % \end{figure}
 
 %
-where $\hat{\mu}_z = \mu_B(\hat{L}_z + g_s \hat{S}_z)/\hbar$ is the coupling of the orbital and spin angular momenta of the electron with a magnetic field of strength B pointing in the $z$-direction, $\mu_B$ is the Bohr magneton and $g_s$ is the electron spin $g$-factor.
-	The fine structure Hamiltonian $\hat{H}_{\textrm{fs}}$ is diagonal in the $|LSJ m_J\rangle$ basis with eigenvalues $E_{\textrm{fs}}$,
-%
-\begin{equation}
-  \hat{H}_{\textrm{fs}}|LSJm_J\rangle = E_{\textrm{fs},LSJ}|LSJm_J\rangle,
-\end{equation}
-%
-which are degenerate for all $m_J$ with fixed $J$.
-	The magnetic moment $\hat{\mu}_z$ couples states of different $J$, and is instead diagonal in the $|L m_L S m_S\rangle$ basis.
-	In the $|LSJ m_J\rangle$ basis the matrix elements of $\hat{H}(B)$ are, with abbreviated notation,
-%
-\begin{equation}
-\begin{aligned}
-H_{J',J} =& \langle J'|\hat{H}|J \rangle\\
-  =& E_{\textrm{fs},J} - B \frac{\mu_B}{\hbar} \sum_{m_L} (2m_J - m_L)C_{J,'m_L}C_{J,m_L},\\
-\end{aligned}
-\end{equation}
-%
-where $C_{J,m_L} = \langle LSJ m_J|L m_L S m_S\rangle$ is shorthand for the Clebsch-Gordan coefficients.
-	For $B>0$, the contribution of $\hat{\mu}_z$ breaks the degeneracy of $\hat{H}_{\textrm{fs}}$, giving rise to the Zeeman shift.
+	\noindent where $\hat{\mu}_z = \mu_B(\hat{L}_z + g_s \hat{S}_z)/\hbar$ is the coupling of the orbital and spin angular momenta of the electron with a magnetic field of strength B pointing in the $z$-direction, $\mu_B$ is the Bohr magneton and $g_s$ is the electron spin $g$-factor.
+		The fine structure Hamiltonian $\hat{H}_{\textrm{fs}}$ is diagonal in the $|LSJ m_J\rangle$ basis with eigenvalues $E_{\textrm{fs}}$,
+	%
+	\begin{equation}
+	  \hat{H}_{\textrm{fs}}|LSJm_J\rangle = E_{\textrm{fs},LSJ}|LSJm_J\rangle,
+	\end{equation}
+	%
+	which are degenerate for all $m_J$ with fixed $J$.
+		The magnetic moment $\hat{\mu}_z$ couples states of different $J$, and is instead diagonal in the $|L m_L S m_S\rangle$ basis.
+		In the $|LSJ m_J\rangle$ basis the matrix elements of $\hat{H}(B)$ are, with abbreviated notation,
+	%
+	\begin{equation}
+	\begin{aligned}
+	H_{J',J} =& \langle J'|\hat{H}|J \rangle\\
+	  =& E_{\textrm{fs},J} - B \frac{\mu_B}{\hbar} \sum_{m_L} (2m_J - m_L)C_{J,'m_L}C_{J,m_L},\\
+	\end{aligned}
+	\end{equation}
+	%
+	where $C_{J,m_L} = \langle LSJ m_J|L m_L S m_S\rangle$ is shorthand for the Clebsch-Gordan coefficients.
+		For $B>0$, the contribution of $\hat{\mu}_z$ breaks the degeneracy of $\hat{H}_{\textrm{fs}}$, giving rise to the Zeeman shift.
+		
+	%
+	%
+	\begin{figure}
+	\centering
+		\includegraphics[width=0.9\textwidth]{fig/spectroscopy/fitting-lines}
+		\caption{Determining the $5\triplet D$ fine-structure splitting.
+		The values for the $|J,m_J\rangle=5\triplet D_J(m_J)$ levels (grey lines) at $B=0$ are fixed by solving the optimization problem (Eqn.
+		\ref{eqn:opt-problem}), constrained by the fitted peak centres (filled circles).
+		The saturated peaks are not used to constrain the levels and are not shown here. \com{}
+		The corresponding frequencies predicted by the optimization method are shown in dotted lines.}
+	    \label{fig:fitting_3D}
+	\end{figure}
+
+	The solution of Eqn.
+	\ref{eqn:opt-problem} is illustrated in Fig.
+	\ref{fig:fitting_3D}.
+	By defining the energies $E_{\textrm{fs}}$ relative to the $2\triplet P_2(m_J=2)$ state,  the predicted transition frequencies can be read directly from the eigenvalues of $\hat{H}$ via $\nu_{J,m_J}^{\textrm{pred}}=E_{J,mJ}(B)/h$, where $h$ is Planck's constant.
+	The observed frequencies $\nu_{J,m_J,B}^{\textrm{obs}}$ used in this procedure exclude the overlapping saturated peaks because their centre frequencies cannot be determined with satisfactory accuracy.
+	The triple $E_{\textrm{fs}}$ which minimizes the cost function (Eqn.
+	\ref{eqn:opt-problem}) corresponds to the $2\triplet P_2 - 5\triplet D_J$ intervals at $B=0$, as listed in Tab.
+	\ref{tab:results}.
+	Again, the difference in this determination of the field-free splitting is consistent within 2$\sigma$ predictions in \cite{Drake07} after accounting for systematic effects (Tab.
+	\ref{tab:errors}).
 	
-%
-%
+
+
+% \usepackage{floatrow}
+
+
+
+% \begin{figure}
+% \floatbox[{\capbeside\thisfloatsetup{capbesideposition={left,top},capbesidewidth=4cm}}]{figure}[\FBwidth]
+% {\caption{A test figure with its caption side by side}\label{fig:test}}
+% {\includegraphics[width=5cm]{name}}
+% \end{figure}
+
+% \begin{figure}
+% \floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top},capbesidewidth=4cm}}]{figure}[\FBwidth]
+% {\caption{A test figure with its caption side by side}\label{fig:test}}
+% {\includegraphics[width=5cm]{name}}
+% \end{figure}
+
+
+
+
+% \begin{figure}
+% 	\begin{minipage}[t]{0.38\textwidth}
+% 			\vspace{0pt}
+% 			\caption{Determining the $5\triplet D$ fine-structure splitting.
+% 	The values for the $|J,m_J\rangle=5\triplet D_J(m_J)$ levels (grey lines) at $B=0$ are fixed by solving the optimization problem (Eqn.
+% 	\ref{eqn:opt-problem}), constrained by the fitted peak centres (filled circles).
+% 	The saturated peaks are not used to constrain the levels, but are shown with hollow circles and the corresponding frequencies predicted by our method are shown in dotted lines.}
+%     \label{fig:fitting_3D}
+% 	\end{minipage}\hfill
+% 	\begin{minipage}[t]{0.6\textwidth}
+% 		\vspace{0pt}
+% 		\includegraphics[width=\textwidth]{fig/spectroscopy/fitting-lines-eps-converted-to.pdf}
+% 	\end{minipage}
+
+% \end{figure}
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.48\textwidth]{fig/spectroscopy/fitting-lines-eps-converted-to.pdf}
+%     \caption{Determining the $5\triplet D$ fine-structure splitting.
+% 	The values for the $|J,m_J\rangle=5\triplet D_J(m_J)$ levels (grey lines) at $B=0$ are fixed by solving the optimization problem (Eqn.
+% 	\ref{eqn:opt-problem}), constrained by the fitted peak centres (filled circles).
+% 	The saturated peaks are not used to constrain the levels, but are shown with hollow circles and the corresponding frequencies predicted by our method are shown in dotted lines.}
+%     \label{fig:fitting_3D}
+% \end{figure}
+
+
 
 \begin{table*}
 \centering
@@ -309,85 +330,33 @@ where $C_{J,m_L} = \langle LSJ m_J|L m_L S m_S\rangle$ is shorthand for the Cleb
       \hline\hline
     \end{tabular}
 \caption{Summary of results for each transition.
-	After correcting for the AOM and vapor cell shifts we extract the centre frequencies from Lorentzian fits with statistical error at the $10\textrm{kHz}$ level.
-	We obtain the field-free energies after correcting for Zeeman shifts, shown with theoretical predictions in the row below.
-	We show the difference between our measurements and theoretical predictions for direct comparison.
+	After correcting for the AOM and vapor cell shifts, the centre frequencies obtained from Lorentzian fits have statistical error at the $10\textrm{kHz}$ level.
+	The field-free energies follow after correcting for Zeeman shifts, shown with theoretical predictions in the row below.
+	The difference between our measurements and theoretical predictions is comparable with the experimental error.
 	Observed full width at half maximum line widths (FWHM) of the Lorentzian fit to each line are shown in comparison to predicted linewidths as given in \cite{Drake07}.
 	$f_\textrm{theory}$ for the $2\triplet P_2 - 5^3\mathrm{S}_1$ line comes from \cite{Drake07}, all others from \cite{Yerokhin20}
 	All values are in MHz with uncertainty in the final digit in parentheses.}
   \label{tab:results}
 \end{table*}
-The solution of Eqn.
-	\ref{eqn:opt-problem} is illustrated in Fig.
-	\ref{fig:fitting_3D}.
-	If we define the energies $E_{\textrm{fs}}$ relative to the $2\triplet P_2(m_J=2)$ state, then we can read the predicted transition frequencies directly from the eigenvalues of $\hat{H}$ via $\nu_{J,m_J}^{\textrm{pred}}=E_{J,mJ}(B)/h$, where $h$ is Planck's constant.
-	The observed frequencies $\nu_{J,m_J,B}^{\textrm{obs}}$ used in this procedure exclude the saturated peaks because their centre frequencies cannot be determined accurately.
-	The triple $E_{\textrm{fs}}$ which minimizes the cost function (Eqn.
-	\ref{eqn:opt-problem}) corresponds to the $2\triplet P_2 - 5\triplet D_J$ intervals at $B=0$, as listed in Tab.
-	\ref{tab:results}.
-	Again, the difference in our determination of the field-free splitting is consistent within 2$\sigma$ predictions in \cite{Drake07} after accounting for systematic effects (Tab.
-	\ref{tab:errors}).
-	
-
-
-% \usepackage{floatrow}
-
-
-
-% \begin{figure}
-% \floatbox[{\capbeside\thisfloatsetup{capbesideposition={left,top},capbesidewidth=4cm}}]{figure}[\FBwidth]
-% {\caption{A test figure with its caption side by side}\label{fig:test}}
-% {\includegraphics[width=5cm]{name}}
-% \end{figure}
-
-% \begin{figure}
-% \floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top},capbesidewidth=4cm}}]{figure}[\FBwidth]
-% {\caption{A test figure with its caption side by side}\label{fig:test}}
-% {\includegraphics[width=5cm]{name}}
-% \end{figure}
-
-
-\begin{figure}
-\centering
-	\includegraphics[width=0.8\textwidth]{fig/spectroscopy/fitting-lines}
-	\caption{Determining the $5\triplet D$ fine-structure splitting.
-	The values for the $|J,m_J\rangle=5\triplet D_J(m_J)$ levels (grey lines) at $B=0$ are fixed by solving the optimization problem (Eqn.
-	\ref{eqn:opt-problem}), constrained by the fitted peak centres (filled circles).
-	The saturated peaks are not used to constrain the levels, but are shown with hollow circles and the corresponding frequencies predicted by our method are shown in dotted lines.}
-    \label{fig:fitting_3D}
-\end{figure}
-
-
-% \begin{figure}
-% 	\begin{minipage}[t]{0.38\textwidth}
-% 			\vspace{0pt}
-% 			\caption{Determining the $5\triplet D$ fine-structure splitting.
-% 	The values for the $|J,m_J\rangle=5\triplet D_J(m_J)$ levels (grey lines) at $B=0$ are fixed by solving the optimization problem (Eqn.
-% 	\ref{eqn:opt-problem}), constrained by the fitted peak centres (filled circles).
-% 	The saturated peaks are not used to constrain the levels, but are shown with hollow circles and the corresponding frequencies predicted by our method are shown in dotted lines.}
-%     \label{fig:fitting_3D}
-% 	\end{minipage}\hfill
-% 	\begin{minipage}[t]{0.6\textwidth}
-% 		\vspace{0pt}
-% 		\includegraphics[width=\textwidth]{fig/spectroscopy/fitting-lines-eps-converted-to.pdf}
-% 	\end{minipage}
-
-% \end{figure}
-
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.48\textwidth]{fig/spectroscopy/fitting-lines-eps-converted-to.pdf}
-%     \caption{Determining the $5\triplet D$ fine-structure splitting.
-% 	The values for the $|J,m_J\rangle=5\triplet D_J(m_J)$ levels (grey lines) at $B=0$ are fixed by solving the optimization problem (Eqn.
-% 	\ref{eqn:opt-problem}), constrained by the fitted peak centres (filled circles).
-% 	The saturated peaks are not used to constrain the levels, but are shown with hollow circles and the corresponding frequencies predicted by our method are shown in dotted lines.}
-%     \label{fig:fitting_3D}
-% \end{figure}
 
 \section{Shifts, broadening, and errors}
 
 
 
+
+% summarize results
+
+	The results of these measurements are summarized in Tab.
+	\ref{tab:results} and are consistent with theoretical predictions \cite{Morton06} within $2.1\sigma$ or less.
+	The accuracy of these determinations of the field-free transition energies is limited by the absolute accuracy of the wavemeter.
+	High Finesse specifies \cite{HighFinesseDoc} a 3$\sigma$ accuracy of 2MHz within 2nm of a calibration line (as in the transition to the $5\triplet S_1$ state), and 10MHz for all other lines measured.
+	Because the wavemeter is used to lock the seed light for the doubler, the uncertainty is doubled in determinations of the absolute probe frequency.
+	In Table \ref{tab:results} the corresponding 1$\sigma$ accuracy is shown in order to be consistent with other terms in our error budget, as displayed in Table \ref{tab:errors}.
+	Note that this specification does not depend on the specific difference between the calibration and measured wavelengths, and may vary due to nonlinear dispersion of the wavemeter optics.
+	Without an independent calibration this error cannot be rigorously constrained, which would be overcome with the instrumental improvements discussed below.
+	As such, the 1-sigma errors determined in this way are presented with the caveat that they may be slightly underestimated.
+	Still, all measured frequencies are consistent with predictions to within 2.1$\sigma$.
+	Finally, the $5\triplet S_1$ transition line is 1.9nm away from the calibration line, and as such the 2MHz uncertainty may again be a slight underestimate.
 
 \begin{table}
 \centering
@@ -411,7 +380,7 @@ The solution of Eqn.
       \hline\hline
   \end{tabular}
 \caption{Error budget for the determination of the peak centre frequencies.
-	 The master laser for our pump beam is described in \cite{Shin16}.
+	 The master laser for the pump beam is described in \cite{Shin16}.
 	AOM stabilities were checked with an RF spectrum analyser.
 	See \cite{Thomas20} for measurement of the Cesium cell shift and probe beam lock drift.
 	The shift and uncertainty from the Zeeman shift (ZS) varies between the lines, so these contributions are omitted from the total.
@@ -420,46 +389,39 @@ The solution of Eqn.
   
 \end{table}
 
-
-% summarize results
-
-The results of our measurements are reported in Tab.
-	\ref{tab:results} and are consistent with theoretical predictions \cite{Morton06} within $2.1\sigma$ or less.
-	The accuracy of our determinations of the field-free transition energies is limited by the absolute accuracy of the wavemeter.
-	High Finesse specifies \cite{HighFinesseDoc} a 3$\sigma$ accuracy of 2MHz within 2nm of a calibration line (as in the transition to the $5\triplet S_1$ state), and 10MHz for all other lines measured in this work.
-	Because we use the wavemeter to lock the seed light for the doubler, the uncertainty is doubled in determinations of the absolute probe frequency.
-	We adopt the corresponding 1$\sigma$ accuracy in order to be consistent with other terms in our error budget, as displayed in Table \ref{tab:errors}.
-	We note that this specification does not depend on the specific difference between the calibration and measured wavelengths, and may vary due to nonlinear dispersion of the wavemeter optics.
-	Without an independent calibration we cannot rigorously constrain this source of error, which would be overcome with the instrumental improvements discussed below.
-	As such, we state the 1-sigma errors determined in this way with the caveat that they may be slightly underestimated.
-	Still, all measured frequencies are consistent with predictions to within 2.1$\sigma$.
-	Finally, we note that the the $5\triplet S_1$ transition line is 1.9nm away from the calibration line, and as such the 2MHz uncertainty may again be a slight underestimate.
-
-The linewidth of the pump and probe laser sources are 40kHz \cite{Shin16} and 200kHz \cite{Thomas20}, respectively.
+	The linewidth of the pump and probe laser sources are 40kHz \cite{Shin16} and 200kHz \cite{Thomas20}, respectively.
 	The laser lock error has a standard deviation of $100$kHz.
 	The additional contribution from the pump and probe AOMs are 300kHz and 1Hz, respectively, as determined with an RF spectrum analyser.
 	
 
-{We calibrated our magnetic field by measuring the change in number of atoms which were detected in response to applied RF radiation.
+{I obtained the magnetic field calibrations by measuring the number of atoms detected by the MCP-DLD after applying 300ms of RF radiation at variable frequencies (see Fig. \ref{fig:RF_spec}).
 The number $n_\delta(\nu)$ of detections probes the population of trapped atoms $n_\text{T}(B)$ subject to a magnetic field strength $B$ through the relation $2 \mu_B B = h \nu$.
 	
 As shown in Fig.
 	\ref{fig:RF_spec}, $n_\text{D}(B)$ follows a Bose-Einstein distribution with a chemical potential $g \mu_B B_0$, where $B_0$ is the bias in the magnetic field strength and $g\approx2$ is the g-factor of the $2\triplet S_1$ state.
-The Bose-Einstein fit provides a model for $n_\text{T}(B)$ and an estimate of the temperature of the cloud.
-	The temperature determination of $\sim130(20)\mu K$ implies Doppler broadenings of 100(10) kHz and 2.6(3) MHz for the pump and probe transitions, respectively.
+	The Bose-Einstein fit provides a model for $n_\text{T}(B)$ and an estimate of the temperature of the cloud at each stage of the cooling process (and thus at each field strength).
+	We can use the average temperature of $\sim130(20)\mu K$ to estimate  Doppler broadenings of 100(10) kHz and 2.6(3) MHz for the pump and probe transitions, respectively.
 
-The optical absorption profile near the 1083nm pump transition can be calculated by convolving $n_\text{T}(B)$ with Zeeman-shifted absorption profile of the 1083nm transition, which is a Lorentzian $\mathcal{L}_\text{abs}(f,B)$ with a 1.6 MHz FWHM \cite{Drake07}.
-The pumping rate at a given field strength is given by the convolution of $\mathcal{L}_\text{abs}(f,B)$ with the pump laser line $\mathcal{L}_\text{L}(f)$.
-Hence, we calculate the range of magnetic field strengths $B$ at which atoms are pumped to the $2\triplet P_2$ state, which are concentrated at field strengths of 10.2(3) G and 16.5(3) G for the two measurement stages.
+	Kinetic effects do not contribute any significant uncertainty in these frequency measurements, rather they just broaden the observed peaks.
+	The pump light was applied by two counterpropagating beams, subtending angles of 15$^\circ$ and 195$^\circ$ relative to the direction of propagation of the probe beam.
+	Photon absorption events contribute a recoil velocity of magnitude $\cos(15^\circ)\cdot\hbar k/m\approx6$mm/s, imparting a Doppler shift of order 1.4kHz.
+	Atoms may absorb probe light after absorbing a photon from the pump beams, but not after decaying again, so the decay events do not contribute.
+	Because there were two counterpropagating pump beams, the resulting contribution is a negligible broadening, especially in comparison with the thermal broadening.
+	The 1-3 MHz difference between predicted and observed line widths is well accounted for by these broadening effects, mainly by Doppler broadening.
+	\com{Is it worth including a Voigt fit to the profiles to extract homogenous broadening and natural linewidth? Would give lifetime measurement but not accurately enough to be very interesting.}
+
+	The optical absorption profile near the 1083nm pump transition can be calculated by convolving $n_\text{T}(B)$ with Zeeman-shifted absorption profile of the 1083nm transition, which is a Lorentzian $\mathcal{L}_\text{abs}(f,B)$ with a 1.6 MHz FWHM \cite{Drake07}.
+	The pumping rate at a given field strength is given by the convolution of $\mathcal{L}_\text{abs}(f,B)$ with the pump laser line $\mathcal{L}_\text{L}(f)$.
+	Hence, the range of magnetic field strengths $B$ at which atoms were pumped to the $2\triplet P_2$ state were concentrated at field strengths of 10.2(3) G and 16.5(3) G for the two measurement stages.
+
+	The Zeeman shift of the $2\triplet P_2 - 5L, L\neq D$ transitions is given by $\Delta E = \mu B (g_e m_e-g_g m_g)$, whose error is obtained by standard propagation of uncertainties.
 	
-The Zeeman shift of the $2\triplet P_2 - 5L, L\neq D$ transitions by is given by $\Delta E = \mu B (g_e m_e-g_g m_g)$, whose error is obtained by standard propagation of uncertainties.
-	
-For the $5\triplet D$ states, we varied the input magnetic field constraints within the range of experimental uncertainty ($0.3$G) to estimate the uncertainty in the iterative method described above.}
+	For the $5\triplet D$ states, the uncertainty in the iterative method described above follows from varying the magnetic field constraints within the range of experimental uncertainty ($0.3$G). }
 
 
-\begin{figure}
+	\begin{figure}
 	\centering
-  \includegraphics[width=0.9\textwidth]{fig/spectroscopy/rf_spec_subfig-eps-converted-to.pdf}
+  \includegraphics[width=\textwidth]{fig/spectroscopy/rf_spec_subfig-eps-converted-to.pdf}
   \caption{Determination of magnetic field for Zeeman shift correction.
 	The number $n_\text{D}$ of atoms detected after probing the trap with 300ms of RF radiation is shown in (a) versus the frequency of the applied radiation.
 	Each point is an average of three shots.
@@ -484,24 +446,19 @@ For the $5\triplet D$ states, we varied the input magnetic field constraints wit
 % \end{figure}
 
 % The probe laser can only excite atoms pumped into the $2\triplet P_2$ state, which has a population distributed over a finite range of magnetic field strengths.
-	The peak of the response to the probe laser is given by the convolution of the probe laser spectrum and the density of pumped states over the magnetic field strengths.
-	We identify the 
+	% The peak of the response to the probe laser is given by the convolution of the probe laser spectrum and the density of pumped states over the magnetic field strengths.
+	% We identify the 
 
 % Finite temp in non-uniform field would lead to Zeeman broadening as well as a shift...
-	ungh run the trap sim?
+	% ungh run the trap sim?
 
-Kinetic effects do not contribute any significant uncertainty in our frequency measurements, rather they just broaden the observed peaks.
-	The pump light is applied by two counterpropagating beams, subtending angles of 15$^\circ$ and 195$^\circ$ relative to the direction of propagation of the probe beam.
-	Photon absorption events contribute a recoil velocity of magnitude $\cos(15^\circ)\cdot\hbar k/m\approx6$mm/s, imparting a Doppler shift of order 1.4kHz.
-	Atoms may absorb probe light after absorbing a photon from the pump beams, but not after decaying again, so the decay events do not contribute.
-	Because there are two counterpropagating pump beams, the resulting contribution is a negligible broadening, especially in comparison with the thermal broadening.
-	The difference between predicted and observed line widths is well accounted for by these broadening effects.
+	
 
 
 \begin{figure}
   \begin{minipage}[t]{0.6\textwidth}
   \vspace{0pt}
-  \includegraphics[width=\textwidth]{fig/spectroscopy/power-drift-combined-eps-converted-to.pdf}
+  \includegraphics[width=\textwidth]{fig/spectroscopy/power-drift-combined}
   \end{minipage}\hfill
   \begin{minipage}[t]{0.38\textwidth}
   \vspace{0pt}
@@ -520,39 +477,38 @@ Kinetic effects do not contribute any significant uncertainty in our frequency m
 % \label{fig:power_drift_combined}
 % \end{figure}
 
-Other precision measurements of transition frequencies have been shown to be subject to line pulling effects \cite{Marsman15,Marsman15PRA}.
+	Other precision measurements of transition frequencies have been shown to be subject to line pulling effects \cite{Marsman15,Marsman15PRA}.
 	These effects arise in multilevel transitions because of interference between the laser-driven transition path and off-resonant driving through transitions with neighbouring intermediate states.
-	We estimate the worst-case shift by $w_{\text{pump}}^2/\Delta_{2P} + w_{\text{probe}}^2/\Delta_{5L}$ \cite{Marsman15,Marsman15PRA}, where the $w$ terms are the linewidths of the pump and probe transitions, and the $\Delta$ terms are the Zeeman splittings between the sublevels of the pump and target states.
+	The worst-case shift can be approximated by $w_{\text{pump}}^2/\Delta_{2P} + w_{\text{probe}}^2/\Delta_{5L}$ \cite{Marsman15,Marsman15PRA}, where the $w$ terms are the linewidths of the pump and probe transitions, and the $\Delta$ terms are the Zeeman splittings between the sublevels of the pump and target states.
 	The largest estimate among all the reported transitions is 500kHz.
-	While this uncertainty is dominated by other effects in our experiment, it will be important to understand them for improved measurements in the future.
+	While this uncertainty is dominated by other effects in our experiment, it may be important to understand them for improved measurements in the future.
+	\com{I actually think this is bogus because we drove through (hyperfine) magnetic sublevels. For these, $\Delta\rightarrow 0$ at B=0, so the above expression would diverge, as oppsed to the case in Marsman \emph{et al} where they considered fine structure sublevels with $\delta>0$ at $B=0$. Without doing the calculations I suspect this rule of thumb doesn't actually apply to hyperfine levels but I'm not certain. Either way I will probably leave this in, as I'm unsure whether it's worth entering into that discussion.}
 
-
-We determine no significant contribution from the AC Stark effect.
-	During measurements of the $5\triplet D_1$ transition with varying probe beam powers, we found that any dependence of the centre frequency on the laser power was dominated by the drift in the wavemeter output, as shown in Fig.
+	There was no significant detectable contribution from the AC Stark effect.
+	During measurements of the $5\triplet D_1$ transition with varying probe beam powers, the dependence of the centre frequency on the laser power was dominated by the drift in the wavemeter output, as shown in Fig.
 	\ref{fig:power_drift_combined}.
-	For the triplet-singlet transition, the increase in laser intensity is more than compensated for by the reduced dipole matrix element, and hence we come to the same conclusion.
+	For the triplet-singlet transition, the increase in laser intensity is more than compensated for by the reduced dipole matrix element, and hence the same conclusion follows.
 	
 
 
 
 \section{Discussion}
 
-We performed multilevel laser absorption spectroscopy of excited state transitions in ultracold helium.
-	This includes the first observation (to our knowledge) of the forbidden $2\triplet P_2 - 5\singlet D_2$ transition.
-	Our measurements agree with current predictions within our error budget and suggest that the $93\sigma$ difference between previous measurements \cite{Martin60} and predictions \cite{Morton06} of the $\PStateManifold_2  -  \UpperS$ and $\PStateManifold_2  -  \UpperStateManifold$ intervals are due to an unkown systematic error \footnote{As a historical note on the advancement of experimental methods, Martin's measurements were made using a nitrogen-cooled helium discharge lamp fed through an in-vacuum prism onto photographic plates, on which the line separations were measured by hand with a ruler.}.
-	%Our work provides five contributions to the NIST database of atomic spectral lines.
-	
+	This chapter described multilevel laser absorption spectroscopy of excited state transitions in ultracold helium.
+	The observations include the first observation (to my knowledge) of the forbidden $2\triplet P_2 - 5\singlet D_2$ transition.
+	These measurements agree with current predictions within the error budget and suggest that the $93\sigma$ difference between previous measurements \cite{Martin60} and predictions \cite{Morton06} of the $\PStateManifold_2  -  \UpperS$ and $\PStateManifold_2  -  \UpperStateManifold$ intervals are due to an unkown systematic error \footnote{As a historical note on the advancement of experimental methods, Martin's measurements were made using a nitrogen-cooled helium discharge lamp fed through an in-vacuum prism onto photographic plates, on which the line separations were measured by hand with a ruler.}.
+	This work offers five contributions to the NIST database of atomic spectral lines.
 
-The techniques described here are readily extensible to other opportunities in $^4$He structure measurements.
+	The techniques described here are readily extensible to other opportunities in $^4$He structure measurements.
 	For example, while there is an outstanding 7.4$\sigma$ disagreement between the predicted and observed singlet-triplet interval for the n=3 level in $^3$He \cite{Morton06,Derouard80}, the corresponding transition in $^4$He has never been directly measured.
 	An indirect measurement in $^4$He could be made with the techniques described here by taking the difference betweeen the $2\triplet P_2 - 3\triplet D_2$ and $2\triplet P_2 - 3\singlet D_2$ transitions near 587.6nm and 587.4nm.
 	While the latter transition is also spin-forbidden, it is predicted to be an order of magnitude stronger than the $2\triplet P_2 - 5\singlet D_2$ transition reported here \cite{Morton06}.
 
-{Further, energies of other $2L-nD$ transitions in $^4$He are a few MHz larger than predicted, apparently independent of $L$ \cite{Wienczek19,Yerokhin20}.
-	Our results deviate from this trend, and invite independent verification.
+	{Further, energies of other $2L-nD$ transitions in $^4$He are a few MHz larger than predicted, apparently independent of $L$ \cite{Wienczek19,Yerokhin20}.
+	The results here deviate from this trend, and invite independent verification.
 	Further study of transitions between states from different shells to MHz precision or better, in particular the prospective study of the $2\triplet P - 3 D$ intervals, would also provide further clarification.}
 
-Simply exchanging the light source would suffice to make these measurements, but a definitive comparison with theory would require an improved frequency reference.
+	Simply exchanging the light source would suffice to make these measurements, but a definitive comparison with theory would require an improved frequency reference.
 	For instance, the hypothetical $10/n^3$ MHz shift could be checked by a measurement of the $2~P-n~D$ transitions accurate to sub-MHz precision.
 	The associated theoretical uncertainties are about this size, dominated by the 700 kHz uncertainty in the lower state \cite{Pachucki17,Wienczek19}.
 	As the $\alpha^7$ terms could improve the theoretical accuracy to as little as 10kHz \cite{Pachucki17}, this more challenging precision appears to be a more appropriate budget, and readily achievable with current methods.
@@ -560,31 +516,29 @@ Simply exchanging the light source would suffice to make these measurements, but
 	Magnetic field strengths can be determined by RF spectroscopy with sub-kHz accuracy and so would not present a serious limitation.
 	Improving the AOM frequency stability would provide sufficient accuracy to account for laser-induced stark shifts, likely leaving systematic drifts as the dominant source of error.
 
-Extending these methods to direct measurements on $^3$He would also permit isotope shift measurements from forbidden excited-state transitions in $\triplet$He.
+	Extending these methods to direct measurements on $^3$He would also permit isotope shift measurements from forbidden excited-state transitions in $\triplet$He.
 	Theoretical calculations of isotope shifts are already accurate to the sub-kHz level, so such measurements would be even more demanding than the prospects above.
-	Existing demonstrations of comparable accuracy \cite{Rengelink18} show such measurements are worthy challenges whose completion can access femtoscale nuclear structure information via optical atomic spectroscopy.
+	Existing demonstrations of comparable accuracy \cite{Rengelink18} show such measurements are worthy challenges whose completion can access nuclear structure information at the femtometre scale via optical atomic spectroscopy.
 
 
 \vfill
 
 \begin{flushright}
 \emph{
-``Immediately you would like to know where this number for a coupling comes from:\\ 
-is it related to pi or perhaps to the base of natural logarithms? Nobody knows.\\
-It's one of the greatest damn mysteries of physics: a magic number that\\
-comes to us with no understanding by man.
-	You might say the \\
-``hand of God" wrote that number, and ``we don't know how\\
+``Immediately you would like to know where this \\
+number for a coupling comes from: is it related to pi\\
+or perhaps to the base of natural logarithms? \\
+Nobody knows.\\
+It's one of the greatest damn mysteries of physics: a magic number \\
+that comes to us with no understanding by man. You might say \\
+the ``hand of God" wrote that number, and ``we don't know how\\
 He pushed his pencil." We know what kind of a dance to\\
- do experimentally to measure this number very accurately,\\
-  but we don't know what kind of dance to do on the computer\\
+do experimentally to measure this number very accurately,\\
+but we don't know what kind of dance to do on the computer\\
 to make this number come out, without putting it in secretly!"}\\
 - Richard P.
-	Feynman \footnote{\emph{QED: The Strange Theory of Light and Matter}.
-	Princeton University Press.
-	p.
-	129.
-	(1985)}
+Feynman \footnote{\emph{QED: The Strange Theory of Light and Matter}.
+	Princeton University Press.	p.	129.	(1985)}
 \end{flushright}
 
 

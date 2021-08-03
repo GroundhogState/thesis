@@ -6,7 +6,17 @@
     bottom = 20mm,
     inner = 40mm,
     outer = 20mm}
+    % ^ for print thesis. Digital thesis uses 2.5cm all margins
+    % Single-spacing for bibliography, footnotes, and indented quotes.
+% https://policies.anu.edu.au/ppl/document/ANUP_012815 
+\usepackage{setspace} % for setting the bib and footnotes
+\usepackage{anyfontsize}
+% \titleformat{\chapter}[display]
+%      { \normalsize \huge  \color{black}}
+%       {\normalsize \MakeUppercase { \chaptertitlename \hspace{1 ex} }  { \fontsize{60}{60}\selectfont \color{RoyalRed} \sffamily  \thechapter }} {10 pt}{\bfseries\huge} 
+%       % https://tex.stackexchange.com/questions/94729/how-to-customize-chapter-heading-style
 
+% \renewcommand{\footnote}[1]{\begingroup\setstretch{1.0}\footnote{#1}\endgroup}
 
 \usepackage{graphicx}
 % \usepackage{wrapgfig}
@@ -29,10 +39,17 @@
 \usepackage{Typocaps}
 \newcommand{\dropcap}[1]{\dropcapaux#1\relax}
 \def\dropcapaux#1#2\relax{\lettrine[lines=3,lraise=-0.5,depth=1]{\typocap{#1}}{#2}}
-
+\newcommand{\fullpaper}[5]{\normalsize {{\bf#1}\newline #2, \IfNoValueTF{#5}{\emph{#3}}{\href{#5}{\emph{#3}}} (#4) }}
+\newcommand{\citem}[1]{\item[\cite{#1}]}
+\let\svthefootnote\thefootnote
+\newcommand\blankfootnote[1]{%
+  \let\thefootnote\relax\footnotetext{#1}%
+  \let\thefootnote\svthefootnote%
+} %https://tex.stackexchange.com/questions/170511/footnotes-without-numbering
 % \input Rothdn.fd
 % \newcommand*\initfamily{\usefont{U}{Rothdn}{xl}{n}}
-
+\usepackage{dpfloat}
+\usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
 \usepackage{xparse}
 
 % from tug.org try: QT Linostroke, Lukas Svatba, Calligra, Baroque initials, 
@@ -47,6 +64,8 @@
 % main text font
 % https://tug.org/FontCatalogue/mathfonts.html
 
+\usepackage[toc,page]{appendix}
+\usepackage{pdfpages}
 \usepackage[backend=biber,style=numeric]{biblatex}
 
 % biber issues https://tex.stackexchange.com/questions/309991/how-to-fix-the-incompatility-between-biber-and-biblatex-versions-in-texmaker 
@@ -72,6 +91,8 @@
 \newcommand{\ket}[1]{|#1\rangle}
 \newcommand{\braket}[2]{\langle#1|#2\rangle}
 \newcommand{\Tr}{\textrm{Tr}}
+\newcommand{\cre}[1]{\hat{#1}^\dagger}
+\newcommand{\anh}[1]{\hat{#1}}
 
 \newcommand{\MetastableState}{2^{3\!}S_1}%
 \newcommand{\UpperS}{5^{3\!}S_{1}}%
