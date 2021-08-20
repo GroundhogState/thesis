@@ -17,7 +17,7 @@
 \begin{document}
 
 % \include{latex/mtodo}
-% 	% \myemptypage
+% - % \myemptypage
 
 
 % \frontmatter
@@ -26,6 +26,11 @@
 % \setcounter{tocdepth}{1}
 % \tableofcontents
 
+% double-page double-ket or bra-ket
+% i.e. nested \ket{\ket} around entire text: ||main>>
+% Or put it all in bra-kets?
+% - Make them H/V - split up sections so chapt = <s1|s2> + <s3|s4>, or inc tensor products chapt = |s2><s1| + <s3|s4>\otimes<s5|
+
 % \mainmatter
 
 % \include{latex/10_overview}
@@ -33,13 +38,13 @@
 % \part{Background and technical introduction}
 % \include{latex/11_introduction}
 % \include{latex/12_apparatus}
-\include{latex/13_lattice_build}
+% \include{latex/13_lattice_build}
 % \part{Experiments with ultracold metastable helium atoms}
 % \include{latex/21_transitions}
 % \include{latex/22_tuneout}
 % \include{latex/31_depletion}
 
-% \include{latex/40_conclusion}
+\include{latex/40_conclusion}
 
 %%https://tex.stackexchange.com/questions/172496/adding-appendix-chapters-without-sections-in-table-of-contents
 % \begin{appendices}
@@ -50,10 +55,10 @@
 
 \backmatter
 
-\begingroup
-\setstretch{1.0}
+% \begingroup
+% \setstretch{1.0}
 \printbibliography
-\endgroup
+% \endgroup
 
 % \newpage
 % \begin{center}

@@ -1,0 +1,933 @@
+% \documentclass{article} 
+\documentclass[%
+%reprint,
+%superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%preprint,
+%preprintnumbers,
+%notitlepage,
+%nofootinbib,
+%nobibnotes,
+%bibnotes,
+ amsmath,amssymb,
+aps,
+ %prl,
+%pra,
+%prb,
+%rmp,
+%prstab,
+%prstper,
+%floatfix,
+]{revtex4-2}
+
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+
+\usepackage{graphicx}% Include figure files
+ \usepackage{float}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{hhline}
+\usepackage{subfigure}
+% \usepackage{subcaption} can only use one of these
+\usepackage{caption}
+\usepackage[font=small,labelfont=bf,
+  justification=justified]{caption} % 'format=plain' avoids hanging indentation
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{textcomp} % for text mu
+\usepackage{xr}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{nicefrac}
+\usepackage{nth}
+\usepackage{etoolbox}
+\usepackage{gensymb} % for degree symbol
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\usepackage{framed}
+
+\usepackage{ragged2e}
+\DeclareCaptionJustification{justified}{\justifying}
+\captionsetup{justification=justified,singlelinecheck=false}%,labelfont=large
+
+%adjust how sections/subsections appear
+% \patchcmd{\section}
+%   {\centering}
+%   {\raggedright}
+%   {}
+%   {}
+% \patchcmd{\subsection}
+%   {\centering}
+%   {\raggedright}
+%   {}
+%   {}
+\def\edotr{\mbox{\boldmath{$\hat{\bf e}\cdot {\bf r}$}}}
+%hack to have outline that is not spaced so wide
+\newcommand{\ItemSpacing}{0pt}%
+\newcommand{\ParSpacing}{0pt}%
+
+\newcommand{\brycerev}[1]{{\color{Purple}{#1}\normalcolor}} %revision from Bryce
+\newcommand{\brycecom}[1]{{\color{ProcessBlue}[BMH:{#1}]\normalcolor}} %Comments from Bryce
+\newcommand{\andrewcom}[1]{{\color{Orange}[AGT:{#1}]\normalcolor}}
+\newcommand{\theoryq}[1]{{\color{Green}[Theory Question:{#1}]\normalcolor}}
+\newcommand{\todocom}[1]{{\color{Red}[TODO:{#1}]\normalcolor}} 
+
+
+\newcommand{\pderivn}[3][{}]{
+    \frac{\partial^{#1} #2}{\partial #3^{#1}}
+}
+
+\newcommand{\derivn}[3][{}]{
+    \frac{d^{#1} #2}{d #3^{#1}}
+}
+
+\newcommand{\difn}[3]{\frac{d^#3 #1}{d #2^#3}}
+
+% define some easy to use states for He*
+\newcommand{\MetastableState}{2^{3\!}S_1}%
+\newcommand{\UpperStates}{3^{3\!}P_{0,1,2}}%
+\newcommand{\UpperStateManifold}{3^{3\!}P}%
+\newcommand{\LowerStates}{2^{3\!}P_{0,1,2}}%
+\newcommand{\LowerStateManifold}{2^{3\!}P}%
+\newcommand{\GroundState}{1^{1\!}S_{0}}%
+\newcommand{\SingletState}{2^{1\!}S_0}%
+
+\newcommand{\TO}{\MetastableState- \LowerStateManifold / \UpperStateManifold}%
+
+\newcommand{\avg}[1]{\left\langle #1 \right\rangle}
+% Outlines configurations
+\usepackage{outlines}
+\usepackage{enumitem}
+\setenumerate[1]{itemsep={\ItemSpacing},parsep={\ParSpacing},label=\Roman*.}
+\setenumerate[2]{itemsep={\ItemSpacing},parsep={\ParSpacing},label=\Alph*.}
+\setenumerate[3]{itemsep={\ItemSpacing},parsep={\ParSpacing},label=\roman*.}
+\setenumerate[4]{itemsep={\ItemSpacing},parsep={\ParSpacing},label=\alph*.}
+\usepackage{hyperref}
+
+%$ add the main file as a dependency
+% \makeatletter
+% \newcommand*{\addFileDependency}[1]{% argument=file name and extension
+%   \typeout{(#1)}
+%   \@addtofilelist{#1}
+%   \IfFileExists{#1}{}{\typeout{No file #1.}}
+% }
+% \makeatother
+ 
+% \newcommand*{\myexternaldocument}[1]{%
+%     \externaldocument{#1}%
+%     \addFileDependency{#1.tex}%
+%     \addFileDependency{#1.aux}%
+% }
+
+% \myexternaldocument{main}
+
+\renewcommand\thefigure{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}} 
+\begin{document}
+\title{Supporting Online Material}
+%\appendix
+\maketitle
+
+\section{Notation}
+We propose a new notation $L-U_1/U_2$ (used in the title of this paper) which specifies a tune-out by the occupied state $L$ followed by the two transitions $U_1$,$U_2$ which dominate the polarizability at the specified tune-out. In our case we specify the manifolds which dominate ($\TO$) and neglect the $\MetastableState \rightarrow 3^{3\!}S_1 $ transition as it is sufficiently weak \cite{PhysRevLett.125.013002}. This new notation is similar to the transition notation used in the spectroscopic community. 
+
+\section{Method} 	
+%$f_{TO}(\mathcal{Q_{L}},\mathcal{V})$
+% outline
+% - how do we find the TO for a given polarization state
+% - how a single trap frequency measurment works
+% - how we use multiple of these to build up a trap freq meassuremtn
+% - how a single scan of freq gives a TO measurment
+%   - calibration
+%   - fitting
+% 
+% Scraps
+%At its core this involves measuring the trap frequency as a function of the applied probe beam frequency for a particular probe polarization state.
+
+% summarise the stages of measurement
+To measure \(f_{\mathrm{TO}}(-1,0)\) we perform three stages of measurements. Firstly, for a given probe beam polarization and (optical) frequency we make a measurement of the polarizability via the (spatial) oscillation frequency of ultracold helium in the combination of an optical dipole potential of the probe beam and the magnetic trap. 
+Secondly, we repeat many of these measurements while varying the probe beam (optical) frequency to find the optical frequency where the polarizability goes to zero (the tune-out frequency, \(f_{TO}(\mathcal{Q_A},\mathcal{V})\) ) for this probe beam polarization. 
+Finally, we repeat the second stage at many values of probe beam polarization in order to extract  \(f_{\mathrm{TO}}(-1,0)\), the tune-out for the particular light polarization (in the atomic frame) which we use to compare with theoretical predictions.
+
+\subsection{Trap Frequency Based Polarizability Measurement}
+\label{sec:trap_freq_measure}
+\subsubsection{Theoretical Basis}
+To measure the tune-out we must first be able to be measure the (real part of the) optical polarizability (\(\operatorname{Re}(\alpha)\)) at some given probe beam (optical) frequency. As only the null of this signal is used, absolute calibration is not required. However, the measurement should be linear to allow for linear interpolation of the polarizability as a function of frequency to find the tune-out.  A nonzero polarizability manifests as an optical dipole potential (\(U_{\mathrm{dip}}\)) in proportion to the intensity of the optical field (\(I\)) as \cite{grimm1999optical},
+ \begin{align}
+    U_{\mathrm{dip}}=-\frac{1}{2 \epsilon_{0} c} \operatorname{Re}(\alpha) I ,
+\end{align}
+where \(c\) is the speed of light, \(\epsilon_{0}\) is the vacuum permittivity, and \(\alpha\) is the complex polarizability. In this work, we detect the optical dipole potential through a modification to the (spatial) oscillation frequency of ultracold atoms confined in a harmonic magnetic trap when a Gaussian probe beam (oriented along the y axis) is overlapped with the trap minimum. The combined potential is given as
+ \begin{align}
+    U_{\mathrm{net}}& =-\frac{1}{2 \epsilon_{0} c} \operatorname{Re}(\alpha) 
+    \bigg[ 
+        \frac{2 P}{\pi w_0^2} \left(\frac{w_0}{w(y)}\right)^2 \exp\left( \frac{-2 (x^2+z^2)}{w(y)^2} \right)
+    \bigg]
+    + \frac{1}{2} m (x^2 \Omega_{\text{trap},x}^2  +y^2 \Omega_{\text{trap},y}^2  +z^2 \Omega_{\text{trap},z}^2 ), \label{eqn:net_U}
+ \end{align}
+where \(w(y) = w_0 \sqrt{1+\left( \frac{y}{y_R} \right)^2 }\) is the probe beam waist along the axis of propagation, \(w_0\) is the probe beam waist at the focus, \(y_R\) is the Rayleigh length, \(P\) is the total power of the beam and \( \Omega_{\text{trap},(x,y,z)} \) are the magnetic trap frequencies in the \((x,y,z)\) axes.
+To find the net trap frequency we use the expression   
+\begin{equation}
+\Omega=\frac{1}{2\pi\sqrt{m}} \sqrt{\frac{\partial^{2} U}{\partial x^{2}} \biggr\rvert_{\frac{\partial U}{\partial x}=0}}
+\label{eq:omega_from_u}
+\end{equation}
+for the trap frequency about a local minimum, where \(m\) is the mass of the oscillating particle, and apply it to the net potential in the \(x\)-axis. Applying Eq.~(\ref{eq:omega_from_u}) to Eq.~(\ref{eqn:net_U}) we obtain the net oscillation frequency as
+\begin{align}
+\Omega_{\text{net}}^2  & = \frac{1}{4\pi^2m} \frac{1}{2\epsilon_{0} c} Re(\alpha) \frac{2 P}{\pi w_0^2} \frac{4}{w_{0}^{2}} 
++  \Omega_{\text{trap},x}^2,
+\end{align}
+which can also be expressed as the components from each potential source,
+\begin{align}
+\Omega_{\text{net}} & =\sqrt{\Omega_{\text{probe}}^{2}+\Omega_{\text{trap},x}^{2}}, \; \; \text{where }\\
+\Omega_{\text{probe}}& = \frac{1}{2\pi} \sqrt{\frac{1}{2m \epsilon_{0} c} Re(\alpha) \frac{2 P}{\pi w_0^2} \frac{4}{w_{0}^{2}}} \;.
+\end{align}
+Here \( \Omega_{\text{probe}} \) represents the spatial oscillation frequency of the probe beam by itself, which becomes imaginary when the trap is repulsive.
+Finally we see that a measurement of \( \Omega_{\text{probe}}^2 \) is linearly proportional to the real part of the polarizability. The treatment above is equivalent to a second order Taylor expansion about the trap minimum and provides a good approximation of the behaviour when the oscillation amplitude is small compared to the probe beam waist and when the probe trap frequency is small. For a discussion of the nonlinear effects see section \ref{sec:syst.subsec:lin} below.
+
+
+\subsubsection{Frequency Measurement}
+A single measurement of trap frequency begins with the production of a BEC, consisting of $(6\pm1) \times 10^{5}$ metastable \(^4\)He atoms \footnote{variation over the data presented here, which ranges from a minimum of $3 \times 10^{5}$ to a maximum of $8 \times 10^{5}$}, through a combination of laser and evaporative cooling.
+The BEC is formed in a biplanar quadrupole Ioffe magnetic trap \cite{Dall2007a} with trapping frequencies given by $(f_{x},f_{y},f_{z})= (426.6(1),55.4(3),428.41(4))$ Hz \footnote{Values in brackets represent variation over many experiments.}.
+The probe beam is overlapped with the BEC at the trap minimum (waist radius of  10(2)~\textmu{}m) and aligned along the weak axis ($y$-axis) of the trap, and either turned on in the case of a probe measurement or blocked for a calibration measurement. The probe beam is stabilized in both power and frequency (details below). 
+Before measuring the trap frequency a brief (50~\textmu{}s) pulse of current is applied through a small coil near the BEC to induce an oscillation predominantly in the $x$-direction with (initial) amplitude \(\sim30\)~\textmu{}m. 
+The momentum of the oscillating BEC is then periodically sampled by weakly out-coupling atoms ($\sim1 \% $) from the magnetic trap every 8~ms with short ($\sim5$~\textmu{}s) pulses of RF radiation resonant with the $m_J=1 \rightarrow m_J=0$ state splitting at the center of the trap ($\sim1.7$ MHz). 
+The atoms that are transferred to the $m_J=0$ state are unaffected by magnetic fields, including the trap, and fall 852~mm under gravity to a multi-channel plate and delay line detector \cite{Manning:10} where the large internal energy  ($\sim 20$~eV) of the atoms allows detection with a spatial (temporal) resolution of  $\sim 120$~\textmu{}m ($\sim 3$~\textmu{}s) \cite{PhysRevA.97.063601} and a detection quantum efficiency of ${\sim} 10\%$.
+This allows us to reconstruct the initial velocity of each atom in each out-coupling pulse, whose average in each pulse estimates the mean velocity of the BEC at the time of that out-coupling pulse. 
+By fitting 130 measurements of the time-dependent velocity with an exponentially damped sine wave we are able to determine the trap frequency to a precision of 10~mHz with a single experimental realization. 
+To partially compensate for the decreasing atom number with each pulse, which would otherwise proceed as a geometric series and reduce the signal-to-noise ratio of later pulses, the RF power is increased with pulse number in an approximately exponential manner.
+
+\subsubsection{Reconstructive Aliasing}
+The method presented in this section will be presented in detail in a forthcoming publication on the use of pulsed atom lasers for trap frequency measurement. The pertinent points for this experiment are as follows.
+The sampling rate of the pulsed atom laser is limited by the momentum width of the BEC in the vertical axis (\(\sim40\)~mm/s, which corresponds to a temporal width at the detector of \(\sim\)4~ms) along with the vertical oscillation amplitude. This presents a challenge for measuring trap frequencies greater than the Nyquist  frequency (62~Hz) of the sampling (at a rate of rate 125~Hz, interval 8~ms) as the Nyquist zone of the original signal is unknown. To find the Nyquist zone of the trap frequency we conduct separate measurements where we vary the sampling rate and measure the change in apparent frequency of the aliased signal. The gradient of the apparent frequency with respect to sampling frequency unambiguously determines the Nyquist zone and in turn the true trap frequency. The high stability of our trap frequency along with the small perturbation of the probe beams allows the net oscillation frequency signal to stay within a single Nyquist zone, even over the entire data acquisition, simplifying the correction. 
+In this work, the oscillations in the \(x\)-axis are in the 5\textsuperscript{th} Niquist zone for sampling at 125~Hz and the correction applied to the aliased frequency measured in the oscillation fit is
+\begin{equation}
+    f_{\text{real}}=3 f_{\text{sampling}} + f_{\text{aliased}}.
+\end{equation}
+Here \(f_{\text{real}}\) is the true frequency, \(f_{\text{aliased}}\) is the measured aliased frequency and  \(f_{\text{sampling}}\) is the sampling frequency. % 
+
+\subsubsection{Probe beam trap frequency}
+To extract the squared probe beam trap frequency we use the difference between the squared oscillation frequencies of the combined trap and the the pure magnetic trap (calibration with the probe beam off). Explicitly this reads:
+\begin{equation}
+    \Omega_{\text{probe}}^{2}=\Omega_{\text{net}}^2 -\Omega_{\text{trap},x}^{2}.  
+\end{equation}
+Measurements alternate between those with the probe beam on and then off as a calibration.
+For a single probe beam measurement the calibration trap frequency (at that time) is taken from an interpolated smoothed (Gaussian kernel, $\sigma=60$~s) model of the calibration measurements in order to correct for trends in the underlying trap frequency and reduce noise. 
+This calibration data can be used to provide an estimate of the trap frequency error which combines (true) trap frequency variation along with measurement error. We find a standard deviation of 30~mHz and an overlapping Allan deviation of 18~mHz (at 90~s) in the raw calibration measurements. This values corresponds to a fractional error of 70~ppm and 43~ppm respectively.
+
+\subsection{Tune-Out measurement}
+To determine the tune-out frequency (\(f_{TO}\)) for a given polarization state of the probe beam (\( \mathcal{Q_{L}},\mathcal{V} \)), we find the probe beam (optical) frequency $f$ for which the measured probe beam trap frequency \(\Omega_{\text{probe}}^2\) is zero (using the methods described in section \ref{sec:trap_freq_measure} above). 
+This is done by measuring \(\Omega_{\text{probe}}^2\) as a function of the probe (optical) frequency in a small range about the tune-out frequency. 
+This range is chosen in order to minimize the nonlinearities that are present at large probe beam potentials while still presenting a sufficient signal-to-noise for interpolation of the the linear response. For the data presented here, we used scans out to 4.5~GHz either side of the tune-out.
+To perform these scans we change the set point of the probe beam (optical) frequency feedback system every two trap frequency measurements (after each set of one probe-on measurement and one calibration). We step through 13 frequency values over this 9~GHz range. We then use a linear fit to extract the probe beam frequency where \(\Omega_{\text{probe}}^2=0\), which corresponds to the tune-out frequency for this polarization.
+
+\subsubsection{Precision energy measurements}
+
+A single scan takes approximately 700~s (12~minutes) and consists of 26 trap frequency measurements (BEC productions). We typically achieve an uncertainty in the tune-out of approximately 1.2~$\text{GHz}/\sqrt{N_\text{shots}}$, where \(N_\text{shots}\) refer to the number of BEC's used (either calibration or probe beam measurements). For example, 26 trap frequency measurements (one full scan) gives an uncertainty of $\sim 1.2\;\mathrm{GHz}/\sqrt{26}=235$~MHz. The number of measurements taken to find the tune-out for a given polarization varies from 50 to a few thousand for the data presented here.
+
+Using this method we can infer the peak value of the energy shift imparted by the probe beam onto the atoms. Through Eq.~(\ref{eq:omega_from_u}), a measurement of the probe-induced shift in trap frequency determines the curvature of peak of the Gaussian optical potential energy surface. Along with a measurement of the beam profile at the focus, the inferred curvature completely specifies the geometry of the optical potential. Thus, we can indirectly measure the absolute energy shift in the $\MetastableState$ state with a sensitivity of $1.7\cdot10^{-33}\mathrm{J}/\sqrt{\mathrm{sec}}$, where the time is the probe beam interrogation time. In the case of the probe beam polarization with the lowest frequency uncertainty in $f_\textrm{TO}$, (30~MHz), the minimum potential energy peak we can thus discern with is approximately $10^{-35}\mathrm{J}$ ($U/k_B=3$~pK).
+
+
+\subsection{Extracting \(f_{\mathrm{TO}}(-1,0)\)}
+
+ The tune-out frequency measurement described in the previous section depends on the light polarization in the atomic frame, which depends in turn on the polarization of the probe beam and the angle between the probe beam propagation and the magnetic polarization axis of the atoms. A comparison of these tune-out measurements to theory would therefore require accurate knowledge of both the probe beam polarization and the magnetic field pointing. In practice we are unable to measure the field pointing with sufficient accuracy to prevent it becoming a limiting uncertainty in our comparison with theory.
+ Instead we adopt a different procedure assuming only the stability of the magnetic pointing and use measurements of the tune-out at a variety of polarization states in order to extrapolate to the \(\mathcal{Q_{A}}=-1,\mathcal{V}=0\) polarization state in the atomic frame, giving a tune-out measurement \(f_{\mathrm{TO}}(-1,0)\) that is insensitive to the magnetic field pointing (to first order). 
+ 
+ \subsubsection{Theoretical Basis}
+ To understand why \(f_{\mathrm{TO}}(-1,0)\) is independent of field pointing, we start from the expression for the Stark interaction under arbitrary light fields from  \cite[Eq. 19]{LeKien2013}:
+ \begin{equation}
+    \alpha(f) = \alpha^S(f) + C \alpha^V(f) \frac{M}{2J} + D \alpha^T(f) \frac{3M^2-J(J+1)}{2J(2J-1)}
+    \label{eq:polarizability_full_1}
+\end{equation}
+where \(\alpha^S(f)\), \(\alpha^V(f)\), and \(\alpha^T(f)\) are the conventional scalar, vector, and tensor polarizabilities respectively. If we assume that the \(B\)-field is pointing along the \textit{z}-axis then the coefficients \(C\) and \(D\) are given by \cite[Eq. 20]{LeKien2013}:
+\begin{align}
+    C &= 2 \text{Im}(u_x^* u_y),\\
+    D &= 3|u_z|^2 -1.
+\end{align}
+We can define these constants in terms of experimentally measurable variables,
+\begin{align}
+     C &= - \mathcal{V_{A}} \cos \left( \theta_k \right), \\
+     D &= 3 \sin^2\left( \theta_k \right) \left(\frac{1}{2} +  \frac{\mathcal{Q_{A}}}{2}\right) -1 
+\end{align}
+where \(\mathcal{V_{A}},\mathcal{Q_{A}}\) are the second and fourth Stokes parameter of the probe beam in the preferred atomic reference frame (see Fig.~\ref{fig:ellipse} for illustration of this particular frame). For the $2^3S_1, M_J=1$ state, which is the focus of this work, we substitute the quantum numbers $J=1$ and $M=1$, leading to the expression,
+\begin{equation}
+    \alpha(f) = \alpha^S(f) - 
+    \frac{1}{2} \alpha^V(f)  \cos \left( \theta_k \right) \mathcal{V_{A}} + 
+    \frac{1}{2} \alpha^T(f) \left[3 \sin^2\left( \theta_k \right) \left(\frac{1}{2} +  \frac{\mathcal{Q_{A}}}{2}\right) -1 \right].
+    \label{eq:polarizability_full}
+\end{equation}
+ 
+ \subsubsection{Tune-Out Component Linearization}
+To obtain the dependence of the net tune-out on the Stoke parameters, we perform a Taylor expansion on the dynamic polarizability components \{\(\alpha^S(f)\),\, \(\alpha^V(f)\),\, \(\alpha^T(f)\)\} in terms of frequency about the zero point of \(\alpha^S(f)\), which we denote \(f^{S}_{TO}\),
+\begin{align}
+    \alpha^J(f) &= \alpha^J(f^{S}_{TO}) + \left. \derivn{\alpha^J}{f}{{}}\right|_{f=f^{S}_{TO}} (f-f^{S}_{TO}) +\frac{1}{2}\left. \difn{\alpha^J}{f}{2}\right|_{f=f^{S}_{TO}}(f-f^{S}_{TO})^2 + ...,\label{eqn:taylor_exp}
+\end{align}
+where \(J=\{S,V,T\}\). To make the analysis tractable we truncate Eq.~(\ref{eqn:taylor_exp}) to a given order. We wish to truncate the various polarizability components to the lowest order possible, as this makes the final functional form of the tune-out frequency simpler and requires a fewer free parameter fit to the experimental data. This will hence both reduce the fit error and the possibility of having multiple unique local minima in the parameter space.
+
+%what order to truncate to and why
+Theoretically we expect \(\left|\difn{\alpha^{\{V,T\}}}{f}{n} \frac{(\Delta f)^n}{n!}\right|\ll 1\) for \(\Delta f = 16\)~GHz and \(n\geq1\), with the dominant contributions to the net polarizability coming from the first and second derivatives of the scalar polarizability. Hence, we truncate the various components as follows,
+\begin{align}
+    \alpha^S(f) &\approx \left. \derivn{\alpha^S}{f}{{}}\right|_{f=f^{S}_{TO}} (f-f^{S}_{TO}) +\frac{1}{2}\left. \difn{\alpha^S}{f}{2}\right|_{f=f^{S}_{TO}}(f-f^{S}_{TO})^2 \label{eqn:each_taylor_exp}\\
+    \alpha^V(f) &\approx  \alpha^V(f^{S}_{TO}) \\
+    \alpha^T(f) &\approx  \alpha^T(f^{S}_{TO}),\label{eqn:each_taylor_exp_vec}
+\end{align}
+where we have also used \( \alpha^S(f^{S}_{TO})=0\). Substituting these expansions into Eq.~(\ref{eq:polarizability_full}) we obtain,
+\begin{align}
+    \alpha(f) &\approx \derivn{\alpha^S}{f}{{}}(f-f^{S}_{TO}) + \frac{1}{2} \difn{\alpha^S}{f}{2} (f-f^{S}_{TO})^2
+    -\frac{1}{2} \alpha^V(f^{S}_{TO}) \cos \left( \theta_k \right) \mathcal{V}  + 
+    \frac{1}{2} \alpha^T(f^{S}_{TO}) \left[3 \sin^2\left( \theta_k \right) \left(\frac{1}{2} +  \frac{\mathcal{Q_{A}}}{2}\right) -1 \right]  . \label{eq:main_to}
+\end{align}
+We wish to determine the quantity \(f_{TO}\), at which the net polarizability vanishes, \(\alpha(f_{TO})=0\). As changes in the total polarization \(\alpha(f)\) near the tune-out come predominantly from the scalar polarizability we have \(f_{TO}\approx f^{S}_{TO}\). Thus, we can assume that our truncate Taylor expansions of the polarizability terms [Eqs.~(\ref{eqn:each_taylor_exp}-\ref{eqn:each_taylor_exp_vec})], and hence Eq.~(\ref{eq:main_to}), are valid over the range of interest. Furthermore, we note that we try a fit to the data both including and excluding the quadratic term in Eq.~(\ref{eqn:each_taylor_exp}) and find that both models reproduce the same fit values within uncertainties. We thus determine that for simplicity we can simplify Eq.~(\ref{eqn:each_taylor_exp}) to linear order. Setting \(f=f_{TO}\) and solving Eq.~(\ref{eq:main_to}) we find our tune-out equation, 
+ \begin{align}
+    f_{TO} &= 
+    f^{S}_{TO}
+    %
+    +\frac{1}{2}\beta^V  \cos \left( \theta_k \right) \mathcal{V_{A}}
+    %
+    - \frac{1}{2}\beta^T  \left[3 \sin^2\left( \theta_k \right) \left(\frac{1}{2} +  \frac{\mathcal{Q_{A}}}{2}\right) -1 \right], \label{eqn:tune_out_eq} 
+\end{align}
+where
+ \begin{align}
+  \beta^V &= \alpha^V(f^{S}_{TO}) \bigg/ \left. \derivn{\alpha^S}{f} \right|_{f=f^{S}_{TO}} \mathrm{, and}\\
+  \beta^T &= \alpha^T(f^{S}_{TO}) \bigg/ \left. \derivn{\alpha^S}{f} \right|_{f=f^{S}_{TO}} .
+ \end{align}
+Note that the choice to expand about \(f^{S}_{TO}\) in Eq.~(\ref{eqn:taylor_exp}) is somewhat arbitrary, any frequency sufficiently close to the net tune-out \(f_{TO}\) can be chosen and will produce an equivalent functional form to Eq.~(\ref{eqn:tune_out_eq}).  We chose \(f^{S}_{TO}\) as it simplifies the interpretation of the final equation. If we set \(\mathcal{V_{A}}=0\) and \(\mathcal{Q_{A}}=-1\) we obtain \(f_{TO}(-1,0) = f^{S}_{TO} + \frac{1}{2} \beta^T\) which is the tune-out frequency for the dynamic polarizability \(\alpha(f) = \alpha^S(f) - \frac{1}{2}  \alpha^T(f)\), and is hence independent of the magnetic field pointing. We find further support for this analysis from the experimental data, as it provides a good fit to Eq.~(\ref{eqn:tune_out_eq}) (see Fig.~\ref{fig:full_tune_out} and Fig.~3 in the main text).
+  
+%  Near the tune-out the net dynamic polarizability \(\alpha(f)\) and the scalar component \(\alpha^S(f)\) can be approximated (over a small range) by their first order Taylor expansions about their respective zero points (\(f_{TO}\), \(f^{S}_{TO}\)):
+% \begin{align}
+%     \alpha(f) &= \alpha(f_{TO}) + \derivn{\alpha(f)}{f}{{}}(f-f_{TO})=\derivn{\alpha(f)}{f}{{}}(f-f_{TO}), \\
+%     \alpha^S(f) &= \alpha^S(f^{S}_{TO}) + \derivn{\alpha^S(f)}{f}{{}}(f-f^{S}_{TO})= \derivn{\alpha^S(f)}{f}{{}}(f-f^{S}_{TO}),
+% \end{align}
+% where \(f_{TO}\) is the quantity we wish to determine. Substituting this expansion into Eq.~(\ref{eq:polarizability_full}) we obtain,
+% \begin{align}
+%     \derivn{\alpha(f)}{f}{{}}(f-f_{TO}) &= \derivn{\alpha^S(f)}{f}{{}}(f-f^{S}_{TO}) 
+%     -\frac{1}{2} \alpha^V(f) \cos \left( \theta_k \right) \mathcal{V}  + 
+%     \frac{1}{2} \alpha^T(f) \left[3 \sin^2\left( \theta_k \right) \left(\frac{1}{2} +  \frac{\mathcal{Q_{A}}}{2}\right) -1 \right]  . \label{eq:main_to}
+% \end{align}
+% As changes in the total polarization \(\alpha(f)\) near the tune-out come predominantly from the scalar polarizability, we can make the approximation that the vector and tensor polarizability terms are constant over the range of interest. Setting \(\alpha^V(f)\approx\alpha^V, \alpha^T(f)\approx\alpha^T,\) and \(\derivn{\alpha^S(f)}{f}{{}} \approx \derivn{\alpha(f)}{f}{{}} \),
+% we can make a further simplification in the form, 
+% \begin{align}
+%     f-f_{TO} &= 
+%     \left(
+%         \derivn{\alpha^S(f)}{f}{{}} \bigg/ \derivn{\alpha(f)}{f}{{}}
+%     \right)
+%     (f-f^{S}_{TO}) 
+%     %
+%     -\frac{1}{2} 
+%     \left(\alpha^V(f) \bigg/\derivn{\alpha(f)}{f}{{}}\right) 
+%      \cos \left( \theta_k \right) \mathcal{V}
+%     + \\  \nonumber
+%     %
+%     & \qquad \frac{1}{2} 
+%     \left(
+%         \alpha^T(f)\bigg/\derivn{\alpha(f)}{f}{{}} 
+%     \right) 
+%     \left(3 \sin^2\left( \theta_k \right) \left(\frac{1}{2} +  \frac{\mathcal{Q_{A}}}{2}\right) -1 \right) 
+%  \end{align}   
+%  \begin{align}
+%     f_{TO} &= 
+%     f^{S}_{TO}
+%     %
+%     +\frac{1}{2}\beta^V  \cos \left( \theta_k \right) \mathcal{V_{A}}
+%     %
+%     - \frac{1}{2}\beta^T  \left[3 \sin^2\left( \theta_k \right) \left(\frac{1}{2} +  \frac{\mathcal{Q_{A}}}{2}\right) -1 \right], \label{eqn:tune_out_eq} 
+% \end{align}
+% where
+%  \begin{align}
+%   \beta^V &= \alpha^V(f^{S}_{TO}) \bigg/ \left. \pderivn{\alpha^S(f)}{f} \right|_{f=f^{S}_{TO}} \mathrm{, and}\\
+%   \beta^T &= \alpha^T(f^{S}_{TO}) \bigg/ \left. \pderivn{\alpha^S(f)}{f} \right|_{f=f^{S}_{TO}} .
+%  \end{align}
+% If we set \(\mathcal{V_{A}}=0\) and \(\mathcal{Q_{A}}=-1\) we obtain \(f_{TO}(-1,0) = f^{S}_{TO} + \frac{1}{2} \beta^T\) which is the tune-out frequency for the dynamic polarizability \(\alpha(f) = \alpha^S(f) - \frac{1}{2}  \alpha^T(f)\), which is independent of the magnetic field pointing.
+
+ \subsubsection{Polarization in the Atomic Reference Frame}
+ We measure the probe beam polarization parameters \(\mathcal{V_{L}},\mathcal{Q_{L}}\) in the laboratory basis using a high extinction rotating polarizer \footnote{Glan-Thompson, extinction ratio $>10^{5}:1$} and the power ratio technique. The polarization parameters are given by
+ \begin{align}
+     \mathcal{Q_{L}} &=\frac{p_{\mathrm{max}}-p_{\mathrm{min}}}{p_{\mathrm{max}}+p_{\mathrm{min}}} \cos(2\theta_{\mathrm{min}}), \\
+     |\mathcal{V}_{\mathcal{L}}| &= \frac{2\sqrt{p_{\mathrm{min}}p_{\mathrm{max}}}}{p_{\mathrm{min}}+p_{\mathrm{max}}},
+\end{align}
+where \(p_{\mathrm{max}}\) (\(+p_{\mathrm{min}}\)) is the maximum (minimum) power transmitted and $\theta_{\mathrm{min}}$ is the polarizer angle of minimum power transmission. The sign of \(\mathcal{V}_{\mathcal{L}}\), corresponding to the handedness of the circular component, is determined using a rotating quarter wave plate technique. The second polarization parameter is invariant under transformation into the atomic reference frame, hence \(\mathcal{V_{L}}=\mathcal{V_{A}}\) is hereafter denoted \(\mathcal{V}\). The fourth polarization parameter is transformed into the atomic reference frame by a rotation by \(\mathcal{\theta_{L}}\) (see Fig.~\ref{fig:ellipse}) around the probe beam axis,
+\begin{equation}
+ \mathcal{Q_{A}} =\frac{p_{\mathrm{max}}-p_{\mathrm{min}}}{p_{\mathrm{max}}+p_{\mathrm{min}}} \cos(2(\mathcal{\theta_{L}}+\theta_{\mathrm{min}})) ,
+\end{equation}
+which corresponds to a rotation about the probe beam to align the laboratory polarizer angle origin with the component of the magnetic field vector pointing radially from the probe beam. In practice \(\mathcal{\theta_{L}}\) cannot be directly measured with sufficient accuracy and is used as a free fit parameter, as described in the next section.
+ 
+ \tikzset{
+   pics/.cd,
+   vector out/.style={
+      code={
+         \draw[#1] (0,0)  circle (1) (45:1) -- (225:1) (135:1) -- (315:1);
+      }%end code   
+   }%end style
+}%end tikzset
+\tikzset{
+   pics/.cd,
+   vector in/.style={
+      code={
+        \draw[#1] (0,0)  circle (0.25);
+        \fill[#1] (0,0)  circle (.05);
+      }%end code   
+   }%end style
+}%end tikzset
+\begin{figure}
+\centering
+\begin{tikzpicture}[declare function={c=1.4;a=4/c;b=2/c;alpha=30;}]
+\begin{scope} 
+ \draw[<-,line width=0.4mm] (0,5*b/3) node[right]{$\mathbf{\hat{k}_\perp}$} -- (0,-5*b/3);
+ \draw[<-,line width=0.4mm] (4*a/3,0) node[above]{$\mathbf{\hat{x}}$} -- (-4*a/3,0);
+\end{scope}
+
+\begin{scope}[dashed,rotate=50] 
+ \draw[<-,line width=0.4mm] (0,5*b/3) node[right]{$\, \mathbf{\hat{y}_L}$} -- (0,-5*b/3);
+ \draw[<-,line width=0.4mm] (4*a/3,0) node[above]{$\mathbf{\hat{x}_L}$} -- (-3*a/3,0);
+\end{scope}
+
+\begin{scope}[rotate=alpha] 
+ \draw[line width=0.4mm,blue] (0,0) circle (a and b); 
+ \draw (0,5*b/3) node[left]{minor axis} --  (0,-5*b/3) ;
+ \draw (4*a/3,0) node[above]{major axis} -- (-4*a/3,0);
+  \draw (-a,0) -- (0,-b); %node[pos=0.4,above]; %node[above] 
+    \coordinate (a) at (0,0);
+    \coordinate (b) at (-a,0);
+    \coordinate (c) at (0,-b);
+ \pic ["$\mathbf{\chi}$",draw, <->,radius=0.8cm, angle eccentricity=1.9]{angle = c--b--a};
+ \path 
+ ({a*cos(atan(-(b/a)*tan(alpha)))},{b*sin(atan(-(b/a)*tan(alpha)))}) coordinate (aux1)
+ ({a*cos(atan((b/a)*cot(alpha)))},{b*sin(atan((b/a)*cot(alpha)))}) coordinate (aux2) 
+ ({-a*cos(atan(-(b/a)*tan(alpha)))},{-b*sin(atan(-(b/a)*tan(alpha)))}) coordinate (aux3)
+ ({-a*cos(atan((b/a)*cot(alpha)))},{-b*sin(atan((b/a)*cot(alpha)))}) coordinate (aux4); 
+\end{scope}
+%\draw (aux3|-aux4) rectangle (aux1|-aux2);
+\path (0:1) coordinate (A) (0,0) coordinate[label={[xshift=0.3em]below left:{$ $}}] (O)
+ (alpha:1) coordinate (C) 
+pic ["$\mathbf{\psi}$",draw,latex-latex,angle radius=1.8cm,angle eccentricity=1.2] {angle = A--O--C};
+\path (0:1) coordinate (B) (0,0) coordinate (D)
+ (50:1) coordinate (E) 
+pic ["$\mathbf{\theta_L}$",draw,latex-latex,angle radius=2.6cm,angle eccentricity=1.25] {angle = B--D--E};
+\path (5.5/c,4/c) pic {vector in={line
+width=1.5pt}} node[left]{$\hat{k}\, \, \, \,$};
+\end{tikzpicture}
+\begin{tikzpicture}[declare function={c=1.4;a=4/c;b=2/c;alpha=30;}]
+\begin{scope} 
+ \draw[<-,line width=0.4mm] (0,5*b/3) node[right]{$\mathbf{\hat{z}}$} -- (0,-5*b/3);
+ \draw[<-,line width=0.4mm] (4*a/3,0) node[above]{$\mathbf{\hat{y}}$} -- (-4*a/3,0);
+\end{scope}
+\begin{scope}[rotate=alpha] 
+ \draw[<-,line width=0.4mm,red] (0,5*b/3) node[left]{$\hat{k}$} --  (0,0);
+ \draw[<-,line width=0.4mm,blue] (0.5*2.1,2.1*0.866) node[left]{$\hat{B}$} -- (0,0);
+\end{scope}
+\path (90:1) coordinate (A) (0,0) coordinate[label={[xshift=0.3em]below left:{$ $}}] (O)
+ (120:1) coordinate (C) 
+pic ["$\mathbf{\theta_k}$",draw,latex-latex,angle radius=1.6cm,angle eccentricity=1.2] {angle = A--O--C};
+%\draw (aux3|-aux4) rectangle (aux1|-aux2);
+\end{tikzpicture}
+\caption{Diagram showing the various parameters used in Eq.~(\ref{eq:main_to}). (left) Shows the Stokes ellipse (blue) where \(\mathcal{Q} = \cos(2\psi) \cos(2\chi)\) and \(\mathcal{V} = \sin(2\chi)\), and \((\hat{x}_L,\hat{y}_L)\) represents the lab reference frame. Note that \(\hat{k}_\perp=\hat{y}\cos(\theta_k)+\hat{z}\sin(\theta_k)\) and in this case the probe beam wavevector \(\hat{k}\) is out of the page. (right) Shows how the magnetic quantization axis is assumed to be along the \(z\)-axis, with the plane spanned by it and the probe beam wavevector forming the \(zy\)-plane.}
+\label{fig:ellipse}
+\end{figure}
+ \subsubsection{Fitting}
+ 
+To find \(f_{\mathrm{TO}}(-1,0)\) we measure the tune-out frequency and \(\mathcal{Q_{L}},\mathcal{V}\) over a range of $\lambda/2$, and $\lambda/4$ wave-plate angles (75 combinations used here) and then fit the above model [Eq.~(\ref{eqn:tune_out_eq})] to this set of \(\{\mathcal{Q_{L}},\, \mathcal{V},\, f_{TO}\}\) data using the free parameters $f^{S}_{TO}$,\, $\theta_{\mathcal{L}}$,\, $\theta_{k}$,\, $\beta^V$, and $\beta^T$ (see Fig.~\ref{fig:full_tune_out} for fit of full model with polarization data from pre and post vacuum chamber). This free fit is unable to fully constrain the free fit parameters, critically, giving equal agreement between either polarity of \( \beta^T \) and thus preventing a determination of \(f_{\mathrm{TO}}(-1,0)\). 
+To eliminate one of these cases, we introduce a constraint on the sign of  \( \beta^T \) using  measurements and simulations of the magnetic field pointing and theoretical atomic structure calculations, both of which agree with the sign constraint \( \beta^T >0 \).
+With this constraint added, we use an uncertainty-weighted fit to find \(f_{\mathrm{TO}}(-1,0)\) by evaluating the resulting model at \(\mathcal{Q_{A}}=-1,\mathcal{V}=0\). The statistical error in the calculated \(f_{\mathrm{TO}}(-1,0)\) is determined with a bootstrapping technique wherein the constrained fitting procedure is repeated on subsets of the data to estimate the uncertainty in the full fit \cite{bryce_bootstrap_error_code}. 
+Four of the fit terms ($\theta_{\mathcal{L}}$, $\theta_{k}$, $\beta^V$, and $\beta^T$) are interdependent (reflected in their nondiagonal covariance matrix) and therefore the result of this fit cannot be used to find these values without extra information (such as measuring all but one such parameter). However, this does not effect the prediction of \(f_{\mathrm{TO}}(-1,0)\).
+
+% \begin{figure}
+% \centering
+% \includegraphics[width=8.6cm]{figs/to_v_dependence.eps}
+% \caption{Dependence of the measured tune-out on $\mathcal{V}$ when projected to $\mathcal{Q}=0$ using the fit model. The light error bars represent the standard deviation in the tune-out measurements that make up each point, the thick blue error bar shows the standard error in the weighted mean (smaller than the marker of most points).
+% }
+% \end{figure}
+
+For display in Fig.~\ref{fig:full_tune_out} the $\mathcal{Q_{A}}$ value is calculated using the fit $\theta_{\mathcal{L}}$ and $\mathcal{Q_{L}}$ and the measured \(f_{TO}\) is displayed as a function of $\mathcal{Q_{A}}$, $\mathcal{V}$. In Fig.~\ref{fig:full_tune_out} we also display the tune-out calculated for polarization data sets taken before and after the vacuum chamber.%For display each polarization is combined, with the uncertainty weighted mean, standard error of the weighted mean  standard deviation.
+
+\subsubsection{Simplified Explanation}
+It can be helpful to consider this process for a simplified system with only linear polarization. In this case the measured tune-out will depend sinusoidally on the angle of the input polarization (\(\theta_{\mathcal{L}}\)). The above method is equivalent to using a sinusoidal fit in order to extract the maximum tune-out value in this dependence, corresponding to the \(f_{\mathrm{TO}}(-1,0)\). The choice of taking the maximum is equivalent to constraining \( \beta^T \). The above method is a natural extension of this simplified approach to also account for the circular component of the light field.
+
+% scraps
+%\href{https://github.com/spicydonkey/sewm}{sewm code} along with unweighted
+
+%It is clear here that the estimated statistical error in the determined TO frequency for each scan is far less than spread between the the model and the data. (factor of 6 between SEWM of combined data and the sd of redisulas, will calc for each unbinned data pt) We attribute this to imperfections in the polarization measurement and variation of the magnetic field pointing.
+
+
+
+%The fit is weighted by the square of the uncertainty in each TO measurement $1/\sigma^2_{f_{TO}}$. The measured TO for each xx shot scan over wavelength for a given polarization is included in the fit as its own data point.
+%The fit is conducted with a global least squares prefitter that is constrained such that $-\pi/4<\theta_k<\pi/4$ and  $\beta^T>0$ which is then fed to an unconstrained fitter. 
+%In this way only a single parameter is required from theory, namely the sign of the tensor polarizability around the TO wavelength. This approach assumes that the tensor and vector polarization is approximately constant about the TO, consistent with theory [REF]\brycecom{from LYT}.
+
+
+% the frequency (wavelength) of light at which the atoms experience no perturbation is determined for some input probe polarization state and (ii) many of these measurement's (with varying degrees of circularity and linear orientation) are  combined and fit in Stokes space to determine the TO Scalar Minus Half Tensor (TOSMHT). The analysis for a given polarization state generally consists of hundreds of runs of the experiment grouped together to produce a measured TO for that polarization configuration.
+
+
+\section{Experimental Details}
+The general experimental setup is depicted diagrammatically in Fig.~\ref{fig:exp_diagram}. Each section of the experimental setup is described in detail below.
+\subsection{Technical Details}
+\subsubsection{Laser System}
+The laser system produces the monochromatic optical radiation which forms the probe beam. The core components of the system are a tunable titanium sapphire laser (m-Squared SolsTiS-PSX), external doubling cavity (m-Squared ECD-X) and high precision wavemeter (High Finesse WS8-2). The system delivers up to 150~mW of tightly focused (10~\textmu{}m radius), frequency-tunable optical radiation, stabilized in both power and frequency, into the experimental chamber.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{figs/soms/exp_optics_schematic}
+    \caption{Schematic of the optics system. The AOM diffracts into the +1 order with other orders blocked. Abbreviations:  SFP - scanning Fabry-Perot cavity, FC- fiber coupler, ISL-optical isolator, LIA-lock-in amplifier, PBS- polarizing beam splitter, PD- photodiode, AOM- acousto-optic modulator. }
+    \label{fig:exp_diagram}
+\end{figure}
+
+\subsubsection{Power Feedback}
+The power after the delivery fiber is measured with an amplified photodiode which is used to control the drive power to an acousto-optic modulator (AOM). The feedback loop has a 3dB bandwidth of 170 kHz and stabilizes the beam power to an accuracy of $ 3\times10^{-3}$ relative to the mean power. 
+
+\subsubsection{Wavemeter Feedback}
+During normal operation the laser frequency is continuously stabilized using a software-based control loop. The system reads the optical frequency from the wavemeter, passes this through a software based PI controller, and issues the resulting feedback commands to the laser at a rate of $\sim 14$~Hz. The system has sufficient bandwidth to achieve a $\sim900$~ms rise time (10\% to 90\%) for a $\sim300$~MHz frequency step, and during interrogation we measure a typical (in-loop) standard deviation of 170~kHz.
+The set point in this control loop is stepped every two BEC cycles (one interrogation and one calibration) to scan out a measurement of the tune-out frequency. The stabilization of the laser frequency uses measurements of the red side of the laser system (predoubling cavity) such that interruptions to the doubling cavity do not impact the optical frequency feedback.
+
+%We measure up to 8 MHz discrepancy (mean +4.7 betwen the measurment made of the blue frequency divided by two and the red frequency which we note may be used as an indication of the error in the uncalibrated blue region of the wavemeter.
+
+\subsubsection{Wavemeter Calibration}
+To provide an absolute calibration of the wavemeter we use the Doppler-free two-photon $6^{2}S_{1/2} (F=3) \rightarrow 8^{2}S_{1/2} (F=3)$ and $6^{2}S_{1/2} (F=4) \rightarrow 8^{2}S_{1/2} (F=4)$ transitions in cesium around 364.5~THz (822.5~nm). We split off a small fraction ($\sim$50~mW) of the red light generated by the Ti:Sapphire laser (before the doubling cavity), pass it through a warm (50$^{\circ}$~C) cesium cell with a beam waist of $\sim0.5$~mm, and then reflect it backwards along its path.
+We detect the excitation of the transition using the blue florescence from the radiative cascade \cite{HAGEL19991}, with a blue-sensitive (red-blind) photomultiplier tube (PMT). Previous measurements \cite{Wu:13,Fendel:07} have precisely measured the $F=3\rightarrow3$ and $4\rightarrow4$ transitions to be 364\,507\,238.363(10) and 364\,503\,080.297(10) MHZ respectively, and have demonstrated an insensitivity to environmental conditions, which makes these transitions suitable as a secondary frequency standard. 
+
+To calibrate the wavemeter we disable the usual software based wavemeter feedback to the laser and instead stabilize the laser using one of these transitions. To produce a derivative error signal suitable for feedback we modulate the frequency of the Ti:Sapphire laser (frequency deviation $<50$~kHz, modulation frequency $\sim1$~kHz) and detect the resulting modulation in the PMT current with a lock-in amplifier. This analog error signal is continuously read by a software based PID controller which sends adjustment commands to the laser controller (rate $\sim20$~Hz) to maintain the the laser frequency at the maximum of the fluorescence.
+
+As a verification of the calibration procedure we then re-engage the wavemeter based laser feedback system and measure the PMT current as a function of the frequency set point. We fit these data with a Lorentzian profile to extract the transition frequency and verify the calibration procedure (see Fig.~\ref{fig:2p_scan_single}). After calibration we find that measurements of both $F=3\rightarrow3$ and $F=4\rightarrow4$ transitions give frequencies within 50~kHz of the reference values.
+Calibrations are carried out every few days as the ($\sim100$~mK) temperature stability of our laboratory reduces the thermal drift of the wavemeter.
+Based on previous systematic studies of these transitions \cite{Wu:13,Fendel:07} and the conditions used for calibration, we believe that the systematic error of this calibration procedure ($<100$~kHz) is well below the absolute accuracy of the wavemeter over the measurement range used in the this work (2~MHz within 3~THz (2~nm) of calibration \cite{wstechnical}). As the wavemeter measurement and calibration is carried out on the red side of the laser system before the doubling cavity the absolute accuracy of the frequency of the delivered (blue) light is doubled to 4~MHz, well below other systematic uncertainties.
+
+% references for 2p transtion
+% https://www.osapublishing.org/ol/abstract.cfm?uri=ol-32-6-701
+% https://www.osapublishing.org/ol/abstract.cfm?uri=ol-30-24-3413
+% https://www.sciencedirect.com/science/article/pii/S0030401898006622?via%3Dihub#FIG3
+% https://www.osapublishing.org/ol/abstract.cfm?uri=ol-38-16-3186
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{figs/soms/2p_scan_nice}
+    \caption{(Top) single scan of PMT current vs. optical frequency relative to the two photon transition $6^{2}S_{1/2} (F=3) \rightarrow 8^{2}S_{1/2} (F=3)$. A Voigt fit is shown as the black line for comparison, with fit parameters are $\sigma=0.18(3)$~MHz $\gamma=0.49(3)$~MHz. This scan took a total of \(75\)~s. (Bottom) Residuals of the fit model, where the shaded region is the standard deviation of the observation error model. 
+    }
+    \label{fig:2p_scan_single}
+\end{figure}
+
+
+\subsection{Data Vetos}
+To protect the integrity of the final data, we implemented a number of `veto' protocols in the data analysis which discard polarizability measurements when certain desirable experimental conditions are not met. While stringent, these conditions remove only a negligible amount of data (less than one in $10^{4}$ of all shots in the entire dataset). 
+
+\subsubsection{Laser Single Mode}
+We have found that it is possible (although rare) for the titanium sapphire laser to spontaneously run multimode (with multiple optical frequencies in the output) which prevents accurate optical frequency measurement by the wavemeter and in turn accurate polarizability measurement. To eliminate these data we monitor the (folded) optical spectrum using a scanning Fabry-Perot cavity (Thorlabs SA200-5B). The cavity length is scanned across two full free-spectral ranges of the cavity, with a sawtooth voltage applied to the piezoelectric actuator which controls the cavity length at frequency of 20 Hz. 
+%The photodiode voltage is acquired with high dynamic range digitization along with the .
+%in two channels the first with full voltage and the scond after passing through a diode voltage compression citcut which allows high resolution measurment below 0.1v where the power is low.
+Both the cavity piezoelectric actuator and photodiode voltage are acquired around (during and $\sim0.2$~s before/after) the probe interrogation to verify that the laser is running single mode. 
+We detect a multimode condition based on the separation of peaks in the photodiode voltage. During single mode operation peaks will be separated by the cavity free spectral range with only detector noise in-between. A multimode laser appears as peaks spaced closer than this nominal separation, activating the veto condition. We set a conservative threshold for peak detection which corresponds to $1.5\times10^{-3}$ of the peak transmission intensity noting that all multimode conditions we have observed have intensities orders of magnitude greater than this level.
+% To be detected another peak must be more than 60MHz away from a main peak and 10 times the FWHM of the cavity transmision FWHM.
+%the distance, measured in cavity piezoelectric actuator voltage, between peaks in the photodiode voltage. 
+%Aproxamatey 80 scanns of the cavity are analysed to with any peaks above a threshold used to veto that squasition.
+%The threshold is set at  for peaks that are greater than 60 MHz away from the main peaks.
+\subsubsection{Probe Power}
+We employ a check on the probe beam power as measured with the probe beam photodiode which measures the power of the beam just before it enters the experimental chamber, as shown in Fig.~\ref{fig:exp_diagram}. This ensures that the power feedback system is operating at set point in all measurements used in the analysis. Restrictive thresholds are set on the mean ($<0.02$ fractional difference to set point), standard deviation ($<0.05$ of set point) and maximum difference to set point ($<0.03$ of set point) of the power during interrogation.
+\subsubsection{Optical Frequency}
+For our analysis the average value of the optical frequency as measured by the wavemeter (used for feedback) is used for each interrogation. We apply thresholds on the standard deviation ($<3$~MHz) and range ($<5$~MHz) of the measured optical frequency during interrogation.
+\subsubsection{Atom number}
+To prevent data with erroneously low atom numbers from corrupting measurements, we apply a requirement that atom number is at least $2\times10^{5}$. The systematic shift due to atom number is very small, which allows data taken across varying atom numbers to contribute to the overall result.
+
+\section{Systematic Shifts}
+The systematic shifts to our value for the tune-out are summarised in \autoref{tab:results}, and detailed individually below.
+\begin{table}[t]
+\centering
+\begin{ruledtabular}
+\begin{tabular}{l|r|r}
+Term              & Estimate &  Uncertainty \\
+\hline
+Measured Value      & 725\,736\,810             & 40      \\
+Polarization        & & \\
+\, \, - Birefringence & -100                   & 200   \\
+\, \, - Beam Anisotropy & 0                   & 150   \\
+Method Linearity    & 24                   & 30       \\
+Hyperpolarizability           & -30                   & 50   \\
+Broadband Light     & 0                     & 30      \\
+DC Electric field   & 0                     & \(\ll 1\) \\
+Wave-meter          & 0                     & 4    \\
+\hline
+Total               &  725\,736\,700            &  260
+\end{tabular}
+\end{ruledtabular}
+\caption{Contributions to measured tune-out frequency with associated systematic uncertainties (MHz). The measured value is found using only polarization data measured after the vacuum chamber. The polarization row gives the average of the tune-out frequencies calculated using polarization data pre and post vacuum chamber relative to the measured value, where the uncertainty is the discrepancy between these values. Note that uncertainties are added in quadrature.}
+\label{tab:results}
+\end{table}
+
+\subsection{Polarization}
+ The method we have detailed above to extract \(f_{\mathrm{TO}}(-1,0)\) relies on the accurate measurement of the probe beam polarization when it interacts with the atoms. However, as we do not have polarization optics inside our vacuum system; we must infer it from measurements outside the vacuum system. In this section we make estimates of two effects: first, the unknown birefringence of the vacuum windows, and second, the variation in polarization across the beam.
+ 
+ \subsubsection{Birefringence}
+ To estimate the first effect we measure the probe beam polarization before it enters the vacuum system and again after it exits through a second window. The estimated error in the value of \(f_{\mathrm{TO}}(-1,0)\) from the vacuum entry window is constrained by conducting the \(f_{\mathrm{TO}}(-1,0)\) fitting procedure with both measured polarization sets (see Fig.~\ref{fig:full_tune_out} for comparison). We find the two values agree within \(200\)~MHz, and hence use this as our uncertainty for the window birefringence. 
+ 
+ %Table here
+\subsubsection{Polarization across the beam}
+We have also observed a small shift in the probe beam polarization with the location of the measurement in the beam. We have identified the mirrors in our probe beam delivery system to be responsible. To characterize this we have probed the polarization at many points across the beam, repeating a similar process where the \(f_{\mathrm{TO}}(-1,0)\) is found from a single polarization measurement location. We have found that variation in the value of \(f_{\mathrm{TO}}(-1,0)\) is up to \(400\)~MHz away from the beam center. However, we must note that the contribution of these polarizations to the total value is weighted by their power in our measurement. Accordingly the power weighted values give an uncertainty of \(150\)~MHz for the central measurement of polarization.
+
+\subsection{Linearity} \label{sec:syst.subsec:lin}
+The first stage in the measurement of \(f_{\mathrm{TO}}(-1,0)\) assumes a linear response of the  perturbing trap frequency with respect to the optical frequency. This is, however, only an approximation as the polarizability itself is nonlinear with optical frequency at a large enough scale ($\sim$THz). Further, the relation $\Omega_{\text{net}}^2=\Omega_{\text{trap}}^2+\Omega_{\text{probe}}^2$ assumes that the probe beam is harmonic, which is only approximately true for a Gaussian beam.
+
+\newcommand{\subfigwidth}{0.28\linewidth}
+\begin{figure}
+    \centering
+    \setlength{\FrameRule}{3pt}
+    \setlength{\FrameSep}{0pt}
+    \begin{framed}
+    \subfigure[]{\includegraphics[width=\subfigwidth]{figs/soms/to_vq_dependence_0_post}}
+    \hspace{0.5cm}%
+    \subfigure[]{\includegraphics[width=\subfigwidth]{figs/soms/to_vq_dependence_1_post}}
+    \hspace{0.5cm}%
+    \subfigure[]{\includegraphics[width=\subfigwidth]{figs/soms/to_vq_dependence_2_post}}
+  \end{framed}
+  \vspace{-0.8cm}
+    \begin{framed}
+    \subfigure[]{\includegraphics[width=\subfigwidth]{figs/soms/to_vq_dependence_0_pre}}
+    \hspace{0.5cm}%
+    \subfigure[]{\includegraphics[width=\subfigwidth]{figs/soms/to_vq_dependence_1_pre}}
+    \hspace{0.5cm}%
+    \subfigure[]{\includegraphics[width=\subfigwidth]{figs/soms/to_vq_dependence_2_pre}}
+  \end{framed}
+\caption{Visualization of the fit to the measured tune-out $f_{TO}$ as a function of the $\mathcal{Q_{A}}$,\, $\mathcal{V}$ polarization parameters (see Eq.~(\ref{eqn:tune_out_eq}) for full functional form). The top set (a-c) of plots shows the fit using the polarization data taken after the vacuum chamber, while the bottom set (d-f) uses data taken before the vacuum chamber.  Each blue (round) point represents a tune-out measurement with a given polarization state of the probe beam. Note that (a-c) and (d-f) are different rotational views for the same data sets respectively. The black diamond shows the resulting value for \(f_{\mathrm{TO}}(-1,0)\), which is \(f_{\mathrm{TO}}(-1,0)=725\, 736\, 810(40)\)~MHz for the top data, and \(f_{\mathrm{TO}}(-1,0)=725\, 736\, 610(40)\)~MHz for the bottom data. The other fit parameters are \(\beta^V \cos(\theta_k)=13240(70)\)~MHz, and \(\beta^T \sin^2(\theta_k)=1140(20)\)~MHz.}
+% top data:\(\beta^V \cos(\theta_k)=13240(70)\)~MHz, and \(\beta^T \sin^2(\theta_k)=1140(20)\)~MHz
+% bottom data: \(\beta^V \cos(\theta_k)=13012(100)\)~MHz, and \(\beta^T \sin^2(\theta_k)=550(100)\)~MHz
+\label{fig:full_tune_out}
+\end{figure}
+
+\subsubsection{Method Linearity}
+To estimate the shift from the potential measurement method we study the derived \(\Omega_{\mathrm{probe}}\) as a function of probe beam power at a fixed polarization and detuning from the tune-out (see Fig.~\ref{fig:probe_beam_linearity}). We find that a second order model of the response is sufficient to describe the behaviour. From this dependence we find that the tune-out may be shifted by \(-24(30)\)~MHz.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.65\textwidth]{figs/soms/probe_beam_linearity}
+    \caption{Linearity of the derived probe beam trap frequency with probe beam power. The probe beam optical frequency is set 20~GHz to the blue of the tune-out to produce a strong potential. The fit is found to be \( \Omega_{\mathrm{probe}}^2 = a  P - b P^2 \) where P is the probe beam power (in watts) and a, b are the fit parameters with values \(a=\text{30.3(1)}\times 10^{-3}\text{~Hz}^2\text{W}^{-1}\), \(b= \text{0.06(2)} \times 10^{-6}\text{~Hz}^2\text{W}^{-2}\). Higher order terms in the fit function were not found to be statistically significant. Shaded region shows the fit's observation \(1\sigma\) confidence intervals.
+    }
+    \label{fig:probe_beam_linearity}
+\end{figure}
+
+\subsubsection{Polarizability Linearity}
+The polarizability $\alpha(f)$ about the tune-out is approximately linear in frequency. However, this is not exact. Using a model of the polarizability we find that fitting a linear dependence over 4~GHz either side of the tune-out results in a fit intercept which is $-88(1)$~kHz from the true tune-out. This shift would increase to $-9.6(2)$~MHz if measurements were taken 40~GHz about the tune-out. A quadratic fit reduces this shift to 0.6~kHz and 40~kHz in the 4~GHz and 40~GHz cases respectively.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figs/soms/hyp_pol_v1}
+    \caption{Measured tune-out dependence on probe beam intensity. The highest signal gradient (right) corresponds to a peak light field intensity of \(\sim4\times10^{8}\: \mathrm{W}\cdot \mathrm{m}^{-2}\). A linear fit to the data with parameters offset\(=725\,736\,090(50)\)~MHz and gradient\(=-1.2(1.5)\)~MHz/(Hz\(^2\)/GHz), along with shaded region corresponding to \(1\sigma\) confidence interval, is also shown. This fit determines that the gradient dependent tune-out shift, which is within error of no effect for experimentally relevant intensities, $30(50)$~MHz for the power used in the main measurement.
+    }
+    \label{fig:hyperpolarizability}
+\end{figure}
+
+\subsection{Hyperpolarizability}
+The above work assumes that the energy shift in the ground state due to a nonzero polarizability is linear with light field intensity. To reveal the error from this approximation we use a combination of theoretical predictions and experimental measurements.
+\subsubsection{Theoretical treatment}
+The energy of state in an atomic system perturbed by an electric field \(E\) with frequency \(f\) is given by 
+\begin{equation}
+\mathcal{E}=\mathcal{E}_0 - \frac{1}{2} \alpha(f) E^2 - \frac{1}{24} \gamma(f) E^4 + \ldots \, , \label{eqn:energy_shift}
+\end{equation}
+where \(\mathcal{E}_0\) is the unperturbed energy, \(\alpha(f)\) is the dynamic polarizability as defined above, and \(\gamma(f)\) is the frequency dependent second hyperpolarizability.  For monochromatic optical radiation the time averages electric field amplitude can be found from the intensity (I),
+\begin{equation}
+    E^2=\frac{2 I}{c \epsilon_0},
+\end{equation}
+where \(c\) is the speed of light and \(\epsilon_0\) is the permittivity of free space. A measurement of the tune-out will be shifted by an amount such that the dynamic polarizability cancels the contribution from the hyperpolarizability. Using the fact that \(\mathcal{E}=\mathcal{E}_0\) at the measured tune-out by definition, and taking a first order Taylor expansion of the polarizability about the tune-out, Eq.~(\ref{eqn:energy_shift}) gives 
+% \begin{equation}
+% \frac{1}{2} \frac{\partial\alpha}{\partial f}\bigg|_{f=f_\mathrm{TO} } (f-f_\mathrm{TO} ) = - \frac{1}{24} \gamma(f) \left(\frac{2 I}{c \epsilon_0}\right) ,
+% \end{equation}
+\begin{equation}
+ (f-f_\mathrm{TO} ) = - \frac{1}{12} \gamma(f) \left(\frac{2 I}{c \epsilon_0}\right) \left(1\left/ \frac{\partial\alpha}{\partial f}\bigg|_{f=f_\mathrm{TO}} \right. \right).
+\end{equation}
+From our theoretical calculations, the dynamic hyperpolarizability at the tune-out is \(6.964\times10^{-58}\: \mathrm{C}^4\mathrm{m}^4\mathrm{J}^{-3}\) (about $-1.12\times10^{7}$ a.u.). The probe beam intensity used in the present experiment is less than $10^{9}\: \mathrm{W} \mathrm{m}^{-2}$, hence the magnitude shift due to the hyperpolarizability is less than 1.5~MHz, well below other systematic errors.
+%High precision atomic theory has shown that the dynamic hyperpolarizability at the tune-out is \(6.964\times10^{-58}\: \mathrm{C}^4\mathrm{m}^4\mathrm{J}^{-3}\) ($-1.117\times10^{7}$ atomic second hyperpolarizability units), this is substantially more than predictions elsewhere \cite{Grunefeld} \(1.2\times10^{-58}\: \mathrm{C}^4\mathrm{m}^4\mathrm{J}^{-3}\) ($-2\times10^{6}$ atomic second hyperpolarizability units).
+%Taking the larger value we find the intensity dependent shift is  $2\times10^{-3}\: \mathrm{Hz} \mathrm{W}^{-1} \mathrm{m}^2$. For the probe beam intensities used in this experiment ($<10^{9}\: \mathrm{W} \mathrm{m}^{-2}$) the magnitude of this shift is $<1.5$~MHz, well below other systematic errors.
+\subsubsection{Experimental treatment}
+As an independent determination of the above theoretical treatment we study the dependence of the measured tune-out on the light intensity. The gradient of the probe beam trap frequency \(\Omega_{\text{probe}}^2\) with respect to optical frequency provides an indirect measurement of the intensity at the position of the atoms. As a proxy for the intensity it accounts, to first order, for changes due to probe beam misalignment. To this end we measure the tune-out at a variety of probe beam intensities (see Fig.~\ref{fig:hyperpolarizability}) and find no effect within error (a shift of $30(50)$~MHz for the probe beam intensity used in the main measurement).
+
+\subsection{Broadband Light}
+The (superlinearly) increasing atomic polarizability with detuning from the tune-out puts demanding constraints on the spectral purity of the laser used for this measurement. Broadband light can be produced by amplified spontaneous emission of the laser which has been deleterious for measurements in other species \cite{HolmgrenPhd}. It is the product of the spectral power distribution and the polarizability (which heavily weights the tails) to produces a potential and shifts the apparent tune-out from its true value. To minimize this error we use a frequency doubled laser system which provides some suppression of the background through the doubling cavity. 
+
+Suppression is then further improved with a series of optical filters. The first filter is a 450~nm shortpass filter (Thorlabs FESH0450) with an optical density of $>5$ between 450~nm and 1200~nm.  The second is a 415~nm band-pass filter (Semrock FF01-415/10-25) with a FWHM of 27~THZ (15.3~nm) and an optical density of $>4$ out of band between 250-399~nm \& 431-1100~nm. The final filter is an angle-tunable filter with a FWHM of 0.9~THz (0.5~nm), which we center on \(\sim 413\)~nm.
+
+To estimate the remaining error from spectral background one could in principle measure the power spectral density using a spectrometer however the dynamic range needed to see these small powers near the main laser frequency makes this direct approach unfeasible. We therefore employ a scheme similar that used in \cite{PhysRevA.92.052501} measuring the tune-out as a function of the number of filters the probe beam light passes through with progressively narrow spectral filtering. This dependence used to estimate  the final measurement shift. From our experimental fit (see Fig.~\ref{fig:broadband light dependence}), we find that within error there the measured tune-out frequency is independent of the amount of light filtering. We find a standard deviation between the various filters of \(30\)~MHz, and thus take this as our uncertainty in the broadband light shift.
+ 
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.85\textwidth]{figs/soms/filt_dep}
+    \caption{Measured tune-out frequency for a constant probe beam polarization as a function of the number of filters the probe beam light passes through. We find that the gradient of this dependence is \(-4.24(12)\)~MHz/filter, and hence zero within error.
+    }
+    \label{fig:broadband light dependence}
+\end{figure}
+
+\subsection{DC Electric Field}
+To give the shift in the tune-out from background dc electric fields, we may use a similar approach to the hyperpolarizability above. A worst case estimate of our electric field is $2 \, \,\text{kV}\cdot\text{m}^{-1}$. This results in a worst-case shift of \(10^{-2}\)~MHz.
+
+% Magnetic field
+
+% Thermal Hyperpolarizability Shift
+
+% Mean Field
+
+% \hline
+% \multicolumn{3}{c}{Theory}\\
+% \hline
+% Hyp. Polz           & $< 1.5$                   & 0.5     \\
+% Magnetic field      & $< 2$                     & 0.01     \\
+% DC Stark Shift      & $\ll 1$                   & 0.1    \\
+% Thermal Hyperpolarizability Shift & $\ll 1$     & 0.1     \\
+% Mean Field          & $\ll 1$                   & 0.1   \\
+
+% \subsection{Magnetic Field Pointing}
+% Our method for measuring the \(f_{\mathrm{TO}}(-1,0)\) does not require absolute knowledge of the magnetic field pointing however variations in this pointing thought the approximately month long period of measurements represents a possible source of systematic error. To constrain this error we employ a simulation of the magnetic trap \cite{Dall2007a} and field stabilization system \cite{doi:10.1063/1.2472600} used in these experiments. 
+% We break the systematic shift into two parts, first the short timescale variation in magnetic field pointing with trap position which an atom experiences during the trap frequency measurement, and secondly the long term drift due to imperfections in our stabilization system.
+% Under the conditions used for this measurement the magnetic feild vector at the trap minimum points at $5.9 \degree $ relative to the long axis of the chamber (along which the probe beam is oriented) and $0.019 \degree$ relative to the horizontal plane. 
+% We observe a linear dependence of the polar angle of the magnetic pointing relative to the y axis of $y=0.88 x+0.019$ where s is the displacement 
+% The code used for this simulation is freely available \cite{mag_trap_simulator}.
+
+\section{Theory and Results for \(\TO\) Tune-Out Frequency}
+% Table~\ref{t1} presents a convergence test for the tune-out wavelength as the number of partial wave $\ell_{max}$ and B-spline functions $N$ increased. The extrapolation was done by assuming that the ratio between
+% two successive differences in tune-out frequency stays constant as the $\ell_{max}$ and $N$ become infinitely large. The extrapolation RCI value of 413.082 93(2) has seven significant digits. Adding the QED correction of 0.004 26(1) nm into the RCI value results in 413.087 19(5) nm. The uncertainty of 0.05 picometer has been doubled to be conservative.
+
+% Table~\ref{t1} also presents a comparison of the tune-out wavelength between theory and measurement. It is seen that theoretical result is in good agreement with our measurement, and both of theoretcial and measurement values have reached $10^{-7}$ level of precision, which confirms that the tune-out wavelength has well tested the QED theory at the level of 0.1 ppm.
+
+% %
+% \begin{table}[!htbp]\scriptsize
+% \caption{\label{t1} Convergence test of the RCI calculations for the tune-out wavelength (in nm) of the $2\,^3S_1(M_J=\pm 1)$ state of $^4$He as the number of partial wave $\ell_{max}$ and B-spline functions $N$ increased.}
+% \begin{ruledtabular}
+% \begin{tabular}{ll}
+% \multicolumn{1}{l}{($\ell_{max}, N$)}&\multicolumn{1}{l}{$\lambda_t$ } \\
+% \hline
+% (4, 30)         &413.077 802 611    \\
+% (4, 40)         &413.077 686 257    \\
+% (5, 30)         &413.081 422 960    \\
+% (6, 30)         &413.082 450 276    \\
+% (9, 40)         &413.082 895 579                   \\
+% (10,40)         &413.082 949 013                    \\
+% (10,50)         &413.082 915 456                    \\
+% Extrapolation   &413.082 93(2)    \\
+% QED             &0.004 26(1)   \\
+% Total in nm     &413.087 19(5) \\
+% Total in MHz    &725 736 514(89)  \\
+% Experiment      &725 736 810(40)$_{stat}$(150)$_{syst}$       \\
+% Discrepancy     &1.7$\sigma$ \\
+% \end{tabular}
+% \end{ruledtabular}
+% \end{table}
+
+% In this section we briefly cover the contributions to our new theoretical estimate of the \(\TO\) tune-out frequency. In \autoref{t2} we present a detailed tabulation of contributions to the \(\TO\) tune-out frequency in helium. Full details for the various contributions and their calculations will be presented in a subsequent publication.
+
+
+% \autoref{t2} is split into three sections corresponding to the main interactions that contribute to the tune-out. The first section covers nonrelativistic, retardation, and relativistic (mainly from the Breit equation) contributions to the tune-out. The second section covers QED contributions, and the final section covers nuclear structure effects. The retardation corrections were calculated from the frequency-dependent contributions to the generalized polarizability, as described in Ref.~\cite{PhysRevA.99.041803}. Here we note that we calculate the desired tune-out for the scalar minus half tensor polarizability (\(\alpha^S-\frac{1}{2}\alpha^{T}\)) via the tune-out values for the states \(J=1,\, M=\pm 1\) and \(J=1,\, M=0\). The polarizability of these states can be expressed as:
+% \begin{align}
+%     \alpha(M=\pm 1) &= \alpha^{S} - 2 \alpha^{T},\\
+%     \alpha(M=0) &= \alpha^{S} + \alpha^{T}.
+% \end{align}
+% Thus \(\frac{1}{2}[\alpha(M=0)+\alpha(M=\pm 1)]=\alpha^S-\frac{1}{2}\alpha^{T}\). 
+
+% \begin{table}%[!htbp]\scriptsize
+% \begin{ruledtabular}
+% \begin{tabular}{lrrl}
+% Contribution & Value (MHz) & Uncertainty (MHz) & Reference \\
+% \hline
+% \multicolumn{4}{c}{\textbf{Nonrelativistic, Retardation, and Breit Interactions terms}} \\
+% Nonrelativistic & 725 822 411.2 & & \cite{manalo2017variational}\\
+% Mass polarization & -77 814.7 & &\\
+% Mass scaling & -99 481.1 & &\\
+% State retardation & -476.2 & & \\
+% Breit interaction & & & \\
+% \, \, - \(p^4\) & 274 868.2 & 1.8 & \cite{manalo2017variational} \\
+% \, \, - \(\delta^3 (r_1)\) & -193 102.6 & 1.1 & \cite{PhysRevA.99.040502} \\
+% \, \, - \(B_2\) & 15 575.3 & & \\
+% \, \, - \(B_{SS}\) \(M=0\) & 7 014.1 & & \\
+% \, \, - \(B_{SS}\) \(M=\pm 1\) & -3 507.0 & &\\
+% \, \, - \(B_{SS}\) finite mass \(M=0\) & -45.4 & & \\
+% \, \, - \(B_{SS}\) finite mass \(M=\pm 1\) & 22.7 & & \\
+% Other relativistic finite mass & 56.6 & 0.4 & \\
+% \(H_{stone}\) & 78.1 &  & \\
+% \hline
+% Total (non-QED) \(M=0\) & 725 749 412.1 & 2.1 & \\
+% Total (non-QED) \(M=\pm 1\) & 725 739 180.5 & 2.1 & \\
+% \hline
+% Average (\(\frac{1}{2}(\alpha(M=0)+\alpha(M=\pm 1))=\alpha^S-\frac{1}{2}\alpha^{T})\) & 725 744 296.3 & 3.0 & \\
+% \hline
+% \multicolumn{4}{c}{\textbf{QED terms}} \\
+% \(\alpha^3\) & -7 308.0 & & \cite{PhysRevA.99.040502,PhysRevA.101.022505}\\
+% Bethe log derivative & -55.0 & 15 & \cite{PhysRevA.101.022505}\\
+% \(Q\)-term & 3.5 & & \\
+% Anomalous magnetic moment & 8.0 & & \\
+% \(\alpha^3 Z^2 \alpha\) & -125.9 & 6.0 & \cite{PhysRevA.99.041803} \\
+% \(\alpha^3 Z \alpha\) & -1.1 & & \\
+% \hline
+% Total QED contribution & -7 478.5 & 15 & \\
+% \hline
+% \multicolumn{4}{c}{\textbf{Nuclear terms}} \\
+% Finite nuclear size & 5.0 & & \\
+% \hline
+% Theoretical total & 725 736 422.0 & 16 & \\
+% Experiment & 725 736 700.0 & 260 & \\
+% \hline
+% Difference & 278 & 260 & \\
+% \end{tabular}
+% \end{ruledtabular}
+% \caption{\label{t2} Itemized list of contributions to the theoretical value for the helium \(\TO\) manifold tune-out frequency near \(726\)~THz. Uncertainty and references are also shown when relevant.}
+% \end{table}
+% \clearpage
+
+
+Table \ref{tab:theory} provides a summary of the main theoretical contributions to the \(\TO\) tune-out frequency in helium, calculated in a nonreltivistic QED (nr-QED) approach. The nr-QED method is briefly described in the following subsection, followed by the results.\\[\baselineskip].
+
+\subsection{The nr-QED Method}
+The nr-QED method starts with the nonrelativistic Schr\"odinger equation, and then includes the terms in the Pauli form of the Breit interaction by perturbation theory \cite{BetheSalpeter}.  Our nr-QED formalism is similar to that presented in Refs.~\cite{Piszczatowski2015,Puchalski2016,PhysRevA.101.022505}.  The basic expression for the dynamic polarizability is of second-order in the interaction with the external electromagnetic field of frequency $\omega$, and the additional contributions from relativistic and QED effects are included by means of an additional perturbation.  For brevity, define the resolvent operator to be,
+\begin{equation}
+{\cal R}(\omega) = Q(H_0 - E_0 + \hbar\omega)^{-1}Q,
+\end{equation}
+ where $H_0$ is the field-free Hamiltonian, $E_0$ is the unperturbed energy of the $2^3S_1$ state, and $Q = 1 - |\psi_0\rangle\langle \psi_0|$ is a projection operator.  In the electric dipole approximation, the frequency-dependent dipole polarizability is then defined by the symmetric combination
+  $\bar{\alpha}_{\rm d}(\omega) = \frac12[\alpha_{\rm d}(\omega) + \alpha_{\rm d}(-\omega)]$, where
+\begin{equation}
+\alpha_{\rm d}(\omega) = 2\langle\psi_0|\edotr{\cal R}(\omega)\edotr|\psi_0\rangle,
+\end{equation}
+$\mbox{\boldmath{$\hat{\rm e}$}}$ is a polarization vector pointing in the direction of the electric field, and ${\bf r} = {\bf r}_1 + {\bf r}_2$.  Any additional time-independent perturbation $\hat{X}$ can then be included according to the $(2+1)$-order double perturbation expression,
+\begin{equation}
+\delta\alpha_{\rm d}^{\hat{X}}(\omega) = 2\langle\psi_0|[2\edotr{\cal R}(\omega)\edotr{\cal R}(\omega)\hat{X}
++ \edotr{\cal R}(\omega)(\hat{X} - \langle\hat{X}\rangle){\cal R}(\omega)\edotr]|\psi_0\rangle
+\end{equation}
+
+The tune-out frequency $\omega_{\rm TO}$ corresponds to the condition
+\begin{equation}
+\label{eq:baralpha}
+\bar{\alpha}_{\rm d}(\omega) + \sum_{\hat{X}} \delta\bar{\alpha}_{\rm d}^{\hat{X}}(\omega) +
+\delta\bar{\alpha}_{\rm d}^{\partial_{\cal E}^2\ln k_0}(\omega) = 0
+\end{equation}
+where the sum over $\hat{X}$ runs over all the perturbations included in the calculation, and $\delta\bar{\alpha}_{\rm d}^{\partial_{\cal E}^2\ln k_0}(\omega)$ is an additional QED correction due to the field dependence of the Bethe logarithm discussed further below.  For the relativistic corrections, the operators consist of the spin-independent terms $H_1 = -(p_1^4 + p_2^4)/(8m^3c^2)$, the orbit-orbit interaction
+\begin{equation}
+H_2 = -\frac{e^2}{2(mc)^2r_{12}}\left[{\bf p}_1\cdot{\bf p}_2 + \frac{{\bf r}_{12}\cdot({\bf r}_{12}\cdot{\bf p}_1){\bf p}_2}{r_{12}^2}\right],
+\end{equation}
+and the Darwin term $H_4 = \pi(\alpha e a_0)^2[Z\delta^3({\bf r}_1) - \delta^3({\bf r}_{12})]$, together with the  spin-dependent spin-spin interaction
+\begin{equation}
+H_5 = \frac{4\mu_0^2}{r_{12}^3}\left[{\bf s}_1\cdot{\bf s}_2 - \frac{3({\bf s}_{1}\cdot{\bf r}_{12})({\bf s}_2\cdot{\bf r}_{12})}{r_{12}^2}\right],
+\end{equation}
+where ${\bf r}_{12} = {\bf r}_1 - {\bf r}_2$ is the interelectron coordinate, $a_0$ is the Bohr radius, $\mu_0
+= e\hbar/(2mc)(1 + \alpha/(2\pi) + \cdots)$ is the Bohr magneton, and $\alpha\simeq1/137.03599906$ is the fine structure constant. The spin-orbit and spin-other-orbit terms that are normally part of the Breit interaction do not contribute in lowest order after summing over fine structure for the intermediate $^3P_J$ states. Also, the $\delta^3({\bf r}_{12})$ term does not contribute for triplet states. 
+
+\begin{table}[t]
+%\vbox{\hsize 5.2in \noindent
+\caption{\label{tab:theory}Summary of theoretical contributions to the helium $\TO$ manifold tune-out frequency near 725.7 THz.}
+\begin{ruledtabular}
+\begin{tabular}{l r r}
+Quantity    &Value (MHz) & Uncertainty (MHz) \\
+\hline
+\multicolumn{3}{c}{\textbf{Nonrelativistic and Relativistic terms}} \\
+Nonrelativistic (NR) & 725\,645\,115& 2       \\
+NR + relativistic scalar $(\alpha^{\rm S})$ $^{\rm\ a}$    & 725\,742\,216&6   \\
+Relativistic tensor $(-\frac12\alpha^{\rm T})$ &   1\,755& \\
+\hline
+Total non-QED        & 725\,743\,950&6     \\
+\hline
+\multicolumn{3}{c}{\textbf{QED terms}} \\
+QED $\alpha^3$       &       -7\,298& 1       \\
+QED $\alpha^4$       &          -127& 6       \\
+\hline
+Total QED            &         -7\,425& 8     \\
+\hline
+Retardation          &          -477 &        \\
+Nuclear size $^{\rm\ b}$         &             5&          \\
+\hline
+Grand total          & 725\,736\,053& 9       \\
+Experiment           & 725\,736\,700& 260 \\
+\hline
+Difference           &          -647& 260\\
+\end{tabular}\\
+\end{ruledtabular}
+$^{\rm a\,}$The value of the Rydberg used is $3.289\,841\,960\,2508(64)\times10^9$ MHz.  \\
+$^{\rm b\,}$This value is converted from data 2.75~fm in Ref.~\cite{PhysRevA.99.040502}.
+\end{table}
+In addition, the leading QED corrections are included according to the effective operators \cite{Yerokhin2010}
+\begin{equation}
+\hat{X}_{\rm QED}^{(3)} = \alpha^3\left\{\frac{4Z}{3}\left(\frac{19}{30} - \ln\alpha^2 -
+\ln k_0\right)[\delta^3({\bf r}_1) + \delta^3({\bf r}_2)]
+ - \frac{7}{6\pi}\left(\frac{1}{r_{12}^3}\right)_{\rm P.V.}\right\},
+\end{equation}
+and
+\begin{equation}
+\hat{X}_{\rm QED}^{(4)} =\alpha^4\pi\left[\left(\frac{427}{96} - 2\ln2\right)Z^2 + \left(-\frac{9\zeta(3)}{4\pi^2} - \frac{2179}{648\pi^2} + \frac{3\ln2}{2} - \frac{10}{27}\right)Z\right]
+[\delta^3({\bf r}_1) + \delta^3({\bf r}_2)], \label{alpha4}
+\end{equation}
+where $\zeta(z)$ is the Reimann zeta-function, and $(1/r_{12}^3)_{\rm P.V.}$ denotes the principal value of the divergent integral, as defined by
+\begin{equation}
+\left(\frac{1}{r_{12}^3}\right)_{\rm P.V.} = \lim_{\epsilon\rightarrow 0}
+r_{12}^{-3}(\epsilon)+ 4 \pi (\gamma +\ln \epsilon) \delta({\rm\bf r}_{12}),
+\end{equation}
+where $\epsilon$ is the radius of a small sphere about $r_{12} = 0$ that is omitted from the range of integration, and $\gamma$ is Euler's constant (the final result is independent of $\gamma$).  Here, $\hat{X}_{\rm QED}^{(3)}$ contains the Araki-Sucher terms \cite{Araki,Sucher}, and $\hat{X}_{\rm QED}^{(4)}$ contains the radiative QED terms of order $\alpha^4$ Ry.  We take the remaining nonradiative contribution of about 5\% of the radiative terms for the $2^3S_1$ state \cite{Piszczatowski2015,Pachucki2006} (i.e. about 6~MHz) to be the dominant source of uncertainty.
+
+The term $\delta\bar{\alpha}_{\rm d}^{\partial_{\cal E}^2\ln k_0}(\omega)$ in Eq.~(\ref{eq:baralpha}) represents the second-order electric field perturbation to the Bethe logarithm $\ln k_0$.  This term has recently been calculated by Puchalski \textit{et al.}~ \cite{PhysRevA.101.022505} for the ground state of helium, with the result $\delta\bar{\alpha}_{\rm d}^{\partial_{\cal E}^2\ln k_0}(0) = 0.048\,557\,2(14)$ $a_0^3$.  However, as pointed out by Drake and Yan \cite{DrakeBL}, the Bethe logarithm (expressed in the $Z$-scaled form $\ln(k_0/Z^2)$) is determined almost entirely by the inner $1s$ electron, and so is nearly independent of the atomic state, or even the ionization state, at the $\pm1$\% level of accuracy.  The same is also true for the finite nuclear mass corrections to the Bethe logarithm. We can therefore safely assume that $\delta\bar{\alpha}_{\rm d}^{\partial^2_{\cal E}\ln k_0}(\omega) \simeq 0.049(1)$ $a_0^3$, independent of $\omega$ for small $\omega$.  The corresponding correction to the tune-out frequency is then
+\begin{equation}
+\delta\omega_{\rm TO} = -\frac{8\alpha^3}{3}\delta\bar{\alpha}_{\rm d}^{\partial^2_{\cal E}\ln k_0}
+\langle \delta^3({\bf r}_1) + \delta^3({\bf r}_2)\rangle\left(\frac{1}{\partial\bar{\alpha}_{\rm d}(\omega)/\partial\omega|_{\omega_{\rm TO}}}\right).
+\end{equation}
+Using the values $\langle2^3S_1|\delta^3({\bf r}_1) + \delta^3({\bf r}_2)|2^3S_1\rangle = 8.29604/\pi$ $a_0^{-3}$ and $\partial\bar{\alpha}_{\rm d}(\omega)/\partial\omega|_{\omega_{\rm TO}}$ = 7134 $\hbar a_0^4/e^2$, the numerical value is $\delta\omega_{\rm TO} \simeq 0.124(3)$ MHz, which is negligible at current levels of accuracy.  The dominant source of uncertainty is therefore the nonradiative QED corrections of order $\alpha^4$ Ry, which we take to be $\pm6$ MHz, as explained in the previous paragraph.
+
+A major new contribution of the present work is to include the retardation corrections recently derived by Pachucki and Puchalski \cite{PhysRevA.99.041803,Drake2019} and evaluated for the ground state of helium.  These terms represent a reformulation of the problem as a zero in the coherent Rayleigh scattering amplitude for an atom in free space, instead of a zero in the frequency-dependent polarizability for an atom in an optical lattice \cite{PhysRevA.99.041803,Drake2019}.  Here we extend the calculations to the $2^3S_1$ state of helium.  The generalized polarizabilities are defined by (in units of $a_0^5$, except for \(\alpha_0\) which is in units of $a_0^3$)
+\begin{eqnarray}
+\alpha_0(\omega) &=& \frac{e^2}{3}\sum_{a,b}\langle r_a^k{\cal R}(\omega)r_b^k\rangle\\
+\alpha_1(\omega) &=& \frac{e^2}{3}\sum_{a,b}\langle (r_a^kr_a^l)^{(2)}{\cal R}(\omega)(r_b^kr_b^l)^{(2)}\rangle\\
+\alpha_2(\omega) &=& \frac{e^2}{3}\sum_{a,b}\langle r_a^k{\cal R}(\omega)r_b^kr_b^2\rangle\\
+\alpha_3(\omega) &=& \frac{2\hbar e^2}{3m}\sum_{a,b}\langle r_a^k{\cal R}(\omega){\cal R}(\omega)i({\rm L_b}\times{\rm r}_b - {\rm r}_b\times{\rm L}_b)^k\rangle\\
+\alpha_4(\omega) &=& \frac{e^2}{3}\sum_{a,b}\langle r_a^2{\cal R}(\omega)r_b^2\rangle,
+\end{eqnarray}
+where the $a$ and $b$ sums are over the electronic coordinates 1 and 2, and a sum over the repeated cartesian vector components $k$ and $l$ is assumed.  Also, $(r_a^kr_a^l)^{(2)} \equiv r^kr^l -  \delta_{k,l}r^2/3$ is the quadrupole moment operator.  The above definitions differ by a factor of 2/3 from those in Ref.\ \cite{PhysRevA.99.041803} so that here $\alpha_0(\omega) \equiv \alpha_{\rm d}(\omega)$, and $\alpha_1(\omega)$ corresponds to the standard definition of the quadrupole polarizability \cite{Ho2020}.  For each term, $\bar{\alpha}_i(\omega) = \frac12[\alpha_i(\omega) + \alpha_i(-\omega)]$. The retardation corrections to the polarizability $\alpha_0$ and diamagnetic coupling $\chi$ are then
+\begin{eqnarray}
+\bar{\alpha}_{\rm ret}(\omega) &=& \frac{3k^2}{2}\left(\frac{\bar{\alpha}_1(\omega)}{15} - \frac{2\bar{\alpha}_2(\omega)}{15} + \frac{\bar{\alpha}_4(\omega)}{18}\right)\\
+\bar{\chi}_{\rm ret}(\omega) &=& \frac{3k^2}{2}\left(-\frac{\bar{\alpha}_1(\omega)}{60} + \frac{4\bar{\alpha}_2(\omega)}{45} + \frac{\bar{\alpha}_3(\omega)}{9}
+- \frac{\bar{\alpha}_4(\omega)}{18}\right),
+\end{eqnarray}
+where $k = \omega/c$.  The total retardation correction to $\alpha_{\rm d}(\omega)$ is
+\begin{equation}
+\bar{\alpha}_{\rm ret}(\omega) + \bar{\chi}_{\rm ret}(\omega)
+= \frac{3k^2}{2}\left(\frac{\bar{\alpha}_1(\omega)}{20} - \frac{2\bar{\alpha}_2(\omega)}{45} + \frac{\bar{\alpha}_3(\omega)}{9}\right).
+\end{equation}
+As shown in Table~\ref{tab:theory}, the total retardation correction is $-477$ MHz.  
+
+For purposes of practical calculations, the resolvent operator is expanded in terms of pseudostates so that the polarizability assumes its familiar form
+\begin{equation}
+\bar{\alpha}_{\rm d}(\omega) = e^2\sum_n |\langle i|\edotr |n\rangle|^2\left(\frac{1}{E_n-E_i+\hbar\omega} +
+\frac{1}{E_n-E_i-\hbar\omega}\right),
+\end{equation}
+and similarly for all the other correction terms.  The basis sets in correlated Hylleraas coordinates are all of the double basis set form \cite{Drake88,Drake92}
+\begin{equation}
+\Psi({\bf r}_1,{\bf r}_2) = \sum_{t=1}^2\sum_{i,j,k}^{i+j+k\le\Omega}
+a_{i,j,k}^{(t)} r_1^ir_2^jr_{12}^k\exp(-\alpha^{(t)}r_1 - \beta^{(t)}
+r_2)\, r_1^{l_1}r_2^{l_2}\, {\cal Y}_{l_1l_2L}^M(\hat{\bf r}_1,\hat{\bf r}_2) - {\rm exchange},
+\end{equation}
+where $t$ labels two independent sets of nonlinear parameters $\alpha^{(1)}, \beta^{(1)}$ and $\alpha^{(2)}, \beta^{(2)}$ that set two distinct distance scales, and are individually optimized for the state in question, together with the accompanying set of pseudostates.  ${\cal Y}_{l_1l_2L}^M(\hat{\bf r}_1,\hat{\bf r}_2)$ denotes a vector coupled product of spherical harmonics.  The numerical uncertainty in the final results was determined by systematically increasing the parameter $\Omega$ up to $\Omega = 16$ and studying the convergence.  All calculations were done in standard quadruple precision arithmetic (about 32 decimal digits).
+
+
+\subsection{Theoretical Results}
+The results are as indicated in Table~\ref{tab:theory}. The various entries from nonrelativistic, relativistic, and QED contributions are not strictly additive because changing one effect, such as the relativistic correction, changes the tune-out frequency at which the other effects are evaluated.  Thus the first entry is the nonrelativistic tune-out frequency with finite nuclear mass effects included.  The next entry is the scalar part of the relativistic correction arising from the $p^4$, $H_2$ and $H_4$ terms in the Breit interaction, and iterated to convergence.  The next entry from the $H_5$ spin-spin interaction (1755~MHz) is solely and exclusively responsible for the tensor part of the tune-out frequency (excluding the Schwinger radiative correction term $\alpha/\pi$).  These terms determine the nonrelativistic plus relativistic part of the tune-out frequency, iterated to convergence.  The remaining terms are small enough that they can be added linearly.  The leading QED correction of order $\alpha^3$ Ry ($-7298(6)$ MHz) includes the anomalous magnetic moment correction to $H_5$ (8 MHz) and the very small estimate of $-0.124(3)$ MHz for the $\delta\bar{\alpha}_{\rm d}^{\partial_{\cal E}^2\ln k_0}$ term.  The terms of order $\alpha^4$ Ry include only the radiative corrections in Eq.~(\ref{alpha4}).  The dominant source of uncertainty is thus the remaining nonradiative terms not included in the present calculation, but evaluated previously for the $2^3S_1$ state energy \cite{Pachucki2006}.  The remaining terms are the retardation correction of $-477$ MHz, evaluated here for the first time for the helium $2^3S_1$ state, and a finite nuclear size correction.
+
+The final theoretical result of 725\,736\,053(9) MHz by the nr-QED method differs from experiment by $-647\pm260$ MHz.  A more detailed account of the theory and calculations will be published separately.
+
+\section{Comparison With Previous Oscillator Strength Ratio Measurements}
+We claim that this measurement of the $\TO$ tune-out wavelength represents the most precise measurement of transition rate ratios made to date in an atomic system. To find the uncertainty in the ratio of oscillator strengths we start by generalizing the treatment given in Ref.~\cite{PhysRevA.88.052515} by using a model of the polarizability of a three level system.
+\begin{equation}
+\alpha(f) = \frac{\mathfrak{F}_1}{E_1^2-h^2 f^2}+\frac{\mathfrak{F}_2}{E_2^2-h^2 f^2}
+\end{equation}
+where $\mathfrak{F}_1$, $\mathfrak{F}_2$ correspond to the oscillator strengths, and $E_1$, $E_2$ the excitation energy of the respective transitions, $f$ is the photon frequency, and \(h\) is Planck's constant. 
+
+% In this simple model the tune-out is given by
+% \begin{equation}
+%     f_{TO}=\frac{\sqrt{E_{1}^2 \mathfrak{F}_2+E_{2}^2 \mathfrak{F}_1}}{h \sqrt{\mathfrak{F}_1+\mathfrak{F}_2}} .
+% \end{equation}
+If we introduce  the ratio of the oscillator strengths $X=\mathfrak{F}_2^2/\mathfrak{F}_1^2$ and note that by definition \(\alpha(f_{TO})=0\), substituting in the above expression and solving for this ratio we find
+\begin{equation}
+    X =\frac{ (E_2^2 -h^2 f_{TO}^2 )^2}{(E_1^2-h^2 f_{TO}^2)^2}.
+\end{equation}
+We can hence find the sensitivity of the value of \(X\) to changes in the tune-out frequency.
+% \begin{equation}
+%     \frac{\partial f_{to}}{\partial X} = \frac{(E_1-E_2) (E_1+E_2)}{4 h (1+\sqrt{X})^{3/2} \sqrt{E_2^2 + E_1^2 \sqrt{X}}}
+% \end{equation}
+% And then give the fractional uncertainty in the derived transition strength ratio.
+\begin{equation}
+    \frac{\delta X}{X} = \frac{\partial X} {\partial f_{TO}} \frac{1}{X} \cdot \delta f_{TO} =
+    \frac{2  h^2 f_{TO} (E_1^2-E_2^2)}
+    {(E_1^2-h^2 f_{TO}^2) (-E_2^2 + h^2 f_{TO}^2 )} \cdot \delta  f_{TO} = \frac{-2 f_{TO}^2 (f_1^2-f_2^2)}{(f_1^2-f_{TO}^2)(f_2^2-f_{TO}^2)} \frac{\delta  f_{TO}}{f_{TO}}
+\end{equation}
+where \(E_1=h f_1\) and \(E_2=h f_2\).
+To evaluate other work in the literature we use the frequency of the dominant transitions and the measured tune-out value to then derive the estimated sensitivity to the ratio of transition strengths. This method is approximate and neglects the contribution from the DC polarizability, however this is a small effect and not needed for such coarse comparison of sensitivity. Given the dominant transition manifolds at 276.7465~THz (\(\MetastableState \to \UpperStateManifold \)) and 770.7298~THz (\(\MetastableState \to \LowerStateManifold\)), as well as our value for the tune-out frequency of \(f_{TO}=725.7367\)~THz, we reach a fractional uncertainty in the oscillator strength ratio of 6~ppm, an improvement on the previous record of 15~ppm set by Ref.~\cite{PhysRevA.92.052501}. We note that the fractional uncertainty in the ratio of oscillator strengths is identical to the fractional uncertainty in the ratio of transition matrix elements which are calculated in Ref.~\cite{PhysRevA.92.052501}.
+
+
+\bibliographystyle{apsrev4-1}
+\bibliography{to_v2}
+
+\end{document}

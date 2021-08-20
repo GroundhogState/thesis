@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{fullpage}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{verbatim}
+\usepackage{mathtools}
+\usepackage{rotating}
+\usepackage{braket}
+\usepackage{url}
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
+\usepackage{hyperref}
+\newcommand{\bt}{\textbf{tr}}
+\newcommand{\difn}[3]{\frac{d^#3 #1}{d #2^#3}}
+\title{Derivation of the linear Tune-Out equation (linear form of the ac
+Stark shift of a Zeeman sublevel)}
+\author{Kieran Thomas}
+\date{March 2019}
+
+\newcommand{\pderivn}[3][{}]{
+    \frac{\partial^{#1} #2}{\partial #3^{#1}}
+}
+
+\newcommand{\derivn}[3][{}]{
+    \frac{d^{#1} #2}{d #3^{#1}}
+}
+
+\begin{document}
+
+\maketitle
+\section{Tune-Out Component Linearization}
+To obtain the dependence of the net tune-out on the Stoke parameters, we perform a Taylor expansion on the dynamic polarizability components \{\(\alpha^S(f)\),\, \(\alpha^V(f)\),\, \(\alpha^T(f)\)\} in terms of frequency about the zero point of \(\alpha^S(f)\), which we denote \(f^{S}_{TO}\),
+\begin{align}
+    \alpha^J(f) &= \alpha^J(f^{S}_{TO}) + \left. \derivn{\alpha^J}{f}{{}}(f-f^{S}_{TO})\right|_{f=f^{S}_{TO}} + \alpha^J(f^{S}_{TO}) +\left. \difn{\alpha^J}{f}{2}\right|_{f=f^{S}_{TO}}(f-f^{S}_{TO})^2 + ...,\label{eqn:taylor_exp}
+\end{align}
+where \(J=\{S,V,T\}\). To make the analysis tractable we truncate Eq.~(\ref{eqn:taylor_exp}) to a given order. We wish to truncate the various polarizability components to the lowest order possible, as this makes the final functional form of the tune-out frequency simpler and requires a fewer free parameter fit to the experimental data. This will hence both reduce the fit error and the possibility of having multiple unique local minima in the parameter space.
+
+%what order to truncate to and why
+Theoretically we expect \(\left|\difn{\alpha^{\{V,T\}}}{f}{n} (\Delta f)^n\right|\ll 1\) for \(\Delta f = 16\)~GHz and \(n\geq1\), with the dominant contributions coming from the first and second derivatives of the scalar polarizability. Hence, we truncate the various components as follows,
+\begin{align}
+    \alpha^S(f) &\approx \left. \derivn{\alpha^S}{f}{{}}(f-f^{S}_{TO})\right|_{f=f^{S}_{TO}} +\left. \difn{\alpha^S}{f}{2}\right|_{f=f^{S}_{TO}}(f-f^{S}_{TO})^2 \label{eqn:each_taylor_exp}\\
+    \alpha^V(f) &\approx  \alpha^V(f^{S}_{TO}) \\
+    \alpha^T(f) &\approx  \alpha^T(f^{S}_{TO}),\label{eqn:each_taylor_exp_vec}
+\end{align}
+where we have also used \( \alpha^S(f^{S}_{TO})=0\). Substituting these expansions into Eq.~(\ref{eq:polarizability_full}) we obtain,
+\begin{align}
+    \alpha(f) &\approx \derivn{\alpha^S}{f}{{}}(f-f^{S}_{TO}) + \difn{\alpha^S}{f}{2} (f-f^{S}_{TO})^2
+    -\frac{1}{2} \alpha^V(f^{S}_{TO}) \cos \left( \theta_k \right) \mathcal{V}  + 
+    \frac{1}{2} \alpha^T(f^{S}_{TO}) \left[3 \sin^2\left( \theta_k \right) \left(\frac{1}{2} +  \frac{\mathcal{Q_{A}}}{2}\right) -1 \right]  . \label{eq:main_to}
+\end{align}
+We wish to determine the quantity \(f_{TO}\), at which the net polarizability vanishes, \(\alpha(f_{TO})=0\). As changes in the total polarization \(\alpha(f)\) near the tune-out come predominantly from the scalar polarizability we have \(f_{TO}\approx f^{S}_{TO}\). Thus, we can assume that our truncate Taylor expansions of the polarizability terms [Eqs.~(\ref{eqn:each_taylor_exp}-\ref{eqn:each_taylor_exp_vec})], and hence Eq.~(\ref{eq:main_to}), are valid over the range of interest. Furthermore, we note that we try a fit to the data both including and excluding the quadratic term in Eq.~(\ref{eqn:each_taylor_exp}) and find that both fits reproduce the same fit values within uncertainties. We thus determine that for simplicity we can simplify Eq.~(\ref{eqn:each_taylor_exp}) to linear order. Setting \(f=f_{TO}\) and solving Eq.~(\ref{eq:main_to}) we find our tune-out equation, 
+% \begin{align}
+%     f-f_{TO} &= 
+%     \left(
+%         \derivn{\alpha^S(f)}{f}{{}} \bigg/ \derivn{\alpha(f)}{f}{{}}
+%     \right)
+%     (f-f^{S}_{TO}) 
+%     %
+%     -\frac{1}{2} 
+%     \left(\alpha^V(f) \bigg/\derivn{\alpha(f)}{f}{{}}\right) 
+%      \cos \left( \theta_k \right) \mathcal{V}
+%     + \\  \nonumber
+%     %
+%     & \qquad \frac{1}{2} 
+%     \left(
+%         \alpha^T(f)\bigg/\derivn{\alpha(f)}{f}{{}} 
+%     \right) 
+%     \left(3 \sin^2\left( \theta_k \right) \left(\frac{1}{2} +  \frac{\mathcal{Q_{A}}}{2}\right) -1 \right) 
+%  \end{align}   
+ \begin{align}
+    f_{TO} &= 
+    f^{S}_{TO}
+    %
+    +\frac{1}{2}\beta^V  \cos \left( \theta_k \right) \mathcal{V_{A}}
+    %
+    - \frac{1}{2}\beta^T  \left[3 \sin^2\left( \theta_k \right) \left(\frac{1}{2} +  \frac{\mathcal{Q_{A}}}{2}\right) -1 \right], \label{eqn:tune_out_eq} 
+\end{align}
+where
+ \begin{align}
+  \beta^V &= \alpha^V(f^{S}_{TO}) \bigg/ \left. \derivn{\alpha^S}{f} \right|_{f=f^{S}_{TO}} \mathrm{, and}\\
+  \beta^T &= \alpha^T(f^{S}_{TO}) \bigg/ \left. \derivn{\alpha^S}{f} \right|_{f=f^{S}_{TO}} .
+ \end{align}
+Note that the choice to expand about \(f^{S}_{TO}\) in Eq.~(\ref{eqn:taylor_exp}) is somewhat arbitrary, any frequency sufficiently close to the net tune-out \(f_{TO}\) can be chosen and will produce an equivalent functional form to Eq.~(\ref{eqn:tune_out_eq}).  We chose \(f^{S}_{TO}\) as it simplifies the interpretation of the final equation. If we set \(\mathcal{V_{A}}=0\) and \(\mathcal{Q_{A}}=-1\) we obtain \(f_{TO}(-1,0) = f^{S}_{TO} + \frac{1}{2} \beta^T\) which is the tune-out frequency for the dynamic polarizability \(\alpha(f) = \alpha^S(f) - \frac{1}{2}  \alpha^T(f)\), and is hence independent of the magnetic field pointing. We find further support for this analysis from the experimental data, as it provides a good fit to Eq.~(\ref{eqn:tune_out_eq}) (see Fig.~\ref{fig:full_tune_out} and Fig.~3 in the main text).
+
+
+
+%Experimental/ analysis results
+%A fit of S=1,V=0,T=0 (referring to the orders of expansion) gives a good fit and produces (within error) the same results as a fit with S=2,V=0,T=0. S=1,V=1,T=1 gives a value closer to the theory one, and makes the post logical sense without any deeper knowledge, however the fitting parameters are less consistent pre and post window, and this treatment doesn't match up with Gordon's predicted values for the various derivatives so well, plus the fits (while still just as good in a residuals sense) don't look quite as nice.
+\end{document}

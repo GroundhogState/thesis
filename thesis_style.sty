@@ -11,46 +11,39 @@
 % https://policies.anu.edu.au/ppl/document/ANUP_012815 
 \usepackage{setspace} % for setting the bib and footnotes
 \usepackage{anyfontsize}
-% \titleformat{\chapter}[display]
-%      { \normalsize \huge  \color{black}}
-%       {\normalsize \MakeUppercase { \chaptertitlename \hspace{1 ex} }  { \fontsize{60}{60}\selectfont \color{RoyalRed} \sffamily  \thechapter }} {10 pt}{\bfseries\huge} 
-%       % https://tex.stackexchange.com/questions/94729/how-to-customize-chapter-heading-style
 
-% \renewcommand{\footnote}[1]{\begingroup\setstretch{1.0}\footnote{#1}\endgroup}
 
 \usepackage{graphicx}
-% \usepackage{wrapgfig}
+\usepackage{gensymb}
 \usepackage{xcolor}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{hyperref}
 \usepackage{subcaption}
 \usepackage{changepage}
-% \usepackage[a4paper, margin=3.5cm]{geometry}
-% https://tex.stackexchange.com/questions/50258/margins-of-book-class
-
-% https://mirror.aarnet.edu.au/pub/CTAN/macros/latex/contrib/lettrine/doc/lettrine.pdf
-\usepackage{lettrine}
-% \usepackage{floatrow}
+\usepackage{lettrine} % https://mirror.aarnet.edu.au/pub/CTAN/macros/latex/contrib/lettrine/doc/lettrine.pdf
 \usepackage{siunitx}
-%%% Formatting stuffs
+
 \usepackage{rotating}
 \renewcommand{\baselinestretch}{1}
 \usepackage{Typocaps}
-\newcommand{\dropcap}[1]{\dropcapaux#1\relax}
-\def\dropcapaux#1#2\relax{\lettrine[lines=3,lraise=-0.5,depth=1]{\typocap{#1}}{#2}}
-\newcommand{\fullpaper}[5]{\normalsize {{\bf#1}\newline #2, \IfNoValueTF{#5}{\emph{#3}}{\href{#5}{\emph{#3}}} (#4) }}
-\newcommand{\citem}[1]{\item[\cite{#1}]}
-\let\svthefootnote\thefootnote
-\newcommand\blankfootnote[1]{%
-  \let\thefootnote\relax\footnotetext{#1}%
-  \let\thefootnote\svthefootnote%
-} %https://tex.stackexchange.com/questions/170511/footnotes-without-numbering
-% \input Rothdn.fd
-% \newcommand*\initfamily{\usefont{U}{Rothdn}{xl}{n}}
 \usepackage{dpfloat}
 \usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
 \usepackage{xparse}
+\usepackage[toc,page]{appendix}
+\usepackage{pdfpages}
+\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage{framed}
+% \usepackage{subfigure}
+
+% \usepackage[a4paper, margin=3.5cm]{geometry}
+% https://tex.stackexchange.com/questions/50258/margins-of-book-class
+% \titleformat{\chapter}[display]
+%      { \normalsize \huge  \color{black}}
+%       {\normalsize \MakeUppercase { \chaptertitlename \hspace{1 ex} }  { \fontsize{60}{60}\selectfont \color{RoyalRed} \sffamily  \thechapter }} {10 pt}{\bfseries\huge} 
+%       % https://tex.stackexchange.com/questions/94729/how-to-customize-chapter-heading-style
+% biber issues https://tex.stackexchange.com/questions/309991/how-to-fix-the-incompatility-between-biber-and-biblatex-versions-in-texmaker 
+% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
 
 % from tug.org try: QT Linostroke, Lukas Svatba, Calligra, Baroque initials, 
 %
@@ -64,13 +57,6 @@
 % main text font
 % https://tug.org/FontCatalogue/mathfonts.html
 
-\usepackage[toc,page]{appendix}
-\usepackage{pdfpages}
-\usepackage[backend=biber,style=numeric]{biblatex}
-
-% biber issues https://tex.stackexchange.com/questions/309991/how-to-fix-the-incompatility-between-biber-and-biblatex-versions-in-texmaker 
-% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
-
 % Editing
 \newcommand{\todo}[1]{{\color{blue}{#1}\normalcolor}} % todo
 \newcommand{\com}[1]{{\color{red}{#1}\normalcolor}} %comment
@@ -82,7 +68,18 @@
 % Formatting
 % Paper reference box
 	% Change bib format to fullform?
+\newcommand{\dropcap}[1]{\dropcapaux#1\relax}
+\def\dropcapaux#1#2\relax{\lettrine[lines=3,lraise=-0.5,depth=1]{\typocap{#1}}{#2}}
+\newcommand{\fullpaper}[5]{\normalsize {{\bf#1}\newline #2, \IfNoValueTF{#5}{\emph{#3}}{\href{#5}{\emph{#3}}} (#4) }}
+\newcommand{\citem}[1]{\item[\cite{#1}]}
+\let\svthefootnote\thefootnote
+\newcommand\blankfootnote[1]{%
+  \let\thefootnote\relax\footnotetext{#1}%
+  \let\thefootnote\svthefootnote%
+} %https://tex.stackexchange.com/questions/170511/footnotes-without-numbering
 	
+
+
 % Liner box
 % Scientist profile
 
@@ -94,16 +91,35 @@
 \newcommand{\cre}[1]{\hat{#1}^\dagger}
 \newcommand{\anh}[1]{\hat{#1}}
 
+%Helium stuff
+\newcommand{\TO}{\MetastableState- \TOLowerStateManifold / \TOUpperStateManifold}%
 \newcommand{\MetastableState}{2^{3\!}S_1}%
+\newcommand{\GroundState}{1^{1\!}S_{0}}%
+\newcommand{\SingletState}{2^{1\!}S_0}%
+
+\newcommand{\LowerStates}{2^{3\!}P_{(0,1,2)}}%
+\newcommand{\UpperStates}{3^{3\!}P_{0,1,2}}%
 \newcommand{\UpperS}{5^{3\!}S_{1}}%
-\newcommand{\UpperTriplet}{5^{1\!}D_{2}}%
+\newcommand{\UpperSinglet}{5^{1\!}D_{2}}%
+\newcommand{\UpperSingletStates}{5^{3\!}D_{0,1,2}}%
+\newcommand{\SpecLowerStateManifold}{2^{3\!}P}%
+\newcommand{\SpecUpperStateManifold}{5^{3\!}D}%
+\newcommand{\TOLowerStateManifold}{2^{3\!}P}%
+\newcommand{\TOUpperStateManifold}{3^{3\!}P}%
 \newcommand{\triplet}{^{3\!}}
 \newcommand{\singlet}{^{1\!}}
-\newcommand{\UpperSingletStates}{5^{3\!}D_{0,1,2}}%
-\newcommand{\PStateManifold}{2^{3\!}P}%
-\newcommand{\UpperStateManifold}{5^{3\!}D}%
 % \newcommand{\atomstate}{3}{#1^{#2\!}#3}
 
+%math notation
+\newcommand{\avg}[1]{\left\langle #1 \right\rangle}
+\newcommand{\difn}[3]{\frac{d^#3 #1}{d #2^#3}}
+\newcommand{\pderivn}[3][{}]{
+    \frac{\partial^{#1} #2}{\partial #3^{#1}}
+}
+\newcommand{\derivn}[3][{}]{
+    \frac{d^{#1} #2}{d #3^{#1}}
+}
+\def\edotr{\mbox{\boldmath{$\hat{\bf e}\cdot {\bf r}$}}}
 
 \newcommand{\kvec}{\textbf{k}}
 \newcommand{\pvec}{\textbf{p}}
@@ -112,7 +128,8 @@
 % common notation
 % Spectroscopic notation 
 \newcommand{\metastable}{2^{3\!}S_1}%
-\newcommand{\mhe}{\textrm{He}$^*$}%
+\newcommand{\polz}{\alpha(f)}% \operatorname{Re}()  , cand have real part implicit
+\newcommand{\mhe}{\textrm{He}$^*$~}%
 
 
 \usepackage{afterpage}
@@ -122,3 +139,7 @@
     \addtocounter{page}{-1}
     \newpage
     }
+
+
+\usepackage{tikz}
+\usetikzlibrary{angles,quotes}
