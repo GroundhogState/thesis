@@ -1,6 +1,11 @@
 \ProvidesPackage{thesis_style}
+% ANU formatting guidelines:
+% Thesis should be double spaced or one and a half spaced. Single spacing is used only for indented quotations, footnotes and bibliographies. All margins are with header and footing settings as 2.5cm from the top and bottom. Digital copies: All four margins.
 
-\renewcommand{\baselinestretch}{1.5} %1.5 spacing
+
+
+
+
 \usepackage{geometry}
 \geometry{top = 20mm,
     bottom = 20mm,
@@ -11,6 +16,9 @@
 % https://policies.anu.edu.au/ppl/document/ANUP_012815 
 \usepackage{setspace} % for setting the bib and footnotes
 \usepackage{anyfontsize}
+% All this for a single character...
+% \usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
 
 
 \usepackage{graphicx}
@@ -21,20 +29,25 @@
 \usepackage{hyperref}
 \usepackage{subcaption}
 \usepackage{changepage}
+
+% For fancy letterheading:
+% https://tex.stackexchange.com/questions/769/how-can-i-create-documents-in-latex-using-a-calligraphic-first-letter-for-chapte/10260
 \usepackage{lettrine} % https://mirror.aarnet.edu.au/pub/CTAN/macros/latex/contrib/lettrine/doc/lettrine.pdf
 \usepackage{siunitx}
 
 \usepackage{rotating}
-\renewcommand{\baselinestretch}{1}
 \usepackage{Typocaps}
 \usepackage{dpfloat}
 \usepackage[export]{adjustbox}% http://ctan.org/pkg/adjustbox
 \usepackage{xparse}
 \usepackage[toc,page]{appendix}
 \usepackage{pdfpages}
-\usepackage[backend=biber,style=numeric]{biblatex}
+\usepackage[backend=biber,style=nature]{biblatex}
+% biber issues https://tex.stackexchange.com/questions/309991/how-to-fix-the-incompatility-between-biber-and-biblatex-versions-in-texmaker 
+% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+
 \usepackage{framed}
-% \usepackage{subfigure}
+
 
 % \usepackage[a4paper, margin=3.5cm]{geometry}
 % https://tex.stackexchange.com/questions/50258/margins-of-book-class
@@ -42,20 +55,7 @@
 %      { \normalsize \huge  \color{black}}
 %       {\normalsize \MakeUppercase { \chaptertitlename \hspace{1 ex} }  { \fontsize{60}{60}\selectfont \color{RoyalRed} \sffamily  \thechapter }} {10 pt}{\bfseries\huge} 
 %       % https://tex.stackexchange.com/questions/94729/how-to-customize-chapter-heading-style
-% biber issues https://tex.stackexchange.com/questions/309991/how-to-fix-the-incompatility-between-biber-and-biblatex-versions-in-texmaker 
-% https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
 
-% from tug.org try: QT Linostroke, Lukas Svatba, Calligra, Baroque initials, 
-%
-% Also try: eileenbl, elz, roth, romantik, royal
-% https://tug.org/FontCatalogue/rothenburgdecorative/example.html
-% https://tug.org/FontCatalogue/zallmancaps/example.html
-% https://tug.org/FontCatalogue/typographercaps/example.html
-% https://tug.org/FontCatalogue/elzeviercapsregular/example.html
-% https://tug.org/FontCatalogue/royalinitialen/example.html
-
-% main text font
-% https://tug.org/FontCatalogue/mathfonts.html
 
 % Editing
 \newcommand{\todo}[1]{{\color{blue}{#1}\normalcolor}} % todo
@@ -64,24 +64,22 @@
 \newcommand{\blu}[1]{{\color{blue}{#1}}}
 \newcommand{\org}[1]{{\begin{color}[rgb]{1.0,0.5,0}{#1}\end{color}}}
 \newcommand{\rem}[1]{{\begin{color}[rgb]{0.0,0.7,0}{#1}\end{color}}} 
+\newcommand{\rev}[1]{{\begin{color}[rgb]{0.7,0.7,0}{#1}\end{color}}}
 
 % Formatting
 % Paper reference box
-	% Change bib format to fullform?
 \newcommand{\dropcap}[1]{\dropcapaux#1\relax}
 \def\dropcapaux#1#2\relax{\lettrine[lines=3,lraise=-0.5,depth=1]{\typocap{#1}}{#2}}
 \newcommand{\fullpaper}[5]{\normalsize {{\bf#1}\newline #2, \IfNoValueTF{#5}{\emph{#3}}{\href{#5}{\emph{#3}}} (#4) }}
 \newcommand{\citem}[1]{\item[\cite{#1}]}
+
+%https://tex.stackexchange.com/questions/170511/footnotes-without-numbering
 \let\svthefootnote\thefootnote
 \newcommand\blankfootnote[1]{%
   \let\thefootnote\relax\footnotetext{#1}%
   \let\thefootnote\svthefootnote%
-} %https://tex.stackexchange.com/questions/170511/footnotes-without-numbering
+} 
 	
-
-
-% Liner box
-% Scientist profile
 
 % common notation
 \newcommand{\bra}[1]{\langle#1|}
@@ -90,13 +88,20 @@
 \newcommand{\Tr}{\textrm{Tr}}
 \newcommand{\cre}[1]{\hat{#1}^\dagger}
 \newcommand{\anh}[1]{\hat{#1}}
+% formatting shortcuts for notation
+\newcommand{\st}[1]{\mathcal{#1}} % for stokes parameters
+\newcommand{\mb}[1]{\mathbf{#1}}
+
 
 %Helium stuff
+\newcommand{\mhe}{\textrm{He}$^*$}
+\newcommand{\fto}{f_\mathrm{TO}}
 \newcommand{\TO}{\MetastableState- \TOLowerStateManifold / \TOUpperStateManifold}%
 \newcommand{\MetastableState}{2^{3\!}S_1}%
+\newcommand{\metastable}{2^{3\!}S_1}%
 \newcommand{\GroundState}{1^{1\!}S_{0}}%
 \newcommand{\SingletState}{2^{1\!}S_0}%
-
+\newcommand{\PStateManifold}{2^{3\!}P}%
 \newcommand{\LowerStates}{2^{3\!}P_{(0,1,2)}}%
 \newcommand{\UpperStates}{3^{3\!}P_{0,1,2}}%
 \newcommand{\UpperS}{5^{3\!}S_{1}}%
@@ -108,7 +113,7 @@
 \newcommand{\TOUpperStateManifold}{3^{3\!}P}%
 \newcommand{\triplet}{^{3\!}}
 \newcommand{\singlet}{^{1\!}}
-% \newcommand{\atomstate}{3}{#1^{#2\!}#3}
+\newcommand{\polz}{\alpha(f)}% 
 
 %math notation
 \newcommand{\avg}[1]{\left\langle #1 \right\rangle}
@@ -125,11 +130,8 @@
 \newcommand{\pvec}{\textbf{p}}
 \newcommand{\rvec}{\textbf{r}}
 \newcommand{\micron}{\mu\textrm{m}}
-% common notation
-% Spectroscopic notation 
-\newcommand{\metastable}{2^{3\!}S_1}%
-\newcommand{\polz}{\alpha(f)}% \operatorname{Re}()  , cand have real part implicit
-\newcommand{\mhe}{\textrm{He}$^*$~}%
+
+
 
 
 \usepackage{afterpage}
@@ -141,5 +143,6 @@
     }
 
 
-\usepackage{tikz}
-\usetikzlibrary{angles,quotes}
+% \usepackage{tikz}
+% \usetikzlibrary{angles,quotes}
+

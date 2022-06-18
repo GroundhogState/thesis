@@ -1,15 +1,22 @@
 \documentclass[12pt,a4paper,twoside]{book} 
-%  Formatting guidelines:
-% 
-% Should fix margins for printing
-
+% On the choice of document class:
 % report offers chapter and abstract. book does not offer abstract. https://tex.stackexchange.com/questions/36988/regarding-the-book-report-and-article-document-classes-what-are-the-mai
 % However, book offers other nice things like openright and twoside, so the Abstract environment might well be defined manually instead (or change the class file)
-% For initial writing, will use report to get everything working, then consider porting to book for the nicer formatting.
+
+% spellings to check
+%     realize -> realise 
+%         (realizations exception?)
+%     optimise/optimize/optimized...
+%     maximise/maximize
+%     thermalize
+%     specialize/specialise
+% Capitalization of headings
+
+
+% \renewcommand{\baselinestretch}{1} %1.5 spacing
+
+
 \usepackage{thesis_style}
-% Thesis should be double spaced or one and a half spaced. Single spacing is used only for indented quotations, footnotes and bibliographies. All margins are with header and footing settings as 2.5cm from the top and bottom. Digital copies: All four margins.
-% For fancy letterheading:
-% https://tex.stackexchange.com/questions/769/how-can-i-create-documents-in-latex-using-a-calligraphic-first-letter-for-chapte/10260
 
 
 \addbibresource{latex/bibliography.bib}
@@ -17,63 +24,49 @@
 \begin{document}
 
 % \include{latex/mtodo}
-% - % \myemptypage
+% \myemptypage
 
-
-% \frontmatter
-% \include{latex/00_frontmatter}
-% \include{latex/01_abstract}
-% \setcounter{tocdepth}{1}
-% \tableofcontents
+\frontmatter
+\include{latex/00_frontmatter}
+\singlespacing
+\include{latex/001_acknowledgements}
+\include{latex/01_abstract}
+\include{latex/02_works}
+\setcounter{tocdepth}{1}
+\tableofcontents
 
 % double-page double-ket or bra-ket
 % i.e. nested \ket{\ket} around entire text: ||main>>
 % Or put it all in bra-kets?
 % - Make them H/V - split up sections so chapt = <s1|s2> + <s3|s4>, or inc tensor products chapt = |s2><s1| + <s3|s4>\otimes<s5|
 
-% \mainmatter
+\onehalfspacing
 
-% \include{latex/10_overview}
+\mainmatter
+% \singlespacing
+\include{latex/10_overview}
 
-% \part{Background and technical introduction}
-% \include{latex/11_introduction}
-% \include{latex/12_apparatus}
+\part{Background and technical introduction}
+\include{latex/11_introduction}
+\include{latex/12_apparatus}
 % \include{latex/13_lattice_build}
-% \part{Experiments with ultracold metastable helium atoms}
-% \include{latex/21_transitions}
-% \include{latex/22_tuneout}
-% \include{latex/31_depletion}
-
+\part{Experiments with ultracold metastable helium atoms}
+\include{latex/21_transitions}
+\include{latex/22_tuneout}
+\include{latex/31_depletion}
 \include{latex/40_conclusion}
 
-%%https://tex.stackexchange.com/questions/172496/adding-appendix-chapters-without-sections-in-table-of-contents
-% \begin{appendices}
-    % \chapter{Lattice calculations}
-    % \include{appendix/A1_lattice}
-    % \includepdf[pages=-]{appendix/BandPractise} 
-% \end{appendices}
+\appendix
+\include{latex/13_lattice_build}
 
 \backmatter
 
+
+
 % \begingroup
-% \setstretch{1.0}
+\singlespacing
 \printbibliography
 % \endgroup
 
-% \newpage
-% \begin{center}
-% \vfill
-% \emph{``The key to discoveries is to look at those\\
-%  places where there is still a paradox.\\
-% It’s like the tip of an iceberg.\\
-% If there is a point of \\
-% dissatisfaction, \\
-% take a closer \\
-% look at it.'' \\}
-%  \end{center}
-% \begin{center}
-% ~E. Arikan
-%  \end{center}
- % \vfill
 
 \end{document}

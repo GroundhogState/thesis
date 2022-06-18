@@ -3,10 +3,13 @@
 
 \chapter{Conclusion}
 \markboth{CONCLUSION}{}
-
+\label{chap:conclusion}
 \begin{flushright}
+\singlespacing
 \emph{``Good judgment depends mostly on experience, and\\ experience usually comes from poor judgment"} \\- Anonymous\footnote{The origin of this frequently misattributed aphorism is unknown \url{https://quoteinvestigator.com/2017/02/23/judgment/}}
 \end{flushright}
+\onehalfspacing
+\vspace{1cm}
 
 % \todo{Actually write a conclusion}
 
@@ -18,231 +21,195 @@
 
 % % Pick a good-looking drop cap https://www.fontsplace.com/free/images/t/typographer-caps_font_preview_characters.gif
 	 
+
+	 % https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.90.025008
 	 % https://jila.colorado.edu/~junye/yelabsOLD/pubs/scienceArticles/2007/sArticle_2007_10_Helium_DFCS_EPJD.pdf
+
+\section*{Summary of findings}
+% \addcontentsline{toc}{section}{Summary of findings}  
+	{The} central element of this thesis was helium-4, cast as the workhorse for the experiments for the twin reasons of structural simplicity and unique affordance of three-dimensional single-particle momentum measurements.
+	The dominant theme of this dissertation,  metrology, concerns the precision measurement of basic physical quantities to empirically ground present and future theories of physics and was the focus of chapters \ref{chap:transitions} and \ref{chap:tuneout}. 
+	These works were motivated by the suitability of the (deceptively) simple helium atom to high-precision calculations.
+	In the counterpoint, many-body physics, we turned attention outside the helium atom itself, towards the collective behaviour of interacting particles.
+	This theme was elaborated in chapters \ref{chap:lattice} and \ref{chap:QD} with particular emphasis on the scientific contributions made possible by `momentum microscopy' of quantum gases.
+
+	Chapter \ref{chap:transitions} presented the first measurement of the spin-forbidden $2\triplet P_2\rightarrow 5\singlet D_2$ line in helium along with new measurements of transitions from the $2\triplet P_2$ state to the $5\triplet S_1$ and $5\triplet D_J~(J\in\{1,2,3\})$ states. 
+	These measurements were made by disturbing an optical cooling process during the BEC production sequence, wherein the upper state of the 1083nm cooling transition served as the lower state for the target transition. 
+	When atoms were excited by the cooling light, they were able to absorb resonant probe light and thus degrade the phase-space density of the atomic sample by either absorbing the energy (heating the sample) or decaying to an untrapped state (reducing the number density).
+	Subsequently, when the evaporative cooling process amplified the phase space density, the perturbation in the initial condition resulted in a decrease in the total number of atoms cooled to degeneracy.
+	As far as I know, this is the first use of such a technique for atomic spectroscopy.
+	Other transition measurements are usually made by probing the trapped ground state \cite{Thomas20,Rengelink18,Notermans14}, rather than excited states.
+	The resulting determinations of transition frequencies improve upon previous measurements, where they exist \cite{Martin60}, by at least an order of magnitude in precision and are consistent with state-of-the art theoretical predictions.
+	However, the precision of this measurement was limited to the level of a few MHz by the wavemeter we employed as the frequency reference.
+	In comparison, the uncertainty of theoretical predictions for these transitions is dominated by the 700kHz uncertainty in the lower state energy.
+	The use of a frequency comb locked to a stable frequency reference would be the major instrumental requirement toward challenging the precision of current atomic structure theory calculations - additional considerations are discussed at the end of the chapter.
 	
-	The versatile trapping capabilities of optical lattices [Bloch review and more recent] have opened doors into a new era of precision spectroscopy and quantum simulation of condensed matter systems (see chapter Y for further discussion). [https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.83.1523]
-	Put in a box with single atom detection
-		get the Ott review
-		
-	In parallel, the miniaturization of magnetic and RF traps down to chip-scale circuits is an important step towards developing and deploying `atomtronic' technologies employing the techniques under development in cold atom labs today [roadmap on atomtronics].
-	More exotically, condensates of bound matter-antimatter atoms, positronium, are subjects of study for their potential as gamma-ray laser gain medium [https://journals.aps.org/pra/abstract/10.1103/PhysRevA.89.043624]
-	and BEC has recenlty been achieved in constant freefall on board the international space station [] towards long-baseline atom-interferometric gravimetry
-
-
-This thesis describes work that consists of the following scientific
-contributions: * Martin was wrong * New lines * Weakest transition *
-Test of QED * Partial resolution of QD which didn't answer much and
-isn't decisive re: theory * work towards a new regime of condensed
-matter simulation
-
-It is instructive to reflect on the efficiency of these machines as generators of quantum matter.
-	The mass input is X to produce Y condensed atoms and detect only 10\% of them.
-	The COP is complicated by the atom loss along the way but if we consider the change in energy of only the charge of atoms distilled to the BEC, then we find a COP of X.
-	The duty cycle of about 30mHz means that even with large BECs the average flux rate is only X.
-	These are low, but one would do well to recall that the first steam engines had efficiencies below 1\%, and several engineering breakthroughs later brought them towards several tens of percent, and gasoline engines followed a similar trend.
-	In the production of BEC in the new machine, the duty cycle is reduced by a factor of ten and the atom number by a factor of two, an increase in the time-coherence product of a factor of twenty.
-	The downscaling of helium condensate machines is a nontrivial challenge, but one is brought to wonder about the prospects of future fast-cycling, compact devices routinely creating and manipulating large quantum states.
-	As James Watt could not conceive of the full implications of a developed rail network, we too are surely blind to the world we may be building
-
-
-Lord Kelvin's famous remark - 'aside from two clouds, physics is done' - his arrogance aside, we are in a different position: Rather than a 'nearly done' job with a few details to work out, we are vividly aware of the sites of our ignorance.
-	As Einstein (?) said, a well-formulated question contains its own answer; but we are still some ways from determining whether we are even asking the right questions!
-
-\begin{itemize}
-% \tightlist
-\item
-  future specroscopy - prospects for helium 3
-\item
-  Lattices - possible directions
-\item
-  Quantum correlations \& foundations experiments
-\end{itemize}
-
-From Howl (2021) refs 60,61 on Feshbach resonances for fundamental physics
-
-A personal reflection.
-	Was lured in to the academy by the promise of
-questions like `what is the difference between simplicity and
-complexity' - when are things simple? When is something intrinsically
-hard to represent, even if it exists effortlessly in its own right? This
-drew me to lattice - to build something with the hands that would be so
-elusive for theory and computing.
-	But yeah - that might have been
-possible, but I hadn't the background to make reasonable progress in the
-three year timeframe of an Australian PhD.
-	Also, frankly, I didn't have
-the tuition or support and so was left alone for most of the time,
-crushing motivation and without praise and squirreled my time away in a
-simulation that was much more to my theoretical tastes.
-	But hey.
-	I have
-to find a nice way to dress this up.
-	Most of these words won't make it.
-So having got these ones out of the way, the hope is that I can move on
-from them and think more deliberately about what it is that I would say
-here.
-
-The chronological order of work is reversed.
-	I should perhaps detail the
-actual sequence of events - and frame them as pragmatic decisions from
-which I learned some useful things about scoping projects properly.
-There isn't really much that window dressing can add here.
-	But that's
-okay - rather than telling the entire truth, just tell enough of it.
-	But
-don't let the complexity frighten you out of doing your best to be
-honest, at least in this tiny sliver, the final vestiage of the
-self-expression that you'd hoped you'd find the opportunity to explore.
-This has been an exercise in shedding the ego, however incomplete that
-process may yet remain.
-
-\#\#\#A critical reading of science Technology evidently brings us great
-things.
-	But let us not lose sight of the implicit `right to know' - that
-we still embody the notion of a conquest over nature, of mastery of the
-other, the greater, the ultimately incomprehensible.
-	Let us not fall
-victim to our own arrogances, and recall that in our turbulent times,
-our investigations come at cost.
-	The nature of reality will, according
-to our ultimate foundations, remain.
-	But the conditions of society in
-which we have the ability to pursue them are not guaranteed.
-	One can
-never predict the outcomes of discoveries, or what miraculous things may
-be born of new technologies, but in the problem of allocating compute
-power from human wetware - which still retains a certain je ne sais
-quois that has not been replicated by industrial-scale algorithms
-running in silico - we should be mindful of the hubris of endless
-pursuit of the mastery of nature.
-	This remains ingrained in our
-mythology - that more advanced technology is always worth the price that
-is paid.
-	In the limit of free, clean energy and post-scarcity
-manufacture whereby human labour is eliminated, this may be true.
-	But,
-unlike the atoms in this thesis, we do not live in vacuum.
-
-\subsubsection{New frontiers}
-
-	BEC for analagoe gravity/early cosmological simulation
-		https://journals.aps.org/prd/abstract/10.1103/PhysRevD.78.084013
-
-	there are some folks who claim steady-state BEC by optical cooling which doens't need the atoms to talk to each other.
-	The themes of condensed matter, quantum information, and ATMOP find their synthesis in UCA labs...
-	Still active exploration of realms of applicability of conventional theories and extending the understanding of condensed matter beyond areas amenable to mean-field theories etc; soon enough quantum simulators might do something useful... 
-	
-
-	In the early days, cold gases were fantastic resources for studying atomic structure and basic interactions such as dimerization, because their low kinetic energies and densities dramaticall reduced the homogenous broadening effects that spectroscopy would otherwise be susceptible to. The development of advanced atomic clocks was a logical extension. Mre about spectroscopy? In the later 90s though, Jaksch and Zoller proposed quantum simulation in optical lattices. Lattices themselves had been used before for some studies - check out Orzel for the work that \emph{almost} got to the quantum phase transition - but yeah. That field is exploding now, with advances into microscopy and stuff. 	yan20 ultracold dipolar molecules with microwave-dressed resonant interaction; enhances interaction above s-wave scattering limit for controlled interactions and immediately applicable in lattices....
-
-	BEC in space 2020; comparisons with earth-bound experiments to look for GR stuff...
-
-	
-	Quantum technology is a young term, but has been growing exponentially	since used in print for the first time in about 1970 according to google	Ngram. 
-	Despite their foundational reliance on the quantum picture
-	of the world, these technolgies may one day be seen as `primitive' in
-	the same way that a typewriter or vacuum tube is now.
-
-	Amico 2020 - roadmap on atomtronics
-
-\footnote{mathematical models - could be thought of as the quantitative storytelling part of humanity, the things that make it unique - and so there's something really sublime about the exactness of the correspondence with the world}, written extensively about in things like `the unreasonable effectiveness of mathematics' and this correspondence is still explored in the problems of foundations of QM: what exactly does this mathematics say abotu the nature of the world? Why does it run this way? This deep inquiry will always be part of the human spirit, I think, but yeah.
-The frontiers of physics now marry the fundamental concepts of matter, energy, and information, and we now find much value in the comptuational perspective even at the quantum level...
-
-Aside; gravitation still holds many mysteries and 
-	However, until we have the technology to synthesize black holes or other extreme gravitational conditions, we may not have experimental access to the high energy densities required to probe the Planck scale where quantum and gravitational effects are expected to be of comparable magnitude.
-	QED, and QFT in general, presently has no formulation that is consistent with general relativity (other than in string theory, which despite its ambition and elegance has yet to satisfy experimental physicists).
-	We can never be sure that a given line of inquiry will crack open the mystery; c.f. Michelson, the discovery was not in the sixth decimal place but by asking the right question
-	Despite his role in the eponymous experiment, it's worth bearing in mind Albert Michelson's comment that `the great principles had already been discovered, and that physics would henceforth be limited to finding truths in the sixth decimal place.'\footnote{ at the inauguration of the Ryerson Physics Laboratory at the University of Chicago https://www.bbvaopenmind.com/en/science/physics/lord-kelvin-and-the-end-of-physics-which-he-never-predicted/}.
-	Seen another way, the years that followed could be read as evidence that the revolutions are not in the margins, but in the paradoxes.
-
-Some have said that we live in the `silicon age', in light of the
-	pervasiveness of computing technology based on silicon substrates.
-	What	Understanding	gained since the conception of QM has led to myriad other technologies	that foundationally depend on the quantum world.
-	A second quantum	revolution began with the creation and manipulation of single quantum	states, for which Haroche and Wineland were awarede a Nobel, but	includes technologies such as ion traps and coherent control mechanisms,
-	Nuclear magnetic	resonance, for example, underpins the life-altering technology of	magnetic resonance imaging and finds use in the study of biomolecular	structure and industrial applications, forming multibillion dollar	industries.
-	A second prominent example is the laser, whose functioning
-	depends on the quantum theory of light and matter.
-	Of course, lasers outside of	the atomic physics laboratory are now used in fields as diverse	as electromagnetic and gravitational astronomy, medicine, self-driving	vehicles and robotics, cosmetics, manufacturing, remote sensing, and	miltary use.
 
 
 	
-	'large' quantum states and quantum resources
-	Resource theories have gained much ground lately, most prominently the resource theories of entanglement and thermodynamics.
-	Any resource theory must characterize the resource, give a framework for quantifying the resource content of a state, and describe the operations that preserve and diminish the resource content of a given quantum state.
-	Resource theories pertain to coherence, entanglement; where do they come from? An incoherent state, with no resource content, is therefore any state with a fully diagonal density matrix in a given basis.
-	A coherent state is any state with  nonzero off-diagonal elements, Where does coherence come from? How much do you get in a BEC (distillable) and at what cost?	In which we connect with past measurements of coherent BECs, perhaps across the condensation transition, and test the performance of various coherence monotones across said transition.
-	[11,12] Bell state measurements by Aspect et al ruling out HV theories, loophole-free tests [76,64,172] RSP
-	This led to new understandings of the ways to extract, harness, and apply energy in greater and greater quantities, propelling the process of industrialization and shaping the world of today.
-	and the still nascent technolgies of single-system state determination.
-	These are still developing but have laid the foundations for the third
-	quantum revolution, the large-scale engineering of quantum states by
-	controllable interactions between multiple subsystems.
-	The posterchild
-	for such technologies is, of course, quantum computing.
-	Notwithstanding
-	ongoing controversy over the viability and usefulness of quantum
-	computing, the challenge of large-scale quantum engineering has spurred
-	an explosion of technical developments.
-	Moreover, the growing prominence
-	of quantum technology has drawn the curious eyes of computer scientists,
-	who now join forces with physicists in attempts to unravel the basic
-	structure of the cosmos from process-theoretic perspectives.
-	somehow connect to cold gases: 
 
-The tools of tomorrow being built in the cold-atom labs of today? By analogy, we've gone from hand-cut axes to laser cutters and the attendant precision has exploded the variety of uses for material resources; and so one is led to wonder about the ways these quantum resources will be put to use by means of the new era of ultra-precise, ultra-cold, and ultra-... era.... The state-of-the-art being advanced by groups in XYZ technologies, and their strident peer: cold atoms
+
+
+	% Such measurements would help constrain the energy of the $2\triplet P_2$ state because, thanks to the $1/n^3$-like scaling of QED uncertainties, theoretical uncertainty in the $n=5$ levels is as low as 
+	 % mean the $n=5$ states are known with a factor $\sim5$ better accuracy than the $n=3$ levels, thus bolstering the efforts to understand the 7.4$\sigma$ anomaly in the $n=3$ singlet-triplet level in $^3$He, which has not been measured in $^4$He \cite{Derouard80,Morton06}.
+
+	The content of chapter \ref{chap:tuneout} was a variation on the theme of frequency measurement, focusing instead on the $\TO$ tune-out frequency.
+	This measurement was underpinned by a novel technique for trap freqency measurement that yields a single-shot determination of the trapping frequencies with accuracy at the level of tens of ppm.
+	This technique was employed to detect the shift in the net trapping frequency of a hybrid magnetic- and optical-dipole trap as a function of the probe laser frequency, and improved on the precision of the ANU group's previous measurement \cite{Henson15} by a factor of 25.
+	A further advance over the prior work was made by characterizing the polarization-dependence of the tune-out, eliminating any dependence on parameters which were not precisely measurable and permitting an unambiguous comparison with theory.
+	The experimental determination of $725,736,700(40_\mathrm{stat})(260_\mathrm{sys})$ MHz differs from the theoretical prediction of 725,736,053(9) MHz by 2.5$\sigma$, where the experimental accuracy is limited by the imprecise knowledge of the exact polarization of the probe laser light at the atoms.
+	This measurement is the first tune-out measurement to resolve corrections for finite-wavelength retardation effects and yields the most precise constraint on the ratio of transition dipole matrix elements in any neutral atom to date.
+	Furthermore, the highly accurate trap frequency measurements meant that our longest data collection run at a fixed polarization would be capable of detecting, with an SNR of 1, a differential Stark shift at the level of $10^{-35}$ J.
+
+
+	In chapter \ref{chap:lattice} I recounted the major milestones I achieved towards the construction of a new BEC machine with the objective of trapping \mhe~atoms in a 3D optical lattice.
+	Over the course of work on this project, I built the vacuum system, the optomechanical and optoelectronic systems used to control and distribute laser light for cooling, trapping and imaging applications, and the imaging system (including hardware assembly and attendant software suite), all of which are still in use in the laboratory.
+	This lab has since gone on to achieve condensation of $^4$He in a record time of only 3.3 seconds, with very large condensed populations on the order of a million atoms \cite{Abbas21}.
+	Work towards the operation of the optical lattice is ongoing.
+
+	Finally, the topic of chapter \ref{chap:QD} was the physics of the condensed state itself.
+	This work concerned the density measurements of the ultra-dilute, large-momentum halo around the condensate and outside the thermal fraction.
+	In this region of momentum space, we found evidence suggestive of the persistence of the quantum depletion through the expansion into the far-field, seemingly  consistent with Ref. \cite{Chang16}.
+	Moreover, we looked in some detail at the shortcomings of least-squares regression against density histograms when attempting parameter estimation of power-law distributions, and provided an alternative analysis which circumvented this problem.
+	The regression technique yields the robust conclusion that the large-momentum tails persist into the far-field, in contravention of theoretical expectations \cite{Qu16,Xu06}.
+	These findings were complemented by simulations of the condensate expansion \cite{Ross21}. 
+	Together, the experiment and simulations support the interpretation that the quantum-depleted particles are accelerated by the non-uniform mean-field potential energy during the condensate expansion.
+	While this effect has been observed for thermal atoms \cite{Ozeri02}, we showed that the observed tail population could not have originated in the thermal part and indeed showed that the tail population exhibited the very same scaling with condensate size as one would expect of the depletion, based on Tan's theory of the contact.
+	However, the population observed in the experiment was larger still than in the simulations, which could not be attributed to any identified systematic effects.
+
+	Each chapter contains a short discussion of the near-term prospects for extending the work discussed therein.
+	With all that behind us, let us take a moment to look farther forward by the light of the luminaries on whose shoulders we stand.
+
+
+% \section*{Outlook}
+% \addcontentsline{toc}{section}{Outlook}  
+
+
+\section*{Closing remarks}
 	
-	The children of 2050 may grow up in a world shaped by an analogous explosion of comprehension and deployment of \emph{quantum} resources, of which the familiar `classical' states of systems in general are nearly devoid to us by virtue of being highly entangled with one another and a shared environment, and are sustaining quantum states/distilling and expending quantum resources entanglement/coherence/etc; (while quantum computing may be the poster child for the dawn of quantum technologies...)
-	BEC - a complete surprise and experimental triumph
-
-	In truth, the insight was gradual, distributed among many participants, and is still unfolding today. The names we remember - Bethe, Bohr, Born, de Broglie, Dirac, Ehrenfest, Fermi, Feynman, Heisenberg, Lamb, Michelson, Morley, Pauli, Planck, Schrodinger, Sommerfeld - stood among many others who were yet to be giants. The emblematic protagonist, Albert Einstein, is connected to the works herein by many threads: The photoelectric theory established the correspondence between photon energy and wavelength; the theory of special relativity fixed the speed of light as the universal constant connecting the energy and frequency of light through its linear dispersion in free space; the statistics of Bose gases with conserved particle number (\emph{i.e.} quantum-degenerate bosonic matter); the spontaneous and stimulated absorption and emission of radiation by bound charges; and many more indirect routes. \footnote{Quote re: humility from his book}.
-
-	Einstein's special theory of relativity deals with the differences in observations made from inertial reference frames, falling freely along geodesic trajectories through spacetime. The full theory of general relativity covers a much larger territory, and famously resists unification with quantum theory. 
-
-	-> GR and atoms yet to be connnected... experimental intervention on the horizon with atom interferometers...
-
-	The development of atom interferometers for quantum experiments with gravitational connection is one way forward. The cooling of larger masses may prove more fruitful for foundational experiments
-
-Why is it,
-	for example, so difficult to efficiently simulate quantum processes?
-	Where is the border between efficient and intractable? The proof of
-	genuine quantum advantages in certain processes may be one of the most
-	profound statements about the nature of reality of this generation.
-	Wherefore the nature of this advantage? Perhaps we will know before the
-	century is out - perhaps, if ongoing crises arenot addressed - we will
-	never know, and the cosmos may miss its chance to delve most deeply into
-	its own self-awareness.... Particularly consider the confluence of embedded AI etc etc...
-
-
-			On new physics: We are searching for a revolution in the margins.
-	A hair's width between complex theory and calculations.
-	Let's assume the calculations are perfect and the experimental errors are overly cautious.
-	What do we find - another term in the standard model? Very well.
-	It's true that the Higgs detection was a spectacular vindication.
-	Was it a revolution? Did it change how we think of our place in the world, alter what we thought was possible? Maybe if you are a theoretical particle physicist.
-	And so with these results; they may contribute to an advance in physics, defined as a change in our model of the world in a more profound way than better precision in the fundamental constants.
-	Forgive my skepticism; the 'new physics' we find in these experiments may extend the standard model, but for the 'pure' scientist, the goal is not to extend SM, but to supercede it.
-	Of course, if we knew where the revelations were, we would spend our money very differently, but in some sense *search* is inseparable from re*search*, with apologies to etymologists.
-
-
-Whereas millenia have passed without significant evolution, each generation living the same lives as the last, we are surrounded/circumscribed/immersed in the pervasive myth of progress.
-	The undescoring narrative always invites the conscientious scientist to ask the impossible question; \emph{what} is the future we are building? \emph{For whom} are we building it, and \emph{why}? <- perhaps better placed in the afterword, gels with notion we are not in vacuum
+	Creating and studying quantum matter with the techniques of laser cooling and trapping has endowed the experimentalist with an ever-expanding arsenal of tools.
+	Within this field the precise, quantitative, and functional characterization of individual and interacting atoms has led to the frontiers of space \cite{Aveline20} and time \cite{LeTargat13}.
+	Increasingly specialized machines are driving the production of atom traps mounted on chip-scale systems \cite{AtomChips} which, packaged alongside supporting vacuum and optical systems in small form-factor housings produced with additive manufacturing methods \cite{Madkhaly21}, herald the approach of integrated `atomtronic' devices \cite{Amico21}.
+	Future evolutions of ultracold-atom techniques may present themselves in such exotic manifestations as:
+	
+	\begin{itemize}
+	 \item A sensing medium for gravitational wave astronomy \cite{Kolkowitz16}, dark matter detection \cite{Derevianko14}, spacetime geodesy and absolute gravimetry \cite{Bidel20}, multiparametric gradiometry \cite{Hardman16}, or ascertaining the non-classicality of gravity \cite{Howl21};
+	 \item A gain medium for a gamma-ray laser with condensates of positronium  \cite{Wang14} or antihydrogen atoms produced by laser cooling \cite{Baker21};
+	 \item A storage medium \cite{Heller20} for large entangled, topologically ordered \cite{Zhang19}, fault-tolerant quantum information \cite{Briegel99}, integrated within networks of diverse quantum substrates \cite{Maring17};
+	 \item A computational medium in which to study the cosmology of the early universe \cite{Fischer04}, false-vacuum collapse \cite{Ng21}, the AdS/CFT correspondence \cite{Wei21}, and chromodynamics \cite{Zohar15}, or;
+	 \item A working medium \cite{Niedenzu19} for powering and regulating engineered processes using quantum resources \cite{Chitambar19}.
+	\end{itemize}
 	
 
-Let us put ourselves in Pythagoras' shoes. What was it like to have such a rudimentary understanding of mathematics? To be so far away from the interplay of geometry and algebra that we have now? These proofs must have seemed magic - what are we scratching at in these labs of the modern quantum endeavour? Pythagoras was practically deified for discovering what is now taught to ten year olds. Where are we going? What is going to happen next? What are we becoming?
+	\begin{figure*}
+	\includegraphics[width=\textwidth]{fig/conclusion/maiman_ruby}
+	\caption*{The synthetic ruby crystal used by T. Maiman in the first human-made laser. Taken by the author on a visit to the Max Planck Institute of Quantum Optics, Garching, Germany.}
+	\end{figure*}
 
-% % Schrodinger quote goes here?
+	\noindent  Just as James Watt could not comprehend how the development of resource extraction, mass production, and intercontinental transit would be spurred on by his steam engine, we too are surely blind to the world we {may} be building.
+	It took two centuries for the largest steam turbine capacity to grow from the kilowatt to the gigawatt scale, but the intervening investment in industrial and information infrastructure tends to compress societal learning curves \cite{SmilEnergy}.
+	Indeed, Claude Cohen-Tannoudji himself reflected that few expected Bose-Einstein condensation to follow so rapidly after the pioneering works of Chu, Phillips, and colleagues \cite{CTNote}.
+	One readily doubts Theodore Maiman glimpsed the extent of modern scientific finesse in the first glint of laser light from his ruby crystal in 1960.
+	Indeed, while `quantum technology' is a young term, its use has exploded since it was coined in the 1960s.
+	One of the earliest uses of the term in print, in a US National Research Council report \cite{Isotopes69} on the needs and uses of separated stable isotopes in 1968, reads as a cautionary tale for the technological optimist:
 
+	\bigskip
+	\hfill
+	\begin{minipage}{0.9\textwidth}
+	\emph{``While it is dangerous to predict the future, the Committee strongly believes that our society is entering an era of nuclear and quantum technology, that will be different from that of the present which is based largely on nonquantum, non-nuclear science. The uses of separated isotopes in this new technology - beyond those envisioned and discussed above - will probably be multifold. Among the diverse uses that may beome important in the future are structural components of nuclear reactors and devices, industrial product labelling, measuring and controlling air pollution, and industrial process and product control."}
+	\end{minipage}
+	\bigskip
+	% It is instructive to reflect on the efficiency of these machines as generators of quantum matter.
+	% The mass input is X to produce Y condensed atoms and detect only 10\% of them.
+	% The COP is complicated by the atom loss along the way but if we consider the change in energy of only the charge of atoms distilled to the BEC, then we find a COP of X.
+	% The duty cycle of about 30mHz means that even with large BECs the average flux rate is only X.
+	% These are low, but one would do well to recall that the first steam engines had efficiencies below 1\%, and several engineering breakthroughs later brought them towards several tens of percent, and gasoline engines followed a similar trend.
+	% In the production of BEC in the new machine, the duty cycle is reduced by a factor of ten and the atom number by a factor of two, an increase in the time-coherence product of a factor of twenty.
+	% Indeed, the characteristically quantum qualities of coherence and entanglemeent are being recast as quantifiable resources.
+	
+	
+	\noindent The early decades of the 21st century {may} see the proliferation of cold-atom systems into wider application, following the path of the laser from R\&D to ubiquity.
+	The children of 2121 {may} live in a world shaped as much by engineered quantum systems as today's society is by the repercussions of the first quantum revolution.
+	They {may} look upon today's cold-atom machines as `primitive' in the same way that we look upon vaccum tubes and typewriters as quaint vestiges of a bygone era.
+	We \emph{may} cross the precipice of the 21st century \cite{OrdPrecipice} and realize some of the innumerable possibilities bejeweling the vastness of Hilbert space.
+	If we do, may we enjoy the burgeoning fruits of science with discerning wisdom and boundless generosity.
+	After all - unlike the atoms in these experiments, we do not live in a vacuum.
 
+	
 
 \vfill
-\begin{flushright}
-\emph{``We shall not cease from exploration\\
-And the end of all our exploring \\
-Will be to arrive where we started \\
-And know the place for the first time."\\} 
-- T. S.	Eliot
-\end{flushright}
+
+% \section*{Coda}	
+\section*{\begin{figure*}[!h]
+\centering
+\includegraphics[scale=2]{fig/conclusion/Coda_sign}
+\end{figure*}}
+
+% \vspace{3cm}
+
+	{Albert} Michelson may have lived to rue his proclamation at the inauguration of the Ryserson Physics Laboratory that `the great principles had already been discovered, and that physics would henceforth be limited to finding truths in the sixth decimal place.'
+	Nobody could repeat this mistake today as we can readily identify subjects awaiting clear insight, such as the nature of dark matter and dark energy, or the synthesis of quantum field theory and general relativity.
+	At first glance, the dogged pursuit of the next digit of precision could appear a peculiar lens with which to bring such quandaries into focus, and one could demur the endeavour as searching for a revolution in the margins of Nature.
+	But surely such an enterprise would find vindication in a discovery that the fundamental constants were contingent, in deciding whether or not gravity is fundamentally quantum, or in establishing control of dark matter?
+	Albert Einstein, on whose shoulders this work squarely rests, noted that a well-formulated question contains its own answer. 
+	Although we can't be sure from the side of the revolution, perhaps we are beginning to ask the right questions.
+	
+\vfill	
+
+\begin{center}
 \vfill
+\singlespacing
+\emph{``The key to discoveries is to look at those\\
+ places where there is still a paradox.\\
+It’s like the tip of an iceberg.\\
+If there is a point of \\
+dissatisfaction, \\
+take a closer \\
+look at it.'' \\-\\
+\emph{Edral Arikan}}
+ \end{center}
+
+
+ 
+
+
+
+	
+
+
+
+
+% \section*{Scraps}
+
+
+%Was lured in to the academy by the promise of
+% questions like `what is the difference between simplicity and
+% complexity' - when are things simple? When is something intrinsically
+% hard to represent, even if it exists effortlessly in its own right? This
+% drew me to lattice - to build something with the hands that would be so
+% elusive for theory and computing.
+
+
+% 	But let us not lose sight of the implicit `right to know' - that
+% we still embody the notion of a conquest over nature, of mastery of the
+% other, the greater, the ultimately incomprehensible.
+% 	Let us not fall
+% victim to our own arrogances, and recall that in our turbulent times,
+% our investigations come at cost.
+% 	This remains ingrained in our
+% mythology - that more advanced technology is always worth the price that
+% is paid.
+% 	In the limit of free, clean energy and post-scarcity
+% manufacture whereby human labour is eliminated, this may be true.
+	
+
+
+
+
+
+
+% Schrodinger quote goes here?
+
 
 % Notes on some other dissertation conclusions
 	
@@ -262,7 +229,6 @@ And know the place for the first time."\\}
 % 	Outlook
 % 		A few directions for future research and what the lab is up to
 
-	
 
 % % 	Bakr, Microscopic QPTs 5 pages double spaced
 % 	No conclusion, each chapter self contained
