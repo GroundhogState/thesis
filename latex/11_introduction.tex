@@ -99,7 +99,7 @@
 	Second, that the light field is oscillating close to resonance with the transition to a state $\psi_2$, and that all other resonances are far enough away that we can approximate the atom with a two-level system with a resonant frequency $\omega_0 =(E_2-E_1)/\hbar$.
 	Finally, suppose that the wavelength of the light is much larger than the atom. 
 	This is the \emph{dipole approximation}, wherein the electric field has a constant value throughout space, but oscillates in time as $\textbf{E}(t) = {E}_0 \textrm{Re}(e^{-i\omega t}\hat{\mb{u}})$, where $\hat{\mb{u}}$ is the unit polarization vector, and $\textbf{r} = r\hat{\textbf{r}}$.
-	The interaction energy is then given by retaining only the dipole operator $-e\textbf{r}$ from the multipole expansion of the electronic charge distribution\footnote{This is a good approximation when the wavelength $\lambda = c/f$ is much larger than the atom. This is universally applicable for our purposes as the size of the helium atom is $\approx 30$pm, some 0.1\% of the shortest wavelength of light used in this thesis}.
+	The interaction energy is then given by retaining only the dipole operator $-e\textbf{r}$ from the multipole expansion of the electronic charge distribution\footnote{This is a good approximation when the wavelength $\lambda = c/f$ is much larger than the atom. This is universally applicable for our purposes as the size of the helium atom is $\approx 30$ pm, some 0.1\% of the shortest wavelength of light used in this thesis}.
 	The interaction Hamiltonian can then be written as
 	\begin{equation}
 		\hat{H}_I = e\textbf{r}\cdot\textbf{E}(t),
@@ -209,7 +209,7 @@
 \section{Helium} 
 
 	The idealized model of the hydrogen atom is fine for illustrating some important features of atomic physics, but in heavier atoms than hydrogen\footnote{Or as astronomers tend to call them, `metals'.}, interactions between electrons also play an important role, which is true even for the humble helium atom.
-	Although the structure of helium is simple enough that theoretical calculations can confidently accrue many significant figures, with precision rivalling similar calculations for hydrogen, the presence of a second electron does considerably complicate the physics\footnote{As the old joke goes, atomic physicists count `\emph{one, two, many...}'}.
+	Although the structure of helium is simple enough that theoretical calculations can confidently accrue many significant figures, with precision rivalling similar calculations for hydrogen, the presence of a second electron does considerably complicate the physics\footnote{As the old joke goes, atomic physicists count `\emph{one, two, many...}' \cite{FootAtomic}}.
 	The helium Hamiltonian 
 	$$
 	\left(\frac{-\hbar^2}{2m}\nabla_{1}^2+\frac{-\hbar^2}{2m}\nabla_{2}^2 + \frac{e^2}{4\pi\epsilon_0}\left(-\frac{Z}{r_1}-\frac{Z}{r_2}+\frac{1}{r_{12}}\right) \right)\ket{\psi} = E \ket{\psi}
@@ -246,20 +246,20 @@
 	\psi^{A}_{space} = \frac{1}{\sqrt{2}}\left(\ket{1\textrm{s},nl}  - \ket{nl,1\textrm{s}}\right)
 	$$
 	in terms of the spatial parts $\ket{n_1,l_1,n_2,l_2}$ of the two-electron wavefunction, with one electron fixed in the 1s state.
-	These adjoin the spin wavefunctions to form the $n\triplet L_{J}$ and $n\singlet L_{J}$ states, referred to as (triplet) ortho- and (singlet) para-helium, respectively\footnote{In what follows, we use the spectroscopic convention and label states by the $n^{2S+1}L_J$, where $J=S+L$ because the helium nucleus is spinless, and we drop the $(1s)$ term as the second electron will invariably be in the ground state in all cases we consider. Doubly-excited helium is highly unstable because the first excited state (19.8eV) has about 80\% of the ionization energy of helium (25.4eV).}.
+	These adjoin the spin wavefunctions to form the $n\triplet L_{J}$ and $n\singlet L_{J}$ states, referred to as (triplet) ortho- and (singlet) para-helium, respectively\footnote{In what follows, we use the spectroscopic convention and label states by the $n^{2S+1}L_J$, where $J=S+L$ because the helium nucleus is spinless, and we drop the $(1s)$ term as the second electron will invariably be in the ground state in all cases we consider. Doubly-excited helium is highly unstable because the first excited state (19.8eV) has about 80\% of the ionization energy of helium (24.6 eV \cite{Drake07}.}.
 	It can be shown via degenerate perturbation theory that the exchange antisymmetry produces the \emph{exchange energy} difference between the singlet and triplet states, where the  orthohelium state has a lower energy.
-	 The $\metastable$ state, also denoted \mhe, distinguishes helium amongst the zoo of atomic species available to the cold atom physicist by virtue of its 19.8 eV excitation energy and $\approx 7800$s lifetime \cite{Hodgman09_mhe}.
+	 The $\metastable$ state, also denoted \mhe, distinguishes helium amongst the zoo of atomic species available to the cold atom physicist by virtue of its 19.8 eV excitation energy and $\approx 7800$ s lifetime \cite{Hodgman09_mhe}.
 	 This state is forbidden to decay to the ground state by the $\delta L\neq0$ selection rule and also because the dipole operator does not couple states of different spin, such as the \mhe~state and the ground state.
 	Decay to the ground state from the metastable state is  therefore called \emph{doubly forbidden}.
 	Forbidden transitions can generally occur by higher-order interactions that are omitted from the dipole approximation, and the \mhe~state in particular can decay via a magnetic dipole transition.
 	Nonetheless, the two-hour lifetime is effectively a ground state for the purposes of ultracold helium experiments, which generally last less than a minute.
-	Fortuitously, the metastable state is connected to the $2\triplet P_2$ state by a transition with a wavelength of 1083.331nm, which is far more readily accessible with compact laser systems than the $\leq 63$nm X-ray transitions from the true ground state.
+	Fortuitously, the metastable state is connected to the $2\triplet P_2$ state by a transition with a wavelength of 1083.331nm, which is far more readily accessible with compact laser systems than the $\leq 63$ nm X-ray transitions from the true ground state.
 	The $2\triplet P_2$ state also provides an essentially closed transition cycle for laser cooling as its decay is dominated by transitions to the \mhe~state, obviating the need for complicated optical repumping schemes as required for laser cooling of alkali atoms.
-	There is also a forbidden transition to the true ground state, but as this decay is some billionfold slower, it is negligible for our purposes (nonetheless, it was measured in the ANU lab \cite{Hodgman09_23P}).
+	There is also a forbidden transition to the true ground state, but as this decay is some billionfold slower, it is negligible for our purposes (nonetheless, it was measured in the ANU lab \cite{Hodgman09_23P}). The relevant features of the Helium level structure are shown in Fig. \ref{fig:full_level_diagram}.
 
 	\begin{figure}
-		\includegraphics[width=\textwidth]{fig/introduction/full_lvl_diag}
-		\caption{A level diagram for $^4$He. Some more words.}
+		\includegraphics[width=\textwidth]{fig/introduction/full_lvl_diag.pdf}
+		\caption{Energy levels of the singly-excited $^4$He atom, grouped by orbital angular momentum quantum number $L$. The $n=1$ manifold contains the unique $1^{1\!}S_0$ ground state - the Pauli exclusion principle precludes the existence of any $1^{3\!}S$ state. All singlet states (with total electron spin $S=0$) are marked with black lines, and the triplet states ($S=1$) in black. Levels up to $n=10$ and $L=3$ are shown along with notable optical transitions. The 1083.331nm cooling and trapping $2^{3\!}S_1\rightarrow2^{3\!}P_2$ transition is shown in solid red. The $63$nm transition between the ground and metastable excited $\MetastableState$ state is indicated in purple, and indicated as \emph{forbidden} by a dashed line. The transitions discussed in Chapter \ref{chap:transitions} and \cite{Ross20} are detailed in the inset (not to scale) , illustrating the fine structure splitting between states with different azimuthal quantum number $J$ which is too small to resolve at the scale of the main diagram. These were measured in the same campaign as the tune-out wavelength (dotted line, Chapter \ref{chap:tuneout} and Ref. \cite{Henson22}) and the forbidden $2^{3\!}S_1\rightarrow3^{3\!}S_1$ transition (reported in \cite{Thomas20}, not discussed in this thesis). The dotted line shows the 24.6 eV ionization threshold \cite{Drake07}.}
 		\label{fig:full_level_diagram}
 	\end{figure}
 
@@ -314,7 +314,7 @@
 	% % Grimm, dipole traps
 	
 	For all the intricacy of atomic structure, life would be very dull indeed were it not for the interactions between them.
-	Indeed, the material reality of the world depends, in a sense, less on the structure of its building blocks and more on how they fit together\footnote{This could be said to underpin the transferability of systems from a natural instantiation to analytic or simulated contexts, because there is truth in the \emph{structure} which is independent of the \emph{substrate} - this theme is elaborated in chapter \ref{chap:lattice}.}.
+	Indeed, the material reality of the world depends, in a sense, less on the structure of its building blocks and more on how they fit together\footnote{This could be said to underpin the transferability of systems from a natural instantiation to analytic or simulated contexts, because there is truth in the \emph{structure} which is independent of the \emph{substrate} - this theme is elaborated in appendix \ref{chap:lattice}.}.
 	The varied and central roles of interactions will be revisited in later chapters, traversing the spectrum from isolated, to weakly-interacting, to distinctly many-body systems.
 	
 
@@ -393,7 +393,7 @@
 	The Penning ionization rate is some 20-fold lower at large detunings compared to near-resonant light \cite{Mastwijk98}, reducing this loss rate to the order of $5\times10^{-9}$ cm$^3$/s at large detunings.
 	Fortunately, the inelastic scattering cross-sections depend on the molecular potentials in such a way that condensation becomes attainable: When all the atoms are polarized in the either of the $m_J=\pm1$ states, the incoming state has a total spin of 2, whereas the reaction products have a total spin of 1, and so this process is forbidden.
 	In reality, it does occur through a weak virtual spin-dipole transition \cite{Shlyapnikov94}, but slowly enough that spin-polarized \mhe~exhibits a $10^4$-fold reduction in the Penning ionization rate.
-	At field strengths above 50G, however, the suppression weakens \cite{Shlyapnikov94,Borbely12}.
+	At field strengths above 50 G, however, the suppression weakens \cite{Shlyapnikov94,Borbely12}.
 	Other noble gases also exhibit highly energetic metastable states, but the lifetime and suppression of Penning ionization decreases with increasing mass \cite{Orzel99, Spoden05}.
 	Thus helium may be the only noble gas ever to cooled to degeneracy.
 	
@@ -423,7 +423,7 @@
 	The fourth, plasma, is the state of at leats 99\% of the ordinary matter in the universe \cite{Plasmastuff}.
 	Helium comprises about 23\%, most of which being primordial baryons formed during the recombination epoch.}  has a long and storied history\cite{Mukundanote}.
 	Interest in BEC was amplified back in the middle of the 20th century when Fritz London proposed that Bose-Einstein condensation was connected to the superfluid phenomenon in liquid helium.
-	Nikolay Nikolayevich Bogolyubov formalized this connection and so, historically speaking, helium was the element which hosted the earliest experimental realization of Bose-Einstein condensation, albeit with a very small condensed fraction\footnote{Nikolay was a darling of Russian theoretical physics, receiving his PhD-equivalent qualification at 19 and made important contributions to quantum field theory. In his famous paper on the problem of interacting bosons, his name is transliterated as \emph{Bogolubov}. Bogolyubov and \emph{Bogoliubov} are also common transliterations.}.
+	Nikolay Nikolayevich Bogolyubov formalized this connection and so, historically speaking, helium was the element which hosted the earliest experimental realization of Bose-Einstein condensation, albeit with a very small condensed fraction\footnote{Nikolay was a darling of Russian theoretical physics, receiving his PhD-equivalent qualification at 19 and made important contributions to quantum field theory. In his famous paper on the problem of interacting bosons, his name is transliterated as \emph{Bogolubov}. \emph{Bogolyubov} and \emph{Bogoliubov} are also common transliterations.}.
 	While liquid helium is a rare thing in cosmological terms, BEC may have existed already for millions of years in the superdense quark matter of neutron stars \cite{Haskell18, Martin16,Baym69,Page11}, wresting the claim of cosmic novelty from human hands. 
 	Nonetheless, the essentially pure atomic condensates and the emerging study of molecular condensates in laboratory settings are among the most extreme conditions in the universe, and are not believed to occur naturally elsewhere.
 	Following the oft-cited seven decades between the initial theoretical descriptions and the experimental realization of atomic Bose-Einstein condensates (BEC) \cite{Davis95,Bradley95,Anderson95}, the field has become quite industrious at the eve of its centenary.
@@ -598,7 +598,7 @@
 	\begin{equation}
 		\mu = \frac{7}{5}\frac{E}{N} = \frac{\hbar\bar{\omega}}{2}\left(\frac{15 N a}{a_{ho}}\right)^{2/5} ,
 	\end{equation}
-	recalling $a_{ho} = \sqrt{\hbar/m\omega}$ is the length scale of the ground state of the harmonic oscillator.
+	recalling $a_{ho} = \sqrt{\hbar/m\bar{\omega}}$ is the length scale of the ground state of the harmonic oscillator, with $\bar{\omega}$ being the geometric mean of the $x$, $y$, and $z$ trapping frequencies.
 	For a Bose gas confined in a harmonic potential of the form
 	\begin{equation}
 		V = \frac{1}{2} m \omega_x^2 x^2 + \frac{1}{2} m \omega_y^2 y^2 + \frac{1}{2} m \omega_z^2 z^2,
@@ -676,6 +676,6 @@
 	In practise this is set by the linewidth $\Gamma$ of the cooling transition (1.6MHz for the $2\triplet S_1 - 2\triplet P_2$ transition), as the laser linewidth is smaller by about an order of magnitude \cite{Shin16}.
 	These limits of optical cooling mean that laser cooling of helium to the ground state of our traps is not possible.
 	Furthermore, helium has a spinless nucleus and thus no hyperfine structure, precluding the polarization-gradient cooling employed in alkali atoms.
-	Fortunately, condensation is achievable via evaporative cooling in magnetic traps (and in an optical dipole trap, as discussed in chaper \ref{chap:lattice}).
+	Fortunately, condensation is achievable via evaporative cooling in magnetic traps (and in an optical dipole trap, as discussed in appendix \ref{chap:lattice}).
 
 	The machinery used to cut the pathway from room temperature to degeneracy is described in the next chapter. 

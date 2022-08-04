@@ -4,37 +4,48 @@
 \label{chap:lattice}
 
 
-
-	% \begin{adjustwidth}{1.5cm}{0cm}
-	\begingroup
 	\begin{flushright}
-	
-	\singlespacing{\fontsize{12}{12}\selectfont\emph{
-	``It might be noted here, for the benefit of those interested in exact solutions, \\
-	that there is an alternative formulation of the many-body problem:\\
-	How many bodies are required before we have a problem? \\
-	G.	E.	Brown points out that this can be answered by a look at history.	\\
-	In eighteenth-century Newtonian mechanics,
-	the three-body problem was insoluble.\\
-	With the birth of general relativity and quantum electrodynamics in 1930,\\ 
-	the two- and one-body problems became insoluble.
-	And within modern\\
-	quantum field theory, the problem of zero bodies (vacuum) is insoluble.\\
-	So, if we are out after exact solutions, no bodies at all is already too many!"}\\
-	- Richard Mattuck\footnote{R.
-	Mattuck, \emph{A Guide to Feynman Diagrams in the Many-Body Problem}, Dover Books on Physics (1992)}
-	}
+	\singlespacing
+	\emph{``It is not necessary to succeed in order to persevere.\\
+	As long as there is a margin of hope, however narrow, \\
+	we have no choice but to base all our actions on that margin"}\\
+	- Leo Szilard\footnote{\emph{LIFE magazine} volume 51, issue 9, 1961 }\\
 	\end{flushright}
 	\onehalfspacing
-	\endgroup
-	\vspace{1cm}
+
+
+	% \begin{adjustwidth}{1.5cm}{0cm}
+	% \begingroup
+	% \begin{flushright}
+	
+	% \singlespacing{\fontsize{12}{12}\selectfont\emph{
+	% ``It might be noted here, for the benefit of those interested in exact solutions, \\
+	% that there is an alternative formulation of the many-body problem:\\
+	% How many bodies are required before we have a problem? \\
+	% G.	E.	Brown points out that this can be answered by a look at history.	\\
+	% In eighteenth-century Newtonian mechanics,
+	% the three-body problem was insoluble.\\
+	% With the birth of general relativity and quantum electrodynamics in 1930,\\ 
+	% the two- and one-body problems became insoluble.
+	% And within modern\\
+	% quantum field theory, the problem of zero bodies (vacuum) is insoluble.\\
+	% So, if we are out after exact solutions, no bodies at all is already too many!"}\\
+	% - Richard Mattuck\footnote{R.
+	% Mattuck, \emph{A Guide to Feynman Diagrams in the Many-Body Problem}, Dover Books on Physics (1992)}
+	% }
+	% \end{flushright}
+	% \onehalfspacing
+	% \endgroup
+	% \vspace{1cm}
 
 	% \end{adjustwidth}
+
+	\blankfootnote{\noindent The contents of this chapter relate to the work published in \textbf{Rapid generation of metastable helium Bose-Einstein condensates} by A. H. Abbas, X. Meng, R. S. Patil, J. A. Ross, A. G. Truscott, S. S. Hodgman, \href{https://journals.aps.org/pra/abstract/10.1103/PhysRevA.103.053317}{Physical Review A} \textbf{103} (2021)}
 
 \section{The many-body problem}
 
 
-	In his 1972 essay \emph{More Is Different} \cite{Anderson72},  Philip W. Anderson argued that the constructionist hypothesis, that one can reconstruct the universe starting from known physical laws,  `breaks down when confronted with the twin difficulties of scale and complexity\footnote{Five years later, he was awarded the Nobel Prize in physics for his work on the electronics of magnetic and disordered systems}.' 
+	In his 1972 essay \emph{More Is Different} \cite{Anderson72},  Philip W. Anderson argued that the constructionist hypothesis, that one can reconstruct the universe starting from known physical laws,  `breaks down when confronted with the twin difficulties of scale and complexity.' 
 	In this he argues that composing a system out of many well-understood pieces with well-understood interactions will eventually give rise to  phenomena in need of `new laws, concepts, and generalizations'.
 	Familiar examples in physics include quasiparticles and hydrodynamics, and even atoms, which compress enormous amounts of microscopic information into an effective description based on observed emergent regularities.
 	Anderson acknowledges the utility of reductionism by noting that emergent features are always understandable in terms of their microscopic composition.
@@ -46,6 +57,12 @@
 	The design-build-test-learn cycle thus contracts, and humankind grows more proficient at the design of compounds or materials with desirable properties such as their light-harvesting efficiency or efficacy at neutralizing pathogens.
 	In the quantum-mechanical context this project is particularly challenging because analytical models at the microscale may be conceivable but are often analytically intractable.
 	
+
+
+
+		
+	
+
 	Further, the amount of information required to describe a quantum state, and the computational effort needed to forecast its evolution, quickly become so large as to exhaust even the largest supercomputers.
 	It was in 1982 that Richard P.	Feynman laid out a proposition for the now-burgeoning field of \emph{quantum simulation} \cite{Feynman82}:
 
@@ -121,7 +138,7 @@
 \section{Quantum simulation with optical lattices}
 
 
-	The groundbreaking experiment in quantum simulation with optical lattices was the achievement of the Mott insulating state \footnote{A hallmark of the Mott insulator is the suppression of number fluctuations at each lattice site (i.e.
+	The groundbreaking experiment in quantum simulation with optical lattices was the achievement of the Mott insulating state\footnote{A hallmark of the Mott insulator is the suppression of number fluctuations at each lattice site (i.e.
 	\emph{number squeezing}), which was first observed a year prior in \cite{Orzel01}.
 	However, the later result was the first to completely eliminate site occupancy fluctuations in 3D - see \cite{Morsch06} for discussion.} in a lattice filled with ultracold bosonic atoms \cite{Greiner01}, realizing the proposition by Dieter Jaksch \emph{et al.} from three years prior \cite{Jaksch98}.
 	The subsequent few years saw an explosion of foundational research and technical development, summarized in the reviews \cite{Morsch06,Bloch08}. 
@@ -330,13 +347,13 @@
 	Hence, the first point of attention was rebooting the MOT.
 	% https://www.sciencedirect.com/science/article/abs/pii/S0030401806009680?via%3Dihub cited in abbas21 re: InGaAs PD use for pop measurements
 
-	Achieving magneto-optical trapping required two preliminary steps: First, the cooling and trapping beams needed be produced from the amplified master laser ($\approx$3 W of continuous power tuned 253MHz red of the 1083.331 nm transition, see previous chapter).
+	Achieving magneto-optical trapping required two preliminary steps: First, the cooling and trapping beams needed be produced from the amplified master laser ($\approx$3 W of continuous power tuned 253 MHz red of the 1083.331 nm transition, see previous chapter).
 	Figure \ref{fig:distribution_optics} shows two AOMs in the double-pass configuration and illustrates how a single source beam can be split into multiple, approximately collimated, outgoing beams with controllable power and detuning.
 	Lenses within the double-pass setup were used to increase the AOM efficiency and ensure the outgoing beam was collimated.
 	The polarization and profile (hence also intensity) of the beams is fixed further downstream by a series of telescopes and wave-plates.
 	The AOMs were driven in open-loop configuration by an amplified voltage-controlled RF oscillator, whose frequency and power were controlled via the LabView-based data acquisition and control system (DAQ).
 	The LabView program was also used to control the current supplies driving the magnetic coils, relays or MOSFETs for switching off the various field generation coils, and a number of shutters on the table.
-	The control system architecture is essentially the same as the one described in section \ref{sec:DAQ}, but some components of the 1550nm laser system were controlled by other means, described below.
+	The control system architecture is essentially the same as the one described in section \ref{sec:DAQ}, but some components of the 1550 nm laser system were controlled by other means, described below.
 	
 	\begin{figure}
 	    \begin{minipage}{0.45\textwidth}
@@ -374,7 +391,7 @@
 
 	We had to align the collimator and Zeeman slower beams before the MOT could be built.
 	Naturally, having set everything up perfectly the first time, the MOT was nowhere to be found.
-	After some further tweaking, we obtained a visual signature of the MOT on the camera, a 1-2cm diameter smudge in the dark \footnote{We had to switch the room lights off to reduce scattered light in order to spot it.}.
+	After some further tweaking, we obtained a visual signature of the MOT on the camera, a 1-2 cm diameter smudge in the dark \footnote{We had to switch the room lights off to reduce scattered light in order to spot it.}.
 	With some life breathed back into the old machine, it was time for a much larger operation.
 
 
@@ -463,7 +480,7 @@
 		Hydrogen leaching from the surface of the steel chamber can be significant, and even permeate the steel on long enough timescales.
 		One means of addressing this is with a titanium sublimation pump (TiSub).
 		This is not a pump \emph{per se} but rather a titanium filament.
-		A pulsed current of $\approx5A$ (duty cycle approximately 30 seconds on, 60 seconds off) heats the filament and causes titanium to sublimate off the filament and adsorb onto the interior surface of the steel vacuum chamber.
+		A pulsed current of $\approx5$ A (duty cycle approximately 30 seconds on, 60 seconds off) heats the filament and causes titanium to sublimate off the filament and adsorb onto the interior surface of the steel vacuum chamber.
 		Hydrogen adsorbs to the titanium surface but not to steel, thus creating a `virtual pump' and driving the pressure further down.
 
 
@@ -485,7 +502,7 @@
 	In our machine we used a non-evaporative getter (NEG) in the science chamber.
 	The NEG has a highly porous active area which adsorbs hydrogen very strongly.
 	This means that they tend to carry in a lot of contaminants and have little remaining active area when first pumping down.
-	We cleared the surface of the NEG by passing up to 5A of current through it.
+	We cleared the surface of the NEG by passing up to 5 A of current through it.
 	Again, the pressure spikes and eventually relaxes up to an hour later, when the current is switched off.
 	As shown in Fig \ref{fig:bakeouts}, chamber bakes can improve the chamber pressure by up to three orders of magnitude.
 	Afterwards, the TiSub can improve the pressure by a factor of five to ten, and the NEG by a factor of two to five.
@@ -565,7 +582,7 @@
 	\end{figure}
 
 
-	A simple description of absorption imaging is that one `takes a photo of the shadow of the atoms' by illuminating the sample with a collimated laser beam, and then projecting the beam onto a camera (Xenics Bobcat, 256x320 pixel InGaAs sensor, 20$\mu$m pixel pitch).	
+	A simple description of absorption imaging is that one `takes a photo of the shadow of the atoms' by illuminating the sample with a collimated laser beam, and then projecting the beam onto a camera (Xenics Bobcat, 256x320 pixel InGaAs sensor, 20 $\mu$m pixel pitch).	
 	Detailed discussions of the physical principles and implementations of this technique are presented in \cite{MakingProbingUnderstanding,TychkovThesis}.
 	Here we present a simple picture, and an illustration in Fig. \ref{fig:abs_img}.
 	A laser tuned close to resonance with the atomic sample is coupled via optic fibre to the absorption imaging setup.
@@ -576,7 +593,7 @@
 
 	The camera records an image during the application of the laser light and a second image of identical exposure time after a {$\approx$10 ms delay}\footnote{We found it helpful to ensure that the AOM switched off in the meantime as well, and turned back on for the same cycle time for the second measurement.
 	The AOMs can exhibit slow rise-times to their steady state pointing and efficiency due to dissipation of heat into the crystal from the RF drive.
-	This was measurable as differences in the light intensity between subsequent images if the AOM was left on between exposures.}
+	This was measurable as differences in the light intensity between subsequent images if the AOM was left on between exposures.}.
 	By this point the atoms have scattered many photons and left the laser path.
 	The second image is used as a reference to compute the integrated absorption at each pixel.
 	A light-free image can be used as a `darkfield' to compensate for the camera's inherent noise profile.
@@ -608,7 +625,7 @@
 
 \subsection{Dipole trap}
 	While the main chamber was unworkable during bakeouts, construction could continue on other components of the machine, including the control and distribution systems for the optical dipole beams.
-	These beams are generated by a 1550nm diode laser with a linewidth of $\approx100$ kHz that seeds a 30W fibre amplifier.
+	These beams are generated by a 1550 nm diode laser with a linewidth of $\approx100$ kHz that seeds a 30 W fibre amplifier.
 	The high-power beam is split into two AOM arms in a similar manner to the cooling optics described above.
 	This configuration is illustrated  in Fig.	\ref{fig:dipole_optics}.
 	% Because of the high power and stability demands, the optics were mounted on sturdier posts.
@@ -624,7 +641,7 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=\textwidth]{fig/lattice/dipole_optics}
-		\caption{Schematic of the 1550nm optics used to generate and control the dipole trap beams in the lattice machine.
+		\caption{Schematic of the 1550 nm optics used to generate and control the dipole trap beams in the lattice machine.
 		The AOMs are used for amplitude control and fast switching, and to run the dipole beams at slightly different frequencies to avoid mutual interference.
 		They are driven by dedicated PID controls set in configurable sequences with the arbitrary-waveform generators.
 		The beams then focus into an optical fibre which transports the beam to the shaping optics (example on top right).
@@ -641,7 +658,7 @@
 	In order to achieve this, given the non-collimated laser profile emitted from the fibres, we first had to determine the profile of the beam, and then determine an arrangement of lenses to shape the beam to a tight focus at the desired trap location.
 	The procedure we used to construct the shaping and insertion optics are discussed here.
 	We aligned the beam output from the fibre parallel to a 1m-long rail which would be used to mount the lenses.
-	We measured the profiles (at low power) by taking images with an InGaAs camera and fitting the output images with 2D gaussian profiles .
+	We measured the profiles (at low power) by taking images with an InGaAs camera and fitting the output images with 2D gaussian profiles.
 	A constrained two-dimensional Gaussian fit yields the waists $\sigma_x$ and $\sigma_y$ along the frame axes.
 
 	A collection of measurements of the waists at positions $z_i$ along the rail can be fitted by the expression $w(z) = w(0)\sqrt{1 + (z/z_R)^2}$ for the waist of a Gaussian beam.
@@ -658,7 +675,7 @@
 	b) Beam waists along the rail as obtained from two-dimensional Gaussian fits to the images.
 	c) Forward-propagation simulation of the beam waists which was designed to reshape the profiles.
 	Cylindrical lenses only act on one of the axes, and are shown in a lighter blue.
-	This iterative process produced the image on the left, with waist sizes 130$\mu$m and 124$\mu$m.}
+	This iterative process produced the image on the left, with waist sizes 130 $\mu$m and 124 $\mu$m.}
 	\label{fig:profiling}
 	\end{figure}
 
@@ -671,7 +688,7 @@
 	To do this, we redirected a few mW of light from the absorption imaging optics using a beamsplitter, passed it through an attenuator, and inserted it into the dipole optics via removable mirrors as illustrated in Fig.	\ref{fig:dipole_optics}.
 	The endgame strategy was to achieve BEC by evaporative cooling in an optical dipole trap composed of two beams intersecting at right angles.
 	Given total efficiencies of about 30\% through the dipole optics, we could deliver about 5W of power through each beam.
-	With each beam focused to a waist of order 100$ \mu$m, the peak intensity of each beam would be $I_0 = 2P/\pi w_x w_y \approx 3.5\times10^9$ mW cm$^{-2}$, and combine to give a dipole trap about 70 $\mu$K deep.
+	With each beam focused to a waist of order 100 $\mu$m, the peak intensity of each beam would be $I_0 = 2P/\pi w_x w_y \approx 3.5\times10^9$ mW cm$^{-2}$, and combine to give a dipole trap about 70 $\mu$K deep.
 	This highlights the need for very cold magnetic traps (and tightly-focused dipole beams) to ensure many atoms have sufficiently low energy to remain in the dipole trap.
 	One also desires a tightly-confined magnetic trap to ensure good spatial overlap of the magnetic trap with the brightest parts of the dipole beam.
 	Furthermore, the rate of elastic collisions between trapped atoms increases with tighter traps, which permits more efficient evaporative cooling \cite{Ketterle96}, underscoring the need for tight traps.
@@ -707,14 +724,14 @@
 	The cycle could be repeated until very low intensities were able to destroy the trap.
 	Unfortunately we eventually found that there were multiple such optima.
 	We determined that these were due to reflections of the beam from the inside of the chamber and scattering back across the trap.
-	Afterwards, we acquired the image coincident with the resonant beam (rather than afterward) and found that when the beam intensity was reduced to a mere 4$\mu$W, the beam appeared to bore a hole through the cloud, as shown in Fig.	\ref{fig:dipole_align}.
+	Afterwards, we acquired the image coincident with the resonant beam (rather than afterward) and found that when the beam intensity was reduced to a mere 4 $\mu$W, the beam appeared to bore a hole through the cloud, as shown in Fig.	\ref{fig:dipole_align}.
 	
 	\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{fig/lattice/dipole_alignment_stages}
 		\caption{Stages of dipole beam alignment.
 	The first alignment was achieved by passing resonant light through the cloud (a) and triggering the image acquisition (for 10 $\mu$s) at the same time as the resonant pulse.
-	After switching to 1550nm light, the beam deflected slightly due to chromatic aberration in the optics (b) and could then be resolved in averages of 8-10 images. 
+	After switching to 1550 nm light, the beam deflected slightly due to chromatic aberration in the optics (b) and could then be resolved in averages of 8-10 images. 
 	The beam appears to bend in these images because the imaging beam was not aligned with the optical axis of the lenses, which was discovered and corrected using this technique.
 	Some time later the vertical dipole was aligned using the same method (c) and so two dipoles could be loaded simultaneously. 
 	Finally, an image of the combined magnetic and dipole traps could be taken ((d), average of 10 shots). To obtain this image, a Gaussian fit to the central cloud was subtracted from the image, with a residual halo and bright spot (c.f. the aforementioned issues with in-trap imaging).}
@@ -753,13 +770,36 @@
 	The other path is towards the study of the disordered Bose-Hubbard model (also known as the Aubry-Andr\'{e} model), which has been studied in quantum gas microscopes \cite{Rispoli19} but not, so far, with a momentum microscope.
 	Theoretical studies predict that momentum-space localization occures in disordered lattices generated by lasers with incommensurate wavelengths \cite{Larcher11}, which is an aspect of localization which has received little attention.
 	\vfill
+	% \begin{flushright}
+	% \singlespacing
+	% \emph{``It is not necessary to succeed in order to persevere.\\
+	% As long as there is a margin of hope, however narrow, \\
+	% we have no choice but to base all our actions on that margin"}\\
+	% - Leo Szilard\footnote{\emph{LIFE magazine} volume 51, issue 9, 1961 }\\
+	% \end{flushright}
+	% \onehalfspacing
+
+
+
+	\begingroup
 	\begin{flushright}
-	\singlespacing
-	\emph{``It is not necessary to succeed in order to persevere.\\
-	As long as there is a margin of hope, however narrow, \\
-	we have no choice but to base all our actions on that margin"}\\
-	- Leo Szilard\footnote{\emph{LIFE magazine} volume 51, issue 9, 1961 }\\
+	
+	\singlespacing{\fontsize{12}{12}\selectfont\emph{
+	``It might be noted here, for the benefit of those interested in exact solutions, \\
+	that there is an alternative formulation of the many-body problem:\\
+	How many bodies are required before we have a problem? \\
+	G.	E.	Brown points out that this can be answered by a look at history.	\\
+	In eighteenth-century Newtonian mechanics,
+	the three-body problem was insoluble.\\
+	With the birth of general relativity and quantum electrodynamics in 1930,\\ 
+	the two- and one-body problems became insoluble.
+	And within modern\\
+	quantum field theory, the problem of zero bodies (vacuum) is insoluble.\\
+	So, if we are out after exact solutions, no bodies at all is already too many!"}\\
+	- Richard Mattuck\footnote{R.
+	Mattuck, \emph{A Guide to Feynman Diagrams in the Many-Body Problem}, Dover Books on Physics (1992)}
+	}
 	\end{flushright}
 	\onehalfspacing
-
-	
+	\endgroup
+	\vspace{1cm}

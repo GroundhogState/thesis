@@ -1,9 +1,3 @@
-% Issues with TO derivation in paper
-% 	1. Sign error for D alpha^T term in eqn S9.
-% 		Li-Yan's expression differs from that in Le Kien et al by this particular factor
-% 	Introduction of two TOs, then assuming they are similar...
-% 		Effect of V and T offsets is to shift by XXX
-% 		Still linear but not 'close'
 
 % https://en.wikipedia.org/wiki/Proton_radius_puzzle
 %  Contains some refs showing that theory-motivated fits can be a good idea
@@ -15,6 +9,7 @@
 \markboth{\thechapter. MEASUREMENT OF THE 413 nm TUNE-OUT}{}
 \label{chap:tuneout}
 
+\blankfootnote{\noindent The contents of this chapter relate to the work published in \textbf{Measurement of a helium tune-out frequency: an independent test of quantum electrodynamics} by B. M. Henson$^\dagger$, {J. A. Ross}$^\dagger$, K. F. Thomas, C. N. Kuhn, D. K. Shin, S. S. Hodgman, Y. H. Zhang, L. Y. Tang, G. W. F. Drake, A. T. Bondy, A. G. Truscott, K. G. H. Baldwin, \href{https://www.science.org/doi/10.1126/science.abk2502}{\emph{Science} \textbf{376}} (2022) ({$^\dagger$\emph{Equally-contributing authors})}}
 
 
 	\begin{flushright}
@@ -22,7 +17,7 @@
 	{\emph{``Turn on\\
 			Tune in\\
 			Drop out"\\} 
-	Tim Leary\footnote{Leary lamented misinterpretations of the motto he popularized \cite{LearyNote}.}}
+	Tim Leary \cite{LearyNote}.}
 	\end{flushright}
 	\onehalfspacing
 	\vspace{1cm}
@@ -30,18 +25,17 @@
 
 	
 
-\blankfootnote{\noindent The contents of this chapter relate to the work published in \textbf{Measurement of a helium tune-out frequency: an independent test of quantum electrodynamics} by B. M. Henson$^\dagger$, \underline{J. A. Ross}$^\dagger$, K. F. Thomas, C. N. Kuhn, D. K. Shin, S. S. Hodgman, Y. H. Zhang, L. Y. Tang, G. W. F. Drake, A. T. Bondy, A. G. Truscott, K. G. H. Baldwin, \href{https://www.science.org/doi/10.1126/science.abk2502}{\emph{Science} \textbf{376}} (2022) ({$^\dagger$\emph{Equally-contributing authors})}}
 
 
 	\noindent{Nothing} in the universe is truly motionless, as imposed by the ineradicable zero-point energy and uncertainty principle.
 	And yet, atoms may be unmoved by an electric field if the latter oscillates at a \emph{tune-out} point.
 	In vacuum conditions, the specification of the wavelength, frequency, or photon energy of light are all equivalent. 
-	Thus, I use the encompassing term `tune-out point' where the context does not favour any particular quantification.
+	Thus, I use the encompassing term `tune-out point' where the context does not favour any particular unit of measurement.
 	However, in keeping with the tendency in metrology, the quantity of interest in this chapter is the tune-out \emph{frequency}, or simply \emph{tune-out} for brevity. 
 	In the publication pertaining to this chapter (Ref. \cite{Henson22}) we introduced the notation $L-U_1/U_2$ to specify a tune-out point by the occupied state $L$ followed by the two transitions $U_1$,$U_2$ which dominate the polarizability at the specified tune-out. 
 	This chapter concerns the measurement of the frequency of the $\MetastableState-2\triplet P/3\triplet P$ tune-out point near 413 nm (726 THz) \cite{Henson15,Mitroy13} and a comparison with state-of-the-art atomic structure calculations as a test of quantum electrodynamics.
 	Interestingly, the tune-out point is usually determined by the position and strength of the nearest transition frequencies. 
-	However, in this case the tune-out is principally controlled by the $2\triplet P$ and $3\triplet P$ levels (with transitions at 277 and 771 THZ, respectively) despite the $3 \triplet S_1$ being only $701$ THz away. This is because the  $\MetastableState \rightarrow 3^{3\!}S_1 $ transition is extremely weak\footnote{We detected this transition during the laser spectroscopic campaign which included the present and prior chapters. As reported in Ref. \cite{Thomas20}, this is at present the weakest transition detected in a neutral atom.}.
+	However, in this case the tune-out is principally controlled by the $2\triplet P$ and $3\triplet P$ levels (with transitions at 277 and 771 THz, respectively) despite the $3 \triplet S_1$ being only $701$ THz away. This is because the  $\MetastableState \rightarrow 3^{3\!}S_1 $ transition is extremely weak\footnote{We detected this transition during the laser spectroscopic campaign which included the present and prior chapters. As reported in Ref. \cite{Thomas20}, this is at present the weakest transition detected in a neutral atom.}.
 
 	As this work constitutes the most detailed work undertaken in the course of study, and the longest chapter, a brief mention is warranted of the way ahead.
 	Section \ref{sec:TO_bg} includes a detailed definition of a tune-out point with aid of semiclassical models along the way. This section also discusses the motivation for the work and a short summary of the theoretical progress made in parallel to the experimental measurement, which is reported in section \ref{sec:trap_freq_measure}. The foci of section \ref{sec:trap_freq_measure} are the description of the physical process underpinning the probe and measurement methods, including a fine-grained discussion of the effects of the frequency and polarization of the probe laser at the interaction zone. Having established the working principles of the measurement, section \ref{sec:TO_analysis} gives an end-to-end account of the data analysis. This section covers the criteria for diagnosing failure modes and discarding aberrant data files, the extraction of a final measured value and quantifying its statistical confidence, and some sanity checks to assure ourselves that our model maps well onto the ground truth. Section \ref{sec:systematic_effects} enumerates the systematic effects that we quantified in order to determine the ultimate accuracy of the measurement. Finally, section \ref{sec:TO_discussion} summarizes the findings of the experiment, including the establishment of a handful of figures-of-merit and a claim to a new sensitivity record.
@@ -66,7 +60,7 @@
 	The tune-out frequency, where an atom feels no force resulting from applied laser light, is an observable that tests QED independently of the conventional measurement of energy level differences.
 	We selected the $\MetastableState-2\triplet P/3\triplet P$ tune-out as our target quantity because the nearest two transitions are separated by more than an octave, and thus the atomic polarizability must vary slowly with optical frequency near the tune-out. 
 	Therefore, this tune-out is especially sensitive to higher order QED effects. 
-	We achieve a 20-fold improvement in the precision over the sole previous measurement (which was also undertaken in the ANU \mhe~ lab \cite{Henson15}) and make a definitive comparison with theory thanks to a new theoretical prediction of the \(\TO\) tune-out (summarized in section \ref{sec:to_theory}).
+	We achieve a 15-fold improvement in the precision over the sole previous measurement (which was also undertaken in the ANU \mhe lab \cite{Henson15}) and make a definitive comparison with theory thanks to a new theoretical prediction of the \(\TO\) tune-out (summarized in section \ref{sec:to_theory}).
 	The experimental value of 725\,736\,700\,$(40_{\mathrm{stat}},260_{\mathrm{syst}})$~MHz is within \({\sim} 2.5\sigma\) of the predicted frequency (725\,736\,053(9)~MHz),   resolving contributions from QED effects (\({\sim} 30 \sigma\)) and probes finite-wavelength retardation corrections (\({\sim} 2 \sigma\)) for the first time, albeit with lower confidence.
 
 
@@ -376,7 +370,7 @@
 	For our treatment, we are considering purely polarized light in the experimental context of applying wave-plates after the output from a polarizing beamsplitter, and can do without this parameter.
 
 
-	\subsubsection*{Connection to experiment}
+\subsubsection*{Connection to experiment}
 	\label{ssec:connection_to_experiment}
 
 	A full definition of the Stokes parameters in terms of the unit electric field polarization vector $\mb{u}$ the $x',y'$ basis is:
@@ -433,6 +427,7 @@
 	The linearized tune-out equation thus reads
 	\begin{align}
 		 \fto = & \fto^S + \frac{\st{V}}{2}\beta^V - \frac{1}{2}\beta^T \left(\frac{3}{2}\sin^2(\theta_k)(1+\st{Q}) - 1\right)
+		 \label{eqn:fto_stokes_eqn}
 	\end{align}
 	in terms of the Stokes parameters in the atomic reference frame. 
 
@@ -608,6 +603,9 @@
 	This section provides a physical description of the measurement technique and establishes the important roles played by the frequency and polarization of the probe beam.
 	To determine a tune-out point is essentially to measure the frequency where the optical dipole potential  vanishes.
 	In our measurement, we quantified the shift in the oscillation frequency of a harmonically trapped BEC when the magnetic trap was overlapped with a power-stabilized probe laser beam (see Fig. \ref{fig:exp_schematic} and Section \ref{sec:spec_laser}). 
+	This is in contrast to previous works (eg. \cite{Rengelink18}) wherein magic-wavelength optical traps were used in conjunction with a resonant probe beam. 
+	The main motivations for the use of a magnetic trap are that it permits the pulsed outcoupling method, enabling the highly accurate trap frequency determinations which underpin this measurement. Furthermore, the magnetic field is easily configured to be extremely harmonic at length scales much larger than the BEC or its in-trap motion.
+
 	The position-dependent potential energy in this hybrid trap is the sum of both the harmonic magnetic potential and a Gaussian optical potential,
 	\begin{equation}
 		U_\mathrm{net} = U_{\mathrm{trap}} + U_\mathrm{dip},
@@ -648,6 +646,7 @@
 	\begin{align}
 		\Omega_\mathrm{net}^2 &= \Omega_\mathrm{trap}^2 + \Omega_\mathrm{probe}^2\\
 		&= \Omega_\mathrm{trap}^2 + \frac{4P}{\pi m c \epsilon w_{0}^4}\mathrm{Re}(\alpha)
+		\label{eq:delta_omega_squared}
 	\end{align}
 	which shows that the squared shift in trapping frequency $\Omega_\mathrm{probe}^2 = \Omega_\mathrm{net}^2 - \Omega_\mathrm{trap}^2$ is linear in the probe power and the polarizability.
 	Note the $\Omega$ terms have units 1/time - the trapping frequencies $\omega_i$ are angular frequencies with units Rad Hz. Thus, $\Omega_\textrm{trap} = \omega_y/2\pi$.
@@ -660,14 +659,11 @@
 	\label{fig:freq_scan} 
 	\end{figure}
 
-	An immediate corollary is that if the probe beam power is stabilized then $\Omega_\mathrm{probe}^2$	is linear solely in $\mathrm{Re}(\alpha)$. 
+	An immediate corollary of Eqn. \ref{eq:delta_omega_squared} is that if the probe beam power is stabilized then $\Omega_\mathrm{probe}^2$	is linear solely in $\mathrm{Re}(\alpha)$. 
 	It then follows that ascertaining the frequency at which $\Omega_\mathrm{probe}=0$ constitutes a determination of the tune-out point.
 	Figure \ref{fig:freq_scan} shows the linear variation of experimentally-determined values of $\Omega_\mathrm{probe}^2$ versus the probe beam frequency $f$, demonstrating that this approximation holds in practise. 
 	Indeed, we found that including a quadratic term in a fit to $\Omega_\mathrm{probe}^2(f)$ yielded an estimate of the zero-crossing frequency that was not statistically distinguishable from the zero-crossing estimate obtained from a linear fit.
-	The next section provides more information about the experimental methods we used to obtain these measurements.
-
-	% Recalling that the dynamic polarizability $\alpha(f)$ depends on the light frequency $f$, 
-
+	Section \ref{sec:implementation} provides more information about the experimental methods we used to obtain these measurements.
 
 
 
@@ -692,6 +688,8 @@
 	The average velocity of atoms in a given pulse is an estimate of the centre-of-mass velocity of the BEC at the time the pulse was applied.
 	The in-trap oscillation thus resolves as a variation in the centre-of-mass position on the detector, as shown in Fig. \ref{fig:trap_freq_eg}.
 	The underlying trap frequency is then determined by means of the anti-aliasing technique described in the next section and in section \ref{sec:n0_cal}.
+	Ultracold clouds below the condensation temperature were used because thermal clouds are more strongly damped in their oscillation, which is the dominant limitation for the precision of the trap frequency measurement described below (see e.g., \cite{Henson22_PAL}). 
+	This is a major factor in the improved precision of this measurement over the previous one \cite{Henson15}, thus while thermal clouds can certainly be used, they would compromise the accuracy of the measurement.
 	% We gradually increased the RF power during the pulses to maintain a good signal-to-noise ratio for later pulses, which would otherwise be hampered by the geometric decay of the pulse population.
 	% A fit using a model of the form $y = A \exp(-t/\tau)\sin(\omega_\mathrm{net}+\phi)$ to 130 samples of the mean velocity (see fig \ref{}) thus determines the trap frequency to within 10~mHz in a single experimental cycle. 
 
@@ -878,6 +876,8 @@ s
 	To ensure the integrity of the data set used for analysis we complemented the aforementioned control systems with a veto checklist in the data preprocessing pipeline.
 	This consisted of a software screening procedure which discarded any measurements where any of the following essential conditions failed to hold. These conditions result in a loss of only one shot per $10^{4}$ across the whole dataset of 43500 shots. 
 
+
+
 	\textbf{Single-mode laser:}	On rare occasions we observed that the Ti:S laser would spontaneously run in a mode where multiple optical frequencies were resonant in the cavity and present in the output, a so-called multi-mode regime (strictly a \emph{temporal} multi-mode regime, as distinct from the case where multiple spatial modes are present in the beam profile). This behaviour would cause the wavemeter to provide inaccurate frequency measurements, and also fail to produce the desired test conditions at the interaction zone. We eliminated runs where this happened by recording the output of a scanning Fabry-Perot cavity (Thorlabs SA200-5B). We scanned the cavity over twice its full free-spectral range in a sawtooth manner by scanning the voltage across a piezoelectric actuator, which modulates the cavity length, at frequency of 20 Hz. 
 	We recorded the piezo and photodiode voltage during the interrogation and also in a $\sim0.2$~s period before and after.
 	The multimode condition was triggered when the separation between peaks detected in the photodiode voltage were less than the free-spectral range, indicating the presence of multiple optical frequencies.
@@ -890,6 +890,7 @@ s
 	\textbf{High atom number:}		Shots with very low atom number would lead to inaccurate determinations of the trapping frequency because the damped-sine fit would not be able to fit to many points. We mitigated this by screening out shots with less than $2\times10^{5}$ detected atoms. We found that the choice of threshold introduces a negligible systematic shift in the final tune-out determination, hence we could use shots with a wide range of atom numbers.
 
 
+	In the end, it is likely that most of the failed shots would have been detected by the outlier-removal step in the fitting procedure, and thus it is plausible that these exclusion rules were of marginal benefit.However, we did not compare the results of running the analysis with and without the exclusion.
 
 \subsection{Regressing the tune-out against polarization}
  \label{sec:fitting}
@@ -1120,6 +1121,7 @@ We can use the values of the fit parameters to estimate the size of the polariza
 	\end{figure}
 
 
+
 \subsection{Hyperpolarizability}
 
 	The working above also assumes that the metastable-state energy shift due to a nonzero polarizability is a linear function of the light field intensity. 
@@ -1268,9 +1270,17 @@ We can use the values of the fit parameters to estimate the size of the polariza
 	Thus, we can indirectly measure the absolute energy shift in the $\MetastableState$ state with a sensitivity of $1.7\cdot10^{-33}\mathrm{J}/\sqrt{\mathrm{sec}}$, where the time is the probe beam interrogation time. 
 	In the case of the measurement with the lowest frequency uncertainty in $f_\textrm{TO}$, (30~MHz), the minimum potential energy peak we can thus discern is approximately $10^{-35}\mathrm{J}$ ($U/k_B=3$~pK).
 
-\subsubsection{Improvements upon measurement technique}
+\subsection{Improvements upon past measurements}
 
-	In which I compare the present and former methods, pointing out the main advantages.
+	The past measurement of this tune-out frequency \cite{Henson15} obtained a 4 GHz uncertainty in the determined value of $\fto = 725.7249$ THz, thus the 263 MHz uncertainty presented here amounts to a 15-fold improvement in precision (note that here the statistical and systematic errors for each measurement are combined in quadrature for ease of comparison).
+	There are four factors underlying the improved result.
+	\begin{enumerate}
+		\item \textbf{Laser power:} The present measurement applied a 150 mW probe beam at the point of vacuum entry, whereas the original measurement used a 3 mW laser diode (subject also to losses when passing through the focusing optics). 
+		\item \textbf{Characterisation of polarization effects:} As described below (section \label{sec:polz_dep}, especially Eqn. \ref{eqn:fto_stokes_eqn}), the atomic tune-out point depends quite strongly on the polarization of the electric field with respect to the atom's quantization axis. Accordingly, considerable attention is paid in this chapter to measuring this dependence in order to obtain a single measured value for comparison with theoretical calculations. In contrast, the previous measurement used only linearly-polarized light. The direction of polarization relative to the atomic quantization axis in that experiment is not known. 
+		\item \textbf{Probe wavelength precision}: The High Finesse WS-8 wavemeter, obtained especially for this measurement, affords a locking of the probe beam with $\approx$175-fold greater accuracy. Moreover, the day-to-day drift of the wavemeter in the previous measurement was up to 350 MHz \cite{HensonHonsThesis}, larger than the drifts relevant to the present measurement by a similar factor. 
+		\item \textbf{Trap frequency determination:} This is the most critical innovation over the past measurement. Previously, the trap frequency was measured by modulating the net trapping potential with a probe beam and using a `lock-in' technique \cite{HensonHonsThesis} based on Fourier analysis of the outcoupling signal of a continuous atom laser. The idea is that the outcoupling efficiency would be modulated at the probe beam modulation frequency, and the phasor response of would cross zero amplitude (with a phase flip) at the tune-out point. However, this signal exhibited a very high variance therefore contributed considerable uncertainty to the final linear fit to determine the tuneout. In contrast, the method employed in this work provides trap frequency measurement accurate to a few dozen ppm \cite{Henson22_PAL}, drastically improving the accuracy of $\fto$ as determined by the fitting procedures defined below.
+	\end{enumerate}
+
 
 \subsection{Comparison With Previous Oscillator Strength Ratio Measurements}
 	
@@ -1306,10 +1316,9 @@ We can use the values of the fit parameters to estimate the size of the polariza
 
 \subsection{Conclusion}
 	\label{sec:TO_conc}
-	Our experimental determination of 725\,736\,700\,$(40_{\mathrm{stat}},260_{\mathrm{syst}})$ MHz is a \(20\)-fold improvement over the first experimental determination, and is 2.5$\sigma$ larger than the theoretical prediction. 
-	Our measurement has a relative precision better than $4\times 10^{-7}$, and constitutes the most precise measurement of atomic transition rate ratios to date \cite{Mitroy13}.
-	This measurement determines the ratio of oscillator strengths to 6ppm \cite{Henson22}, which is a factor of two improvement on the previous record. 
-	Furthermore, our novel method for measuring the dipole potential is able to discern a peak potential energy of as little as 10$^{-35}$J . This is, to our knowledge, the highest precision in a potential energy measurement reported to date \cite{Henson22}.
+	Our experimental determination of 725\,736\,700\,$(40_{\mathrm{stat}},260_{\mathrm{syst}})$ MHz has a relative precision of $4\times 10^{-7}$, constituting the most precise measurement of atomic transition rate ratios to date \cite{Mitroy13}, and is 2.5$\sigma$ larger than the theoretical prediction. 
+	This measurement determines the ratio of oscillator strengths to 6 ppm, which is a factor of two improvement on the previous record. 
+	Furthermore, our novel method for measuring the dipole potential is able to discern a peak potential energy of as little as 10$^{-35}$ J . This is, to our knowledge, the highest precision in a potential energy measurement reported to date \cite{Henson22}.
 	 
 	In future precision measurements of tune-out points, significant improvements would follow from more precise calibration of the light polarization.
 	One solution would be to use in-vacuum optics and make finer measurements of the angle of the beam axis relative to the magnetic field.
