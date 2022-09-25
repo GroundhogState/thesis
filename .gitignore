@@ -1,12 +1,13 @@
-# gitignore: All the drafts
+	# gitignore: All the drafts
 drafts/*
-reviews/*
+appendix/*
+doc/*
+reviews/drafts/*
 sample_thesis/*
 TO_resources/*
 Forbidden Transition/*
-# huge numbers of qd figs
-fig/depletion/runs/*
-fig/apparatus/ComponentLibrary/*
+# huge numbers of figs
+fig/*
 # gdrive stuff
 *.ini
 # matlab files
@@ -15,5 +16,5 @@ fig/apparatus/ComponentLibrary/*
 # Various image types not used
 *.png
 *.epsc
-
+*.log
 

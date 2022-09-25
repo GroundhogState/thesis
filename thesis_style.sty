@@ -16,6 +16,8 @@
 % https://policies.anu.edu.au/ppl/document/ANUP_012815 
 \usepackage{setspace} % for setting the bib and footnotes
 \usepackage{anyfontsize}
+% prevent footnotes from breaking across pages
+\interfootnotelinepenalty=10000
 % All this for a single character...
 % \usepackage[utf8]{inputenc}
 % \usepackage[T1]{fontenc}
@@ -45,6 +47,7 @@
 \usepackage[backend=biber,style=nature]{biblatex}
 % biber issues https://tex.stackexchange.com/questions/309991/how-to-fix-the-incompatility-between-biber-and-biblatex-versions-in-texmaker 
 % https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
+\usepackage{bookmark}
 
 \usepackage{framed}
 

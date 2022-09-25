@@ -23,11 +23,10 @@
 % http://www.heliumbec.com/wiki/User:Jacob possible graphics for front page
 \begin{document}
 
-% \include{latex/mtodo}
-% \myemptypage
 
 \frontmatter
 \include{latex/00_frontmatter}
+
 \singlespacing
 \include{latex/001_acknowledgements}
 \include{latex/01_abstract}
@@ -35,38 +34,35 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 
-% double-page double-ket or bra-ket
-% i.e. nested \ket{\ket} around entire text: ||main>>
-% Or put it all in bra-kets?
-% - Make them H/V - split up sections so chapt = <s1|s2> + <s3|s4>, or inc tensor products chapt = |s2><s1| + <s3|s4>\otimes<s5|
-
 \onehalfspacing
 
 \mainmatter
-% \singlespacing
+
 \include{latex/10_overview}
+
 
 \part{Background and technical introduction}
 \include{latex/11_introduction}
 \include{latex/12_apparatus}
-% \include{latex/13_lattice_build}
+
 \part{Experiments with ultracold metastable helium atoms}
 \include{latex/21_transitions}
 \include{latex/22_tuneout}
 \include{latex/23_depletion}
 \include{latex/24_conclusion}
 
-\appendix
-\include{latex/A1_lattice_build}
 
-\backmatter
-
-
-
+\cleardoublepage
+% \backmatter
+\bookmarksetup{startatroot}
 % \begingroup
 \singlespacing
 \printbibliography
+\addcontentsline{toc}{chapter}{Bibliography}
 % \endgroup
+
+\appendix
+\include{latex/A1_lattice_build}
 
 
 \end{document}

@@ -204,11 +204,11 @@ condensate after release from a magnetic trap} by J. A. Ross, P. Deuar, D. K. Sh
 		\frac{n_T(k)}{{(2\pi)^3}} =\frac{N_T}{\zeta(3)} ~\left(\frac{\lambda_{dB}}{2\pi}\right)^3 g_{3/2}\left(\exp\left(-\frac{k^2 \lambda_{dB}^2}{4\pi}\right)\right)
 		\label{eqn:th_fun}
 	\end{equation}
-	wherein the thermal de Broglie wavelength $\lambda_{dB} = \sqrt{2\pi\hbar^2/(m k_B T)}$ yields an estimate of the temperature $T$ which ranges from 100 to 320 nK in these experiments. Here, $g_{3/2}(\cdot)$ is the standard Bose integral, $\zeta(\cdot)$ is the Riemann zeta function, and $N_T$ is the number of atoms in the thermal component. The fits were made by manually selecting 
-	Note that for a non-interacting gas in the thermodynamic limit, the {number of thermal atoms} %thermal fraction 
+	wherein the thermal de Broglie wavelength $\lambda_{dB} = \sqrt{2\pi\hbar^2/(m k_B T)}$ yields an estimate of the temperature $T$ which ranges from 100 to 320 nK in these experiments. Here, $g_{3/2}(\cdot)$ is the standard Bose integral, $\zeta(\cdot)$ is the Riemann zeta function, and $N_T$ is the number of atoms in the thermal component. 
+	Note that for a non-interacting gas in the thermodynamic limit, the {number of thermal atoms} 
 	is simply ${N_T^{\rm id}} = \zeta(3)(k_B T / \hbar\bar{\omega})^3{=\eta_T N}$, but for these condensates the critical temperature is reduced by $\approx20\%$ by interactions (see section \ref{sec:BEC_theory}).
 	This, and the attendant twofold increase in the thermal fraction {$\eta_T$}  (relative to the non-interacting case), is accounted for by explicitly using $N_T$ as a fit parameter. 
-	The thermal fits were applied to the $k$-interval that yielded the smallest mean-squared error, which generally excludes the condensate and also the high-momentum region where the thermal fraction makes a negligible contribution.
+	The lower bound of the $k$-interval for the thermal fits is easily identified by the transition point between the thermal and condensed region. The upper bound was chosen individually for each dataset to ensure simultaneous near-total coverage of the thermal region and minimal mean-squared error. Thus the fits generally exclude the condensate and the high-momentum region where the thermal fraction makes a negligible contribution. The fit parameters were used as initial guesses for the fits described in the next section.
 	The same lower bounds were used when fitting the combined thermal- and power-law functions (next section), but the upper bound was fixed at $k=10~\micron^{-1}$ for all cases.
 
 
@@ -270,9 +270,11 @@ condensate after release from a magnetic trap} by J. A. Ross, P. Deuar, D. K. Sh
 	This variation is dominated by the statistical fluctuations in the tails of the individual density profiles, and so would not be distinguishable by eye (or by fit) in a plot of the scaled density.
 	
 	The preceding discussion points to one of the primary challenges with power laws; the exponents are strongly entwined with the rate of occurrence of rare events, which by definition are subject to large statistical fluctuations and thus subvert even the most meticulous investigations.
-	{Finally, the question of whether the data conforms to a power law at all is not amenable to a decisive conclusion. 
-	For example, a log-normal distribution can produce similarly accurate predictions to the power law over finite regions \cite{Virkar14,Clauset09} even though there is no physical hypothesis that predicts such a distribution. 
-	As I discuss in the next section, this underscores the challenge of identifying power-law behaviour in range-limited data, because even with these parameters the log-normal distribution eventually diverges from the power law, albeit over far a far larger domain than available in either Helium experiment.}
+	As I discuss in the next section, this underscores the challenge of identifying power-law behaviour in range-limited data.
+	
+	% {Finally, the question of whether the data conforms to a power law at all is not amenable to a decisive conclusion. 
+	% For example, a log-normal distribution can produce similarly accurate predictions to the power law over finite regions \cite{Virkar14,Clauset09} even though there is no physical hypothesis that predicts such a distribution. 
+	% , because even with these parameters the log-normal distribution eventually diverges from the power law, albeit over far a far larger domain than available in either Helium experiment.}
 
 	To summarize, these problems with fitting power laws are ubiquitous, and made more difficult by the small range of $k$ which are visible in the helium experiments.
 	In general, estimating the exponent of a purported power law is difficult and requires data spanning several orders of magnitude in scale \cite{Goldstein04,Clauset09,Virkar14,Hanel17}, which are not present in either {of the} helium experiment{s to date}.
@@ -280,7 +282,7 @@ condensate after release from a magnetic trap} by J. A. Ross, P. Deuar, D. K. Sh
 	However, in these particle detection experiments the limited sampling region and presence of spurious detection events (see below) mean that such estimators are not appropriate.
 	
 
-	It is worth briefly recapitulating the motivation for fitting the present data with such care. A typical use of goodness-of-fit measures is to discern which of a collection of competing hypotheses provide a more accurate prediction of the phenomenon under study\footnote{This is an oversimplification - in fact, model parsimony and fit residuals are usually considered as well, either heuristically or thorugh, for instance, information criteria (such as the Bayes or Akaike criteria) and chi-squared tests, respectively.}. Typically these hypotheses are motivated by physical principles, and those based on different assumptions may make distinct predicitons. In this case, there are two questions we seek to answer. First, is there a signal beyond the BEC, thermal component, and background? Clearly, a fit including only these terms does not capture the slow decay observed in Fig. \ref{fig:empirical_density}. This alone is not sufficient to discard the hydrodynamic hypothesis, which would require answering a second and subtler question: Is the signal  consistent with the quantum depletion. In this respect, the fit-based parameter estimation does not provide substantial evidence in favour of the depletion-survival hypothesis - the fit results are manifestly not consistent with the relationship predicted by the Tan-Bogoliubov theory.
+	% It is worth briefly recapitulating the motivation for fitting the present data with such care. A typical use of goodness-of-fit measures is to discern which of a collection of competing hypotheses provide a more accurate prediction of the phenomenon under study\footnote{This is an oversimplification - in fact, model parsimony and fit residuals are usually considered as well, either heuristically or thorugh, for instance, information criteria (such as the Bayes or Akaike criteria) and chi-squared tests, respectively.}. Typically these hypotheses are motivated by physical principles, and those based on different assumptions may make distinct predicitons. In this case, there are two questions we seek to answer. First, is there a signal beyond the BEC, thermal component, and background? Clearly, a fit including only these terms does not capture the slow decay observed in Fig. \ref{fig:empirical_density}. This alone is not sufficient to discard the hydrodynamic hypothesis, which would require answering a second and subtler question: Is the signal  consistent with the quantum depletion. In this respect, the fit-based parameter estimation does not provide substantial evidence in favour of the depletion-survival hypothesis - the fit results are manifestly not consistent with the relationship predicted by the Tan-Bogoliubov theory.
 
 	In the next section I discuss an alternative approach which does not require -- and conversely cannot determine -- a precise value of the scaling exponent. 
 	The approach discussed below permits a test of the Tan theory's validity in the far-field without assuming any specific properties of (and is clear about what can and cannot be said about) the actual form of the measured density distribution.
@@ -344,10 +346,10 @@ condensate after release from a magnetic trap} by J. A. Ross, P. Deuar, D. K. Sh
 	However, while this method can accurately predict the number of detected atoms, it does not distinguish whether or not the data follows a power-law distribution, let alone a power-law with a particular exponent. 
 	Consider these simple alternatives: that the tail amplitude is simply larger than expected (i.e. $n(k)=A\mathcal{C}/k^4$), or that the tail decay is somehow slower (i.e. $n(k)=\mathcal{C}/k^{4+\delta})$, or that it comes from another distribution altogether.
 	Specifically, the density profiles $n(k)=A\mathcal{C}/k^4$ with $A=8(3)$ and $n(k)=\mathcal{C}/k^{\alpha}$ with $\alpha=3.86(2)$ both predict the variation of $\Lambda_{\rm pred}$ with $k_\textrm{min}$ and $k_\textrm{max}$ with comparable accuracy, as shown in Fig. \ref{fig:k_indep}. 
-	Without the ability to precisely determine the exponent $\alpha$, or whether a power-law is present at all, there is insufficient evidence to conclude which of these is correct.
+	Without the ability to precisely determine the exponent $\alpha$, there is insufficient evidence to conclude which of these is correct.
 	Indeed, the predicted $k^{-4}$ behaviour is only a strict constraint inasmuch as the tails are \emph{known} to be the quantum depletion escaping the condensate without perturbation - which is itself the claim under test and as argued below is not necessarily expected.
-	Fig. \ref{fig:k_indep} also shows, in red, predictions obtained by assuming log-normally distributed $k$ with parameters $(\mu,\sigma) \approx (1.235,0.95)$.
-	The predictions are essentially identical over the ROI and so we can conclude only that the data is consistent with (a range of) power-law distributions, not that it \emph{is} drawn from a power law.
+	% Fig. \ref{fig:k_indep} also shows, in red, predictions obtained by assuming log-normally distributed $k$ with parameters $(\mu,\sigma) \approx (1.235,0.95)$.
+	% The predictions are essentially identical over the ROI and so we can conclude only that the data is consistent with (a range of) power-law distributions, not that it \emph{is} drawn from a power law.
 
 	\begin{figure}
 	\begin{center}
@@ -356,7 +358,7 @@ condensate after release from a magnetic trap} by J. A. Ross, P. Deuar, D. K. Sh
 		Predictions of $\Lambda$ based on Eqn (\ref{eqn:pred_scaling}) ({$\Lambda_{\rm pred}$}, blue), are shown along with the predictions {from Eqn. (\ref{eqn:Lambda}) using} a density function $n(k){=\mathcal{AC}/k^4}$ that {has an additional prefactor $\mathcal{A}=$8(3)} %times Eqn. (\ref{eqn:pred_scaling})
 		(green) and one that has %exactly the amplitude $\mathcal{C}$ but 
 		a modified exponent of {$\alpha=3.86(2)$ via $n(k)=\mathcal{C}/k^{\alpha}$} (yellow). 
-		{A log-normal distribution produces nearly identical predictions (red, offset vertically for visibility).}
+		% {A log-normal distribution produces nearly identical predictions (red, offset vertically for visibility).}
 		The data does not distinguish between either of these hypotheses, and therefore provides limited information about {the prefactor $\mathcal{A}$ or exponent}% $C$ or
 		$\alpha$.
 		The error bars show the 95\% CI of the fit parameter $\Lambda_\textrm{fit}$, and parentheses enclose the uncertainty in the least-significant digit which is consistent with the 95\% CI.
