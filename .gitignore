@@ -6,6 +6,8 @@ reviews/*
 sample_thesis/*
 TO_resources/*
 Forbidden Transition/*
+Ross, J - PhD thesis.pdf
+res/*
 # huge numbers of figs
 fig/*
 # gdrive stuff
@@ -17,4 +19,6 @@ fig/*
 *.png
 *.epsc
 *.log
-
+*.aux
+*.bcf
+*.mm
